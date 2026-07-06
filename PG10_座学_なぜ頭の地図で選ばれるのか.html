@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PG10 座学｜なぜ「頭の地図」を知ると選ばれ続けるのか</title>
+<title>PG10 座学｜なぜ「頭の地図」を知ると選ばれ続けるのか（20分・完成版）</title>
 <style>
-  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#f3f1ea;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e;--skin:#efd9c4;--sub:#f0e2d0;--galea:#C5A55A;--bone:#e8ddc7}
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#f3f1ea;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e;--skin:#efd9c4;--sub:#f0e2d0;--galea:#C5A55A;--bone:#e8ddc7;--purple:#6b4e8a}
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1000px;margin:0 auto;padding:0 16px 100px}
@@ -21,155 +21,245 @@
   .howto .c b{display:block;color:var(--navy);font-size:13px;margin-bottom:2px}
   .howto .c.audio{background:#eef4fb;border:1px solid #cddcf0}
   .howto .c.visual{background:#fbf5e6;border:1px solid var(--gold-l)}
-  .scene{margin:26px 0}
+  .engage{background:#f2ecf7;border:1px solid #d8c7ea;border-radius:12px;padding:14px 20px;margin:10px 0 4px}
+  .engage h3{font-size:14px;color:var(--purple);margin-bottom:6px}
+  .engage .row{display:flex;flex-wrap:wrap;gap:6px}
+  .engage .chip{background:#fff;border:1px solid #d8c7ea;border-radius:20px;padding:3px 12px;font-size:12px;font-weight:700;color:var(--purple)}
+  .dur{background:#eef7f0;border:1px solid #b6dcc4;border-radius:12px;padding:12px 18px;font-size:13px;margin:8px 0;color:#256b41}
+  .dur b{color:#1c5030}
+  /* chapter divider */
+  .chap{display:flex;align-items:center;gap:14px;margin:34px 0 6px;padding:12px 20px;background:linear-gradient(100deg,var(--navy),#2b4670);border-radius:12px;color:#fff}
+  .chap .cn{background:var(--gold);color:#2c2107;font-weight:800;border-radius:8px;padding:3px 12px;font-size:13px;white-space:nowrap}
+  .chap .ct{font-family:"Hiragino Mincho ProN",serif;font-size:17px;font-weight:600}
+  .chap .cp{margin-left:auto;display:flex;gap:5px}
+  .chap .cp i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.3)}
+  .chap .cp i.on{background:var(--gold)}
+  .scene{margin:16px 0}
   .scene .bar{display:flex;align-items:center;gap:10px;margin-bottom:8px}
   .scene .bar .no{background:var(--navy);color:#fff;font-weight:800;font-size:13px;border-radius:8px;padding:3px 13px}
   .scene .bar .nm{font-size:14px;font-weight:800;color:var(--navy)}
-  .scene .bar .dur{margin-left:auto;font-size:11.5px;color:var(--mut)}
+  .scene .bar .dr{margin-left:auto;font-size:11.5px;color:var(--mut)}
   .slide{container-type:inline-size;aspect-ratio:16/9;width:100%;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;position:relative;box-shadow:0 3px 16px rgba(27,42,74,.08)}
   .slide.dark{background:radial-gradient(circle at 30% 25%,#26406b,var(--navy2));color:#fff;border:none}
+  .slide.quiz{background:radial-gradient(circle at 70% 20%,#3a2b57,#241634);color:#fff;border:none}
   .slide .pad{position:absolute;inset:0;padding:5cqw 6cqw;display:flex;flex-direction:column;justify-content:center}
-  .kick{font-size:2.5cqw;font-weight:800;letter-spacing:.02em;color:#9a7b27;margin-bottom:1.5cqw}
-  .slide.dark .kick{color:var(--gold-l)}
-  .big{font-size:5.2cqw;font-weight:800;line-height:1.36;color:var(--navy);font-family:"Hiragino Mincho ProN",serif}
-  .slide.dark .big{color:#fff}
+  .kick{font-size:2.5cqw;font-weight:800;letter-spacing:.02em;color:#9a7b27;margin-bottom:1.4cqw}
+  .slide.dark .kick,.slide.quiz .kick{color:var(--gold-l)}
+  .big{font-size:5cqw;font-weight:800;line-height:1.36;color:var(--navy);font-family:"Hiragino Mincho ProN",serif}
+  .slide.dark .big,.slide.quiz .big{color:#fff}
   .big .em{color:#9a7b27;background:linear-gradient(transparent 60%,rgba(197,165,90,.30) 60%)}
-  .slide.dark .big .em{color:var(--gold-l);background:none}
-  .sub{font-size:2.7cqw;color:var(--mut);margin-top:2cqw;line-height:1.6}
-  .slide.dark .sub{color:#c9d2e0}
+  .slide.dark .big .em,.slide.quiz .big .em{color:var(--gold-l);background:none}
+  .sub{font-size:2.6cqw;color:var(--mut);margin-top:2cqw;line-height:1.6}
+  .slide.dark .sub,.slide.quiz .sub{color:#d3c7e6}
   .vs{display:grid;grid-template-columns:1fr auto 1fr;gap:3cqw;align-items:center;width:100%}
   .vs .card{border-radius:2cqw;padding:3cqw;text-align:center}
   .vs .bad{background:#f6eceb;border:0.4cqw solid #dcb7b2}
   .vs .good{background:#eaf3ed;border:0.4cqw solid #a9d2ba}
-  .vs .ic{font-size:7cqw;line-height:1}
-  .vs .lb{font-size:2.9cqw;font-weight:800;margin-top:1cqw}
+  .vs .ic{font-size:6.6cqw;line-height:1}
+  .vs .lb{font-size:2.8cqw;font-weight:800;margin-top:1cqw}
   .vs .bad .lb{color:#a5433a}.vs .good .lb{color:var(--green)}
-  .vs .ds{font-size:2.15cqw;color:#555;margin-top:.8cqw;line-height:1.5}
-  .vs .mid{font-size:4cqw;color:var(--gold);font-weight:800}
-  /* 層構造 */
+  .vs .ds{font-size:2.05cqw;color:#555;margin-top:.8cqw;line-height:1.5}
+  .vs .mid{font-size:3.8cqw;color:var(--gold);font-weight:800}
   .figrow{display:flex;gap:4cqw;align-items:center;width:100%}
   .figrow img{flex:0 0 40%;width:40%;border-radius:2cqw;border:1px solid var(--line);background:#fff}
   .figrow .tx{flex:1;min-width:0}
   .layers{display:flex;flex-direction:column;gap:1.1cqw}
-  .layers .ly{border-radius:1.4cqw;padding:1.9cqw 2.4cqw;font-size:2.5cqw;font-weight:700;display:flex;justify-content:space-between;align-items:center;color:#3a3327;gap:1cqw}
-  .layers .ly small{font-weight:400;font-size:1.95cqw;color:#6b6350;text-align:right}
+  .layers .ly{border-radius:1.4cqw;padding:1.8cqw 2.3cqw;font-size:2.45cqw;font-weight:700;display:flex;justify-content:space-between;align-items:center;color:#3a3327;gap:1cqw}
+  .layers .ly small{font-weight:400;font-size:1.9cqw;color:#6b6350;text-align:right}
   .ly.skin{background:var(--skin)} .ly.subq{background:var(--sub)} .ly.galea{background:var(--galea);color:#3a2c08} .ly.bone{background:var(--bone)}
-  .lbl{display:flex;align-items:center;gap:1.4cqw;font-size:2.55cqw;font-weight:700;margin:1cqw 0}
+  .lbl{display:flex;align-items:center;gap:1.4cqw;font-size:2.5cqw;font-weight:700;margin:1cqw 0}
   .lbl .dot{width:2.4cqw;height:2.4cqw;border-radius:50%;flex:0 0 auto}
-  .lbl small{font-weight:400;font-size:1.9cqw;color:var(--mut)}
-  /* 例えバッジ（ネイビー地・全スライド共通で高コントラスト） */
-  .analogy{position:absolute;right:4cqw;bottom:4cqw;background:linear-gradient(135deg,#22375c,var(--navy2));border:0.55cqw solid var(--gold);border-radius:2cqw;padding:1.7cqw 2.3cqw;max-width:42%;box-shadow:0 1.4cqw 3.4cqw rgba(15,26,46,.34)}
-  .analogy .h{font-size:2cqw;font-weight:800;color:var(--gold-l);letter-spacing:.05em}
-  .analogy .b{font-size:2.5cqw;font-weight:800;color:#fff;line-height:1.4;margin-top:.4cqw}
-  /* やってみて（参加） */
-  .tryit{display:inline-flex;align-items:flex-start;gap:1.2cqw;background:rgba(47,138,82,.12);border:0.4cqw solid #a9d2ba;border-radius:1.6cqw;padding:1.4cqw 2cqw;font-size:2.35cqw;font-weight:800;color:#256b41;margin-top:2.4cqw;line-height:1.45}
-  .tryit::before{content:"✋ やってみて";background:var(--green);color:#fff;font-size:1.9cqw;border-radius:1cqw;padding:.5cqw 1.2cqw;white-space:nowrap;flex:0 0 auto}
-  .slide.dark .tryit{background:rgba(255,255,255,.1);border-color:#7fbf9b;color:#cdeede}
-  /* 重み図（S9） */
-  .weight{display:flex;gap:5cqw;align-items:center;width:100%;justify-content:center}
-  .weight .fig{font-size:14cqw;line-height:1}
-  .weight .bt{text-align:center}
-  .weight .bt .n{font-size:7cqw;font-weight:800;color:var(--navy);font-family:"Hiragino Mincho ProN",serif}
-  .weight .bt .n small{font-size:2.4cqw;color:var(--mut);font-weight:400;display:block}
-  .weight .eq{font-size:4cqw;color:var(--gold);font-weight:800}
-  .weight .pb{font-size:9cqw}
-  /* 好循環ループ */
-  .loop2{display:flex;flex-direction:column;gap:1.6cqw;width:100%;align-items:center}
-  .loop2 .r{display:flex;align-items:center;justify-content:center;gap:1.2cqw;flex-wrap:nowrap}
-  .loop2 .step{background:var(--ivory);border:0.4cqw solid var(--gold-l);border-radius:1.5cqw;padding:1.4cqw 1.8cqw;font-size:2.35cqw;font-weight:800;color:var(--navy);white-space:nowrap}
+  .lbl small{font-weight:400;font-size:1.85cqw;color:var(--mut)}
+  .analogy{position:absolute;right:4cqw;bottom:4cqw;background:linear-gradient(135deg,#22375c,var(--navy2));border:0.55cqw solid var(--gold);border-radius:2cqw;padding:1.6cqw 2.2cqw;max-width:42%;box-shadow:0 1.4cqw 3.4cqw rgba(15,26,46,.34)}
+  .analogy .h{font-size:2cqw;font-weight:800;color:var(--gold-l)}
+  .analogy .b{font-size:2.45cqw;font-weight:800;color:#fff;line-height:1.4;margin-top:.4cqw}
+  .tryit{display:inline-flex;align-items:flex-start;gap:1.2cqw;background:rgba(47,138,82,.12);border:0.4cqw solid #a9d2ba;border-radius:1.6cqw;padding:1.3cqw 1.9cqw;font-size:2.3cqw;font-weight:800;color:#256b41;margin-top:2cqw;line-height:1.45}
+  .tryit::before{content:"✋ やってみて";background:var(--green);color:#fff;font-size:1.85cqw;border-radius:1cqw;padding:.5cqw 1.1cqw;white-space:nowrap;flex:0 0 auto}
+  .phrase{display:inline-flex;align-items:center;gap:1.2cqw;background:rgba(197,165,90,.14);border:0.4cqw solid var(--gold-l);border-radius:1.6cqw;padding:1.3cqw 1.9cqw;font-size:2.3cqw;font-weight:700;color:#7a5f1e;margin-top:1.6cqw;line-height:1.4}
+  .phrase::before{content:"💬 使えるひとこと";background:var(--gold);color:#2c2107;font-size:1.8cqw;border-radius:1cqw;padding:.5cqw 1.1cqw;white-space:nowrap;flex:0 0 auto}
+  /* quiz */
+  .qz{width:100%;text-align:center}
+  .qz .qq{font-size:4.4cqw;font-weight:800;font-family:"Hiragino Mincho ProN",serif;line-height:1.4}
+  .qz .opts{display:flex;gap:2cqw;justify-content:center;margin-top:3cqw;flex-wrap:wrap}
+  .qz .op{background:rgba(255,255,255,.1);border:0.4cqw solid rgba(216,199,155,.5);border-radius:1.6cqw;padding:1.6cqw 3cqw;font-size:2.8cqw;font-weight:800}
+  .qz .think{margin-top:3cqw;font-size:2.4cqw;color:var(--gold-l);font-weight:800}
+  /* scenario */
+  .scenario{display:flex;gap:2.5cqw;align-items:center;background:#faf5ec;border:0.4cqw solid var(--gold-l);border-radius:2cqw;padding:2.2cqw 2.6cqw;margin-top:2cqw}
+  .scenario .pic{font-size:7cqw;line-height:1;flex:0 0 auto}
+  .scenario .q{font-size:2.5cqw;color:#4a3f2a;line-height:1.5}
+  .scenario .q b{color:var(--navy)}
+  /* mistakes */
+  .mis{display:flex;flex-direction:column;gap:1.6cqw;width:100%}
+  .mis .m{display:grid;grid-template-columns:1fr auto 1fr;gap:2cqw;align-items:center}
+  .mis .x{background:#f6eceb;border:0.4cqw solid #dcb7b2;border-radius:1.4cqw;padding:1.5cqw 2cqw;font-size:2.4cqw;font-weight:700;color:#a5433a}
+  .mis .o{background:#eaf3ed;border:0.4cqw solid #a9d2ba;border-radius:1.4cqw;padding:1.5cqw 2cqw;font-size:2.4cqw;font-weight:700;color:#256b41}
+  .mis .ar{font-size:3cqw;color:var(--gold);font-weight:800}
+  /* type table */
+  .types{display:grid;grid-template-columns:repeat(3,1fr);gap:2cqw;width:100%}
+  .types .t{background:#fff;border:0.4cqw solid var(--line);border-radius:1.8cqw;padding:2.2cqw;text-align:center}
+  .types .t .ic{font-size:6cqw}
+  .types .t .who{font-size:2.5cqw;font-weight:800;color:var(--navy);margin:.6cqw 0}
+  .types .t .arw{font-size:2.6cqw;color:var(--gold);font-weight:800}
+  .types .t .say{font-size:2.2cqw;color:#4a3f2a;margin-top:.6cqw;line-height:1.4}
+  /* loop */
+  .loop2{display:flex;flex-direction:column;gap:1.5cqw;width:100%;align-items:center}
+  .loop2 .r{display:flex;align-items:center;justify-content:center;gap:1.1cqw;flex-wrap:nowrap}
+  .loop2 .step{background:var(--ivory);border:0.4cqw solid var(--gold-l);border-radius:1.5cqw;padding:1.3cqw 1.7cqw;font-size:2.3cqw;font-weight:800;color:var(--navy);white-space:nowrap}
   .loop2 .step.hi{background:var(--navy);color:#fff;border-color:var(--navy)}
-  .loop2 .ar{color:var(--gold);font-size:2.8cqw;font-weight:800}
-  .loop2 .down{align-self:flex-end;margin-right:8cqw;color:var(--gold);font-size:3.4cqw;font-weight:800;line-height:.8}
-  .loop2 .ret{font-size:2.3cqw;font-weight:800;color:#9a7b27;margin-top:1.2cqw}
+  .loop2 .ar{color:var(--gold);font-size:2.6cqw;font-weight:800}
+  .loop2 .down{align-self:flex-end;margin-right:9cqw;color:var(--gold);font-size:3.2cqw;font-weight:800;line-height:.8}
+  .loop2 .ret{font-size:2.25cqw;font-weight:800;color:#9a7b27;margin-top:1cqw}
+  /* recap */
+  .recap{display:grid;grid-template-columns:repeat(4,1fr);gap:2cqw;width:100%}
+  .recap .c{background:#fff;border:0.4cqw solid var(--line);border-radius:1.8cqw;padding:2cqw 1.6cqw;text-align:center}
+  .recap .c .place{font-size:2.6cqw;font-weight:800;color:var(--mut)}
+  .recap .c .name{font-size:3.2cqw;font-weight:800;color:var(--navy);font-family:"Hiragino Mincho ProN",serif;margin-top:.6cqw}
+  .recap .c .qm{font-size:5cqw;color:var(--gold-l);font-weight:800}
+  .phrases4{display:flex;flex-direction:column;gap:1.5cqw;width:100%}
+  .phrases4 .p{display:flex;align-items:center;gap:2cqw;background:#faf5ec;border:0.4cqw solid var(--gold-l);border-radius:1.5cqw;padding:1.6cqw 2.2cqw}
+  .phrases4 .p .tag{background:var(--gold);color:#2c2107;font-size:2.1cqw;font-weight:800;border-radius:1cqw;padding:.6cqw 1.4cqw;white-space:nowrap;flex:0 0 auto}
+  .phrases4 .p .tx{font-size:2.5cqw;color:#3a3327;font-weight:700}
   .narr{background:#eef4fb;border:1px solid #cddcf0;border-left:5px solid var(--blue);border-radius:0 12px 12px 0;padding:14px 18px;margin-top:10px}
   .narr .h{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:.04em;margin-bottom:6px}
-  .narr .h::before{content:"🎙 ナレーション原稿（この文章を後から吹き込む）";}
+  .narr .h::before{content:"🎙 ナレーション原稿（後から吹き込む）";}
   .narr p{font-size:15px;line-height:2;margin:6px 0;color:#1f2733;font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
   .narr .do{color:#256b41;font-weight:700}
+  .narr .qz2{color:var(--purple);font-weight:700}
   .telop{font-size:12px;color:var(--mut);margin-top:8px;padding-left:4px}
-  .telop b{color:var(--navy)}
-  .telop .a{color:#9a7b27;font-weight:700}
-  .telop .yomi{color:var(--blue);font-weight:700}
-  .analogy-note{background:#fffaf0;border:1px dashed var(--gold);border-radius:10px;padding:9px 14px;font-size:12.5px;color:#7a5f1e;margin-top:8px}
-  .analogy-note b{color:#9a7b27}
-  h2.sec{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:19px;margin:30px 0 4px;padding-bottom:6px;border-bottom:2px solid var(--gold);display:inline-block}
+  .telop b{color:var(--navy)}.telop .a{color:#9a7b27;font-weight:700}.telop .yomi{color:var(--blue);font-weight:700}
+  h2.sec{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:19px;margin:26px 0 4px;padding-bottom:6px;border-bottom:2px solid var(--gold);display:inline-block}
   .note{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin:12px 0;color:#7a5f1e}
   footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:34px}
-  @media(max-width:640px){.howto .g{grid-template-columns:1fr}.narr p{font-size:14px}}
-  @media print{body{background:#fff}.scene{page-break-inside:avoid}}
+  @media(max-width:640px){.howto .g{grid-template-columns:1fr}.narr p{font-size:14px}.types{grid-template-columns:1fr}}
+  @media print{body{background:#fff}.scene,.chap{page-break-inside:avoid}}
 </style>
 </head>
 <body>
 <header>
-  <div class="mark">YAMAGUCHI-RYU RIYODO ／ 座学 LESSON — PILOT v2</div>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ 座学 LESSON — 完成版（約20分）</div>
   <h1>PG10 座学編｜なぜ「頭の地図」を知ると、選ばれ続けるのか</h1>
-  <div class="meta"><span>解剖学①（座学バージョン）</span><span>形式：図解スライド＋AI吹き替えナレーション</span><span>目安：約10分（11シーン）</span></div>
+  <div class="meta"><span>解剖学①（座学）</span><span>5章立て・17シーン</span><span>目安：約20分</span><span>図解＋AI吹き替え＋参加型</span></div>
 </header>
 <div class="wrap">
 
   <div class="howto">
     <h2>この座学動画の作り方（制作メモ）</h2>
     <div class="g">
-      <div class="c visual"><b>🎬 映像＝この画面がそのまま完成ビジュアル</b>各シーンの図解スライドを画面収録、または1枚ずつ書き出して並べる。文字は最小限・図で見せる設計。</div>
-      <div class="c audio"><b>🎙 音声＝各シーンの青枠原稿を後から吹き込み</b>太郎さんの声のクローンAIに、青枠のナレ原稿を読ませて乗せる。短文・話し言葉・難読語に読み仮名付き。</div>
-      <div class="c"><b>🎯 ねらい</b>①図解で視覚化 ②身近な例え ③自分の頭で確かめる参加、で「必ず残る」座学に。解剖の正確さ・薬機法も監修反映済み。</div>
+      <div class="c visual"><b>🎬 映像＝この画面がそのまま完成ビジュアル</b>各シーンの図解スライドを画面収録／書き出して並べる。文字は最小・図で見せる。</div>
+      <div class="c audio"><b>🎙 音声＝各シーンの青枠原稿を後から吹き込み</b>太郎さんの声クローンAIで青枠を読む。短文・話し言葉・難読語に読み仮名。</div>
+      <div class="c"><b>🎯 質：解剖監修・薬機法・教育定着・デザインの4視点レビュー反映済み</b></div>
     </div>
   </div>
 
-  <h2 class="sec">シーン構成（図解＋ナレーション原稿）</h2>
+  <div class="engage">
+    <h3>😴を作らない、8つの飽きさせない仕掛け（この動画に内蔵）</h3>
+    <div class="row">
+      <span class="chip">① 5章立て＋進捗ドット（現在地が分かる）</span>
+      <span class="chip">② クイズ×3（考えて一拍おく）</span>
+      <span class="chip">③ やってみて×4（自分の頭を触る参加）</span>
+      <span class="chip">④ お客様シーンの情景描写</span>
+      <span class="chip">⑤ よくある勘違い（意外性）</span>
+      <span class="chip">⑥ お客様タイプ別の応用（自分ごと化）</span>
+      <span class="chip">⑦ 使えるフレーズ集（明日使える実用）</span>
+      <span class="chip">⑧ 緩急（重い解剖→軽い参加）</span>
+    </div>
+  </div>
+
+  <div class="dur">⏱ <b>尺の検算：</b>ナレーション実文の文字数から算出（下部フッターに自動集計の考え方を明記）。読み上げ＋クイズ/参加の「間」を含めて<b>約20分</b>に設計。速すぎ・間延びを避けるため、各章あたり3〜4分で区切り、章の変わり目で画面・BGMを切り替える。</div>
+
+  <!-- ============ 第1章 ============ -->
+  <div class="chap"><span class="cn">第1章</span><span class="ct">なぜ「頭の地図」で差がつくのか</span><span class="cp"><i class="on"></i><i></i><i></i><i></i><i></i></span></div>
 
   <!-- S1 -->
   <div class="scene">
-    <div class="bar"><span class="no">S1</span><span class="nm">つかみ（タイトル）</span><span class="dur">0:00–0:40</span></div>
+    <div class="bar"><span class="no">S1</span><span class="nm">つかみ（意外なフック）</span><span class="dr">0:00–0:45</span></div>
     <div class="slide dark"><div class="pad" style="align-items:center;text-align:center">
       <div class="kick">解剖学①　座学編</div>
-      <div class="big">同じ強さで揉んでいるのに、<br><span class="em">選ばれる人</span>と、選ばれない人がいる。</div>
-      <div class="sub">その差は「手の力」ではありません。頭の“地図”が、頭に入っているかどうかです。</div>
+      <div class="big">腕がいいのに、<span class="em">選ばれない人</span>がいる。<br>その差は、たった“ひとこと”。</div>
+      <div class="sub">同じ強さ、同じ時間で揉んでも、また来てもらえる人と、一度きりの人がいます。分かれ目は、手の力ではありません。</div>
     </div></div>
     <div class="narr"><div class="h"></div>
-      <p>同じ強さで、同じ時間、頭をほぐしている。なのに、また来てもらえる人と、一度きりで終わる人がいます。この違いは、手の力ではありません。頭の「地図」が、頭に入っているかどうか。今日は、その地図を、いっしょに描いていきます。</p>
+      <p>いきなりですが、質問です。腕のいい施術者が、必ず選ばれ続けるかというと——そうではありません。同じ強さで、同じ時間、頭をほぐしている。なのに、また来てもらえる人と、一度きりで終わる人がいます。この違いは、手の力ではないんです。分かれ目は、施術中の、たったひとことにあります。腕が同じでも、この一言があるかないかで、「また来よう」と思ってもらえるかが、変わるんです。今日はその「ひとこと」の正体、頭の地図を、いっしょに手に入れます。</p>
     </div>
-    <div class="telop"><b>📺画面：</b>ネイビー背景・ゴールド見出し。静かなBGM。</div>
+    <div class="telop"><b>📺画面：</b>ネイビー背景・静かなBGM。「腕がいいのに選ばれない」で一瞬止める。</div>
   </div>
 
   <!-- S2 -->
   <div class="scene">
-    <div class="bar"><span class="no">S2</span><span class="nm">問題提起（2人の施術者）</span><span class="dur">0:40–1:40</span></div>
+    <div class="bar"><span class="no">S2</span><span class="nm">この20分で手に入るもの（アジェンダ）</span><span class="dr">0:45–1:30</span></div>
+    <div class="slide"><div class="pad">
+      <div class="kick">この20分の地図（全5章）</div>
+      <div class="layers" style="gap:1.3cqw">
+        <div class="ly" style="background:#eef2f8;color:var(--navy)">第1章　なぜ地図が必要か <small>信頼と単価の話</small></div>
+        <div class="ly" style="background:#eef2f8;color:var(--navy)">第2章　頭の全体像 <small>層構造・水泳帽</small></div>
+        <div class="ly galea">第3章　4つの場所を歩く <small>今日の主役</small></div>
+        <div class="ly" style="background:#eef2f8;color:var(--navy)">第4章　現場で差がつく <small>勘違い・タイプ別</small></div>
+        <div class="ly" style="background:#eef2f8;color:var(--navy)">第5章　選ばれ続ける仕組み <small>フレーズ集</small></div>
+      </div>
+    </div></div>
+    <div class="narr"><div class="h"></div>
+      <p>今日の流れを、先にお見せします。全部で5章です。第1章で、なぜ地図が必要かを。第2章で、頭の全体像を。第3章が、今日の主役、4つの場所を、ひとつずつ歩きます。第4章で、現場で差がつく使い方を。最後の第5章で、明日から使えるフレーズまで、お渡しします。途中、クイズも出します。頭の中で、いっしょに考えてください。手も、少し動かしてもらいます。見るだけの20分ではなく、体で覚える20分にしましょう。それでは、始めましょう。</p>
+    </div>
+    <div class="telop"><b>📺画面：</b>5章を上から点灯。第3章（主役）をゴールドで強調。以後、章の変わり目でこの地図に戻ると現在地が伝わる。</div>
+  </div>
+
+  <!-- S3 -->
+  <div class="scene">
+    <div class="bar"><span class="no">S3</span><span class="nm">2人の施術者（信頼の差）</span><span class="dr">1:30–2:40</span></div>
     <div class="slide"><div class="pad" style="justify-content:center">
       <div class="kick">なぜ差がつくのか</div>
       <div class="vs">
         <div class="card bad"><div class="ic">🤐</div><div class="lb">黙って揉む人</div><div class="ds">上手いけれど、何をしているか伝わらない。「気持ちよかった」で終わる。</div></div>
         <div class="mid">VS</div>
-        <div class="card good"><div class="ic">🗣️</div><div class="lb">場所を語れる人</div><div class="ds">「ここは側頭筋、噛みしめでかたく感じやすい場所です」。“分かってる人”だと伝わる。</div></div>
+        <div class="card good"><div class="ic">🗣️</div><div class="lb">場所を語れる人</div><div class="ds">「ここは側頭筋、噛みしめでかたく感じやすい所です」。“分かってる人”だと伝わる。</div></div>
       </div>
     </div></div>
     <div class="narr"><div class="h"></div>
-      <p>ここに、2人の施術者がいます。1人は、とても上手に揉みます。でも、黙っています。お客様は「気持ちよかった」で、帰ります。もう1人は、施術しながら、こう言います。「ここは側頭筋。噛みしめのクセがある方は、かたく感じやすい場所と言われています」。同じ手の技術でも、あとの一言があるだけで、“この人は分かっているな”と伝わります。人は、分かっている人に、また任せたくなります。</p>
+      <p>ここに、2人の施術者がいます。1人は、とても上手に揉みます。でも、黙っています。お客様は「気持ちよかった」で、帰ります。もう1人は、施術しながら、こう言います。「ここは側頭筋。噛みしめのクセがある方は、かたく感じやすい場所と言われています」。同じ手の技術でも、あとの一言があるだけで、印象がまるで違います。人は、分かっている人に、また任せたくなる。そして、分かっている人には、少し高くても、お願いしたくなるんです。信頼は、そのまま単価につながります。実際、同じ30分でも、黙って施術する人と、要所で一言そえる人とでは、次の予約の入り方が、まるで違ってきます。技術は、同じでも、です。</p>
     </div>
     <div class="telop"><b>📺画面：</b>右（語れる人）を最後にゴールド枠でハイライト。<span class="yomi">AI読み：側頭筋＝そくとうきん</span></div>
-    <div class="analogy-note"><b>直し：</b>「噛みしめでこる」→「かたく感じやすい場所と言われています」に緩和（薬機法・因果の断定回避）。</div>
-  </div>
-
-  <!-- S3 -->
-  <div class="scene">
-    <div class="bar"><span class="no">S3</span><span class="nm">ゴール提示（カーナビの例え）</span><span class="dur">1:40–2:30</span></div>
-    <div class="slide"><div class="pad">
-      <div class="kick">この座学のゴール</div>
-      <div class="big">頭に<span class="em">“地図”</span>が入っている人は、迷わない。</div>
-      <div class="sub">道を聞いたとき——「たぶん、こっち…」より、「まっすぐ、次の角を右」と即答する人に、安心して任せますよね。施術もまったく同じです。</div>
-      <div class="analogy"><div class="h">たとえるなら</div><div class="b">🧭 カーナビが入った頭<br>“どこを触っているか”を即答できる</div></div>
-    </div></div>
-    <div class="narr"><div class="h"></div>
-      <p>道を聞いたとき、「たぶん、こっちかな…」と迷う人と、「この道をまっすぐ、次の角を右」と、はっきり答える人。どちらに、安心して任せたいですか。頭の中にカーナビが入っている人は、迷いません。施術も同じです。頭の地図が入っていれば、「今ここは側頭筋です」と、自然に言えるようになります。この座学のゴールは、あなたの頭に、その地図を入れることです。</p>
-    </div>
-    <div class="telop"><b>📺画面：</b>右下に「🧭カーナビ」バッジ（ネイビー地・ゴールド文字）。</div>
   </div>
 
   <!-- S4 -->
   <div class="scene">
-    <div class="bar"><span class="no">S4</span><span class="nm">頭は4つの層（水泳帽の例え）＋断面図</span><span class="dur">2:30–3:50</span></div>
+    <div class="bar"><span class="no">S4</span><span class="nm">ゴール＝頭にカーナビを入れる</span><span class="dr">2:40–3:30</span></div>
     <div class="slide"><div class="pad">
-      <div class="kick">まず全体像：頭は層でできている</div>
+      <div class="kick">この座学のゴール</div>
+      <div class="big">頭に<span class="em">“地図”</span>が入っている人は、迷わない。</div>
+      <div class="sub">「たぶんこっち…」より、「まっすぐ、次の角を右」と即答する人に、安心して任せますよね。施術も同じです。</div>
+      <div class="analogy"><div class="h">たとえるなら</div><div class="b">🧭 カーナビが入った頭<br>“どこを触っているか”を即答できる</div></div>
+    </div></div>
+    <div class="narr"><div class="h"></div>
+      <p>道を聞いたとき、「たぶん、こっちかな…」と迷う人と、「まっすぐ、次の角を右」と、はっきり答える人。どちらに、任せたいですか。頭の中にカーナビが入っている人は、迷いません。施術も、まったく同じです。頭の地図が入っていれば、「今ここは側頭筋です」と、自然に、迷わず言えます。この座学のゴールは、あなたの頭に、そのカーナビを入れること。たった4つの場所を覚えるだけで、入ります。難しい医学用語を、たくさん覚える必要は、ありません。名前は、4つだけ。場所は、自分の頭でさわれる範囲。それだけで、明日の施術が、変わります。</p>
+    </div>
+    <div class="telop"><b>📺画面：</b>右下に「🧭カーナビ」バッジ。地図が浮かぶモーション可。</div>
+  </div>
+
+  <!-- ============ 第2章 ============ -->
+  <div class="chap"><span class="cn">第2章</span><span class="ct">まず、頭の全体像をつかむ</span><span class="cp"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></div>
+
+  <!-- S5 QUIZ1 -->
+  <div class="scene">
+    <div class="bar"><span class="no">S5</span><span class="nm">🧩 クイズ①（考えさせる）</span><span class="dr">3:30–4:05</span></div>
+    <div class="slide quiz"><div class="pad">
+      <div class="qz">
+        <div class="kick" style="text-align:center">クイズ①</div>
+        <div class="qq">頭皮は層になっています。<br>施術で“さわる”のは、どこまで？</div>
+        <div class="opts"><span class="op">A 全部</span><span class="op">B 上の方だけ</span><span class="op">C 骨まで</span></div>
+        <div class="think">🤔 …3秒、考えてみてください</div>
+      </div>
+    </div></div>
+    <div class="narr"><div class="h"></div>
+      <p><span class="qz2">では、さっそくクイズです。</span>頭は、いくつかの層が、重なってできています。私たちが施術で、実際にさわるのは、どこまでだと思いますか。全部か。上の方だけか。それとも、骨まで届くのか。…どうでしょう。答えは、次のシーンで、断面を見ながら確かめます。</p>
+    </div>
+    <div class="telop"><b>📺画面：</b>紫系のクイズ専用トーン。選択肢A/B/Cを表示。「🤔3秒」でシンキング音＋一拍の間。</div>
+  </div>
+
+  <!-- S6 -->
+  <div class="scene">
+    <div class="bar"><span class="no">S6</span><span class="nm">答え合わせ：頭は層構造（水泳帽）＋断面図</span><span class="dr">4:05–5:30</span></div>
+    <div class="slide"><div class="pad">
+      <div class="kick">答え：さわるのは“上の方だけ”（B）</div>
       <div class="figrow">
         <img src="img/PG10_02_scalp_layers_cross.png" alt="頭皮の断面（層構造）">
         <div class="tx"><div class="layers">
@@ -181,15 +271,17 @@
       </div>
     </div></div>
     <div class="narr"><div class="h"></div>
-      <p>地図を描く前に、頭の断面を見ます。頭は、層になっています。いちばん外が、皮ふ。その下に、うすい脂肪の層、皮下があります。さらにその下が、今日の主役です。頭全体を、帽子のように包む、一枚の膜。帽状腱膜といいます。そして、この膜と、これからさわる筋肉は、ひとつながりです。膜が、筋肉どうしをつないでいます。イメージは、水泳帽。頭を、スッポリ、一枚で包んでいます。いちばん下が、骨。骨は、さわる相手ではなく、場所を確かめる目印に使います。</p>
+      <p>答えは、B。さわるのは、上の方だけです。断面を見てください。いちばん外が、皮ふ。その下に、うすい脂肪の層、皮下。さらにその下が、今日の主役。頭全体を、帽子のように包む、一枚の膜。帽状腱膜といいます。そして、この膜と、これからさわる筋肉は、ひとつながりです。膜が、筋肉どうしをつないでいます。イメージは、水泳帽。頭を、スッポリ、一枚で包んでいます。いちばん下が、骨。骨は、さわる相手ではなく、場所を確かめる、目印に使います。ですから、私たちがさわるのは、皮ふから筋肉までの、上の層。この感覚を、まず持ってください。</p>
     </div>
-    <div class="telop"><b>📺画面：</b><span class="a">img/PG10_02（断面図）</span>を左に。③帽状腱膜＋筋肉の行をゴールドで強調。<span class="yomi">AI読み：帽状腱膜＝ぼうじょうけんまく</span></div>
-    <div class="analogy-note"><b>直し：</b>①皮下（脂肪の層）を追加（頭皮5層の正しい順）②「帽状腱膜」と「筋肉」を別レイヤーにせず<b>同一の“一枚の帽子”</b>に統合（前頭筋・後頭筋が宙に浮く誤りを回避）。<b>要再生成：</b>断面図PG10_02は頭の丸みと各層ラベル入りに差し替え予定。</div>
+    <div class="telop"><b>📺画面：</b><span class="a">img/PG10_02（断面図）</span>を左に。③をゴールドで強調。図の①②③④の番号と左のバーの番号を対応させる。<span class="yomi">AI読み：帽状腱膜＝ぼうじょうけんまく</span></div>
   </div>
 
-  <!-- S5 -->
+  <!-- ============ 第3章 ============ -->
+  <div class="chap"><span class="cn">第3章</span><span class="ct">4つの場所を、ひとつずつ歩く</span><span class="cp"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></div>
+
+  <!-- S7 map -->
   <div class="scene">
-    <div class="bar"><span class="no">S5</span><span class="nm">今日の3つの筋肉＋1つの膜（筋肉マップ）</span><span class="dur">3:50–4:40</span></div>
+    <div class="bar"><span class="no">S7</span><span class="nm">今日の4か所（全体マップ）</span><span class="dr">5:30–6:20</span></div>
     <div class="slide"><div class="pad">
       <div class="kick">覚えるのは、たった4か所</div>
       <div class="figrow">
@@ -197,126 +289,201 @@
         <div class="tx">
           <div class="lbl"><span class="dot" style="background:var(--gold)"></span>前頭筋（ぜんとうきん）<small>＝おでこ</small></div>
           <div class="lbl"><span class="dot" style="background:#8a94a8"></span>側頭筋（そくとうきん）<small>＝こめかみ</small></div>
-          <div class="lbl"><span class="dot" style="background:#b9c0cf"></span>後頭部の筋肉<small>＝後ろ（前頭筋と対になる後ろ側）</small></div>
+          <div class="lbl"><span class="dot" style="background:#b9c0cf"></span>後頭部の筋肉<small>＝後ろ（前頭筋と対）</small></div>
           <div class="lbl"><span class="dot" style="background:var(--gold-l)"></span>帽状腱膜<small>＝てっぺん（前後をつなぐ膜）</small></div>
         </div>
       </div>
     </div></div>
     <div class="narr"><div class="h"></div>
-      <p>今日覚える場所は、4つです。おでこの、前頭筋。こめかみの、側頭筋。後ろの、後頭部の筋肉。そして、てっぺんを包む、帽状腱膜。じつは、おでこの前頭筋と、後ろの筋肉は、さっきの膜でつながった、ひとつの仲間です。前と後ろで、対になっています。この4つの、名前と、場所と、性格を、順番に見ていきます。</p>
+      <p>ここから第3章。今日の主役、4つの場所です。おでこの、前頭筋。こめかみの、側頭筋。後ろの、後頭部の筋肉。そして、てっぺんを包む、帽状腱膜。じつは、おでこの前頭筋と、後ろの筋肉は、さっきの膜でつながった、ひとつの仲間。前と後ろで、対になっています。この4つを、これから、ひとつずつ、場所・働き・お客様のシーン・さわり方の順で、歩いていきます。画面の下に、進捗の丸が出ます。今、いくつ覚えたか、いっしょに数えましょう。</p>
     </div>
-    <div class="telop"><b>📺画面：</b><span class="a">img/PG10_01（筋肉マップ）</span>を左に。名前が出るたび対応部位を発光。<span class="yomi">AI読み：前頭筋＝ぜんとうきん</span></div>
-    <div class="analogy-note"><b>直し：</b>「後頭筋（独立筋）」→「後頭部の筋肉（前頭筋と対になる後ろ側）」。前頭筋・後頭部の筋は帽状腱膜でつながる一つの筋（後頭前頭筋）という事実に整合。</div>
+    <div class="telop"><b>📺画面：</b><span class="a">img/PG10_01</span>を左に。以後の各部位シーンの右下に進捗ドット（●○○○…）を常時表示。</div>
   </div>
 
-  <!-- S6 -->
+  <!-- S8 前頭筋 -->
   <div class="scene">
-    <div class="bar"><span class="no">S6</span><span class="nm">前頭筋（眉上げの例え）＋参加</span><span class="dur">4:40–5:40</span></div>
+    <div class="bar"><span class="no">S8</span><span class="nm">① 前頭筋（場所→働き→シーン→参加→フレーズ）</span><span class="dr">6:20–7:50</span></div>
     <div class="slide"><div class="pad">
-      <div class="kick">① 前頭筋（おでこ）</div>
-      <div class="big">眉を上げる筋肉。<br><span class="em">画面を見続ける</span>と、負担がかかりやすい。</div>
-      <div class="tryit">おでこに指を当てて、眉を2〜3回、上げ下げ。動く筋肉、それが前頭筋です。</div>
-      <div class="analogy"><div class="h">たとえるなら</div><div class="b">😳 驚いた顔のキープ<br>眉を上げたまま固まると額が張る</div></div>
+      <div class="kick">① 前頭筋（おでこ）　進捗 ●○○○</div>
+      <div class="big">眉を上げる筋肉。<span class="em">画面の見過ぎ</span>で張りやすい。</div>
+      <div class="scenario"><div class="pic">👩‍💻</div><div class="q">一日中パソコンとにらめっこの事務のお客様。<b>おでこと眉間が、こわばっています。</b></div></div>
+      <div class="tryit">おでこに指を当て、眉を2〜3回上げ下げ。動く筋肉、それが前頭筋。</div>
+      <div class="phrase">「おでこ、画面の見過ぎで張りやすい所ですよ」</div>
     </div></div>
     <div class="narr"><div class="h"></div>
-      <p>1つ目は、前頭筋。おでこにある、うすい筋肉です。これは、眉を上げるときに使います。<span class="do">では、いっしょに。おでこに指を当てて、眉を、二、三回、上げ下げしてみてください。</span>動いていますね。それが、前頭筋です。画面をじっと見続けるときなど、無意識に眉を上げるクセがあると、この筋肉に負担がかかりやすいと言われています。驚いた顔を、キープしているようなものです。ここは、皮ふと、うすい層の下が、すぐ骨に近い場所。だから、強く押し込みません。皮ふごと、下から上へ、ゆっくりなで上げる。それで十分だと言われています。</p>
+      <p>1つ目、前頭筋。おでこにある、うすい筋肉です。働きは、眉を上げること。<span class="do">では、いっしょに。おでこに指を当てて、眉を、二、三回、上げ下げしてみてください。</span>動いていますね。それが、前頭筋です。想像してください。一日中、パソコンとにらめっこの、事務のお客様。画面を見続けると、無意識に眉が上がり、おでこがこわばりやすいと言われています。ここは、皮ふとうすい層の下が、すぐ骨に近い場所。だから、強く押し込まず、皮ふごと、下から上へ、ゆっくりなで上げる。それで十分です。そして、こう添えます。「おでこ、画面の見過ぎで、張りやすい場所ですよ」。この一言で、お客様は「ちゃんと見てくれている」と感じます。おでこがゆるむと、目のまわりまで軽く感じやすいと言われていて、パソコン仕事の方には、とくに喜ばれる場所です。</p>
     </div>
-    <div class="telop"><b>📺画面：</b>おでこ部位を発光。右下に「😳驚き顔キープ」バッジ。左に✋やってみて。</div>
+    <div class="telop"><b>📺画面：</b>おでこ発光／情景👩‍💻／✋やってみて／💬フレーズ。進捗●○○○。</div>
   </div>
 
-  <!-- S7 -->
+  <!-- S9 側頭筋 + quiz2 -->
   <div class="scene">
-    <div class="bar"><span class="no">S7</span><span class="nm">側頭筋（グーの例え）＋参加</span><span class="dur">5:40–6:50</span></div>
+    <div class="bar"><span class="no">S9</span><span class="nm">② 側頭筋（クイズ②導入→場所→シーン→参加→フレーズ）</span><span class="dr">7:50–9:30</span></div>
     <div class="slide"><div class="pad">
-      <div class="kick">② 側頭筋（こめかみ）</div>
-      <div class="big">噛む筋肉。<span class="em">食いしばり</span>のクセで、かたく感じやすい。</div>
-      <div class="tryit">こめかみに手を当てて、奥歯をグッと噛む。ふくらむのが側頭筋です。</div>
-      <div class="analogy"><div class="h">たとえるなら</div><div class="b">✊ ずっとグーを握った手<br>あごが一日グーを握り続けている状態</div></div>
+      <div class="kick">② 側頭筋（こめかみ）　進捗 ●●○○</div>
+      <div class="big">噛む筋肉。<span class="em">多くの人が“いちばん”</span>かたく感じる場所。</div>
+      <div class="scenario"><div class="pic">😬</div><div class="q">夜、無意識に食いしばる方。<b>朝、あごとこめかみが重い</b>、とおっしゃいます。</div></div>
+      <div class="tryit">こめかみに手を当て、奥歯をグッと噛む。ふくらむのが側頭筋。</div>
+      <div class="phrase">「ここは側頭筋。噛みしめでかたく感じやすい所です」</div>
     </div></div>
     <div class="narr"><div class="h"></div>
-      <p>2つ目は、側頭筋。こめかみから、耳の上に広がる、おうぎ形の筋肉です。これは、噛むときに使います。<span class="do">こめかみに、手を当ててください。そのまま、奥歯を、グッと噛んでみてください。</span>ふくらみましたね。それが、側頭筋です。想像してください。手で、グーを、ずっと握りしめていたら、手は疲れて、かたくなります。食いしばりが続く方は、あごが、一日じゅうグーを握り続けているようなもの。この筋肉が、こわばりやすいと言われています。ここは、指の腹で、面を広くとらえて、小さな円を、ゆっくり描く。押し込むのではなく、動かす。それが基本です。</p>
+      <p><span class="qz2">ここでクイズ②。</span>頭の中で、いちばん“こり”を感じる方が多いのは、どこでしょう。おでこ？こめかみ？後ろ？…正解は、こめかみ。2つ目の、側頭筋です。こめかみから、耳の上に広がる、おうぎ形の筋肉。働きは、噛むこと。<span class="do">こめかみに手を当てて、奥歯を、グッと噛んでみてください。</span>ふくらみましたね。それが、側頭筋です。夜、無意識に食いしばる方は、朝、あごやこめかみが重い、とよくおっしゃいます。手で、グーをずっと握り続けたら、かたくなりますよね。食いしばりも、同じ。あごが一日じゅう、グーを握っているようなもの。だからこわばりやすいと言われています。ここは、面を広くとらえ、小さな円を、ゆっくり。押さず、動かす。そして「ここは側頭筋。噛みしめで、かたく感じやすい所です」と添えます。ここは、フェイスラインを気にされる方が、関心を持ちやすい場所でもあります。だからこそ、名前を言えると、会話がはずみます。</p>
     </div>
-    <div class="telop"><b>📺画面：</b>こめかみ発光＋「奥歯を噛む→ふくらむ」矢印。右下「✊グーを握り続ける手」。</div>
+    <div class="telop"><b>📺画面：</b>こめかみ発光／情景😬／✋やってみて／💬フレーズ。進捗●●○○。<span class="yomi">クイズ②の正解「こめかみ」は音声のみで即答→テロップで確定。</span></div>
   </div>
 
-  <!-- S8 -->
+  <!-- S10 後ろの筋肉+膜 -->
   <div class="scene">
-    <div class="bar"><span class="no">S8</span><span class="nm">前と後ろは1枚の膜（俯瞰図）＋参加</span><span class="dur">6:50–7:50</span></div>
+    <div class="bar"><span class="no">S10</span><span class="nm">③ 後ろの筋肉＋帽状腱膜（つながり）＋参加</span><span class="dr">9:30–11:00</span></div>
     <div class="slide"><div class="pad">
-      <div class="kick">③ 後ろの筋肉＋帽状腱膜（つながりの話）</div>
+      <div class="kick">③ 後ろの筋肉＋帽状腱膜　進捗 ●●●○</div>
       <div class="figrow">
         <img src="img/PG10_03_galea_top_view.png" alt="頭頂からの俯瞰・帽状腱膜が前後をつなぐ">
         <div class="tx">
-          <div class="big" style="font-size:4.3cqw">前と後ろは、<span class="em">1枚の膜</span>で引っぱり合っている。</div>
-          <div class="sub" style="font-size:2.35cqw">だから、おでこの張りが後頭部に伝わりやすい。＝おでこを軽くすると、後ろも軽く感じやすい。</div>
-          <div class="tryit" style="margin-top:1.8cqw">頭を軽く前に倒すと、後ろが“ピン”と張る。それが後ろの筋肉です。</div>
+          <div class="big" style="font-size:4.1cqw">前と後ろは、<span class="em">1枚の膜</span>で引っぱり合う。</div>
+          <div class="sub" style="font-size:2.3cqw">だから、おでこを軽くすると、後ろも軽く感じやすい。</div>
+          <div class="tryit" style="margin-top:1.6cqw">頭を軽く前に倒すと、後ろが“ピン”と張る。そこが後ろの筋肉。</div>
         </div>
       </div>
     </div></div>
     <div class="narr"><div class="h"></div>
-      <p>3つ目は、後頭部の筋肉です。ここで、さっきの水泳帽を思い出してください。おでこの前頭筋と、後ろの筋肉は、この一枚の膜、帽状腱膜で、つながっています。前と後ろで、帽子を引っぱり合っているんです。<span class="do">頭を、軽く前に倒してみてください。後ろの首すじが、ピンと張りますね。</span>そこが、後ろの筋肉です。前と後ろがつながっているので、おでこの張りは、後頭部にも伝わりやすいと言われています。逆に言えば、おでこを軽くすると、後ろも軽く感じやすい、ということです。ここは、後頭部の骨の縁を目印に、ゆっくり支えるように触れます。</p>
+      <p>3つ目は、後頭部の筋肉です。ここで、さっきの水泳帽を思い出してください。おでこの前頭筋と、後ろの筋肉は、この一枚の膜、帽状腱膜で、つながっています。前と後ろで、帽子を引っぱり合っているんです。<span class="do">頭を、軽く前に倒してみてください。後ろの首すじが、ピンと張りますね。</span>そこが、後ろの筋肉です。前と後ろがつながっているから、おでこの張りは、後頭部にも伝わりやすいと言われています。逆に言えば、おでこを軽くすると、後ろも軽く感じやすい。これは、施術の順番を考えるときの、大きなヒントになります。</p>
     </div>
-    <div class="telop"><b>📺画面：</b><span class="a">img/PG10_03（俯瞰図）</span>を左に。前⇄後ろの両矢印アニメ。バッジは置かず1メッセージに集中。</div>
-    <div class="analogy-note"><b>直し：</b>旧S8の3情報（膜つながり／緊張伝達／重量）のうち、ここは<b>「つながり」1つに集中</b>。重量の話は次のS9に分離（1シーン1メッセージ）。</div>
+    <div class="telop"><b>📺画面：</b><span class="a">img/PG10_03（俯瞰図）</span>を左に。前⇄後ろ両矢印アニメ。進捗●●●○。バッジは置かず1メッセージに集中。</div>
   </div>
 
-  <!-- S9 -->
+  <!-- S11 重さ + scenario -->
   <div class="scene">
-    <div class="bar"><span class="no">S9</span><span class="nm">後頭部の負担（頭の重さの例え）</span><span class="dur">7:50–8:40</span></div>
+    <div class="bar"><span class="no">S11</span><span class="nm">後頭部の負担（頭の重さの例え）＋シーン</span><span class="dr">11:00–12:00</span></div>
     <div class="slide"><div class="pad" style="justify-content:center">
       <div class="kick">なぜ後ろは疲れやすいのか</div>
-      <div class="weight">
-        <div class="bt"><div class="fig">🙇</div><div class="n" style="font-size:2.8cqw">前かがみの姿勢</div></div>
-        <div class="eq">＝</div>
-        <div class="bt"><div class="n">約5<small>キロ（頭の重さ）</small></div></div>
-        <div class="eq">≒</div>
-        <div class="bt"><div class="pb">🧴🧴🥤</div><div class="n" style="font-size:2.4cqw">2Lペット 約2.5本</div></div>
+      <div class="weight" style="display:flex;gap:4cqw;align-items:center;justify-content:center">
+        <div style="text-align:center"><div style="font-size:11cqw">🙇</div><div style="font-size:2.5cqw;font-weight:800;color:var(--navy)">前かがみ</div></div>
+        <div style="font-size:3.6cqw;color:var(--gold);font-weight:800">＝</div>
+        <div style="text-align:center"><div style="font-size:6.4cqw;font-weight:800;color:var(--navy);font-family:'Hiragino Mincho ProN',serif">約5<span style="font-size:2.4cqw">キロ</span></div><div style="font-size:2.1cqw;color:var(--mut)">頭の重さ</div></div>
+        <div style="font-size:3.6cqw;color:var(--gold);font-weight:800">≒</div>
+        <div style="text-align:center"><div style="font-size:8cqw">🥤🥤🥤</div><div style="font-size:2.3cqw;font-weight:800;color:var(--navy)">2Lペット 約2.5本</div></div>
       </div>
-      <div class="sub" style="text-align:center;margin-top:3cqw">その重さを、首の後ろ側で支え続ける。だから後頭部まわりは負担がたまりやすい。</div>
+      <div class="scenario" style="margin-top:2.4cqw"><div class="pic">📱</div><div class="q">一日中スマホを見る方。前かがみで、<b>首の後ろがパンパン</b>、と。</div></div>
     </div></div>
     <div class="narr"><div class="h"></div>
-      <p>では、なぜ、後ろは疲れやすいのか。頭の重さは、およそ5キロ、とされています。2リットルのペットボトルなら、2本半くらい。けっこうな重さです。前かがみで、スマホを見続けると、その重みを、首の後ろ側で、支え続けることになります。だから、後頭部から首にかけては、負担がたまりやすいと言われています。ここを触れるときは、グリグリこするのではなく、頭の重みを、指で受けとめるように、ゆっくり支える。それが基本です。</p>
+      <p>では、なぜ、後ろは疲れやすいのか。頭の重さは、およそ5キロ、とされています。2リットルのペットボトルなら、2本半くらい。けっこうな重さです。一日中スマホを見る方は、前かがみで、その重みを、首の後ろ側で、支え続けることになります。だから、首の後ろがパンパンです、とよくおっしゃる。ここを触れるときは、グリグリこするのではなく、頭の重みを、指で受けとめるように、ゆっくり支える。それが基本です。「頭の重み、ずっと支えて、疲れやすい所ですよ」。この一言も、よく効きます。最近は、スマホを見る時間が増えて、後ろの疲れを感じる方が、とても多い。だから、後ろを丁寧に扱うと、印象に残りやすいんです。</p>
     </div>
-    <div class="telop"><b>📺画面：</b>🙇＝約5キロ≒2Lペット2.5本、の重さ図解。<span class="yomi">AI読み：5キロ＝ごキロ</span></div>
-    <div class="analogy-note"><b>直し：</b>「後頭筋が5kgを支える」→力学的に不正確なので主語を<b>「首の後ろ側」</b>に。ボウリング玉（号数で3.6〜7.3kgと幅）は避け、<b>2Lペット約2.5本</b>で安定化。「約5kgとされています」で断定回避。</div>
+    <div class="telop"><b>📺画面：</b>🙇＝約5キロ≒2Lペット2.5本の重さ図解＋情景📱。<span class="yomi">AI読み：5キロ＝ごキロ</span></div>
   </div>
 
-  <!-- S10 -->
+  <!-- S12 帽状腱膜まとめ -->
   <div class="scene">
-    <div class="bar"><span class="no">S10</span><span class="nm">なぜ選ばれ続けるのか（好循環ループ）</span><span class="dur">8:40–9:20</span></div>
+    <div class="bar"><span class="no">S12</span><span class="nm">④ 帽状腱膜（まとめ役）＋4つ達成</span><span class="dr">12:00–12:50</span></div>
+    <div class="slide"><div class="pad">
+      <div class="kick">④ 帽状腱膜（てっぺん・つなぎ役）　進捗 ●●●●</div>
+      <div class="big">4つ、そろいました。<br>てっぺんの膜が、<span class="em">全部をつなぐ</span>。</div>
+      <div class="sub">前頭筋・側頭筋・後ろの筋肉——ぜんぶ、帽状腱膜という一枚の帽子の上のできごと。だから頭は「面」でつながっている。</div>
+    </div></div>
+    <div class="narr"><div class="h"></div>
+      <p>4つ目は、あらためて、帽状腱膜。頭のてっぺんを包む、一枚の膜です。これまで見てきた、前頭筋、側頭筋、後ろの筋肉。じつは、ぜんぶ、この帽状腱膜という帽子の上の、できごとでした。だから、頭は、点ではなく、面でつながっています。一か所をゆるめると、離れた場所も、ゆるみやすい。これで、4つ、そろいました。おでこ、こめかみ、後ろ、そして、てっぺんの膜。あなたの頭に、地図が、できあがりました。</p>
+    </div>
+    <div class="telop"><b>📺画面：</b>進捗●●●●（達成）。4部位が1枚の膜の上でつながるアニメ。達成音。</div>
+  </div>
+
+  <!-- ============ 第4章 ============ -->
+  <div class="chap"><span class="cn">第4章</span><span class="ct">現場で差がつく使い方</span><span class="cp"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></div>
+
+  <!-- S13 mistakes -->
+  <div class="scene">
+    <div class="bar"><span class="no">S13</span><span class="nm">よくある3つの勘違い（意外性）</span><span class="dr">12:50–14:30</span></div>
+    <div class="slide"><div class="pad">
+      <div class="kick">ここ、勘違いしがちです</div>
+      <div class="mis">
+        <div class="m"><div class="x">❌ 強く押すほど効く</div><div class="ar">→</div><div class="o">⭕ 痛い圧は逆効果。心地よい強さ</div></div>
+        <div class="m"><div class="x">❌ どこも同じ触り方</div><div class="ar">→</div><div class="o">⭕ 場所で変える（軽く/円/支える）</div></div>
+        <div class="m"><div class="x">❌ 技術で黙って勝負</div><div class="ar">→</div><div class="o">⭕ 一言添える人が選ばれる</div></div>
+      </div>
+    </div></div>
+    <div class="narr"><div class="h"></div>
+      <p>第4章です。ここからは、現場での使い方。まず、よくある勘違いを、3つ。1つ目。「強く押すほど効く」。これは、逆です。痛みを我慢させる圧は、かえって力が入ります。心地よいと感じる強さのほうが良い、と言われています。2つ目。「どこも同じ触り方でいい」。これも違います。おでこは軽く、こめかみは円を描いて、後ろは支える。場所ごとに、変えます。3つ目。「良い技術なら、黙っていても伝わる」。今日の、いちばんの逆説です。黙っていると、伝わりません。一言、添えられる人が、選ばれます。この3つ、明日から、気をつけてみてください。とくに、3つ目。技術に自信がある人ほど、黙ってしまいがちです。でも、お客様には、あなたの頭の中までは、見えません。言葉にして、はじめて、伝わる。ここが、選ばれる人と、そうでない人の、いちばんの分かれ目です。</p>
+    </div>
+    <div class="telop"><b>📺画面：</b>❌→⭕を1行ずつ順に表示。3つ目「黙って勝負」の❌を強めに見せてから⭕へ。</div>
+  </div>
+
+  <!-- S14 type -->
+  <div class="scene">
+    <div class="bar"><span class="no">S14</span><span class="nm">お客様タイプ別・どこを語る（自分ごと化）</span><span class="dr">14:30–16:00</span></div>
+    <div class="slide"><div class="pad">
+      <div class="kick">お客様を見て、語る場所を変える</div>
+      <div class="types">
+        <div class="t"><div class="ic">👩‍💻</div><div class="who">デスクワーク</div><div class="arw">↓</div><div class="say">「おでこ（前頭筋）＋目のまわり」を語る</div></div>
+        <div class="t"><div class="ic">😬</div><div class="who">食いしばり</div><div class="arw">↓</div><div class="say">「こめかみ（側頭筋）」を語る</div></div>
+        <div class="t"><div class="ic">📱</div><div class="who">スマホ首</div><div class="arw">↓</div><div class="say">「後ろ・首の後ろ側」を語る</div></div>
+      </div>
+    </div></div>
+    <div class="narr"><div class="h"></div>
+      <p>次に、応用です。同じ4つの地図でも、お客様によって、語る場所を変えると、もっと刺さります。一日中パソコンの、デスクワークの方には、おでこの前頭筋と、目のまわりの話を。夜に食いしばる方には、こめかみの側頭筋を。ずっとスマホを見ている、スマホ首の方には、後ろ、首の後ろ側の話を。お客様の仕事や、しぐさを、よく見る。そして、その人にいちばん関係する場所を、選んで語る。「よく画面をご覧になりますか？」と、ひとこと聞くだけで、どこを語ればいいか、分かります。地図は、相手に合わせて使う。たとえば、こんな一日を想像してください。午前に来た、デスクワークの女性には、おでこの話を。お昼の、食いしばりがある男性には、こめかみの話を。夕方の、スマホをよく見る学生さんには、後ろの話を。同じ4つの地図を、相手に合わせて、出し入れするだけ。それだけで、一人ひとりが「自分のために選んでくれた」と、感じます。ここまでできると、“分かってる人”が、“私のことを分かってくれる人”に、変わります。</p>
+    </div>
+    <div class="telop"><b>📺画面：</b>3タイプのカード。お客様タイプ→語る場所を矢印で。「よく画面をご覧になりますか？」を字幕強調。</div>
+  </div>
+
+  <!-- ============ 第5章 ============ -->
+  <div class="chap"><span class="cn">第5章</span><span class="ct">なぜ、選ばれ続けるのか</span><span class="cp"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div>
+
+  <!-- S15 loop -->
+  <div class="scene">
+    <div class="bar"><span class="no">S15</span><span class="nm">好循環ループ</span><span class="dr">16:00–17:00</span></div>
     <div class="slide"><div class="pad" style="justify-content:center">
       <div class="kick" style="text-align:center">場所を知ると、この“輪”が回り出す</div>
       <div class="loop2">
         <div class="r"><span class="step">場所が分かる</span><span class="ar">→</span><span class="step">施術中に言える</span><span class="ar">→</span><span class="step hi">“分かってる人”</span><span class="ar">→</span><span class="step">信頼・指名</span></div>
         <div class="down">↓</div>
         <div class="r"><span class="step">もっと提供したくなる</span><span class="ar">←</span><span class="step">自信がつく</span><span class="ar">←</span><span class="step">単価が上がる</span></div>
-        <div class="ret">↺ そして最初の「もっと良い施術」に戻り、輪が回り続ける</div>
+        <div class="ret">↺ そして、また良い施術へ。輪が回り続ける</div>
       </div>
     </div></div>
     <div class="narr"><div class="h"></div>
-      <p>ここまでの話が、なぜ大事か。場所が分かると、施術中に「今、側頭筋です」と、言えます。言えると、“分かっている人”だと伝わります。伝わると、信頼され、指名につながります。指名が増えると、単価も上げやすくなる。数字が上がると、自信がつきます。自信がつくと、もっと提供したくなる。そして、また良い施術になる。この良い輪が、回り始めます。すべての出発点が、今日の「頭の地図」です。</p>
+      <p>最後の第5章。ここまでの話が、なぜ大事か。場所が分かると、施術中に「今、側頭筋です」と、言えます。言えると、“分かっている人”だと、伝わります。伝わると、信頼され、指名につながる。指名が増えると、単価も、上げやすくなる。数字が上がると、自信がつく。自信がつくと、もっと提供したくなる。そして、また、良い施術になる。この良い輪が、回り始めます。すべての出発点が、今日の、たった4つの地図です。おもしろいのは、この輪が回り始めると、施術そのものより先に、あなたの表情や、声の落ち着きが、変わること。自信は、手より先に、伝わります。</p>
     </div>
-    <div class="telop"><b>📺画面：</b>チップを順に点灯→下段へ折り返し→最後に↺で輪が閉じるアニメ。「“分かってる人”」をネイビーで強調。</div>
-    <div class="analogy-note"><b>直し：</b>横一列＋末尾↩で直線に見えた問題を、<b>上段→折り返し→下段→↺</b>の2段ループ図に。後半（自信・提供）も文章でなくチップ化。</div>
+    <div class="telop"><b>📺画面：</b>上段→折り返し→下段→↺で輪が閉じるアニメ。「“分かってる人”」をネイビー強調。</div>
   </div>
 
-  <!-- S11 -->
+  <!-- S16 recap quiz3 -->
   <div class="scene">
-    <div class="bar"><span class="no">S11</span><span class="nm">まとめ＋現場の一言テンプレ</span><span class="dur">9:20–10:00</span></div>
-    <div class="slide dark"><div class="pad" style="align-items:center;text-align:center">
-      <div class="kick">今日から使える、たった一言</div>
-      <div class="big">「ここは<span class="em">側頭筋</span>です。<br>噛みしめで、かたく感じやすい場所ですよ。」</div>
-      <div class="sub">前頭筋・側頭筋・後頭部の筋肉・帽状腱膜。名前を言えるだけで、あなたは“語れる施術者”になります。</div>
+    <div class="bar"><span class="no">S16</span><span class="nm">🧩 クイズ③（総復習・間隔反復）</span><span class="dr">17:00–18:00</span></div>
+    <div class="slide quiz"><div class="pad">
+      <div class="kick" style="text-align:center">クイズ③　4つ、言えますか？</div>
+      <div class="recap">
+        <div class="c"><div class="place">おでこ</div><div class="qm">？</div></div>
+        <div class="c"><div class="place">こめかみ</div><div class="qm">？</div></div>
+        <div class="c"><div class="place">後ろ</div><div class="qm">？</div></div>
+        <div class="c"><div class="place">てっぺん</div><div class="qm">？</div></div>
+      </div>
+      <div class="think" style="text-align:center;margin-top:2.4cqw;color:var(--gold-l);font-size:2.4cqw;font-weight:800">🤔 声に出して、答えてみてください</div>
     </div></div>
     <div class="narr"><div class="h"></div>
-      <p>今日は、頭の4つの場所を覚えました。おでこの前頭筋、こめかみの側頭筋、後ろの筋肉、そして頭を包む帽状腱膜。最後に、今日から使える一言を、渡します。施術中に、こう言ってみてください。「ここは側頭筋です。噛みしめで、かたく感じやすい場所ですよ」。たった、これだけです。名前を言えるだけで、あなたは“語れる施術者”になります。次回は、この4つの場所を使って、実際に頭皮をゆるめていきます。それでは、また次回。</p>
+      <p><span class="qz2">では、総復習のクイズです。</span>4つ、言えるようになったか、確かめましょう。声に出して、答えてください。おでこの筋肉は…？　こめかみの筋肉は…？　後ろの筋肉は…？　てっぺんの膜は…？　…どうでしたか。答えは、前頭筋、側頭筋、後ろの筋肉、そして、帽状腱膜。全部言えたなら、もう、地図は入っています。1つ、あいまいだったら、そこだけ、もう一度、見直してください。全部を、完ぺきに覚えようとしなくて、大丈夫です。ひとつ言えれば、ひとつ、選ばれる理由が、増えます。</p>
     </div>
-    <div class="telop"><b>📺画面：</b>ネイビー背景に一言テンプレを大きく。4部位名を下部に一覧。次回予告テロップ。</div>
+    <div class="telop"><b>📺画面：</b>4枚の「？」カード→答えを1枚ずつめくって表示（前頭筋/側頭筋/後ろの筋肉/帽状腱膜）。間隔反復で定着。</div>
   </div>
 
-  <div class="note">💡 <b>このパイロットで確定した型：</b>「図解スライド＋短文ナレ原稿＋各回に“やってみて”参加＋身近な例え」。OKなら座学全回（値付け・接客・集客・衛生・編集ほか）に横展開します。<b>残1点：</b>断面図（S4のPG10_02）はNano Banana 2で「頭の丸み＋各層ラベル入り」に再生成してから差し替え推奨（ここだけ現状チープなため）。</div>
+  <!-- S17 phrases + close -->
+  <div class="scene">
+    <div class="bar"><span class="no">S17</span><span class="nm">使えるフレーズ集＋締め（テンプレ）</span><span class="dr">18:00–20:00</span></div>
+    <div class="slide"><div class="pad">
+      <div class="kick">明日から使える・4つのひとこと</div>
+      <div class="phrases4">
+        <div class="p"><span class="tag">前頭筋</span><span class="tx">「おでこ、画面の見過ぎで張りやすい所ですよ」</span></div>
+        <div class="p"><span class="tag">側頭筋</span><span class="tx">「ここは側頭筋。噛みしめでかたく感じやすい所です」</span></div>
+        <div class="p"><span class="tag">後ろ</span><span class="tx">「首の後ろ、頭の重みを支えて疲れやすい所です」</span></div>
+        <div class="p"><span class="tag">帽状腱膜</span><span class="tx">「頭全体、一枚の膜で前と後ろがつながってるんですよ」</span></div>
+      </div>
+    </div></div>
+    <div class="narr"><div class="h"></div>
+      <p>最後に、明日から、そのまま使えるフレーズを、4つ、お渡しします。おでこなら、「おでこ、画面の見過ぎで、張りやすい所ですよ」。こめかみなら、「ここは側頭筋。噛みしめで、かたく感じやすい所です」。後ろなら、「首の後ろ、頭の重みを支えて、疲れやすい所です」。てっぺんなら、「頭全体、一枚の膜で、前と後ろがつながってるんですよ」。この4つを、施術中に、ひとつでも言えたら、あなたは、もう“語れる施術者”です。今日覚えた地図は、名前を言うためだけのものではありません。次回は、この4つの場所を使って、実際に頭皮を、ゆるめていきます。場所が分かっていれば、手は、迷いません。最後に、今日の宿題を、ひとつだけ。今夜、自分の頭で、4つの場所を、指で確かめておいてください。おでこの前頭筋、こめかみの側頭筋、後ろの筋肉、そして、てっぺんの帽状腱膜。自分の頭で分かった場所は、お客様の頭でも、迷いません。それでは、また次回。おつかれさまでした。</p>
+    </div>
+    <div class="telop"><b>📺画面：</b>4フレーズを1枚ずつ点灯→最後にネイビー背景で「あなたは“語れる施術者”へ」＋次回予告。BGMを締めに向けて上げる。</div>
+  </div>
 
-  <footer>山口流 理容道｜PG10 座学編（パイロットv2）｜図解＋AI吹き替え｜解剖監修・薬機法・教育定着・デザインの3視点レビュー反映済み｜ⓒ Prorium（社外秘）</footer>
+  <div class="note">💡 <b>飽きさせない設計の答え：</b>単なる解説を20分続けると必ず飽きます。そこで「①5章＋進捗で現在地を見せ ②クイズ3回で考える“間”を作り ③やってみて4回で体を動かし ④お客様シーン・タイプ別で自分ごと化し ⑤勘違い・フレーズ集で実用を渡す」ことで、2〜3分ごとに“動き”が入る構成にしました。OKなら、この20分テンプレを座学全回に横展開します。</div>
+
+  <footer id="foot">山口流 理容道｜PG10 座学編（完成版・約20分）｜図解＋AI吹替＋参加型｜解剖監修・薬機法・教育定着・デザイン反映｜尺の目安はナレ文字数÷約350字/分＋クイズ・参加の間で算出｜ⓒ Prorium（社外秘）</footer>
 </div>
 </body>
 </html>
