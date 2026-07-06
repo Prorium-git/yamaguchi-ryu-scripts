@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIVEローンチ全体構成｜7/7-8 山口流 理容道</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:0 16px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:38px 26px 32px;margin:0 -16px 22px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:27px;font-weight:600;margin:8px 0 6px}
+  header .meta{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:#c9d2e0}
+  header .meta b{color:#fff}
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:20px;margin:30px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:flex;align-items:center;gap:10px}
+  h2 .n{width:30px;height:30px;flex:0 0 30px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-family:sans-serif}
+  /* funnel map */
+  .map{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;text-align:center}
+  .map .row{display:flex;gap:8px;justify-content:center;align-items:stretch;flex-wrap:wrap}
+  .map .box{background:var(--ivory);border:2px solid var(--gold);border-radius:10px;padding:10px 14px;font-size:12.5px;font-weight:700;color:var(--navy);min-width:118px;display:flex;flex-direction:column;justify-content:center}
+  .map .box small{font-weight:400;color:var(--mut);font-size:10.5px}
+  .map .box.hot{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .map .box.hot small{color:#c9d2e0}
+  .map .ar{align-self:center;color:var(--gold);font-size:20px;font-weight:800}
+  /* principles */
+  .rules{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}
+  .rule{background:#fff;border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:10px;padding:12px 14px;font-size:13px}
+  .rule b{color:var(--navy);display:block;font-size:14px}
+  /* timeline */
+  .slot{display:flex;background:#fff;border:1px solid var(--line);border-radius:12px;margin:8px 0;overflow:hidden}
+  .slot .time{flex:0 0 108px;background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;font-size:14.5px;padding:8px 4px;text-align:center}
+  .slot .time small{font-weight:400;font-size:10px;color:#c9d2e0}
+  .slot.pre .time{background:#8b93a3}
+  .slot.star .time{background:var(--gold);color:#2c2107}
+  .slot.deadline{border:2px solid var(--red)}
+  .slot.deadline .time{background:var(--red)}
+  .slot .body{flex:1;padding:10px 16px}
+  .slot .ttl{font-size:15px;font-weight:800;color:var(--navy)}
+  .slot .desc{font-size:13px;color:#333;margin-top:2px}
+  .slot .desc b{color:var(--navy)}
+  .who{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;margin-left:6px;vertical-align:1px}
+  .w-taro{background:#fbf3dc;color:#9a7b27}.w-kawa{background:#eaf1fa;color:var(--blue)}.w-ops{background:#eef7f0;color:var(--green)}
+  .cut{background:#fdecea;color:var(--red);font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;margin-left:6px}
+  /* offer 20min */
+  .offer{background:linear-gradient(140deg,#1c2c4b,#26406e);border-radius:14px;padding:22px 24px;color:#fff;margin:12px 0}
+  .offer h3{color:var(--gold-l);font-family:"Hiragino Mincho ProN",serif;font-size:18px;margin-bottom:10px}
+  .ostep{display:flex;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(216,199,155,.3);border-radius:10px;padding:9px 14px;margin:7px 0;align-items:flex-start}
+  .ostep .t{flex:0 0 96px;font-weight:800;color:var(--gold-l);font-size:13.5px}
+  .ostep .c{font-size:13px;color:#e7ecf4;line-height:1.65}
+  .ostep .c b{color:#fff}
+  .ostep.url{background:rgba(197,165,90,.22);border-color:var(--gold)}
+  .mokuteki{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+  .mk{border-radius:10px;padding:12px 14px;font-size:12.5px}
+  .mk.bad{background:rgba(192,57,43,.18);border:1px solid rgba(192,57,43,.5)}
+  .mk.good{background:rgba(47,138,82,.18);border:1px solid rgba(47,138,82,.5)}
+  .mk b{display:block;font-size:13.5px;margin-bottom:4px;color:#fff}
+  /* roles */
+  .roles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+  .role{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .role h4{color:var(--navy);font-size:15px;margin-bottom:6px}
+  .role li{font-size:13px;margin:4px 0 4px 18px}
+  table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;border-radius:10px;overflow:hidden;margin-top:8px}
+  th,td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  ul.chk{list-style:none;margin:8px 0}
+  ul.chk li{position:relative;padding:5px 0 5px 30px;font-size:13.5px;background:#fff;border:1px solid var(--line);border-radius:8px;margin:6px 0;padding-top:8px;padding-bottom:8px}
+  ul.chk li::before{content:"☐";position:absolute;left:9px;top:7px;color:var(--gold);font-size:16px}
+  ul.chk li b{color:var(--navy)}
+  .danger{background:#fdecea;border:1px solid #e0a59d;border-radius:10px;padding:12px 16px;font-size:13.5px;margin:10px 0}
+  .danger b{color:var(--red)}
+  .note{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin:10px 0;color:#7a5f1e}
+  .links a{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-size:12.5px;font-weight:700;border-radius:20px;padding:7px 16px;margin:3px 6px 3px 0}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:34px}
+  @media print{body{background:#fff}.slot,.offer{page-break-inside:avoid}}
+  @media(max-width:680px){.rules,.roles,.mokuteki{grid-template-columns:1fr}.slot .time{flex-basis:86px;font-size:12.5px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ LIVE LAUNCH MASTER PLAN</div>
+  <h1>7/7・7/8 LIVEローンチ 全体構成</h1>
+  <div class="meta"><span>DAY1 <b>7/7(火) 20:00-21:30</b> 覚醒の日</span><span>DAY2 <b>7/8(水) 20:00-21:50</b> 決断の日</span><span>オンスク訴求＝<b>8日ラスト20分のみ</b></span></div>
+</header>
+<div class="wrap">
+
+  <!-- 全体マップ -->
+  <h2><span class="n">0</span>全体マップ（この2日間がファネルのどこか）</h2>
+  <div class="map">
+    <div class="row">
+      <div class="box">公式LINE リスト<small>約350-400＋オプチャ</small></div><div class="ar">▶</div>
+      <div class="box">リマインド10本<small>朝・昼・1h・5分・ジャスト</small></div><div class="ar">▶</div>
+      <div class="box">DAY1 覚醒<small>売り込みゼロ・価値だけ</small></div><div class="ar">▶</div>
+      <div class="box">DAY2 決断<small>価値90分</small></div><div class="ar">▶</div>
+      <div class="box hot">ラスト20分 オファー<small>21:30-21:50 死守</small></div><div class="ar">▶</div>
+      <div class="box">決済ページ<small>→LINE追加で手続き完了</small></div><div class="ar">▶</div>
+      <div class="box">自動追いかけ<small>当夜〜72h(16_導線)</small></div>
+    </div>
+  </div>
+  <div class="rules">
+    <div class="rule"><b>原則① 2日間は「渡す」だけ</b>21:30までは売り込み文言ゼロ。DAY1冒頭で「売り込みではなく判断材料を渡す」と宣言し、最後まで守る。</div>
+    <div class="rule"><b>原則② 太郎さんは手で語る</b>喋りは桜庭が進行・実況・クロージング。太郎さんは実演＋読み上げ一言のみ。</div>
+    <div class="rule"><b>原則③ 21:30オファー開始は死守</b>押したら削るのはコンテンツ（削り順は§5）。オファーを深夜にずらすのが最悪手。</div>
+  </div>
+
+  <!-- DAY1 -->
+  <h2><span class="n">1</span>DAY1｜7/7(火)「覚醒の日」— 世界一の技術を見せる</h2>
+
+  <div class="slot pre"><div class="time">19:00<small>集合</small></div><div class="body"><div class="ttl">スタッフ集合・設営（30分前倒し）</div><div class="desc">カメラ2系統（手元俯瞰＋引き）画角合わせ／ピンマイク／実演セット／裏方LINEグループ疎通確認</div></div></div>
+  <div class="slot pre"><div class="time">19:45<small>Go判定</small></div><div class="body"><div class="ttl">Go判定 5項目<span class="who w-ops">運営</span></div><div class="desc">☐音声 ☐映像 ☐回線 ☐スライド ☐<b>録画開始</b> — 1つでもNGなら開場を19:55に遅らせる</div></div></div>
+  <div class="slot pre"><div class="time">19:50<small>開場</small></div><div class="body"><div class="ttl">開場・待機画面</div><div class="desc">「聞こえたらコメントで1」音声チェック企画＋「どこから見てますか？」<span class="who w-ops">運営B呼び水</span></div></div></div>
+
+  <div class="slot"><div class="time">20:00<small>3分</small></div><div class="body"><div class="ttl">オープニング<span class="who w-kawa">桜庭</span></div><div class="desc">2日間の流れ＋<b>「売り込みでなく、判断材料を渡す2日間です」宣言</b>＋合言葉予告</div></div></div>
+  <div class="slot star"><div class="time">20:03<small>1分</small></div><div class="body"><div class="ttl">⚡コールドオープン：実演チラ見せ60秒<span class="who w-taro">太郎</span></div><div class="desc">世界一の手技を無言で60秒だけ →「全貌は20:35から」<b>＝離脱を止めるフック</b>（冒頭15分の離脱対策）</div></div></div>
+  <div class="slot"><div class="time">20:04<small>6分</small></div><div class="body"><div class="ttl">山口太郎とは誰か（権威）<span class="who w-kawa">桜庭</span><span class="cut">押したら4分</span></div><div class="desc">MCWT2025総合優勝（27カ国・約450人）／情熱大陸／創業100年4代目／YouTube10万人 ※映像素材は使用権未確認なら静止画＋文字で</div></div></div>
+  <div class="slot"><div class="time">20:10<small>10分</small></div><div class="body"><div class="ttl">なぜ今やるのか（物語）＋業界の詰まり<span class="who w-kawa">桜庭</span><span class="who w-taro">太郎一言</span></div><div class="desc">1年準備してきた背景／技術を磨いても単価・指名に結びつかない現実の言語化</div></div></div>
+  <div class="slot"><div class="time">20:20<small>10分</small></div><div class="body"><div class="ttl">3つの思い込みを壊す<span class="who w-kawa">桜庭</span></div><div class="desc">×技術が上がれば選ばれる ×SNSでバズれば集客できる ×長く続ければファンがつく →「全部、思い込みです」</div></div></div>
+  <div class="slot star"><div class="time">20:30<small>25分</small></div><div class="body"><div class="ttl">★技術デモ（本編の山場）<span class="who w-taro">太郎＝手</span><span class="who w-kawa">桜庭＝実況</span></div><div class="desc"><b>桜庭が30秒に1回実況</b>（「いま側頭筋を…」「圧の理由は…」「ここを見てください」）＝無言配信の事故防止。カメラは手元俯瞰メイン、引きに随時スイッチ<span class="who w-ops">運営A切替</span></div></div></div>
+  <div class="slot"><div class="time">20:55<small>12分</small></div><div class="body"><div class="ttl">技術の裏側（なぜ心地よいのか）<span class="who w-kawa">桜庭</span><span class="cut">押したら8分</span></div><div class="desc">脳疲労・自律神経・ゆっくり触れる神経の話（効果断定なし・「示唆されています」で統一）。解剖図をそのまま画面共有</div></div></div>
+  <div class="slot"><div class="time">21:07<small>8分</small></div><div class="body"><div class="ttl">ワーク：自分の現場チェック<span class="who w-kawa">桜庭</span><span class="cut">押したら5分</span></div><div class="desc">「所作・メニュー・単価・指名、いま一番詰まっているのは？」コメントに書き込み<span class="who w-ops">運営B呼び水→読み上げ</span></div></div></div>
+  <div class="slot"><div class="time">21:15<small>10分</small></div><div class="body"><div class="ttl">合言葉①発表 → DAY2予告<span class="who w-kawa">桜庭</span><span class="who w-taro">太郎締め一言</span></div><div class="desc">合言葉は<b>大きくテロップ表示</b>（漢字2文字・表記ゆれ登録済み・「とどかない」救済応答あり）→LINEで特典。予告「明日は山口流を<b>現場に落とす設計図</b>を渡します。最後に<b>特別なご案内</b>もあります」</div></div></div>
+  <div class="slot pre"><div class="time">21:30<small>終了後</small></div><div class="body"><div class="ttl">終了 → 21:45 御礼LINE送信<span class="who w-ops">運営A</span></div><div class="desc">御礼＋特典再案内＋<b>DAY1アーカイブ（DAY2開始まで限定公開）</b>＋明日の予告。深夜配信は翌朝8時に回す</div></div></div>
+
+  <!-- DAY2 -->
+  <h2><span class="n">2</span>DAY2｜7/8(水)「決断の日」— 設計図を渡し、最後の20分で案内する</h2>
+
+  <div class="slot pre"><div class="time">19:00</div><div class="body"><div class="ttl">集合・Go判定はDAY1と同一フロー（19:45 Go判定・19:50開場）</div><div class="desc">追加確認：☐決済ページ実表示 ☐計測リンク3本 ☐LINE一斉配信の予約セット ☐残席監視画面オープン</div></div></div>
+
+  <div class="slot"><div class="time">20:00<small>5分</small></div><div class="body"><div class="ttl">OP＋DAY1振り返り<span class="who w-kawa">桜庭</span></div><div class="desc">「技術だけではなく<b>構造</b>が必要——昨日の気づきの再確認」＋今日の流れ（最後にご案内があることも予告＝不意打ちにしない）</div></div></div>
+  <div class="slot"><div class="time">20:05<small>7分</small></div><div class="body"><div class="ttl">今、こんな状態じゃないですか？<span class="who w-kawa">桜庭</span><span class="cut">押したら4分</span></div><div class="desc">売上が伸びない／リピートされない／高単価が作れない／SNS頼み／学ぶ場がない →「1つでも当てはまる？」コメント参加</div></div></div>
+  <div class="slot star"><div class="time">20:12<small>30分</small></div><div class="body"><div class="ttl">★実演 第2弾<span class="who w-taro">太郎＝手</span><span class="who w-kawa">桜庭＝実況</span></div><div class="desc">姿勢別（寝・座り）の圧と体の使い方／15分コースの組み立てを実演。<b>「これがそのまま商品になる」</b>目線で実況</div></div></div>
+  <div class="slot"><div class="time">20:42<small>20分</small></div><div class="body"><div class="ttl">現場に落とす設計図<span class="who w-kawa">桜庭</span></div><div class="desc">①15分をメニュー化する考え方 ②値付けの原則 ③指名される理由の作り方 ④市場の追い風（リラク市場3年連続拡大・男性+7.2pt）※教育はここで完結させ、オファー内で市場話は繰り返さない</div></div></div>
+  <div class="slot"><div class="time">21:02<small>13分</small></div><div class="body"><div class="ttl">生Q&A＋理想の未来<span class="who w-kawa">桜庭MC</span><span class="who w-taro">太郎=手系のみ</span><span class="cut">押したら8分</span></div><div class="desc"><b>想定問答10問準備済み・薄ければ「事前にいただいた質問」を読む</b>。制度・価格系は全て桜庭が回答。効果断定NGライン共有済み</div></div></div>
+  <div class="slot"><div class="time">21:15<small>15分</small></div><div class="body"><div class="ttl">ブリッジ＋合言葉②<span class="who w-kawa">桜庭</span></div><div class="desc">「2日間で渡せるのはここまで。<b>体系で身につけて、商品にして、選ばれるようになる続きがある</b>」＋合言葉②テロップ→LINE特典 ＝ オファー直前にLINEを開かせておく布石</div></div></div>
+
+  <div class="slot deadline"><div class="time">21:30<small>絶対死守</small></div><div class="body"><div class="ttl">🔴 オンスク訴求 開始（詳細は§3）</div><div class="desc">ここが1分でも遅れそうなら上の<span class="cut">削り枠</span>を発動。<b>22時超えで価格を出すのが最悪</b></div></div></div>
+
+  <div class="slot pre"><div class="time">21:50<small>〜22:00</small></div><div class="body"><div class="ttl">延長Q&A・余韻<span class="who w-kawa">桜庭</span></div><div class="desc">質問対応しながら<b>URL再投下（3回目）</b>＋「個別の質問はLINEで『質問』と送ってください」→ 22:10までに当夜サンクスLINE送信<span class="who w-ops">運営A</span></div></div></div>
+
+  <!-- 20min offer -->
+  <h2><span class="n">3</span>ラスト20分オファー（21:30-21:50）— 分単位の設計</h2>
+  <div class="danger"><b>設計思想：</b>感情のピーク（目的論）が来る前に、全員が「申込方法を知っていて、URLが手元にある」状態を作る。<b>URL投下は21:40（価格・先着発表の直後）</b>——遅らせるほど、買う気になった人が離脱してから案内する事故になる。</div>
+  <div class="offer">
+    <h3>タイムライン（すべて桜庭。太郎さんは締めの読み上げのみ）</h3>
+    <div class="ostep"><div class="t">21:30-31:30</div><div class="c"><b>転換宣言＋対象者の線引き（90秒）</b>：「昨日約束した通り、売り込みではなく判断材料としてご案内します」＋<b>向いている人／向いていない人を明言</b>（今の店で技術を武器に指名を増やしたい人向け。動画を眺めるだけで満足な人には勧めません）＝断る姿勢が売り込み臭を消す ※市場の話はしない（20:42で完結済み）</div></div>
+    <div class="ostep"><div class="t">21:31:30-34:30</div><div class="c"><b>山口流の全体像＋カリキュラム（3分）</b>：手技×科学×接客×経営×集客の五位一体／PG01-30・週1配信・約7.5ヶ月／3段階ディプロマ</div></div>
+    <div class="ostep"><div class="t">21:34:30-38</div><div class="c"><b>価値の積み上げ→価格リビール（3.5分）</b>：別々に学ぶと<b>約59万円相当（内訳スライドで根拠提示）</b>→ なぜ安く出せるか（オンライン／普及目的／0期）→ 通常想定 入会金¥55,000・月額¥22,000（※想定額と明記）→ <b>0期生：入会金¥0・月額¥11,000・解約自由</b> ⚠️この区間アドリブ禁止・台本固定</div></div>
+    <div class="ostep"><div class="t">21:38-40</div><div class="c"><b>0期生特典＋先着100名＋締切（2分）</b>：特典発表＋「運営体制の都合で<b>先着100名</b>」＋締切日時を明言。残数に触れるのは<b>裏の実数確認後のみ</b>（「現時点で◯名決済済み」形式・推定禁止）</div></div>
+    <div class="ostep url"><div class="t">🔴 21:40</div><div class="c"><b>URL一斉投下（3層同時）</b>：①チャット投下＋固定<span style="color:#e3d3a6">〔ライブ用計測リンク〕</span> ②<b>公式LINE一斉配信</b>（0期条件の画像1枚＋決済URL〔LINE用計測リンク〕）→「いまLINEにも届きました。<b>配信を見ながらLINE側から申込できます</b>」 ③以後、口頭で随時再誘導</div></div>
+    <div class="ostep"><div class="t">21:40-43</div><div class="c"><b>申込実演（3分）</b>：スマホ画面収録（事前録画）で<b>①決済 → ②完了画面のLINE友だち追加 → ③LINEで受講手続き完了 → 会員サイト入場</b>まで実際に見せる。「LINE追加までで手続き完了です」を2回言う。3ステップ図解スライドを出したままにする</div></div>
+    <div class="ostep"><div class="t">21:43-45</div><div class="c"><b>ROI＋リスクリバーサル（2分）</b>：月¥11,000＝1日¥367。ヘッドスパを月2〜3人に提供できれば回収の計算（※個人差あり・保証なし）＋<b>入会金0・いつでも解約OK＝「合わなければやめられる」</b></div></div>
+    <div class="ostep"><div class="t">21:45-48</div><div class="c"><b>目的論クロージング・4ステップ（3分）</b>——下の対比を見せながら：<br>①<b>代弁30秒</b>「迷って当然です。お金より“また学んで活かせなかったら”が怖いんですよね」→ ②<b>負45秒</b> → ③<b>得45秒</b> → ④<b>一歩60秒</b>「今日決めるのは“続けるか”ではなく<b>“始めるか”だけ</b>。決めるのはあなたです」</div></div>
+    <div class="mokuteki">
+      <div class="mk bad"><b>やらなかったら（負）</b>このまま技術だけ磨いた3年後——単価も指名も今のまま。価格競争の中で「あの時始めていれば」と思う自分。※本人が既に感じている範囲で・煽らない</div>
+      <div class="mk good"><b>やったら（得）</b>15分の頭のメニューが商品になり、「あなたにお願いしたい」と指名される半年後。家族との時間を守りながら、自信を持って働く自分</div>
+    </div>
+    <div class="ostep"><div class="t">21:48-49:30</div><div class="c"><b>太郎さんの締め（90秒・読み上げ）</b>：「僕は、しゃべるのが得意ではありません。だから、手で全部教えます。4代続いた店の技術を、次はあなたに渡します。お待ちしています。」（プロンプター読みでOK）</div></div>
+    <div class="ostep"><div class="t">21:49:30-50</div><div class="c"><b>桜庭クローズ（30秒）</b>：「URLは固定コメントと公式LINEに。0期のご案内は◯◯まで。決める方は、いま一歩を」→ 延長Q&Aへ</div></div>
+  </div>
+
+  <!-- 役割 -->
+  <h2><span class="n">4</span>役割分担（「運営」で一括りにしない）</h2>
+  <div class="roles">
+    <div class="role"><h4>🤲 山口太郎</h4><ul><li>実演3本（チラ見せ60秒／DAY1デモ25分／DAY2実演30分）</li><li>各所の一言＋最後の締め90秒（すべて読み上げでOK・アドリブ不要）</li><li>ピンマイク常時装着（手が塞がるため）</li></ul></div>
+    <div class="role"><h4>🎙 桜庭（ファシリテーター）</h4><ul><li>進行MC・理論解説・実演の実況（30秒に1回）</li><li>Q&A回答（制度・価格系は全部引き取る）</li><li>ラスト20分のクロージング全編（価格区間はアドリブ禁止）</li></ul></div>
+    <div class="role"><h4>🖥 運営A（配信・投下）</h4><ul><li>カメラ切替・スライド送り・録画開始/停止</li><li>URL投下・チャット固定・合言葉テロップ</li><li>LINE一斉配信（21:40）／御礼・サンクス配信（21:45／22:10）</li></ul></div>
+    <div class="role"><h4>💬 運営B（コメント・計測）＋⏱タイムキーパー</h4><ul><li>コメント監視・呼び水（場面別3本ずつ準備済み）・読み上げ候補を裏LINEで桜庭へ</li><li>荒らし＝反応せず削除＆ブロック（一任）</li><li>⏱残り時間を5分刻みで裏LINEへ／<b>残席の実数を決済画面で常時監視</b></li><li>同接スクショ：20:15／21:00／<b>21:30／21:39</b>／21:50</li></ul></div>
+  </div>
+
+  <!-- 押し対応 -->
+  <h2><span class="n">5</span>押した時の削り順（21:30死守のための保険）</h2>
+  <table>
+    <tr><th>日</th><th>削る順</th><th>削り方</th></tr>
+    <tr><td>DAY1</td><td>①権威 6→4分 ②ワーク 8→5分 ③理論 12→8分</td><td>実演25分と合言葉は削らない</td></tr>
+    <tr><td>DAY2</td><td>①悩み再喚起 7→4分 ②Q&A 13→8分 ③設計図 20→15分</td><td><b>実演30分とオファー20分は絶対に削らない</b></td></tr>
+  </table>
+
+  <!-- checklist -->
+  <h2><span class="n">6</span>直前チェックリスト</h2>
+  <p style="font-size:13px;color:var(--mut)">■＝7/6(月)中に完了必須　□＝当日</p>
+  <ul class="chk">
+    <li><b>■ 前日通しリハ60分</b>：実演カメラ画角→スライド送り→価格リビール→決済画面デモまで本番機材で通す</li>
+    <li><b>■ 配信ツール確定</b>：Zoomウェビナー推奨（視聴者ミュート・荒らし耐性）。<b>定員確認</b>——リスト約400で同接100超想定。ミーティング100名枠では溢れる</li>
+    <li><b>■ 視聴URL確定 → リマインド10本の文面URLを最終照合</b>（特に当日5分前・ジャスト便）</li>
+    <li><b>■ テスト決済＝スマホ実機×LINE内ブラウザで実施</b>（iPhone/Android各1）：決済→LINE追加→手続き完了まで通し。1行に統合されるかを読者一覧で確認（私がAPIで即検証します）。返金処理まで当日中</li>
+    <li><b>■ 計測リンク3本発行</b>：ライブチャット用／当夜サンクスLINE用／翌日後追い用（直リンク手打ち禁止）</li>
+    <li><b>■ 申込実演のスマホ画面収録</b>を事前録画（当日の生操作は事故のもと）</li>
+    <li><b>■ 実演モデル確保</b>：2日連続同一人物＋予備1名・肖像権同意</li>
+    <li><b>■ 合言葉①②のLINE応答テスト</b>：表記ゆれ複数登録＋「とどかない」救済＋相互誤発火チェック（スマホ実機）</li>
+    <li><b>■ 想定問答10問＋仕込み質問</b>／呼び水コメント場面別3本ずつ／トラブル定型返信（音・画面・URL）を運営Bへ配布</li>
+    <li><b>■ ¥59万の内訳スライド＋想定価格の根拠脚注</b>を最終確認（景表法）／0期特典の中身と締切日時を確定</li>
+    <li><b>■ 裏方LINEグループ作成</b>（タイムキープ・残数共有・読み上げ連携）</li>
+    <li>□ 19:45 Go判定5項目（音声・映像・回線・スライド・録画）</li>
+    <li>□ 共同ホスト権限を運営Aへ／太郎さん拠点にテザリング予備回線</li>
+    <li>□ 残席監視：決済管理画面を開きっぱなし（運営B）</li>
+    <li>□ DAY1終了後：アーカイブを「DAY2開始まで限定公開」設定→リマインドに添付</li>
+  </ul>
+
+  <!-- trouble -->
+  <h2><span class="n">7</span>トラブル対応（1枚ルール）</h2>
+  <table>
+    <tr><th>事象</th><th>対応</th></tr>
+    <tr><td>ホスト回線落ち</td><td>共同ホスト（運営A）で配信継続。落ちた側は3分以内に同URLへ再入室。運営Bがチャット「再接続中です」＋公式LINEで一斉案内</td></tr>
+    <tr><td>「決済できない」</td><td>定型返信「LINE内ブラウザの場合、右上の…→ブラウザで開く をお試しください」。解決しなければ「LINEで『決済』と送信」→個別対応（担当：運営A・当夜中）</td></tr>
+    <tr><td>「特典が届かない」</td><td>「『とどかない』とLINEに送信してください」（救済応答設定済み）</td></tr>
+    <tr><td>太郎さん急病</td><td>DAY1なら順延判断19:00・LINE告知文面は準備済みに差し替え。DAY2なら桜庭単独で設計図＋オファー実施（実演はDAY1アーカイブ流用）</td></tr>
+    <tr><td>コメント荒らし</td><td>反応せず削除＋ブロック（運営B一任）。読み上げない</td></tr>
+  </table>
+
+  <!-- KPI -->
+  <h2><span class="n">8</span>計測ポイント（成約率の事後分析用）</h2>
+  <table>
+    <tr><th>時点</th><th>指標</th><th>何がわかるか</th></tr>
+    <tr><td>各日20:15／21:00</td><td>同時接続</td><td>導入・実演の引き</td></tr>
+    <tr><td><b>21:30（訴求開始）</b></td><td><b>残存数</b></td><td>「聞く前に帰った」のか「オファーが弱い」のかの切り分け</td></tr>
+    <tr><td><b>21:39（価格直後）</b></td><td>残存数＋URLクリック（ライブ用リンク）</td><td>価格の受け止め</td></tr>
+    <tr><td>当夜〜48h</td><td>決済数（ライブ経由／LINE経由／後追い経由を計測リンクで分離）</td><td>どの導線が効いたか→次回設計へ</td></tr>
+  </table>
+  <div class="note">基準値（Prorium標準）：着席=リストの40%／成約=参加者の20%＝リスト約8%入校。リスト400なら着席160・入会30前後が標準ライン。</div>
+
+  <!-- links -->
+  <h2><span class="n">9</span>当日使うもの（リンク集）</h2>
+  <div class="links">
+    <a href="https://prorium-git.github.io/yamaguchi-ryu-scripts/" target="_blank">台本ライブラリ（公開版）</a>
+    <a href="https://prorium-git.github.io/yamaguchi-ryu-scripts/香盤表_20260706撮影.html" target="_blank">7/6撮影 香盤表</a>
+    <a href="オファー提示資料_DAY2クロージング_2026-06-29.html">オファー提示資料（25枚→20分用に上記順で圧縮）</a>
+    <a href="価値の見せ方_修正指示書_2026-06-29.html">¥59万 価値設計（内訳の根拠）</a>
+    <a href="../14_LINEリッチメッセージ/LIVE告知＆リマインド文_2026-07-07.md">リマインド10本</a>
+    <a href="../16_クロージング後導線_2DAYS/00_自動化設定とスケジュール_UTAGE.md">クロージング後の自動導線</a>
+    <a href="https://sub.yamaguchiryu.com/p/M1bEUVmWtQXQ" target="_blank">決済ページ（投下は計測リンクで）</a>
+  </div>
+
+  <footer>山口流 理容道｜LIVEローンチ全体構成 2026-07-07/08｜運営×CVRの2視点レビュー反映済み｜ⓒ Prorium（社外秘）</footer>
+</div>
+</body>
+</html>
