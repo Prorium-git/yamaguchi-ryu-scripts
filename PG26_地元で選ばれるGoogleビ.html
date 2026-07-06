@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG26｜地元で選ばれる——Googleビジネスプロフィール・口コミ・紹介｜山口流 理容道 台本v6</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:38px 26px 32px;margin:0 -18px 24px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:24px;font-weight:600;margin:8px 0 8px;line-height:1.5}
+  header .meta{font-size:12.5px;color:#c9d2e0;display:flex;gap:16px;flex-wrap:wrap}
+  .prompter-btn{position:sticky;top:10px;z-index:50;display:flex;justify-content:flex-end;margin-bottom:6px}
+  .prompter-btn button{background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:30px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,26,46,.3)}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:16px 0;box-shadow:0 2px 10px rgba(27,42,74,.05)}
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .oc{background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .oc .l{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+  .oc .v{font-size:13.5px;color:var(--ink);margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  .chip{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;white-space:nowrap}
+  .c1{background:#fbf3dc;color:#9a7b27}.c2{background:#eaf1fa;color:var(--blue)}.c3{background:#eef7f0;color:var(--green)}
+  .serif-card{background:#fffdf8;border:1px solid var(--gold-l);border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0;cursor:pointer}
+  .serif-card:hover{background:#fdf8ec}
+  .serif-card .sid{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .serif-card .sno{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 10px}
+  .serif-card .scene{font-size:11.5px;color:var(--mut)}
+  .serif-card .stx{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;color:var(--ink);line-height:1.9}
+  .serif-card .hint{font-size:10.5px;color:#b6a26d;margin-top:4px}
+  .nar{margin:14px 0}
+  .nar h3{font-size:14px;color:var(--navy);background:#eaf1fa;border-radius:8px;padding:6px 12px;margin-bottom:8px}
+  .nar p{font-size:13.5px;margin:8px 4px;color:#2c3644}
+  ul.plain{list-style:none}
+  ul.plain li{position:relative;padding-left:20px;margin:6px 0;font-size:13.5px}
+  ul.plain li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+  .memo{background:#fff8e8;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin-top:8px}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:30px}
+  /* ===== プロンプター ===== */
+  #pv{position:fixed;inset:0;background:#000;color:#fff;z-index:999;display:none;flex-direction:column}
+  #pv.on{display:flex}
+  #pv .bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#111;flex-wrap:wrap}
+  #pv .bar button{background:#222;color:#fff;border:1px solid #555;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+  #pv .bar button.act{background:var(--gold);color:#000;border-color:var(--gold)}
+  #pv .bar .pos{margin-left:auto;font-size:14px;color:#d8c79b}
+  #pv .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:4vw;overflow:hidden}
+  #pv .line{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;text-align:center;line-height:1.7;white-space:pre-wrap}
+  #pv .scrollwrap{flex:1;overflow-y:auto;padding:20vh 6vw}
+  #pv .scrollwrap .sl{font-family:"Hiragino Mincho ProN",serif;font-weight:600;line-height:1.9;margin:5vh 0;text-align:center;white-space:pre-wrap}
+  #pv .scrollwrap .sl .tag{display:block;font-size:14px;color:#d8c79b;font-family:sans-serif;margin-bottom:8px}
+  #pv.mirror .stage,#pv.mirror .scrollwrap{transform:scaleX(-1)}
+  #pv .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:#888;font-size:34px;padding:18px 10px;cursor:pointer;border-radius:10px}
+  #pv .prev{left:8px}#pv .next{right:8px}
+  @media(max-width:640px){.cards3{grid-template-columns:1fr}header h1{font-size:20px}}
+  @media print{.prompter-btn,#pv{display:none!important}body{background:#fff}section{box-shadow:none;page-break-inside:avoid}}
+  /* ===== 太郎さん専用ガイド ===== */
+.taro{background:#fffaf0;border:3px solid var(--gold);border-radius:14px;padding:8px 22px 22px}
+.taro h2{font-size:20px;border:none;background:var(--gold);color:#3a2c08;padding:6px 16px;border-radius:10px;display:block;margin:14px 0 6px}
+.taro .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.5;margin:6px 0}
+.taro .row{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+.taro .ico{font-size:30px;flex:0 0 40px;text-align:center;line-height:1.2}
+.taro .ttl{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.04em}
+.taro .txt{font-size:16px;color:var(--ink);line-height:1.75;margin-top:2px}
+.taro .txt b{color:var(--navy)}
+.taro .tell{background:#eef7f0;border-left:5px solid var(--green)}
+.taro .tell .ttl{color:var(--green)}
+.taro ul.gist{list-style:none;margin:4px 0 0}
+.taro ul.gist li{position:relative;padding:6px 0 6px 26px;font-size:16px;line-height:1.6}
+.taro ul.gist li::before{content:"💬";position:absolute;left:0;top:5px;font-size:15px}
+.taro .tip{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 14px;margin-top:10px;font-size:14.5px;color:#7a5f1e}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ SCRIPT v6</div>
+  <h1>PG26｜地元で選ばれる——Googleビジネスプロフィール・口コミ・紹介</h1>
+  <div class="meta"><span>尺：約33分</span><span>形式：ナレーション＋画面キャプチャ図解主体（太郎さんは座り収録のみ・計約5分）</span><span>台本v6（2026-07-02）</span><span>層：<span class="chip c1">🎬 層1 太郎</span> <span class="chip c2">🎙 層2 ナレ</span> <span class="chip c3">📺 層3 テロップ</span></span></div>
+</header>
+<div class="wrap">
+  <div class="prompter-btn"><button onclick="openPv(0)">🎬 プロンプターを開く（太郎さんセリフ）</button></div>
+
+  <section class="taro">
+  <h2>👤 太郎さん、まずこれだけ（撮影前に読む）</h2>
+  <div class="big">この回は、「Googleの地図に出てくる自分の店のページ」をちゃんと整えて、口コミと紹介を、自分からお願いできるようにする回です。</div>
+
+  <div class="row"><div class="ico">🤔</div><div><div class="ttl">なんで大事？</div>
+    <div class="txt">いまのお客さんは、初めての店をさがすとき、まずスマホの地図で「葉山 理容室」みたいに検索します。そのとき出てくるのは、インスタではなく<b>Googleの店ページ</b>。ここが空っぽだと、お店が開いていても、地図の上では<b>シャッターが閉まって見える</b>んです。たとえば、旅行先で夜ごはんの店をさがすとき、写真も口コミもゼロの店には、なんとなく入りづらいですよね。あれと同じで、うちの店も、初めての人からそう見られている。だから、地図の中の看板をきれいにしておく——これが大事です。しかも全部<b>無料</b>、かかるのは少しの手間だけです。</div></div></div>
+
+  <div class="row"><div class="ico">🙌</div><div><div class="ttl">太郎さんがやること</div>
+    <div class="txt">🤲 <b>手：</b>今日は施術の実演はナシ。基本すわったまま録るだけです。1か所だけ、レシートにカードを一枚そえて渡す「手元」を撮ります（口コミカードの実物を胸の高さに1枚持って読むと画になりますが、持たなくてもOK）。<br>🗣 <b>口：</b>あいさつ、店の想いのひとこと、口コミをお願いする言葉、紹介カードを渡す言葉、宿題と締め。全部プロンプターに出るので、<b>そのまま読めばOK</b>。カードを見ながらゆっくりで大丈夫です。</div></div></div>
+
+  <div class="row tell"><div class="ico">💬</div><div><div class="ttl">言いたいことは、ざっくりこれ</div>
+    <ul class="gist"><li>「今日は、地元のお客さんに店を見つけてもらう準備をしましょう」って始める。</li><li>「うちは葉山で四代、宣伝じゃなく<b>口づて</b>で続いてきた。Googleの口コミは、その口づてが文字になって残ったもの。だから大切に扱いたい」——ここは太郎さんの本音でいい。</li><li>口コミのお願いは「<b>もしよろしければ</b>ひとこと感想を…<b>うれしいです</b>」でそっと頼むだけ。星いくつとか内容の注文は絶対しない。書くも書かないもお客さん次第。</li><li>紹介カードは「頭や肩の疲れが気になる方がいたら、これを渡してあげてください」と軽くそえるだけ。頼み込まない。</li></ul></div></div>
+
+  <div class="tip">💡 <b>コツ：</b>下の台本は、丸暗記しなくて大丈夫。<b>「言いたいこと（上の💬）」さえ分かっていれば</b>、プロンプターの文はスッと自然に出てきます。読むんじゃなく、"分かってる人がしゃべる"感じで。</div>
+</section>
+
+  <section style="border-left:5px solid var(--gold)">
+  <h2>📌 この回の設計図（まずこれだけ読めばOK）</h2>
+
+  <div style="background:#fbf6ea;border:1px solid var(--gold-l);border-radius:10px;padding:14px 18px;margin:10px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em">① この回でやること</div>
+    <div style="font-size:16px;font-weight:700;color:var(--navy);margin:4px 0">Googleの地図に出る自分の店のページ（Googleビジネスプロフィール・無料）を整えて、口コミと紹介を自分からお願いできる状態にする回</div>
+    <ol style="margin:6px 0 0 22px;font-size:13.5px">
+      <li>Googleマップで自分の店を検索させ、「このビジネスのオーナーですか？」からオーナー確認を申請させる（画面キャプチャで手順を見せる）</li>
+      <li>カテゴリ（メイン＝理容店／追加＝ヘッドスパ系）・店名・営業時間・説明文を埋めさせる（説明文は実文を画面で見せる。「治る／改善」は書かせない）</li>
+      <li>写真8枚（外観／店内／シャンプー台／施術の手元／メニュー表／顔／道順／清潔感）を撮らせて登録させる</li>
+      <li>口コミをお願いする一言とQRカードを作らせる（太郎さんが実文を読む＋作り方3ステップを見せる）</li>
+      <li>口コミ返信の3テンプレ（高評価／低評価／事実無根）を全文見せて配る</li>
+      <li>紹介カードを作らせる（特典は値引きでなく「初回に首肩ケア5分」など時間で付ける）</li>
+    </ol>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">② 太郎さんのタスク（手でやること／口で読むこと）</div>
+    <table>
+      <tr><th style="width:50%">🤲 手でやること（実演・撮る絵）</th><th>🗣 口で読むこと（プロンプター）</th></tr>
+      <tr><td><ul class="plain" style="margin:0"><li>施術実演なし。基本は座り収録のみ</li><li>S06で口コミQRカードの実物モックを胸の高さに1枚持つ（持たなくても可）</li><li>手元インサート1カット：レシートにカードを一枚添えて渡す手（別撮り可）</li></ul></td><td><ul class="plain" style="margin:0"><li>S01–S02 冒頭挨拶＋今日やること（座り）</li><li>S03–S04 一言「四代を支えたのは口づて」（座り）</li><li>S05–S07 口コミをお願いする一言の読み上げデモ（座り・読み上げカード可）</li><li>S08 紹介カードを渡す一言（座り・読み上げカード可）</li><li>S09–S10 宿題＋締め（座り）</li></ul></td></tr>
+    </table>
+    <div style="font-size:12px;color:var(--mut);margin-top:4px">合計拘束目安：実演ほぼなし（手元カット1つ・数分）＋読み約5分（読みはプロンプター使用・演技不要）</div>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">③ 画面に入れるクリエイティブ（編集チームへの発注リスト）</div>
+    <table>
+      <tr><th style="width:110px">種類</th><th>作るもの</th><th style="width:130px">使う場面</th></tr>
+      <tr><td>図解</td><td>地元集客3本柱の図（①Googleの店ページ＝看板 ②口コミ＝信用 ③紹介＝導線）</td><td>01:00 導入</td></tr>
+      <tr><td>画面キャプチャ</td><td>Googleマップ検索→「このビジネスのオーナーですか？」ボタン拡大＋オーナー確認の手順フロー</td><td>03:00 GBP①</td></tr>
+      <tr><td>画面キャプチャ</td><td>管理画面「プロフィールを編集」でカテゴリ設定（メイン＝理容店／追加＝ヘッドスパ系）を順にハイライト</td><td>05:30 GBP②</td></tr>
+      <tr><td>比較テロップ</td><td>店名NG例「山口理容店 葉山 ヘッドスパが人気」に赤バツ（正式名称のみが正）</td><td>05:30 GBP②</td></tr>
+      <tr><td>図解</td><td>写真8枚セットの3×3グリッド（番号バッジ付き・見本写真はBロールから）</td><td>09:00 GBP③</td></tr>
+      <tr><td>テンプレ見本</td><td>週1投稿の実文をスマホ投稿画面モックで全文表示（3行構造を色分け）</td><td>12:00 GBP④</td></tr>
+      <tr><td>テンプレ見本</td><td>口コミ依頼QRカードの実物大モック（文言全文＋QRコード）</td><td>18:00 口コミ②</td></tr>
+      <tr><td>テンプレ見本</td><td>口コミ返信3テンプレ（高評価／低評価／事実無根）を口コミ画面モックの返信欄に全文表示</td><td>20:30 口コミ③</td></tr>
+      <tr><td>テンプレ見本</td><td>紹介カードの実物大モック（特典文言「初回に首肩ケア5分」＋地図QR）</td><td>24:30 紹介</td></tr>
+      <tr><td>実演インサート</td><td>レシートにカードを一枚添えて渡す手元カット</td><td>18:00・24:30 渡し方</td></tr>
+    </table>
+  </div>
+
+  <div class="cards3" style="margin-top:12px">
+    <div class="oc"><div class="l">今日から現場で使える1つ</div><div class="v">会計のとき、口コミカードか紹介カードを一枚添える。どちらか一枚からでOK。</div></div>
+    <div class="oc"><div class="l">宿題</div><div class="v">自分の店のGoogleビジネスプロフィールを整えてスクリーンショット1枚提出。①オーナー確認（申請まででOK）②カテゴリ・営業時間・説明文 ③写真3枚以上 ④口コミ依頼の一言を声に出して3回。</div></div>
+    <div class="oc"><div class="l">配布物</div><div class="v">GBP整えチェックリスト／口コミ依頼QRカード原稿＋読み上げカード／返信テンプレ3種／紹介カード原稿／宿題チェックシート（配布物パック_v6.md）</div></div>
+  </div>
+  </section>
+  <section><h2>基本情報</h2><table><tr><th>番号</th><td>PG26</td></tr><tr><th>タイトル</th><td>地元で選ばれる——Googleビジネスプロフィール・口コミ・紹介</td></tr><tr><th>尺</th><td>約33分</td></tr><tr><th>収録形態</th><td>ナレーション＋画面キャプチャ図解主体。太郎さんは座り収録のみ（OP／一言／口コミ依頼・紹介の読み上げデモ／ED＝計約5分）。本編はGBP管理画面・Googleマップの画面収録＋フルスクリーン図解＋既存PGのBロール</td></tr><tr><th>必要機材</th><td>座り収録用イス（落ち着いた背景）、ピンマイク、カンペ（S01〜S10を大きく印刷）、PC画面収録環境（GBP管理画面・business.google.com）、スマホ画面収録（Googleマップ検索デモ）、口コミ依頼QRカード・紹介カードの実物モック（手元インサート用）、読み上げカード</td></tr><tr><th>モデル</th><td>不要（施術実演なし。Bロールは既存映像流用）</td></tr><tr><th>参照PG</th><td>PG18「あなたの15分に値札をつける」（松竹梅メニュー表・告知文を、GBPの写真・投稿・カードに流用）／PG25「『次、いつ空いてますか』の仕組み」（前回。宿題＝全お客さまに次回の目安をひとこと＋件数報告）</td></tr><tr><th>コンプラ</th><td>効果の断定禁止。「リラクゼーションを目的に」「〜と言われています」に統一。治る／改善／自律神経が整う／育毛はNG（GBPの説明文・投稿・口コミ返信の例文もすべて同基準）。Googleのポリシー遵守を本編で明示（見返りつき口コミ依頼・サクラ・選別依頼の禁止）。統計数値（「◯%が口コミを見る」等）は出典が確定するまで使わない。画面収録は非公開情報・お客さま実名をマスキング</td></tr></table></section>
+  <section><h2>タイムコード構成表</h2><table><tr><th>時間</th><th>パート</th><th>内容</th><th>層</th></tr><tr><td>00:00–00:30</td><td>OP</td><td>太郎さん挨拶＋今日のゴール（S01・S02）＋OPテロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>00:30–01:00</td><td>先週の宿題</td><td>前回宿題のふり返り・良い提出例の紹介</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>01:00–03:00</td><td>導入</td><td>SNS頼み脱却——地元集客の3本柱（GBP／口コミ／紹介）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>03:00–05:30</td><td>GBP①</td><td>Googleビジネスプロフィールとは・登録とオーナー確認（画面キャプチャ）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>05:30–09:00</td><td>GBP②</td><td>基本情報の整え方——カテゴリ・店名・営業時間・説明文</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>09:00–12:00</td><td>GBP③</td><td>写真8枚セット——初めての人の不安を消す並べ方</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span>＋Bロール</td></tr><tr><td>12:00–14:30</td><td>GBP④</td><td>週1投稿——ネタ3種類とPG18告知文の流用</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>14:30–15:00</td><td>太郎さん一言</td><td>「口コミは、口づてが文字になって残ったもの」（S03・S04）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>15:00–18:00</td><td>口コミ①</td><td>依頼のタイミングと一言。太郎さんが実文を読む（S05〜S07）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>18:00–20:30</td><td>口コミ②</td><td>QRカードの作り方・渡し方・やってはいけない3つ</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>20:30–24:30</td><td>口コミ③</td><td>返信テンプレ——高評価・低評価・事実無根（全文読み上げ）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>24:30–27:30</td><td>紹介</td><td>紹介カード導線——特典は値引きでなく時間で。太郎さんが渡す一言を読む（S08）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>27:30–30:00</td><td>演習</td><td>一時停止式3ステップ（自店検索→写真棚卸し→声出し）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>30:00–31:30</td><td>復習</td><td>今日の要点総ざらい（3本柱）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>31:30–32:00</td><td>現場で使える1つ</td><td>まとめテロップ「会計のとき、カードを一枚添える」</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>32:00–33:00</td><td>ED</td><td>宿題提示＋締め（S09・S10）＋宿題テロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr></table></section>
+  <section><h2>太郎さんセリフ（クリックでその行からプロンプター起動）</h2><div class="serif-card"><div class="sid"><span class="sno">S01</span><span class="scene">OP｜00:00–00:30｜座り・バストアップ正面</span></div><div class="stx">こんにちは。山口太郎です。今日は、地元のお客さまに、店を見つけてもらう準備をします。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S02</span><span class="scene">OP｜00:00–00:30</span></div><div class="stx">ゴールはひとつ。Googleの地図に出る自分の店のページを整えて、口コミを自分からお願いできるようになることです。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S03</span><span class="scene">太郎さん一言｜14:30–15:00</span></div><div class="stx">うちは、葉山で四代、続いてきました。支えてくれたのは、宣伝ではなく、口づてです。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S04</span><span class="scene">太郎さん一言｜14:30–15:00</span></div><div class="stx">Googleの口コミは、その口づてが、文字になって残ったものです。だから、大切に扱います。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S05</span><span class="scene">口コミ依頼・読み上げデモ｜15:00–18:00</span></div><div class="stx">ここからは、わたしが実際に読みます。口コミをお願いするときの、言葉です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S06</span><span class="scene">口コミ依頼・読み上げデモ｜手元の読み上げカードを見ながらゆっくり読んでよい。実物のQRカードを胸の高さに1枚持って読むと画になる（持たなくても可）</span></div><div class="stx">「本日はありがとうございました。もしよろしければ、Googleの口コミで、今日の感想をひとこといただけると、うれしいです。こちらのカードから、開けます。」</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S07</span><span class="scene">口コミ依頼・読み上げデモ｜15:00–18:00</span></div><div class="stx">お願いは、これで全部です。書くか、書かないか。何を書くか。それは、お客さまが決めることです。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S08</span><span class="scene">紹介カードを渡す一言・読み上げデモ｜24:30–27:30｜手元の読み上げカードを見ながらゆっくり読んでよい</span></div><div class="stx">「もしお近くに、頭や肩の疲れを気にされている方がいらしたら、このカードを、渡してあげてください。」</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S09</span><span class="scene">ED｜32:00–33:00</span></div><div class="stx">今週の宿題です。自分の店のGoogleのページを整えて、その画面の写真を、提出してください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S10</span><span class="scene">ED｜32:00–33:00｜この後に軽く会釈</span></div><div class="stx">地元のお客さまは、Googleであなたの店を見ています。それでは、また来週。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div></section>
+  <section><h2>ナレーション全文</h2><div class="nar"><h3>先週の宿題・良い例紹介（00:30–01:00）</h3><p>先週の宿題は、「今週いらしたすべてのお客さまに、次回の目安をひとこと伝えて、件数を報告する」でした。報告、ありがとうございました。今週も、良い報告をひとつ紹介します。<b style="color:#c0392b">〔要確認: 実際の件数報告の提出例をここで紹介。画面に提出物を表示〕</b>声に出した人から、次回予約は動き始めます。今日の回も、最後に「自分の店で手を動かす」宿題があります。しかも今日の宿題は、一度やれば、そのあと何年も、あなたの代わりに働き続けてくれるものです。</p></div><div class="nar"><h3>導入：SNS頼み脱却——地元集客の3本柱（01:00–03:00）</h3><p>ここまでの回で、手の中の技術と、メニュー表と、告知の言葉がそろいました。今日は、店の外に目を向けます。テーマは、地元です。</p><p>SNSの発信は、これからも続けてください。ただ、SNSだけに頼ると、集客は仕組みの変化に振り回されて、不安定になります。それに、あなたのお店に実際に通えるのは、結局、通える距離に住んでいる人だけです。</p><p>初めての店を探すとき、いま多くの人は、スマホの地図で検索すると言われています。「葉山 ヘッドスパ」。「近くの理容室」。そう打ち込んだときに画面に出てくるのは、インスタのアカウントではありません。Googleビジネスプロフィール。店の名前、場所、写真、営業時間、そして口コミです。ここが整っていない店は、地図の上で、シャッターが閉まって見えます。</p><p>今日は、この地元集客を、三つの柱で整えます。柱の一、Googleビジネスプロフィール。地図の上に立つ、あなたの店の看板です。柱の二、口コミ。その看板に、信用を足すものです。柱の三、紹介。人から人へ渡る、いちばん確実な導線です。三つとも、お金は一円もかかりません。かかるのは、少しの手間だけです。順番にいきます。</p></div><div class="nar"><h3>GBP①：登録とオーナー確認（03:00–05:30）</h3><p>柱の一、Googleビジネスプロフィールです。長いので、この動画では「ビジネスプロフィール」と呼びます。Googleの検索結果とGoogleマップに表示される、お店の情報ページのことです。登録も利用も、無料です。</p><p>画面を見てください。Googleマップで「山口理容店」と検索すると、このように、店の名前、場所、写真、口コミが出ます。これがビジネスプロフィールです。</p><p>大事なことを先に言います。このページ、あなたが作っていなくても、すでに存在していることが多いです。Googleが地図情報から自動で作るからです。つまり、放っておくと、間違った営業時間や古い情報が、あなたの知らないところで表示され続けます。</p><p>だから最初の仕事は、「オーナー確認」です。この店の持ち主は自分だと、Googleに認めてもらう手続きです。手順は画面のとおりです。ひとつ、Googleマップで自分の店名を検索する。ふたつ、店のページにある「このビジネスのオーナーですか？」を押す。みっつ、Googleアカウントでログインして、案内に従う。確認の方法は、電話、メール、ハガキ、店内を映す動画など、店によって変わります。Googleが指定した方法に従ってください。ハガキの場合は届くまで日数がかかります。だから、申請だけでも、今日やってください。</p><p>もし店のページ自体が地図に出てこない場合は、business.google.com から新規で登録できます。オーナー確認が済むと、情報の編集、写真の追加、そして口コミへの返信が、すべてできるようになります。逆に言うと、確認が済むまでは、何もできません。今日の全部の土台です。</p></div><div class="nar"><h3>GBP②：基本情報の整え方（05:30–09:00）</h3><p>オーナー確認が済んだら、看板の中身を整えます。管理画面の「プロフィールを編集」から、上から順に埋めていきます。</p><p>まず、カテゴリです。ここがいちばん検索結果に影響すると言われています。カテゴリには、メインと追加の二種類があります。メインカテゴリは、お店の本業をひとつ。理容室なら「理容店」。サロンの方は、管理画面に出てくる候補の一覧から、自分の業態にいちばん近いものを選んでください。そして追加カテゴリに、ヘッドスパやリラクゼーションに関わるものを足します。カテゴリは自由記述ではなく、Googleが用意した一覧から選ぶ方式です。候補の名前は変わることがあるので、一覧を実際に開いて、いまのメニューに合うものを選んでください。カットしか登録していない理容室は、「葉山 ヘッドスパ」の検索に出てきません。ここを直すだけで、看板の向きが変わります。</p><p>次に、基本の4情報。店名、住所、電話番号、営業時間です。店名は、正式名称だけを書いてください。「山口理容店 葉山 ヘッドスパが人気」のように、店名にキーワードを足すのは、Googleのルール違反です。見つけてもらいたい気持ちは分かりますが、やらない。住所と電話番号は、ホームページやSNSに書いてあるものと、一字一句そろえます。表記がばらつくと、同じ店だと機械が判断しにくくなると言われています。営業時間は、祝日や臨時休業のたびに更新してください。「開いていると書いてあったのに閉まっていた」は、地元の信用に直接ひびきます。</p><p>予約の導線も入れます。予約用のURL欄に、公式LINEやホームページの予約ページのリンクを貼る。地図で見つけた人が、そのまま予約まで進める道を作ります。</p><p>最後に、ビジネスの説明文です。750文字まで書けますが、長さより中身です。画面の実文を読みます。</p><p>「葉山で四代続く理容店です。カットのほかに、シャンプー台で受けられる、リラクゼーションを目的としたヘッドスパのメニューがあります。15分のお試しから、45分のじっくりコースまで。お仕事帰りの方も、ご予約いただくとお待たせしません。」</p><p>構造は三つだけです。どんな店か。何が受けられるか。どう来ればいいか。そしてここでも、書いてはいけない言葉があります。「治る」「改善する」「自律神経が整う」。説明文もお店の広告です。この講座で守ってきた線引きを、そのまま守ってください。「リラクゼーションを目的とした」で書けば、十分に伝わります。</p></div><div class="nar"><h3>GBP③：写真8枚セット（09:00–12:00）</h3><p>次は、写真です。初めてのお客さまは、文章より先に、写真を見ます。見ているのは、腕前ではありません。「この店に、入って大丈夫か」です。外から中が見えない理容室や個人サロンほど、この不安は大きい。写真の仕事は、上手に見せることではなく、不安を消すことです。</p><p>そろえる写真は、この8枚です。画面のリストを見てください。1枚目、外観。看板と入口がはっきり分かる、昼の写真です。2枚目、店内の全体。3枚目、シャンプー台、または施術スペース。お客さまが実際に過ごす場所です。4枚目、施術中の手元。これは、これまでの回で撮ってきた練習動画から切り出せます。5枚目、メニュー表。PG18で作った、松竹梅の3段メニューをそのまま貼ります。写真がそのまま値段の案内になります。6枚目、あなた自身の顔写真。誰にさわられるのか分からない店には、人は入りません。7枚目、店までの道順。駅からの角、駐車場、目印になる建物。8枚目、清潔感が伝わる一枚。たたんだタオル、そろえた道具。あなたには日常でも、初めての人には安心の材料です。</p><p>撮り方の約束は四つです。スマホで十分。昼の自然光で撮る。お客さまの顔が写り込まないようにする。そして、加工で盛らない。写真と実物の差は、来店した瞬間にばれます。</p><p>最初に表示される1枚、カバー写真には、外観か施術スペースを選んでください。そして、8枚そろえて終わりではなく、月に1枚でいいので、足し続けてください。写真の日付が止まっている店は、営業しているかどうかさえ、疑われます。</p></div><div class="nar"><h3>GBP④：週1投稿（12:00–14:30）</h3><p>ビジネスプロフィールには、「最新情報」を投稿する機能があります。SNSと同じような投稿が、地図の上にも出せる、と考えてください。これを、週1本。この講座の配信と同じリズムで続けます。</p><p>ネタは、三種類だけでいいです。一つ、新メニューやキャンペーンの告知。これは、PG18で作った告知文が、ほぼそのまま使えます。あの回の宿題は、ここでもう一度働きます。二つ、今週の空き状況や、営業時間の変更。三つ、日々の仕事の一枚。研いだハサミ、たたんだタオル、仕込みの様子。写真1枚と、短い文章で十分です。</p><p>実文をひとつ読みます。「今週は、木曜の夕方に、ご予約の空きがあります。シャンプー台で受けられる、リラクゼーションを目的としたヘッドスパ、15分のお試しからどうぞ。ご予約は、プロフィールのリンクからお願いします。」</p><p>三行です。何があるか。何が受けられるか。どうすればいいか。凝った文章は要りません。そしてここでも、効果を約束する言葉は書かない。投稿が続いている店は、地図の上で、営業中の顔をしています。それだけで、隣の更新が止まった店より、一歩前に出ます。</p></div><div class="nar"><h3>太郎さん一言の前フリ（14:30–15:00）</h3><p>ここまでが、柱の一、看板の整え方でした。ここで一度、太郎さんの言葉を聞いてください。</p><p>（太郎さんS03・S04）</p></div><div class="nar"><h3>口コミ①：依頼のタイミングと一言（15:00–18:00）</h3><p>（S05の前）柱の二、口コミです。先に、事実をひとつお伝えします。口コミは、待っていても、ほとんど書かれません。満足したお客さまは、満足したまま、静かに帰ります。一方で、不満を持ったお客さまは、書く理由を持って帰ります。つまり、こちらから何もしなければ、口コミ欄は、実際のお店より悪い顔になりやすいのです。だから、良い仕事のあとに、こちらから、静かにお願いします。</p><p>タイミングは、ひとつだけ覚えてください。お客さまから、満足の言葉が出た直後です。鏡を見て、「すっきりした」「気持ちよかった」と言ってくださった。その流れのまま、会計のときにお願いします。こちらから感想を探りにいく必要はありません。そして、満足の言葉が出なかった日は、無理に頼まない。頼むのは、良い仕事ができた日だけでいいのです。</p><p>言葉は、決めておきます。ここから、太郎さんが実際に読みます。</p><p>（太郎さんS05〜S07）</p><p>（S07のあと）いまの一言が、台本のすべてです。「もしよろしければ」で始めて、「うれしいです」で終わる。書いてください、ではなく、いただけるとうれしい。これだけで、強制の匂いが消えます。そして、太郎さんが最後に言ったことが、いちばん大事です。何を書くかは、お客さまの自由です。「星5でお願いします」「ヘッドスパのことを書いてください」——内容の注文は、絶対につけない。注文をつけた瞬間、それは口コミではなく、広告になります。</p></div><div class="nar"><h3>口コミ②：QRカード（18:00–20:30）</h3><p>口頭のお願いには、弱点があります。お客さまは、家に帰ると忘れます。悪気はありません。忘れるのが普通です。だから、思い出せる紙を渡します。口コミ依頼のQRカードです。</p><p>作り方は、3ステップです。画面を見てください。ステップ1、ビジネスプロフィールの管理画面にある、口コミ依頼用の共有リンクをコピーします。管理画面に「クチコミを依頼」や「プロフィールを共有」といったボタンがあり、そこから、口コミの書き込み画面に直接つながるリンクが取れます。ステップ2、そのリンクを、無料のQRコード作成サービスで、QRコードの画像に変換します。ステップ3、名刺サイズのカードに印刷します。自宅のプリンターと厚紙で十分です。</p><p>カードの文言は、この全文をそのまま使ってください。「本日はありがとうございました。よろしければ、Googleの口コミで、今日の感想をお聞かせください。今後の仕事の励みになります。山口理容店」。この文と、QRコード。それだけです。渡し方は、会計のとき、おつりやレシートに、一枚添える。さっきの一言と、このカードで、口コミ依頼は完成です。</p><p>そして、やってはいけないことを三つ、はっきり言っておきます。一つ、見返りと引き換えのお願い。「口コミを書いてくれたら100円引き」は、Googleのルール違反です。発覚すれば、口コミの削除や、プロフィールが使えなくなるといった措置を受けることがあります。二つ、サクラ。自分や家族、友人が、お客のふりをして書くこと。地元では、必ずばれます。三つ、選んでお願いすること。喜んでくれた人にだけ渡して、そうでない人には渡さない、を続けると、口コミ欄が実態から離れていきます。カードは、同じように渡す。評価は、日々の仕事で取りにいく。それが筋です。</p></div><div class="nar"><h3>口コミ③：返信テンプレ——高評価・低評価・事実無根（20:30–24:30）</h3><p>口コミは、もらって終わりではありません。返信までが仕事です。そして覚えておいてください。返信は、書いてくれた本人だけに宛てた手紙ではありません。これからあなたの店を探す、未来のお客さまが読む手紙です。</p><p>まず、良い口コミへの返信です。全文を読みます。「ご来店と、あたたかい口コミをありがとうございます。ヘッドスパの時間を、ゆっくりお過ごしいただけたなら、何よりです。またお疲れのたまったころに、お待ちしております。山口」。三行で十分です。ルールは二つ。もらった口コミには、できるだけすべて返す。そして、効果を約束する言葉で返さない。お客さまが「肩こりが治った」と書いてくださっても、店側が「治ってよかったです」と書いてはいけません。「ゆっくりお過ごしいただけて何よりです」と受け止める。お客さまの感想は自由ですが、店の言葉は広告として見られます。</p><p>次に、低評価への返信です。その前に、やることが一つあります。すぐに返さない。読んだ直後は、誰でも頭に血がのぼります。一晩置いてください。そのあいだに、いつのどなたのことか、何があったのか、事実を思い出します。返信はそれからです。</p><p>低評価への返信テンプレを、全文読みます。「ご来店いただいたにもかかわらず、ご期待に沿えず、申し訳ありませんでした。いただいたご指摘は、店として受け止め、見直してまいります。よろしければ、詳しいお話をお聞かせください。お電話やご来店の際に、わたくし山口が、直接うかがいます。貴重なご意見を、ありがとうございました。」</p><p>型は五つです。一、言い訳から始めない。二、相手を否定しない。三、来店日時や施術の中身など、お客さまの個人情報にあたることを書かない。四、詳しい話し合いは、返信の中でなく、電話や対面に移す。五、感謝で締める。この返信を読んだ未来のお客さまは、こう思います。「この店は、うまくいかなかったときに、ちゃんとしている」。低評価への返信は、守りではなく、店の人柄を見せる場面です。</p><p>最後に、身に覚えのない口コミ、来た記録のない方からの口コミです。返信例を読みます。「口コミをありがとうございます。恐れ入りますが、ご記載の内容について、当店の記録では確認ができませんでした。お心当たりの点がございましたら、直接ご連絡いただけますと幸いです。」感情を入れず、事実だけを短く。あわせて、口コミの横のメニューから、Googleに「レビューを報告」で削除を申請できます。ただし、申請しても消えるとは限りません。消えない口コミと争い続けるより、その上に、本物の良い口コミを積んでいくほうが早い。だからこそ、さっきのカードなのです。</p></div><div class="nar"><h3>紹介：紹介カード導線（24:30–27:30）</h3><p>（S08の前）最後の柱、紹介です。地元の店にとって、いちばん確実な新規のお客さまは、いまの常連さんの、後ろにいます。家族、職場の同僚、近所の友人。紹介は「自然に起きるのを待つもの」と思われがちですが、導線は作れます。それが、紹介カードです。</p><p>さっきの口コミカードとの違いを、はっきりさせておきます。口コミカードは、感想を書いてもらうための紙。紹介カードは、人を連れてきてもらうための紙です。役割が違うので、二枚は分けて作ります。</p><p>カードの実文です。「ご紹介カード。このカードをお持ちの方は、初回のヘッドスパに、首肩のケア5分を、おつけします。山口理容店」。この文に、店の場所がすぐ分かるように、ビジネスプロフィールにつながる地図のQRコードを添えます。渡された人は、そのQRから、営業時間も写真も口コミも、全部見られます。今日整えた看板が、ここでつながります。</p><p>特典の決め方に、ルールがひとつあります。値引きではなく、時間で贈る。PG18で、根拠を持って付けた値札を、自分から崩さないためです。初回に5分のケアを足す。紹介してくださった側には、次回の施術を5分延長する。両方に、お金ではなく時間で返す。そして確認です。口コミは、見返りを付けたらルール違反でした。紹介カードの特典は、口コミとは別のものなので、付けて構いません。この区別だけ、間違えないでください。</p><p>渡し方の一言も、決めておきます。太郎さんが読みます。</p><p>（太郎さんS08）</p><p>（S08のあと）これだけです。渡す相手は、通ってくださっている方、今日、満足の言葉が出た方。会計のときに、二枚渡します。一枚は渡す用、一枚は予備です。頼み込む必要はありません。「渡してあげてください」まで言ったら、あとは、あなたの日々の仕事が決めます。紹介は、技術と人柄の、成績表です。</p></div><div class="nar"><h3>演習：一時停止式3ステップ（27:30–30:00）</h3><p>ここからは、あなた自身の番です。スマホと、紙とペンを用意してください。ステップごとに動画を一時停止して、進めてください。</p><p>ステップ1。スマホでGoogleマップを開き、自分の店の名前を検索してください。出てきたページを、お客さまの目で見ます。営業時間は合っていますか。住所と電話は正しいですか。写真は何が写っていますか。オーナー確認がまだの方は、「このビジネスのオーナーですか？」から、いますぐ申請まで進めてください。終わったら、一時停止を解除してください。</p><p>ステップ2。写真の棚卸しです。画面に、8枚セットのリストをもう一度出します。外観、店内、施術スペース、施術中の手元、メニュー表、あなたの顔、道順、清潔感の一枚。いま自分のページにある写真と見比べて、足りないものを紙に書き出してください。それが、今週の撮影リストになります。書けたら、一時停止してください。</p><p>ステップ3。口の練習です。口コミをお願いする一言を、声に出して3回読んでください。「本日はありがとうございました。もしよろしければ、Googleの口コミで、今日の感想をひとこといただけると、うれしいです。こちらのカードから、開けます。」3回読むと、自分の言葉になります。</p><p>これで、看板の点検と、撮影リストと、口の練習がそろいました。</p></div><div class="nar"><h3>復習：今日の総ざらい（30:00–31:30）</h3><p>今日の要点をまとめます。</p><p>柱の一、Googleビジネスプロフィール。まずオーナー確認。カテゴリは本業をメインに、ヘッドスパ系を追加で。店名にキーワードを足さない。写真は8枚セット、説明文と投稿には効果を約束する言葉を書かない。投稿は週1本、ネタは告知・空き状況・日々の一枚の三種類。</p><p>柱の二、口コミ。満足の言葉が出た直後に、一言とQRカードでお願いする。内容の注文はつけない。見返り、サクラ、選び渡しの三つは、やらない。返信は全部にやる。低評価には一晩置いて、五つの型で返す。</p><p>柱の三、紹介。口コミカードとは別に、紹介カードを作る。特典は値引きでなく、時間で贈る。会計のときに二枚、「渡してあげてください」と添える。</p><p>三つの柱は、全部つながっています。紹介カードのQRの先に、整った看板と、本物の口コミがある。それが、地元で選ばれる店の形です。</p></div><div class="nar"><h3>今日から現場で使える1つ（31:30–32:00）</h3><p>今日から現場で使える1つは、これです。会計のとき、カードを一枚添える。口コミカードでも、紹介カードでも、まずはどちらか一枚から。カードは、あなたが眠っているあいだも、お客さまの財布の中で働き続けます。</p></div></section>
+  <section><h2>テロップ・図解指示</h2><ul class="plain"><li><b>OPテロップ</b>: 「PG26｜地元で選ばれる」／サブ「Googleビジネスプロフィール・口コミ・紹介」。ブランドカラー（ネイビー＋ゴールド）。</li><li><b>先週の宿題（00:30）</b>: PG25宿題（次回の目安ひとこと・件数報告）の提出物を枠付きで表示。<b style="color:#c0392b">〔要確認: 実提出例〕</b></li><li><b>導入・3本柱図（01:00）</b>: 中央に店舗アイコン、周囲に3本柱「①Googleビジネスプロフィール＝看板」「②口コミ＝信用」「③紹介＝導線」。下部に「3つとも無料。かかるのは手間だけ」。スマホ検索画面のモック（検索語「葉山 ヘッドスパ」）→地図表示の流れをアニメーション。</li><li><b>GBP①（03:00）</b>: 実画面キャプチャ主体。①Googleマップ検索結果→山口理容店のプロフィール表示 ②「このビジネスのオーナーですか？」ボタンをズーム・ハイライト ③オーナー確認フロー図（検索→ボタン→ログイン→確認方法は店により電話/メール/ハガキ/動画）。注意テロップ「ページは自動で作られていることが多い→放置＝間違った情報が出続ける」「ハガキ確認は日数がかかる→申請は今日」。</li><li><b>GBP②（05:30）</b>: 管理画面「プロフィールを編集」の実キャプチャに沿って項目ごとにハイライト。カテゴリ図解＝「メイン：理容店（本業）／追加：ヘッドスパ・リラクゼーション系（候補一覧から選択）」。NG例テロップ「店名にキーワード追加はルール違反：山口理容店 葉山 ヘッドスパが人気 ←NG」（赤バツ）。「NAPそろえ」図＝店名・住所・電話をHP/SNS/GBPで一字一句統一する三面図。説明文はモック画面に全文表示し、ナレ読み上げに合わせ行ハイライト。「治る／改善／自律神経が整う＝説明文でもNG」の禁止ワードテロップ。</li><li><b>GBP③写真8枚（09:00）</b>: 3×3グリッド（8枚＋中央にロゴ）で「①外観 ②店内全体 ③シャンプー台 ④施術の手元 ⑤メニュー表 ⑥あなたの顔 ⑦道順 ⑧清潔感の一枚」を番号バッジ付きで表示。各写真の見本はBロール・スチールから。撮り方の約束4つ（スマホで十分／昼の自然光／お客さま写り込みNG／加工で盛らない）を1枚ずつ。「カバー写真＝外観 or 施術スペース」「月1枚 足し続ける」。</li><li><b>GBP④投稿（12:00）</b>: 投稿作成画面の実キャプチャ。ネタ3種の図解「①告知（PG18の告知文を流用）②空き状況・営業時間 ③日々の一枚」。投稿実文はスマホモックで全文表示、3行構造（何がある/何が受けられる/どうすればいい）に色分け注釈。</li><li><b>太郎さん一言（14:30）</b>: S03・S04を画面下1/3に字幕。背景に葉山の店舗外観スチール（あれば）<b style="color:#c0392b">〔要確認: 山口理容店の外観写真素材の有無〕</b></li><li><b>口コミ①（15:00）</b>: 「口コミは待っていても書かれない」図＝満足客は静かに帰る/不満客は書く理由を持ち帰る、の対比イラスト。タイミング図解＝来店→施術→鏡で確認→【満足の言葉が出た直後】（強調色）→会計。S06の読み上げに合わせ、依頼の一言全文を画面下1/3に字幕表示（書き写せるよう2秒以上ホールド）。禁止テロップ「星5でお願いします／内容の注文＝NG」。</li><li><b>口コミ②QRカード（18:00）</b>: 作り方3ステップ図（①管理画面でリンクをコピー→②無料QR作成サービスで変換→③名刺サイズに印刷）。カードの完成モック（実物大）を画面表示、文言全文＋QR。「やってはいけない3つ」を1枚ずつ赤帯テロップ（①見返りつき依頼＝Googleルール違反 ②サクラ ③選び渡し）。</li><li><b>口コミ③返信（20:30）</b>: 高評価返信・低評価返信・事実無根返信の3テンプレを、口コミ画面モック（ダミー名・ダミーアイコン）上の返信欄に全文表示し、ナレ読み上げと同期して行ハイライト。低評価の「五つの型」（①言い訳から始めない ②相手を否定しない ③個人情報を書かない ④話し合いはオフラインへ ⑤感謝で締める）を番号バッジで。手順キャプチャ「レビューを報告」の位置。注意テロップ「返信は未来のお客さまへの手紙」「すぐ返さない・一晩置く」「『治ってよかったです』と店側が書くのはNG」。</li><li><b>紹介（24:30）</b>: 口コミカードと紹介カードの役割対比図（感想を書いてもらう紙／人を連れてきてもらう紙）。紹介カード完成モック（実物大・文言全文＋地図QR）。特典ルール図「値引きではなく時間で贈る：紹介された側＝初回に首肩ケア5分／紹介した側＝次回5分延長」。区別テロップ「口コミに見返り＝NG／紹介カードの特典＝OK」。S08は字幕表示。</li><li><b>演習画面（27:30）</b>: ステップ番号を左上大。ステップ1＝スマホ画面モックでチェック観点（営業時間/住所・電話/写真）。ステップ2＝8枚リスト再掲＋書き込み欄イメージ。ステップ3＝依頼の一言全文を大きく表示。各ステップ末に一時停止アイコン＋「ここで一時停止」テロップ2秒。</li><li><b>復習テロップ（30:00）</b>: 「柱①看板」「柱②口コミ」「柱③紹介」を1枚ずつ→最後に3本柱がQRでつながる全体図。</li><li><b>まとめテロップ（31:30）</b>: 「今日から現場で使える1つ：会計のとき、カードを一枚添える」。</li><li><b>EDテロップ</b>: 「今週の宿題：①オーナー確認（申請まででOK）②写真3枚以上を登録 ③プロフィール画面のスクリーンショットを提出 ④口コミ依頼の一言を声に出して3回」。</li><li><b>共通コンプラ表記</b>: 効能に触れる箇所に常時小さく「※リラクゼーションを目的とした内容です／効果には個人差があります」。</li><li><b>注記</b>: 図解内の店名（山口理容店）・メニュー名・特典内容はすべて記入例。テロップに小さく「※店名・メニュー・特典はご自身のものに差し替えてください」を併記。Google管理画面のボタン名・配置は変更されることがある旨を小さく注記（「※画面は収録時点のものです」）。</li></ul></section>
+  <section><h2>宿題・配布物</h2><ul class="plain"><li><b>今週の宿題</b>: 自分の店のGoogleビジネスプロフィールを整えて、その画面のスクリーンショットを1枚提出する。具体的には——①オーナー確認を済ませる（ハガキ待ち等の場合は「申請まで」でOK。申請画面のスクリーンショットで提出可）②基本情報（カテゴリ・営業時間・説明文）を埋める ③写真を3枚以上登録する ④口コミ依頼の一言を声に出して3回読む。</li><li><b>チェックシート1</b> □ オーナー確認を済ませた（またはハガキ等の申請まで進めた）</li><li><b>チェックシート2</b> □ メインカテゴリ＋追加カテゴリを設定し、店名にキーワードを足していない</li><li><b>チェックシート3</b> □ 写真を3枚以上登録した（8枚セットの不足分は撮影リストに書き出した）</li><li><b>チェックシート4</b> □ 説明文・投稿に「治る／改善／自律神経が整う」等の効果断定を書いていない</li><li><b>チェックシート5</b> □ 口コミ依頼の一言を、声に出して3回読んだ</li><li><b>配布物</b>（配布物パック_v6.md 参照）: Googleビジネスプロフィール整えチェックリスト（登録〜写真〜投稿・写真8枚リスト付き）</li><li><b>配布物</b>: 口コミ依頼QRカード原稿＋依頼の一言読み上げカード</li><li><b>配布物</b>: 口コミ返信テンプレ集（高評価／低評価／事実無根の3種・全文）</li><li><b>配布物</b>: 紹介カード原稿＋渡すときの一言カード</li><li><b>配布物</b>: 宿題チェックシート（上記5項目）</li></ul></section>
+  <section><h2>制作メモ</h2><div class="memo"><b>太郎さん収録は座りのみ・計約5分</b>（OP／一言／口コミ依頼デモ／紹介デモ／ED）。バストアップ正面、背景はダークネイビー基調。S06・S08は手元の読み上げカードを見ながらゆっくり読んで構わない。S06でQRカードの実物モックを1枚持つ場合は、文字がカメラに読める必要はない（かたちが分かれば十分）。<br><br><b>読み上げデモの字幕は必須</b>。太郎さんの音声と画面の実文を完全一致させる。受講生がそのまま書き写す前提。<br><br><b>画面収録は撮影直前に最新UIで撮る</b>。Googleビジネスプロフィールの管理画面は名称・配置の変更が頻繁。台本のボタン名（「このビジネスのオーナーですか？」「プロフィールを編集」「クチコミを依頼」等）と実画面が食い違う場合は、実画面を正としてナレを微修正する。編集で「※画面は収録時点のものです」を常時小さく入れる。<br><br><b>マスキング必須</b>: 管理画面収録では、メールアドレス・電話番号・インサイト数値・お客さま実名の口コミを必ずぼかす。口コミ返信パートの画面は、ダミー名・ダミーアイコンで作ったモックを使用（実在の口コミを使わない）。検索デモで競合店が映る場合は他店名をぼかす。<br><br><b>山口理容店の実プロフィールを画面素材に使うかどうか</b> <b style="color:#c0392b">〔要確認: 太郎さんの許可。不可の場合はデモ用モックで全画面を作成〕</b><br><br><b>Bロール割当</b>: 写真8枚パート（09:00–12:00）で「施術の手元」＝既存PGの実技映像から切り出し、「清潔感の一枚」＝タオル・道具のスチールを新規で数カット撮影しておくと図解が実写で組める。<br><br><b>カードモック2種</b>（口コミ依頼QRカード・紹介カード）は撮影前に実物を印刷して用意。手元インサート（レシートに添えて渡す手のカット）を1カット撮ると、渡し方の説明が実写でできる。<br><br><b>数値の扱い</b>: 「◯%が口コミを見て店を選ぶ」等の統計は本編で使用しない方針（出典未確定のため）。使いたい場合は出典確定後に差し込む <b style="color:#c0392b">〔要確認: 使用する場合の出典〕</b><br><br><b>QRコード作成サービス</b>は特定サービス名を画面に出す場合、撮影時点で無料・ログイン不要で使えることを確認 <b style="color:#c0392b">〔要確認: 使用サービス名〕</b>。ナレーションでは固有名を出していないので、画面側のみの判断でよい。<br><br><b style="color:#c0392b">〔要確認〕一覧</b>: ①PG25宿題（件数報告）の実提出例（00:30パートの差し替え）②提出先（公式LINEか会員サイトか）に合わせてEDテロップの提出先文言を確定 ③山口理容店の実GBP画面の使用許可（不可ならモック作成）④葉山店舗の外観スチール素材の有無（太郎さん一言の背景）⑤紹介カード特典の最終内容（「首肩ケア5分／次回5分延長」は記入例。太郎さん・運営で確定）⑥QRコード作成サービス名と稼働確認。<br><br><b>本編との整合</b>: メニュー名・価格・告知文はPG18の記入例（お試しヘッドスパ15分3,500円ほか）と統一済み。PG18を先に視聴している前提の言及（「PG18で作った告知文」）が2か所あるため、配信順が変わる場合はナレの該当箇所を修正。</div></section>
+  <footer>山口流 理容道｜台本v6｜PG26 地元で選ばれる——Googleビジネスプロフィール・口コミ・紹介｜ⓒ Prorium（社外秘）</footer>
+</div>
+
+<div id="pv">
+  <div class="bar">
+    <button onclick="closePv()">✕ 閉じる(Esc)</button>
+    <button id="mSingle" class="act" onclick="setMode('single')">1枚ずつ</button>
+    <button id="mScroll" onclick="setMode('scroll')">自動スクロール</button>
+    <button onclick="fsz(1)">文字＋</button><button onclick="fsz(-1)">文字−</button>
+    <button id="spD" onclick="spd(-1)" style="display:none">遅く</button><button id="spU" onclick="spd(1)" style="display:none">速く</button>
+    <button id="mir" onclick="mirror()">🪞 ミラー反転</button>
+    <span class="pos" id="pos"></span>
+  </div>
+  <div class="stage" id="stage"><div class="line" id="line"></div></div>
+  <div class="scrollwrap" id="sw" style="display:none"></div>
+  <button class="nav prev" onclick="mv(-1)">‹</button>
+  <button class="nav next" onclick="mv(1)">›</button>
+</div>
+
+<script>
+const LINES = [{"id":"S01","text":"こんにちは。山口太郎です。今日は、地元のお客さまに、店を見つけてもらう準備をします。"},{"id":"S02","text":"ゴールはひとつ。Googleの地図に出る自分の店のページを整えて、口コミを自分からお願いできるようになることです。"},{"id":"S03","text":"うちは、葉山で四代、続いてきました。支えてくれたのは、宣伝ではなく、口づてです。"},{"id":"S04","text":"Googleの口コミは、その口づてが、文字になって残ったものです。だから、大切に扱います。"},{"id":"S05","text":"ここからは、わたしが実際に読みます。口コミをお願いするときの、言葉です。"},{"id":"S06","text":"「本日はありがとうございました。もしよろしければ、Googleの口コミで、今日の感想をひとこといただけると、うれしいです。こちらのカードから、開けます。」"},{"id":"S07","text":"お願いは、これで全部です。書くか、書かないか。何を書くか。それは、お客さまが決めることです。"},{"id":"S08","text":"「もしお近くに、頭や肩の疲れを気にされている方がいらしたら、このカードを、渡してあげてください。」"},{"id":"S09","text":"今週の宿題です。自分の店のGoogleのページを整えて、その画面の写真を、提出してください。"},{"id":"S10","text":"地元のお客さまは、Googleであなたの店を見ています。それでは、また来週。"}];
+let idx=0, fs=6.4, mode='single', speed=1, raf=null;
+const pv=document.getElementById('pv'), line=document.getElementById('line'), pos=document.getElementById('pos'), sw=document.getElementById('sw'), stage=document.getElementById('stage');
+function openPv(i){ if(!LINES.length) return; idx=i||0; pv.classList.add('on'); render(); }
+function closePv(){ pv.classList.remove('on'); stopScroll(); }
+function render(){
+  if(mode==='single'){
+    stage.style.display='flex'; sw.style.display='none';
+    const L=LINES[idx]; line.style.fontSize=fs+'vw'; line.textContent=L.text;
+    pos.textContent=(L.id||('#'+(idx+1)))+'　'+(idx+1)+' / '+LINES.length;
+  }else{
+    stage.style.display='none'; sw.style.display='block';
+    sw.innerHTML=LINES.map(L=>'<div class="sl" style="font-size:'+fs+'vw"><span class="tag">'+(L.id||'')+'</span>'+L.text.replace(/</g,'&lt;')+'</div>').join('');
+    pos.textContent='自動スクロール（速度 '+speed+'）— クリックで一時停止/再開';
+    startScroll();
+  }
+}
+function mv(d){ if(mode!=='single')return; idx=Math.min(LINES.length-1,Math.max(0,idx+d)); render(); }
+function fsz(d){ fs=Math.min(14,Math.max(2.4,fs+d*0.8)); render(); }
+function mirror(){ pv.classList.toggle('mirror'); document.getElementById('mir').classList.toggle('act'); }
+function setMode(m){ mode=m; stopScroll();
+  document.getElementById('mSingle').classList.toggle('act',m==='single');
+  document.getElementById('mScroll').classList.toggle('act',m==='scroll');
+  document.getElementById('spD').style.display=m==='scroll'?'':'none';
+  document.getElementById('spU').style.display=m==='scroll'?'':'none';
+  render(); }
+function spd(d){ speed=Math.min(5,Math.max(1,speed+d)); pos.textContent='自動スクロール（速度 '+speed+'）'; }
+let paused=false;
+function startScroll(){ paused=false; sw.scrollTop=0; const step=()=>{ if(!paused){ sw.scrollTop+=0.4*speed; } raf=requestAnimationFrame(step); }; raf=requestAnimationFrame(step); }
+function stopScroll(){ if(raf)cancelAnimationFrame(raf); raf=null; }
+sw.addEventListener('click',()=>{ paused=!paused; });
+document.addEventListener('keydown',e=>{
+  if(!pv.classList.contains('on'))return;
+  if(e.key==='Escape')closePv();
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();mv(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();mv(-1);}
+});
+document.querySelectorAll('.serif-card').forEach((el,i)=>el.addEventListener('click',()=>openPv(i)));
+</script>
+</body>
+</html>

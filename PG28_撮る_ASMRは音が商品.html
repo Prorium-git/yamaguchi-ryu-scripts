@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG28｜撮る——ASMRは“音”が商品｜山口流 理容道 台本v6</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:38px 26px 32px;margin:0 -18px 24px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:24px;font-weight:600;margin:8px 0 8px;line-height:1.5}
+  header .meta{font-size:12.5px;color:#c9d2e0;display:flex;gap:16px;flex-wrap:wrap}
+  .prompter-btn{position:sticky;top:10px;z-index:50;display:flex;justify-content:flex-end;margin-bottom:6px}
+  .prompter-btn button{background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:30px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,26,46,.3)}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:16px 0;box-shadow:0 2px 10px rgba(27,42,74,.05)}
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .oc{background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .oc .l{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+  .oc .v{font-size:13.5px;color:var(--ink);margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  .chip{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;white-space:nowrap}
+  .c1{background:#fbf3dc;color:#9a7b27}.c2{background:#eaf1fa;color:var(--blue)}.c3{background:#eef7f0;color:var(--green)}
+  .serif-card{background:#fffdf8;border:1px solid var(--gold-l);border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0;cursor:pointer}
+  .serif-card:hover{background:#fdf8ec}
+  .serif-card .sid{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .serif-card .sno{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 10px}
+  .serif-card .scene{font-size:11.5px;color:var(--mut)}
+  .serif-card .stx{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;color:var(--ink);line-height:1.9}
+  .serif-card .hint{font-size:10.5px;color:#b6a26d;margin-top:4px}
+  .nar{margin:14px 0}
+  .nar h3{font-size:14px;color:var(--navy);background:#eaf1fa;border-radius:8px;padding:6px 12px;margin-bottom:8px}
+  .nar p{font-size:13.5px;margin:8px 4px;color:#2c3644}
+  ul.plain{list-style:none}
+  ul.plain li{position:relative;padding-left:20px;margin:6px 0;font-size:13.5px}
+  ul.plain li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+  .memo{background:#fff8e8;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin-top:8px}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:30px}
+  /* ===== プロンプター ===== */
+  #pv{position:fixed;inset:0;background:#000;color:#fff;z-index:999;display:none;flex-direction:column}
+  #pv.on{display:flex}
+  #pv .bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#111;flex-wrap:wrap}
+  #pv .bar button{background:#222;color:#fff;border:1px solid #555;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+  #pv .bar button.act{background:var(--gold);color:#000;border-color:var(--gold)}
+  #pv .bar .pos{margin-left:auto;font-size:14px;color:#d8c79b}
+  #pv .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:4vw;overflow:hidden}
+  #pv .line{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;text-align:center;line-height:1.7;white-space:pre-wrap}
+  #pv .scrollwrap{flex:1;overflow-y:auto;padding:20vh 6vw}
+  #pv .scrollwrap .sl{font-family:"Hiragino Mincho ProN",serif;font-weight:600;line-height:1.9;margin:5vh 0;text-align:center;white-space:pre-wrap}
+  #pv .scrollwrap .sl .tag{display:block;font-size:14px;color:#d8c79b;font-family:sans-serif;margin-bottom:8px}
+  #pv.mirror .stage,#pv.mirror .scrollwrap{transform:scaleX(-1)}
+  #pv .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:#888;font-size:34px;padding:18px 10px;cursor:pointer;border-radius:10px}
+  #pv .prev{left:8px}#pv .next{right:8px}
+  @media(max-width:640px){.cards3{grid-template-columns:1fr}header h1{font-size:20px}}
+  @media print{.prompter-btn,#pv{display:none!important}body{background:#fff}section{box-shadow:none;page-break-inside:avoid}}
+  /* ===== 太郎さん専用ガイド ===== */
+.taro{background:#fffaf0;border:3px solid var(--gold);border-radius:14px;padding:8px 22px 22px}
+.taro h2{font-size:20px;border:none;background:var(--gold);color:#3a2c08;padding:6px 16px;border-radius:10px;display:block;margin:14px 0 6px}
+.taro .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.5;margin:6px 0}
+.taro .row{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+.taro .ico{font-size:30px;flex:0 0 40px;text-align:center;line-height:1.2}
+.taro .ttl{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.04em}
+.taro .txt{font-size:16px;color:var(--ink);line-height:1.75;margin-top:2px}
+.taro .txt b{color:var(--navy)}
+.taro .tell{background:#eef7f0;border-left:5px solid var(--green)}
+.taro .tell .ttl{color:var(--green)}
+.taro ul.gist{list-style:none;margin:4px 0 0}
+.taro ul.gist li{position:relative;padding:6px 0 6px 26px;font-size:16px;line-height:1.6}
+.taro ul.gist li::before{content:"💬";position:absolute;left:0;top:5px;font-size:15px}
+.taro .tip{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 14px;margin-top:10px;font-size:14.5px;color:#7a5f1e}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ SCRIPT v6</div>
+  <h1>PG28｜撮る——ASMRは“音”が商品</h1>
+  <div class="meta"><span>尺：約33分</span><span>形式：実演回（手技を「売れる形で録る」回・撮る側⇔撮られる側を行き来）</span><span>台本v6（2026-07-02）</span><span>層：<span class="chip c1">🎬 層1 太郎</span> <span class="chip c2">🎙 層2 ナレ</span> <span class="chip c3">📺 層3 テロップ</span></span></div>
+</header>
+<div class="wrap">
+  <div class="prompter-btn"><button onclick="openPv(0)">🎬 プロンプターを開く（太郎さんセリフ）</button></div>
+
+  <section class="taro">
+  <h2>👤 太郎さん、まずこれだけ（撮影前に読む）</h2>
+  <div class="big">この回は「施術の“音”を、雑音なしで60秒スマホで録るやり方」を教える回です（施術のやり方は教えません）。</div>
+
+  <div class="row"><div class="ico">🤔</div><div><div class="ttl">なんで大事？</div>
+    <div class="txt">受講生さん（=お客さんに選ばれたい施術者）は、髪をさわる音や指がすべる音そのものが、実は“お客さんを呼ぶ商品”だからです。<br>たとえば、焼肉屋さんの前を通ると、あの「ジュ〜ッ」という焼ける音だけで入りたくなりますよね。<b>あれと同じで、施術の音は「来る前のお試し体験」</b>になります。太郎さんのYouTubeが登録者10万人・100万回再生になったのも、しゃべりではなく“音”が良かったから。だから今日は<b>「良い音を録る」やり方だけ</b>を教えます。</div></div></div>
+
+  <div class="row"><div class="ico">🙌</div><div><div class="ttl">太郎さんがやること</div>
+    <div class="txt">🤲 <b>手：</b>スマホを三脚に縦で立てて、数千円のマイクを付ける → エアコン・音楽を止めて「静かにする7つの準備」を順番に実演 → わざと雑音を鳴らして「あり／なし」を録り比べ → 最後に頭皮さすりを60秒だけ録って、その場でイヤホンで聴き返す。<br>🗣 <b>口：</b>OPあいさつ（S01・S02）、途中の一言（S03〜S09を7本まとめ撮り）、宿題の締め（S10）、撮影OKをもらう声かけ（カードB）。<b>ぜんぶ下のプロンプターを読めばOK</b>、演技はいりません。</div></div></div>
+
+  <div class="row tell"><div class="ico">💬</div><div><div class="ttl">言いたいことは、ざっくりこれ</div>
+    <ul class="gist"><li>自分はしゃべりが得意じゃないけど、動画は見てもらえた。音だけで伝わるから。（S03）</li><li>使うのはスマホとマイク1個だけ。数千円で始められて、高い機材はいらない。（S04）</li><li>録る前にエアコンとBGMは止める。雑音はあとから消せないから。録ったらイヤホンですぐ聴いて確認。（S05・S06）</li><li>撮る前にお客さんへ「撮っていいですか」と必ず聞く。だまって撮るのはダメ。まずは60秒、下手でもいいから録ることが第一歩。（S07・S08）</li></ul></div></div>
+
+  <div class="tip">💡 <b>コツ：</b>下の台本は、丸暗記しなくて大丈夫。<b>「言いたいこと（上の💬）」さえ分かっていれば</b>、プロンプターの文はスッと自然に出てきます。読むんじゃなく、"分かってる人がしゃべる"感じで。</div>
+  </section>
+
+  <section style="border-left:5px solid var(--gold)">
+  <h2>📌 この回の設計図（まずこれだけ読めばOK）</h2>
+
+  <div style="background:#fbf6ea;border:1px solid var(--gold-l);border-radius:10px;padding:14px 18px;margin:10px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em">① この回でやること</div>
+    <div style="font-size:16px;font-weight:700;color:var(--navy);margin:4px 0">スマホ1台と数千円のピンマイクで、雑音ゼロの施術音を60秒録れるようになる回（施術は教えない。撮り方だけの回）</div>
+    <ol style="margin:6px 0 0 22px;font-size:13.5px">
+      <li>太郎さんのYouTube実画面（登録者10万人・主要動画100万回再生）で「音を消す→戻す」比較を見せ、売れているのは映像でなく音だと分からせる</li>
+      <li>機材3点（スマホ＋数千円ピンマイク＋三脚）のセッティングを見せる（縦9:16・被写体まで50cm〜1m・マイクは触れる音から20〜30cm以内）</li>
+      <li>録る直前の「無音をつくる7ステップ」（エアコンOFF→BGM OFF→機内モード→窓閉め→小さな音源確認→服・装飾品→10秒無音テスト）を太郎さんが実際に順番にやって見せる</li>
+      <li>NG音10項目（エアコン・BGM・衣擦れ等）をわざと鳴らして録り、あり／なしを波形と実音で聴き比べさせる</li>
+      <li>撮影許可の読み上げカードA〜Dを字幕全文で見せ、そのまま音読練習させる</li>
+      <li>PG11の頭皮さすりで60秒を1本録り通し、「録ったらすぐイヤホンで聴き返す」までをワンセットで見せる→宿題で受講生に同じ60秒を録って提出させる</li>
+    </ol>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">② 太郎さんのタスク（手でやること／口で読むこと）</div>
+    <table>
+      <tr><th style="width:50%">🤲 手でやること（実演・撮る絵）</th><th>🗣 口で読むこと（プロンプター）</th></tr>
+      <tr><td>・スマホを三脚に縦で固定し、ピンマイクをモデルの襟元に付ける（②機材）<br>・エアコンOFF→BGM停止→機内モード→窓閉め→秒針・冷蔵庫の確認→時計・指輪を外す→10秒無音テスト録音、を順番に実行（③7ステップ）<br>・エアコン・BGM・化繊の上着・腕時計をわざと鳴らして録る→止めて録る（④NG音デモ）<br>・60秒録り通し：セッティング→カードB→録画→PG11頭皮さすり60秒→イヤホンで聴き返す（⑥）<br>・リプレイ用：同じさすりを内蔵マイク／ピンマイクで各1回録り比べ（分解リプレイ①）</td><td>・S01-S02 OP挨拶＋ゴール宣言（バストアップ・カメラ目線）<br>・S03〜S09 一言インサート7本（同じ立ち位置・同画角で連続録り。各5〜10秒）<br>・S10 ED宿題（バストアップ）<br>・カードB「では、撮らせていただきますね」（⑥の録り通しの中で一言）</td></tr>
+    </table>
+    <div style="font-size:12px;color:var(--mut);margin-top:4px">合計拘束目安：実演 約45分（機材5分＋7ステップ5分＋NG音デモ15分＋60秒通し10分＋録り比べ10分）＋読み 約10分（S01〜S10の計10本・プロンプター使用・演技不要）</div>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">③ 画面に入れるクリエイティブ（編集チームへの発注リスト）</div>
+    <table>
+      <tr><th style="width:110px">種類</th><th>作るもの</th><th style="width:130px">使う場面</th></tr>
+      <tr><td>画面キャプチャ</td><td>太郎さんYouTubeチャンネル実画面（登録者10万人・100万回再生の表示。撮影時点で画面収録し、テロップ数値を画面と一致させる）</td><td>01:00 バズ実例</td></tr>
+      <tr><td>比較テロップ</td><td>「🔇 音なし／🔊 音あり」の切り替え表示＋波形アニメ</td><td>01:00–04:00 音消し比較</td></tr>
+      <tr><td>図解</td><td>内蔵マイクは部屋中の雑音まで拾う図＋ピンマイク「触れる音から20〜30cm以内」の円の図</td><td>04:20 機材パート</td></tr>
+      <tr><td>テロップUI</td><td>無音7ステップの順送りチェックリスト（実演と同期して✓が入る）</td><td>07:50 無音環境</td></tr>
+      <tr><td>比較テロップ</td><td>NG音10項目リスト（×NG音→○直し方の2段。デモ中の項目をハイライト）</td><td>11:40 NG音</td></tr>
+      <tr><td>波形図</td><td>NG音あり／なしの実波形を並列表示（誇張せず実データを拡大）</td><td>11:40 NG音／21:20 リプレイ①</td></tr>
+      <tr><td>テンプレ見本</td><td>読み上げカードA〜D全文の大型字幕（受講生がそのまま音読練習できる速度で表示）</td><td>15:30 許可パート</td></tr>
+      <tr><td>テロップUI</td><td>60秒タイマー（0:00→1:00）＋手順チェックリストの同期✓</td><td>18:20 録り通し</td></tr>
+      <tr><td>アニメ図</td><td>「録る前の1枚の地図」俯瞰イラスト（被写体・三脚50cm〜1m・手元寄り角度・マイク位置・閉めた窓・OFFの空調とBGM）</td><td>23:50 リプレイ②</td></tr>
+      <tr><td>図解</td><td>素材ストック時系列図（第3週タッピング→第17週 直す前/直した後→今日、の帯にサムネイルが積み上がる図）</td><td>26:20 棚卸し</td></tr>
+    </table>
+  </div>
+
+  <div class="cards3" style="margin-top:12px">
+    <div class="oc"><div class="l">今日から現場で使える1つ</div><div class="v">録る前に、エアコンを止める（S09・まとめテロップと連動）</div></div>
+    <div class="oc"><div class="l">宿題</div><div class="v">自分の施術の音を60秒録って提出。三脚固定・縦／無音7ステップ／カードAで同意／イヤホンで聴き返してから提出</div></div>
+    <div class="oc"><div class="l">配布物</div><div class="v">機材リスト／無音7ステップ／NG音チェックリスト10項目／声かけカード4種／宿題提出要項（配布物パック_v6.md）</div></div>
+  </div>
+  </section>
+  <section><h2>基本情報</h2><table><tr><th>番号</th><td>PG28</td></tr><tr><th>タイトル</th><td>撮る——ASMRは“音”が商品</td></tr><tr><th>尺</th><td>約33分（OP30秒＋宿題復習30秒＋本編⑦まで約28分＋分解リプレイ約5分内包＋復習・宿題・ED約4分）</td></tr><tr><th>収録形態</th><td>実演回（手技を教える回ではなく「手技を売れる形で録る」回）。太郎さんはOP/ED＋本編の一言インサート（S03〜S09）を別撮り。本編は太郎さんが「撮る側」（スマホ・三脚・マイクを操作）と「撮られる側」（施術モデルに手技）を行き来する。解説はすべてナレーション（層2）＋テロップ・波形図解（層3）</td></tr><tr><th>必要機材（劇中で使う実機）</th><td>スマホ1台（縦持ち）／スマホ用三脚（自由雲台）／スマホ装着型ピンマイク（数千円クラスの実機）／イヤホン（聴き返し用）／メジャー（距離明示用）／ハンドタオル・施術クリーム少量／施術用の椅子またはベッド／NG音デモ用：エアコンリモコン・BGMスピーカー・化繊の上着・腕時計・指輪</td></tr><tr><th>収録カメラ（この台本を撮る側）</th><td>カメラA＝太郎さんバストアップ（OP/ED/一言）／カメラB＝太郎さんが構えるスマホの「画面そのもの」（画面収録ミラーリング推奨）／カメラC＝現場全体の引き（三脚位置・距離・マイク位置の位置関係が分かる俯瞰寄り）／音声＝劇中スマホの実録音声をそのまま比較素材に使う（制作メモ参照）</td></tr><tr><th>モデル</th><td>施術モデル1名（被写体。髪は短〜中・清潔。表情を映さない前提で顔出し負担が低い人）。新規撮影あり</td></tr><tr><th>参照PG</th><td>PG03 タッピング4種（第3週・練習撮影の起点）／PG09 太郎ハンド3種／PG11 筋膜リリース頭皮さすり＆揉捏（60秒録り通しの手技）／PG17 10のクセ（「直す前／直した後」動画＝素材ストック）／PG18・19（メニューと価格＝発信の受け皿）／次回接続：<b style="color:#c0392b">〔要確認: 次回PG番号・タイトル（編集・投稿回）〕</b></td></tr><tr><th>コンプラ</th><td>効果の断定なし。「リラクゼーションを目的に」「〜と言われています」「研究で示唆されています」で統一。治る／改善／自律神経が整う／育毛 はNG。太郎さんの実績数字は「YouTube登録者10万人・主要動画100万回再生」の事実のみ使用し、盛らない（編集時に実画面キャプチャで裏取り<b style="color:#c0392b">〔要確認: 撮影時点の最新数値で画面収録〕</b>）。肖像・音声の同意、店内BGMの著作権、他のお客様の映り込みに注意</td></tr></table></section>
+  <section><h2>タイムコード構成表</h2><table><tr><th>時間</th><th>パート</th><th>内容</th><th>層</th></tr><tr><td>00:00–00:10</td><td>OP挨拶</td><td>太郎さん挨拶・カメラ目線（S01）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>00:10–00:30</td><td>今日のゴール宣言</td><td>太郎さんがゴールを言う（S02）／OPテロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>00:30–01:00</td><td>先週の宿題・良い例紹介</td><td>ナレーションで前回の宿題を振り返り、良い実践例を紹介（N00）</td><td><span class="chip c2">🎙 層2</span></td></tr><tr><td>01:00–04:00</td><td>① 太郎さんのバズ実例——音が商品</td><td>YouTube登録者10万人・主要動画100万回再生の実画面。音を消す／音を戻す比較。「売っているのは音」</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>04:00–04:20</td><td>一言インサート</td><td>S03「しゃべらなくても、施術の音だけで伝わるからです。」</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>04:20–07:30</td><td>② 最低ラインの機材</td><td>スマホ1台＋数千円のピンマイク＋三脚。内蔵マイクの限界。縦9:16・固定・手元寄りの基本を圧縮再掲</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>07:30–07:50</td><td>一言インサート</td><td>S04「数千円で、始められます。」</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>07:50–11:20</td><td>③ 無音環境の作り方</td><td>「無音をつくる7ステップ」を太郎さんが実際に順に実行。10秒の無音テスト録音</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>11:20–11:40</td><td>一言インサート</td><td>S05「雑音は、録ったあとでは消せません。」</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>11:40–15:10</td><td>④ NG音チェックリスト</td><td>エアコン・BGM・衣擦れ等10項目。実際に鳴らして録り、波形と音で聴き比べ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>15:10–15:30</td><td>一言インサート</td><td>S06「録ったら、その場でイヤホンで聴いてください。」</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>15:30–18:00</td><td>⑤ 客への撮影許可の声かけ</td><td>読み上げカードA〜D（事前・直前・断られた時・載せる前）。字幕で全文提示</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>18:00–18:20</td><td>一言インサート</td><td>S07「黙って撮っては、いけません。」</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>18:20–21:00</td><td>⑥ 60秒施術音の録り通し</td><td>セッティング→無音7ステップ→カードB→録画→PG11さすりを60秒→すぐイヤホンで聴き返す、を1本通す</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span> <span class="chip c2">🎙 層2（最小限）</span></td></tr><tr><td>21:00–21:20</td><td>一言インサート</td><td>S08「まず、60秒です。」</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>21:20–23:50</td><td>分解リプレイ① マイク位置と音</td><td>内蔵マイク（遠）vs ピンマイク（近）を同一手技で録り比べ。波形＋実音で比較</td><td><span class="chip c3">📺 層3</span> <span class="chip c1">🎬 実演（スロー）</span></td></tr><tr><td>23:50–26:20</td><td>分解リプレイ② NG音の聴き比べ</td><td>エアコンON/OFF・BGMあり/なし・衣擦れ・通知音を×→直し方で一覧。最後に「録る前の1枚の地図」</td><td><span class="chip c3">📺 層3</span> <span class="chip c1">🎬 実演（スロー）</span></td></tr><tr><td>26:20–28:40</td><td>⑦ 3週目からのストックが素材になる</td><td>第3週タッピング以降の練習撮影＝投稿素材ストック。棚卸しの方法（フォルダ分け・★印・60秒切り出しメモ）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>28:40–30:30</td><td>復習</td><td>機材→無音→NG音→許可→60秒録って聴く、を手順で総ざらい</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>30:30–30:50</td><td>今日から現場で使える1つ</td><td>まとめテロップ＋太郎さん一言（S09）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>30:50–32:20</td><td>宿題解説</td><td>「自分の施術音60秒を提出」の条件・録り方・提出先をナレで解説（N09）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>32:20–33:00</td><td>ED</td><td>太郎さん宿題提示＋締め（S10）＋宿題テロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>33:00–33:20</td><td>クロージング</td><td>ロゴ・次回予告<b style="color:#c0392b">〔要確認: 次回PG〕</b>テロップ</td><td><span class="chip c3">📺 層3</span></td></tr></table><p style="font-size:12px;color:#5b6676;margin-top:8px">※実演（層1）は説明を担わない。太郎さんの手と機材操作が「その手順」を静かに見せ、意味はすべて層2ナレーションと層3テロップ・波形が運ぶ。すべて静かな職人トーン。1文は短く。誇張・絶叫・問いかけ演技なし。S03〜S09は本編にかぶせる一言インサート（別撮り・施術空間を背景に短く読む）。</p></section>
+  <section><h2>太郎さんセリフ（クリックでその行からプロンプター起動）</h2><div class="serif-card"><div class="sid"><span class="sno">S01</span><span class="scene">（OP挨拶・00:00）</span></div><div class="stx">こんにちは。山口太郎です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S02</span><span class="scene">（今日のゴール・00:10／ゆっくり読む）</span></div><div class="stx">今日は、施術ではなく、動画の撮り方をやります。<br>ゴールは、雑音のない施術の音を、60秒、録れるようになることです。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S03</span><span class="scene">（①バズ実例の後・04:00／手を止めて言う）</span></div><div class="stx">私は、話すのが得意ではありません。<br>それでも、動画はたくさんの人に見てもらえました。<br>しゃべらなくても、施術の音だけで伝わるからです。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S04</span><span class="scene">（②機材の後・07:30）</span></div><div class="stx">使うのは、スマホと、マイクひとつです。<br>数千円で、始められます。<br>高い機材は、いりません。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S05</span><span class="scene">（③無音環境の後・11:20）</span></div><div class="stx">録る前に、エアコンとBGMを止めます。<br>雑音は、録ったあとでは消せません。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S06</span><span class="scene">（④NG音の後・15:10／ゆっくり読む）</span></div><div class="stx">録ったら、その場でイヤホンで聴いてください。<br>雑音が入っていないかは、聴けばすぐ分かります。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S07</span><span class="scene">（⑤許可の声かけの後・18:00）</span></div><div class="stx">撮る前に、お客様に「撮っていいですか」と聞きます。<br>黙って撮っては、いけません。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S08</span><span class="scene">（⑥60秒通しの後・21:00）</span></div><div class="stx">まず、60秒です。<br>下手で、かまいません。<br>録らないと、始まりません。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S09</span><span class="scene">（まとめ・30:30／手を止めて言う）</span></div><div class="stx">今日から使えるのは、ひとつです。<br>録る前に、エアコンを止める。<br>それだけで、音が変わります。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S10</span><span class="scene">（ED宿題・32:20／ゆっくり読む）</span></div><div class="stx">今週の宿題です。<br>自分の施術の音を、60秒、録って提出してください。<br>それでは、また来週。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">カードA</span><span class="scene">（⑤読み上げカード｜事前のお願い・予約時か施術前）</span></div><div class="stx">ひとつ、お願いがあります。いま、施術の動画を撮る練習をしています。お顔は映しません。手元と、音だけです。SNSに載せることがあります。撮らせていただいても、よろしいですか。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">カードB</span><span class="scene">（⑤読み上げカード｜撮影直前のひとこと）</span></div><div class="stx">では、撮らせていただきますね。音を録るので、いつもより静かに進めます。途中で気になったら、いつでもおっしゃってください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">カードC</span><span class="scene">（⑤読み上げカード｜断られたときの返し）</span></div><div class="stx">かしこまりました。撮りません。いつも通り、ゆっくりお休みください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">カードD</span><span class="scene">（⑤読み上げカード｜載せる前の最終確認）</span></div><div class="stx">先日の動画、載せる前に一度お見せします。ここまでなら大丈夫、という範囲を教えてください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div></section>
+  <section><h2>ナレーション全文</h2><p style="font-size:12px;color:#5b6676;margin-bottom:6px">声：落ち着いた中低音。機材・数値・距離・手順は具体に言い切る（再現できる数字を出す）。効能だけは断定せず「〜と言われています／示唆されています／目的に」で受ける。「絶対」「必ず」は使わない。</p><div class="nar"><h3>N00｜先週の宿題・良い例紹介（00:30–01:00）</h3><p>先週の宿題は、覚えていますか。<b style="color:#c0392b">〔要確認: 前回PGの宿題内容に合わせて1文を差し替え〕</b>。今週も、たくさんの提出をいただきました。いちばん良かったのは、「完璧を待たずに、まず出した」提出です。今日からは、いよいよ「発信」の話に入ります。ここまで磨いてきた手技を、お店の外にいる人へ届ける方法。その第一歩が、今日の「撮る」です。</p></div><div class="nar"><h3>N01｜① 太郎さんのバズ実例——音が商品（01:00–04:00）</h3><p>まず、事実を、そのままお見せします。画面に出ているのは、太郎さんのYouTubeチャンネルです。登録者は、10万人。そして、主要な動画は、100万回以上、再生されています。<b style="color:#c0392b">〔要確認: 撮影時点の最新数値をチャンネル実画面の収録で裏取り〕</b></p><p>ここで、思い出してください。太郎さんは、話すことが得意な人ではありません。この動画の中でも、ほとんど話していません。カメラに向かって語りかけることも、テロップで煽ることも、していません。映っているのは、手元。そして、流れているのは、施術の音だけです。</p><p>試しに、音を消してみます。……どうでしょうか。手が動いているだけの、静かな映像です。悪くはありませんが、100万回、見たくなるものではありません。</p><p>では、音を戻します。……髪をかき分ける音。指の腹が頭皮をすべる音。タッピングの、規則正しい音。とたんに、画面の中に、引き込まれていきませんか。</p><p>これが、今日いちばん大切な結論です。ASMR動画で売れているのは、映像ではありません。音です。ASMRとは、ささやき声や、静かな物音で、心地よい感覚が生まれる動画のジャンルです。一定のリズムでくり返される静かな音は、落ち着きや眠気を誘う方向と、反復刺激の研究で示唆されています。ヘッドマッサージには、髪に触れる音、指がすべる音、タッピングの音が、自然に生まれます。あなたの施術は、もともと「音の商品」を毎日つくっているのです。</p><p>そして、見る人にとって、その音は、来店前の「お試し体験」になります。動画で心地よさを感じた人が、「この手に触れてもらいたい」と思って、お店を探す。話さなくても、音が集客をしてくれる。太郎さんの10万人と100万回は、その実例です。</p><p>だから今日は、カメラの話より先に、音の話をします。音を商品として録るための、4つのまとまりです。ひとつ、最低ラインの機材。ふたつ、無音環境の作り方。みっつ、消すべきNG音。よっつ、お客様への撮影許可。最後に、60秒を1本、通して録ります。</p></div><div class="nar"><h3>N02｜② 最低ラインの機材——スマホ1台＋数千円のマイク（04:20–07:30）</h3><p>結論から言います。必要なのは、スマホ1台と、数千円の外付けピンマイク。これが最低ラインで、そして、これで十分です。</p><p>まず、映像。今のスマホのカメラは、十分にきれいです。映像のために、新しい機材を買う必要はありません。</p><p>問題は、音です。スマホの内蔵マイクには、限界があります。内蔵マイクは、部屋全体の音を広く拾うようにできています。だから、エアコンの音、外の車の音、自分の足音まで、いっしょに入ってしまいます。肝心の、髪に触れる小さな音は、遠くて小さくしか録れません。音が商品なのに、商品がいちばん小さく録れてしまう。これが内蔵マイクの弱点です。</p><p>対策は、シンプルです。マイクを、音のそばに置く。それだけです。いちばん手軽なのは、スマホに挿す小型のピンマイクです。数千円で買えます。被写体の襟元や、頭の近く、触れる音からおよそ20〜30センチ以内に置きます。マイクを近づけるだけで、触れる音の生々しさが、大きく変わります。もっと高いマイクは、あとでいい。まず数千円のピンマイクで、音の最低ラインを引き上げてください。</p><p>映像側のセッティングは、前に学んだ基本を、そのまま使います。3つだけ、おさらいします。ひとつ、手で持たない。三脚で固定します。手持ちの小さな揺れは、見る人の落ち着きを壊します。ふたつ、縦で撮る。スマホを縦にした、9対16です。リールも、ショートも、縦が基本だからです。距離は、被写体の頭まで50センチから1メートル。頭が画面の中心に来る高さで、雲台のネジを最後にきつく締めます。みっつ、アングルに迷ったら、手元寄り。頭の横、やや上から、指先と髪の動きが画面いっぱいに映る位置です。指先が、いちばん心地よさを語ります。</p><p>明るさは、窓のある部屋の自然光で十分です。逆光、つまり窓を背にして被写体が影になる形だけ、避けてください。今日はここまで。今日の主役は、光ではなく、音です。</p></div><div class="nar"><h3>N03｜③ 無音環境の作り方——無音をつくる7ステップ（07:50–11:20）</h3><p>音が商品なら、雑音は、商品に混ざった不良品です。そして雑音は、撮ったあとの編集では、きれいに消せません。だから、録る前に消します。太郎さんが今から、録る直前のルーティン、「無音をつくる7ステップ」を、実際に順番にやります。</p><p>ステップ1。エアコンと換気扇を止めます。空調の「ゴー」という音は、いちばん多く混入する雑音です。止めるのは、録っている数分間だけでかまいません。お客様がいる場合は、「少しのあいだ、空調を止めますね」と一言添えます。夏や冬は、直前まで部屋をしっかり空調しておいて、録る間だけ止める。この段取りで、お客様の快適さと両立できます。</p><p>ステップ2。BGMを止めます。店内の音楽は、雑音であると同時に、市販の曲が入った動画をSNSに載せると、著作権の問題になることがあります。撮影中は、無音が正解です。</p><p>ステップ3。スマホを機内モードにします。撮影に使うスマホも、自分のポケットのスマホも、両方です。通知音とバイブは、いちばん惜しいタイミングで鳴ります。</p><p>ステップ4。窓とドアを閉めます。外の車、話し声、雨の音を、できるだけ遮ります。</p><p>ステップ5。小さな音源を確認します。掛け時計の秒針。冷蔵庫のうなり。給湯器。ふだんは気にならない音ほど、静かな録音では目立ちます。止められるものは止め、動かせないものからは、撮影場所のほうを離します。</p><p>ステップ6。自分の服と装飾品です。シャカシャカと鳴る化繊の上着やエプロンは脱ぐか、綿など静かな素材に替えます。指輪、腕時計、ブレスレットは外します。マイクのすぐ近くで動くのは、あなたの腕だからです。</p><p>ステップ7。最後に、10秒の無音テスト録音です。誰も動かず、何もしない10秒を録って、イヤホンで聴きます。「サー」「ゴー」という音が聞こえたら、まだ音源が残っています。探して、止めてから、本番です。</p><p>時間帯にも、狙い目があります。開店前と、閉店後。道路も店内も静かで、お客様への気がねもいりません。練習撮影は、この時間帯が最適です。</p></div><div class="nar"><h3>N04｜④ NG音チェックリスト——録って、聴いて、消す（11:40–15:10）</h3><p>ここで、不思議なことをお伝えします。あなたの耳は、いつもの店の雑音を、もう聞いていません。人の脳は、慣れた音を消してしまうからです。エアコンの音も、冷蔵庫のうなりも、あなたには「無音」に聞こえています。けれど、マイクは消してくれません。録音には、全部、入ります。だから、耳で判断せず、録って、聴いて、確かめます。</p><p>画面のチェックリストは、実際の録音によく混ざる、NG音の10項目です。太郎さんが、わざと鳴らした状態と、消した状態を、順番に録り比べます。音の差を、聴いてください。</p><p>1番、エアコン・換気扇の「ゴー」。……止めるだけで、これだけ変わります。<br>2番、BGMの消し忘れ。著作権の面でも、必ず止めます。<br>3番、スマホの通知音とバイブ。機内モードで防ぎます。<br>4番、衣擦れの「シャカシャカ」。化繊の袖が、マイクのそばで鳴っています。素材を替えるか、袖をまくります。<br>5番、指輪・腕時計・爪の音。金属が頭皮の近くで鳴ると、心地よさが一瞬で壊れます。外して、爪は短く。<br>6番、足音と、床のきしみ、スリッパの音。録っている60秒は、立ち位置を決めて、動き回らないことです。<br>7番、外の音。車、話し声、工事、雨。窓とドアを閉め、静かな時間帯を選びます。<br>8番、マイク擦れ。襟元のピンマイクに、襟や髪が触れる音です。マイクの位置をテープなどで固定し、髪はまとめます。<br>9番、冷蔵庫・給湯器・時計の秒針。小さな連続音は、場所を離すか、時計なら外します。<br>10番、自分の呼吸と鼻息。マイクに近すぎるか、力んでいるサインです。マイクを口から離し、始める前に、一度、息を吐きます。</p><p>全部を一度に覚える必要はありません。ワースト3だけ、先に押さえてください。エアコン、BGM、衣擦れ。この3つを消すだけで、あなたの録音は、見違えます。チェックリストは配布物にしてあります。録るたびに、照らし合わせてください。</p></div><div class="nar"><h3>N05｜⑤ 客への撮影許可——声かけの読み上げ台本（15:30–18:00）</h3><p>音の準備ができたら、最後の準備は、人への礼儀です。お客様を撮る前には、必ず、許可をもらいます。顔を映さないから大丈夫、ではありません。後ろ姿も、髪も、そして声も、その人のものです。黙って撮って、黙って載せる。それは、積み上げてきた信頼を、一本の動画で失う行為です。</p><p>とはいえ、その場で言葉を考える必要はありません。読み上げカードを4枚、用意しました。そのまま読み上げて、かまいません。伝える順番は、いつも同じです。目的、映る範囲、載せる場所、そして、断ってよいこと。</p><p>カードA。事前のお願いです。予約のときか、施術の前に。<br>「ひとつ、お願いがあります。いま、施術の動画を撮る練習をしています。お顔は映しません。手元と、音だけです。SNSに載せることがあります。撮らせていただいても、よろしいですか。」</p><p>カードB。撮影直前の、ひとことです。<br>「では、撮らせていただきますね。音を録るので、いつもより静かに進めます。途中で気になったら、いつでもおっしゃってください。」</p><p>カードC。断られたときの返しです。<br>「かしこまりました。撮りません。いつも通り、ゆっくりお休みください。」<br>ここで、きれいに引きます。無理に頼まない。断られても、失うものは何もありません。「この人は、無理をさせない人だ」という信頼が残ります。</p><p>カードD。載せる前の、最終確認です。<br>「先日の動画、載せる前に一度お見せします。ここまでなら大丈夫、という範囲を教えてください。」<br>撮る同意と、載せる同意は、別のものです。載せる前にもう一度見せる。この一手間が、あなたとお客様の両方を守ります。</p><p>あわせて、2つの注意です。ひとつ、店内で撮るときは、ほかのお客様の姿と会話が入らないように配慮します。他人の声が入った動画は、発信しません。ふたつ、動画の説明文でも、効果を言いすぎないこと。「治る」「必ず眠れる」は使わず、「リラクゼーションを目的に」と、やわらかく書きます。</p></div><div class="nar"><h3>N06｜⑥ 60秒施術音の録り通し（18:20–21:00）</h3><p>それでは、今日の全部を使って、60秒を1本、通して録ります。完璧でなくて、かまいません。手順を体で覚えるのが目的です。</p><p>順番は、こうです。まず、セッティング。三脚に縦で固定、距離は50センチから1メートル、手元寄りのアングル、ピンマイクは襟元、触れる音から20〜30センチ以内。次に、無音の7ステップ。エアコンを止め、BGMを止め、機内モード、窓を閉め、小さな音源を確認し、装飾品を外し、10秒の無音テスト。そして、カードBの一言。「では、撮らせていただきますね」。</p><p>録画を押します。ここからの60秒は、PG11で学んだ、頭皮のさすりです。急がない。一秒に3センチから5センチ。触れる音を、マイクに聴かせるつもりで、静かに手を動かします。</p><p>……60秒、録れました。最後の仕上げは、すぐに聴き返すことです。スピーカーではなく、イヤホンで聴きます。確かめるのは3つ。雑音が入っていないか。触れる音が、しっかり立っているか。画面が揺れていないか。この「録ったら、すぐイヤホンで聴く」までが、1セットです。ここまでやって、はじめて1本の素材が完成します。</p></div><div class="nar"><h3>分解リプレイ①｜マイク位置と音（21:20–23:50）※ナレは要点のみ、波形と実音が主役</h3><p>同じ手技を、マイクだけ変えて録り比べました。左が、スマホの内蔵マイク。右が、襟元のピンマイクです。まず内蔵マイク。……触れる音が遠く、部屋の響きと空調がかぶっています。次に、ピンマイク。……音が、目の前に来ました。波形を見てください。内蔵は小さく平ら、ピンマイクは触れるたびに、しっかり山が立っています。近づけるほど、触れる音が立つ。マイクの値段ではなく、マイクの距離。これが、数千円で音が商品になる理由です。</p></div><div class="nar"><h3>分解リプレイ②｜NG音の聴き比べ＋録る前の1枚の地図（23:50–26:20）※ナレは要点のみ</h3><p>NG音のワーストを、もう一度、あり・なしで聴き比べます。エアコン、あり。……なし。BGM、あり。……なし。衣擦れ、あり。……なし。通知音は、説明不要ですね。最後に、今日のセットを1枚の地図にまとめます。被写体、三脚と距離、手元寄りの角度、ピンマイクの位置、閉めた窓、止めた空調。録る前に、この1枚を見れば、同じ環境を、いつでも組み直せます。配布物に入れてあります。</p></div><div class="nar"><h3>N07｜⑦ 3週目からのストックが、そのまま素材になる（26:20–28:40）</h3><p>ここまで聞いて、「素材を撮る時間なんてない」と思った方へ。良い知らせがあります。あなたには、もう素材があります。</p><p>思い出してください。第3週のタッピングから、このスクールの宿題には、ずっと「練習をスマホで撮って保存する」が入っていました。俯瞰で固定して撮った練習動画。第17週で撮った、クセを「直す前」と「直した後」の比較動画。あれは、答え合わせのためだけの動画ではありません。全部、発信の素材ストックです。練習の記録が、そのまま商品棚になる。そういう設計で、この半年、撮りためてもらっていました。</p><p>今週やることは、棚卸しです。3つだけ。ひとつ、スマホの中の練習動画を、手技ごとにフォルダ分けします。タッピング、さすり、太郎ハンド、というように。ふたつ、音を聴いて、雑音が少なく、触れる音が立っているものに、星印をつけます。基準は今日のNG音チェックリストです。みっつ、その中で「ここの60秒は使える」という箇所を、メモしておきます。切り出しや編集は、まだしなくて大丈夫です。<b style="color:#c0392b">〔要確認: 次回PG番号〕</b>で、このストックから実際に投稿を作ります。</p><p>そして、今日からの練習は、撮り方をひとつだけ変えてください。どうせ撮るなら、エアコンを止めて、マイクを近づけて撮る。練習の記録が、そのまま投稿できる素材に変わります。同じ1回の練習が、二度働いてくれるのです。</p></div><div class="nar"><h3>N08｜復習（28:40–30:30）</h3><p>今日を、手順として総ざらいします。</p><p>ひとつ、機材。スマホ1台と、数千円のピンマイク、そして三脚。縦9対16、距離50センチから1メートル、迷ったら手元寄り。マイクは触れる音から20〜30センチ以内。</p><p>ふたつ、無音の7ステップ。エアコン・換気扇を止める。BGMを止める。機内モード。窓とドアを閉める。小さな音源を確認する。服と装飾品を静かにする。10秒の無音テスト録音。</p><p>みっつ、NG音チェックリスト。ワースト3は、エアコン、BGM、衣擦れ。耳は慣れて聞き逃す。だから録って、イヤホンで聴いて、確かめる。</p><p>よっつ、許可。カードAで先にお願いし、断られたらカードCで引く。載せる前にカードDでもう一度見せる。</p><p>いつつ、60秒を録ったら、すぐイヤホンで聴き返す。雑音、触れる音、揺れ。この3つを確かめて、1本完成。</p><p>覚えるのは、この順番だけです。あとは、録るほど、耳が育ちます。</p></div><div class="nar"><h3>N09｜宿題解説（30:50–32:20）</h3><p>今週の宿題は、ひとつです。あなた自身の施術の音を、60秒、録って提出してください。</p><p>録り方の条件は、今日の通りです。三脚で固定し、縦で、手元寄り。無音の7ステップをやってから録る。ピンマイクがあれば襟元に。まだ手元になければ、静かな部屋で内蔵マイクでもかまいません。マイクを買うのを、提出を遅らせる理由にしないでください。</p><p>被写体は、お客様でなくて大丈夫です。家族でも、友人でも、練習モデルでも。ただし、誰であっても、カードAを読んで、同意をもらってから撮ります。撮れたら、イヤホンで聴き返して、いちばん音が良い60秒を選んで、提出してください。提出先は、<b style="color:#c0392b">〔要確認: 公式LINE／会員サイト提出フォーム〕</b>です。</p><p>見せてほしいのは、上手な施術ではありません。雑音のない、触れる音です。あなたの手の音が、あなたの代わりに話し始める。その最初の60秒を、待っています。</p></div></section>
+  <section><h2>テロップ・図解指示</h2><ul class="plain"><li><b>【OPテロップ】</b>中央：「PG28｜撮る——ASMRは“音”が商品」／サブ：「今日のゴール：雑音ゼロの施術音60秒を、自分で録れるようになる」</li><li><b>【①バズ実例（01:00–04:00）】</b>太郎さんのYouTubeチャンネル実画面キャプチャ（チャンネルページ＋再生数表示）。テロップ：「登録者 10万人」／「主要動画 100万回再生」<b style="color:#c0392b">〔要確認: 撮影時点の実画面を収録し、数値表記を画面と一致させる〕</b></li><li>「音を消す」比較デモ：消音時に画面隅へ「🔇 音なし」、復帰時に「🔊 音あり」＋波形アニメ</li><li>ASMR定義テロップ：「ASMR＝ささやき・静かな物音で心地よさが生まれる動画ジャンル」</li><li>根拠テロップ（小・出典トーン）：「一定リズムの反復刺激は鎮静・眠気を誘う方向と示唆」</li><li>結論の大テロップ：「ASMRは、映像でなく『音』が商品」／矢印図「動画の音 → 心地よさ → 来店前の“お試し体験” → 来店」</li><li><b>【②最低ラインの機材（04:20–07:30)】</b>機材3点を並べた画に値札風テロップ：「スマホ（いまのでOK）」／「ピンマイク 数千円」／「三脚 数千円程度」。合計欄「スマホ以外＝数千円〜」</li><li>内蔵マイクの限界図解：スマホから広がる集音範囲に雑音アイコン（エアコン・車・足音）が入り込む図 →「広く拾う＝雑音も入る」。ピンマイク図：「触れる音から20〜30cm以内」に円</li><li>基本の再掲テロップ：「①三脚固定（手持ち×） ②縦9:16／距離50cm〜1m／雲台を締める ③迷ったら手元寄り」。逆光NGは×アイコンで一瞬</li><li><b>【③無音環境（07:50–11:20)】</b>7ステップを順送りの大テロップ（実演と同期・チェックが入っていくUI）：「1 エアコン・換気扇OFF」→「2 BGM OFF」→「3 機内モード」→「4 窓・ドアを閉める」→「5 小さな音源（秒針・冷蔵庫）」→「6 服・装飾品（衣擦れ／指輪・時計）」→「7 無音テスト録音10秒」</li><li>注記：「空調を止めるのは録る数分だけ／お客様に一言」／「市販BGM入り動画のSNS掲載は著作権の問題になることがあります」</li><li>時間帯テロップ：「狙い目＝開店前・閉店後」</li><li><b>【④NG音チェックリスト（11:40–15:10)】</b>10項目リストを画面右に常設し、デモ中の項目をハイライト。各項目「×NG音 → ○直し方」の2段表示</li><li>各録り比べで波形を並列表示（あり＝ギザギザに雑音床、なし＝静かな底＋触れる音の山）</li><li>まとめテロップ：「ワースト3＝エアコン・BGM・衣擦れ」／「耳は慣れる。マイクは慣れない。」</li><li><b>【⑤許可の声かけ（15:30–18:00)】</b>カードA〜Dの全文を、読み上げ速度に合わせて大きめ字幕で表示（受講生がそのまま音読練習できるサイズ）</li><li>構造テロップ：「伝える順＝目的 → 映る範囲 → 載せる場所 → 断ってよいこと」</li><li>注意テロップ：「顔が映らなくても『後ろ姿・髪・声』はその人のもの」／「撮る同意と載せる同意は別」／「他のお客様の映り込み・会話はNG」／「効果の断定はしない（リラクゼーションを目的に）」</li><li><b>【⑥60秒録り通し（18:20–21:00)】</b>画面隅に大きめタイマー（0:00→1:00）。手順チェックリスト（セッティング→無音7ステップ→カードB→録画→60秒→イヤホン確認）が進行と同期して✓</li><li>速度テロップ：「さすりは 3〜5cm/秒（PG11）」</li><li>締めテロップ：「録ったら、すぐイヤホンで聴く（雑音・触れる音・揺れ）」</li><li><b>【分解リプレイ①②（21:20–26:20)】</b>①：画面2分割「内蔵マイク｜ピンマイク」＋それぞれの波形。テロップ「近づけるほど、触れる音が立つ」／「値段より、距離」</li><li>②：NG音を1つずつ「あり → なし」でA/B再生。各NGに×印＋直し方一言。最後に「録る前の1枚の地図」＝俯瞰イラスト（被写体・三脚50cm〜1m・手元寄り角度・ピンマイク位置・閉めた窓・OFFにした空調とBGM）を全画面で</li><li>ヘッドホン推奨テロップ：「このパートはイヤホン推奨🎧」（リプレイ①冒頭）</li><li><b>【⑦ストック棚卸し（26:20–28:40)】</b>時系列図：「第3週 タッピング」→「第17週 直す前/直した後」→「第28週（今日）」の帯に動画サムネイルが積み上がる図。「練習の記録＝素材ストック」</li><li>棚卸し3ステップテロップ：「1 手技ごとにフォルダ分け 2 音の良いものに★ 3 使える60秒をメモ」</li><li>注記：「切り出し・編集は次回<b style="color:#c0392b">〔要確認: 次回PG〕</b>で」</li><li><b>【「今日から現場で使える1つ」まとめテロップ（30:30)】</b>中央大：「今日の1つ ＝ 録る前に、エアコンを止める」</li><li><b>【宿題テロップ（32:20・S10と同時)】</b>「今週の宿題：自分の施術音60秒を提出」</li><li>条件小テロップ：「三脚固定・縦／無音7ステップ／同意（カードA）／イヤホンで聴き返してから提出」</li><li>提出先：<b style="color:#c0392b">〔要確認: 公式LINE／会員サイト提出フォーム〕</b></li><li><b>【コンプライアンス固定注記（本編・ED付近に小さく常時可)】</b>「本コンテンツはリラクゼーションを目的とした手技と発信方法の紹介です。効果・効能を保証するものではありません。」</li><li>「実績数値は撮影時点のチャンネル画面によるものです。」</li></ul></section>
+  <section><h2>宿題・配布物</h2><ul class="plain"><li><b>【今週の宿題（セリフS10／テロップ同時表示）】</b>自分の施術の音を60秒録って提出する</li><li>三脚固定・縦9:16・手元寄り。無音の7ステップを実施してから録る</li><li>ピンマイク推奨（なければ静かな部屋で内蔵マイク可。機材待ちで提出を遅らせない）</li><li>被写体は家族・友人・練習モデルで可。誰であってもカードAで同意を得てから撮る</li><li>イヤホンで聴き返し、いちばん音の良い60秒を選んで提出。提出先<b style="color:#c0392b">〔要確認: 公式LINE／会員サイト提出フォーム〕</b></li><li><b>【チェックシート（5項目／できたら✓）】</b>1. □ 10秒の無音テスト録音をしてから、本番を録った</li><li>2. □ NG音チェックリスト10項目を録音で確認し、気になる音を1つ以上消した（ワースト3＝エアコン・BGM・衣擦れを優先）</li><li>3. □ マイク（または内蔵マイク）を、触れる音の近く（20〜30cm以内の目安）に置いた</li><li>4. □ 被写体に、撮影と発信の同意を先に得た（カードAを読んだ）</li><li>5. □ イヤホンで聴き返し、雑音・触れる音・揺れの3点を確認してから提出した</li><li><b>【あわせてやること（棚卸し）】</b>3週目からの練習動画を手技ごとにフォルダ分けし、音の良いものに★、使える60秒をメモする（提出は不要）</li><li><b>【配布物（配信ページに添付）】</b>最低ライン機材リスト＋セッティング覚え書き</li><li>無音環境の作り方 7ステップ（撮影前ルーティン・印刷用）</li><li>NG音チェックリスト（10項目）</li><li>撮影許可の声かけ 読み上げカード4種</li><li>今週の宿題「自分の施術音60秒」提出要項＋チェックシート＋ストック棚卸しメモ</li><li>※すべて「配布物パック_v6.md」に収録</li></ul></section>
+  <section><h2>制作メモ</h2><div class="memo"><b>太郎さんの収録（最短で済む設計）</b><br>・新規収録は OP（S01・S02）／ED（S10）／一言インサート（S03〜S09）＋実演パート。OP/ED/一言は施術空間を背景に固定カメラ1台・バストアップ・カメラ目線。カンペをレンズ脇に置いて読み上げでよい。<br>・一言インサート（S03〜S09）は同じ立ち位置・同じ画角で7本連続収録し、編集で各タイムコードに配置。1本5〜10秒。演技指示はなし（「ゆっくり読む」「手を止めて言う」のみ）。<br>・実演パートの太郎さんは無言。機材操作（三脚・マイク装着・リモコン操作）と手技（PG11さすり）を等速で見せるだけ。説明はすべてナレに任せる。<br><br><b>①バズ実例の素材</b><br>・太郎さんのYouTubeチャンネルページと該当動画の再生数画面を、撮影時点で画面収録する<b style="color:#c0392b">〔要確認: チャンネル名表記／使用する動画の特定／数値の最新確認〕</b>。数値テロップは必ず実画面と一致させる。盛らない・丸めすぎない。<br>・「音を消す→戻す」比較は、太郎さんの実際のバズ動画の音声をそのまま使う（自社チャンネルのため許諾問題なし。BGMが入っている動画は避け、環境音のみの動画を選ぶ）。<br><br><b>音声収録（この回の生命線）</b><br>・劇中スマホの録音音声（内蔵マイク／ピンマイク）を実データで回収し、リプレイ①②のA/B比較に使う。比較は同一手技・同一環境で「マイクだけ」「NG音だけ」を変えて録る。条件が2つ以上動くと比較にならない。<br>・NG音デモ（エアコン・BGM・衣擦れ・通知・時計秒針など）は、実際に鳴らして録る。効果音ライブラリで代用しない（受講生の現場音と質感が変わるため）。<br>・リプレイ①冒頭に「イヤホン推奨」テロップを必ず入れる。スマホスピーカーでは差が伝わりにくい。<br>・波形表示は誇張しない。実波形をそのまま拡大表示。<br><br><b>モデル・現場</b><br>・施術モデルは表情を映さない構図（後頭部〜頭頂中心）。事前に撮影・掲載同意を書面で取得（カードA〜Dの運用を制作側も実践して見せる）。<br>・⑥の60秒通しは、失敗してもカットせずに使える設計（「下手でかまいません」の文脈と一致させる）。ただし雑音混入時は録り直し。<br><br><b>コンプライアンス（最重要）</b><br>・全編で「治る／改善／自律神経が整う／育毛」を使わない。ASMRの心地よさは「〜と示唆されています」止め。ナレ・テロップを納品前にPG21の薬機法対訳表で照合する。<br>・実績は「登録者10万人・主要動画100万回再生」の2点のみ。「日本一」「世界が認めた」等の付け足しをしない（MCWT2025総合優勝に触れる場合も事実表記のみ）。<br>・BGM著作権の注意は「〜ことがあります」の表現で統一（法的断定をしない）。<br><br><b>編集</b><br>・⑤の読み上げカードは、字幕を大きく・読み上げをゆっくり＝受講生がそのまま音読練習できる速度で。<br>・「今日から現場で使える1つ」は1つに絞る（＝録る前にエアコンを止める）。S09・宿題テロップと連動。<br>・⑦のストック時系列図は、実際の受講生提出動画を使う場合は必ず本人の掲載同意を取る。なければモック画像で。<br>・次回予告テロップは<b style="color:#c0392b">〔要確認: 次回PG番号・タイトル（編集・投稿回）〕</b>へ接続。<br><br><b>改修元</b><br>・旧PG27「ASMR撮影入門（スマホ1台）」を改修（v6）。冒頭に太郎さんのバズ実例（YouTube登録者10万人・主要動画100万回再生＝事実のみ）を提示し、「ASMRは映像でなく音が商品」という軸に再構成。太郎さんは台本読み上げ（S01〜S10）＋実演（層1＝太郎の手・機材操作）のみ。説明はすべて層2＝ナレーション・層3＝テロップ／図解が担う。演技・アドリブは一切不要。</div></section>
+  <footer>山口流 理容道｜台本v6｜PG28 撮る——ASMRは“音”が商品｜ⓒ Prorium（社外秘）</footer>
+</div>
+
+<div id="pv">
+  <div class="bar">
+    <button onclick="closePv()">✕ 閉じる(Esc)</button>
+    <button id="mSingle" class="act" onclick="setMode('single')">1枚ずつ</button>
+    <button id="mScroll" onclick="setMode('scroll')">自動スクロール</button>
+    <button onclick="fsz(1)">文字＋</button><button onclick="fsz(-1)">文字−</button>
+    <button id="spD" onclick="spd(-1)" style="display:none">遅く</button><button id="spU" onclick="spd(1)" style="display:none">速く</button>
+    <button id="mir" onclick="mirror()">🪞 ミラー反転</button>
+    <span class="pos" id="pos"></span>
+  </div>
+  <div class="stage" id="stage"><div class="line" id="line"></div></div>
+  <div class="scrollwrap" id="sw" style="display:none"></div>
+  <button class="nav prev" onclick="mv(-1)">‹</button>
+  <button class="nav next" onclick="mv(1)">›</button>
+</div>
+
+<script>
+const LINES = [{"id":"S01","text":"こんにちは。山口太郎です。"},{"id":"S02","text":"今日は、施術ではなく、動画の撮り方をやります。\nゴールは、雑音のない施術の音を、60秒、録れるようになることです。"},{"id":"S03","text":"私は、話すのが得意ではありません。\nそれでも、動画はたくさんの人に見てもらえました。\nしゃべらなくても、施術の音だけで伝わるからです。"},{"id":"S04","text":"使うのは、スマホと、マイクひとつです。\n数千円で、始められます。\n高い機材は、いりません。"},{"id":"S05","text":"録る前に、エアコンとBGMを止めます。\n雑音は、録ったあとでは消せません。"},{"id":"S06","text":"録ったら、その場でイヤホンで聴いてください。\n雑音が入っていないかは、聴けばすぐ分かります。"},{"id":"S07","text":"撮る前に、お客様に「撮っていいですか」と聞きます。\n黙って撮っては、いけません。"},{"id":"S08","text":"まず、60秒です。\n下手で、かまいません。\n録らないと、始まりません。"},{"id":"S09","text":"今日から使えるのは、ひとつです。\n録る前に、エアコンを止める。\nそれだけで、音が変わります。"},{"id":"S10","text":"今週の宿題です。\n自分の施術の音を、60秒、録って提出してください。\nそれでは、また来週。"},{"id":"カードA","text":"ひとつ、お願いがあります。いま、施術の動画を撮る練習をしています。お顔は映しません。手元と、音だけです。SNSに載せることがあります。撮らせていただいても、よろしいですか。"},{"id":"カードB","text":"では、撮らせていただきますね。音を録るので、いつもより静かに進めます。途中で気になったら、いつでもおっしゃってください。"},{"id":"カードC","text":"かしこまりました。撮りません。いつも通り、ゆっくりお休みください。"},{"id":"カードD","text":"先日の動画、載せる前に一度お見せします。ここまでなら大丈夫、という範囲を教えてください。"}];
+let idx=0, fs=6.4, mode='single', speed=1, raf=null;
+const pv=document.getElementById('pv'), line=document.getElementById('line'), pos=document.getElementById('pos'), sw=document.getElementById('sw'), stage=document.getElementById('stage');
+function openPv(i){ if(!LINES.length) return; idx=i||0; pv.classList.add('on'); render(); }
+function closePv(){ pv.classList.remove('on'); stopScroll(); }
+function render(){
+  if(mode==='single'){
+    stage.style.display='flex'; sw.style.display='none';
+    const L=LINES[idx]; line.style.fontSize=fs+'vw'; line.textContent=L.text;
+    pos.textContent=(L.id||('#'+(idx+1)))+'　'+(idx+1)+' / '+LINES.length;
+  }else{
+    stage.style.display='none'; sw.style.display='block';
+    sw.innerHTML=LINES.map(L=>'<div class="sl" style="font-size:'+fs+'vw"><span class="tag">'+(L.id||'')+'</span>'+L.text.replace(/</g,'&lt;')+'</div>').join('');
+    pos.textContent='自動スクロール（速度 '+speed+'）— クリックで一時停止/再開';
+    startScroll();
+  }
+}
+function mv(d){ if(mode!=='single')return; idx=Math.min(LINES.length-1,Math.max(0,idx+d)); render(); }
+function fsz(d){ fs=Math.min(14,Math.max(2.4,fs+d*0.8)); render(); }
+function mirror(){ pv.classList.toggle('mirror'); document.getElementById('mir').classList.toggle('act'); }
+function setMode(m){ mode=m; stopScroll();
+  document.getElementById('mSingle').classList.toggle('act',m==='single');
+  document.getElementById('mScroll').classList.toggle('act',m==='scroll');
+  document.getElementById('spD').style.display=m==='scroll'?'':'none';
+  document.getElementById('spU').style.display=m==='scroll'?'':'none';
+  render(); }
+function spd(d){ speed=Math.min(5,Math.max(1,speed+d)); pos.textContent='自動スクロール（速度 '+speed+'）'; }
+let paused=false;
+function startScroll(){ paused=false; sw.scrollTop=0; const step=()=>{ if(!paused){ sw.scrollTop+=0.4*speed; } raf=requestAnimationFrame(step); }; raf=requestAnimationFrame(step); }
+function stopScroll(){ if(raf)cancelAnimationFrame(raf); raf=null; }
+sw.addEventListener('click',()=>{ paused=!paused; });
+document.addEventListener('keydown',e=>{
+  if(!pv.classList.contains('on'))return;
+  if(e.key==='Escape')closePv();
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();mv(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();mv(-1);}
+});
+document.querySelectorAll('.serif-card').forEach((el,i)=>el.addEventListener('click',()=>openPv(i)));
+</script>
+</body>
+</html>

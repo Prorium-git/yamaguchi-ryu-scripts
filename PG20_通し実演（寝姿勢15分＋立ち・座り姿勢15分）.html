@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG20｜通し実演（寝姿勢15分＋立ち・座り姿勢15分）｜山口流 理容道 台本v6</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:38px 26px 32px;margin:0 -18px 24px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:24px;font-weight:600;margin:8px 0 8px;line-height:1.5}
+  header .meta{font-size:12.5px;color:#c9d2e0;display:flex;gap:16px;flex-wrap:wrap}
+  .prompter-btn{position:sticky;top:10px;z-index:50;display:flex;justify-content:flex-end;margin-bottom:6px}
+  .prompter-btn button{background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:30px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,26,46,.3)}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:16px 0;box-shadow:0 2px 10px rgba(27,42,74,.05)}
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .oc{background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .oc .l{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+  .oc .v{font-size:13.5px;color:var(--ink);margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  .chip{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;white-space:nowrap}
+  .c1{background:#fbf3dc;color:#9a7b27}.c2{background:#eaf1fa;color:var(--blue)}.c3{background:#eef7f0;color:var(--green)}
+  .serif-card{background:#fffdf8;border:1px solid var(--gold-l);border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0;cursor:pointer}
+  .serif-card:hover{background:#fdf8ec}
+  .serif-card .sid{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .serif-card .sno{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 10px}
+  .serif-card .scene{font-size:11.5px;color:var(--mut)}
+  .serif-card .stx{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;color:var(--ink);line-height:1.9}
+  .serif-card .hint{font-size:10.5px;color:#b6a26d;margin-top:4px}
+  .nar{margin:14px 0}
+  .nar h3{font-size:14px;color:var(--navy);background:#eaf1fa;border-radius:8px;padding:6px 12px;margin-bottom:8px}
+  .nar p{font-size:13.5px;margin:8px 4px;color:#2c3644}
+  ul.plain{list-style:none}
+  ul.plain li{position:relative;padding-left:20px;margin:6px 0;font-size:13.5px}
+  ul.plain li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+  .memo{background:#fff8e8;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin-top:8px}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:30px}
+  /* ===== プロンプター ===== */
+  #pv{position:fixed;inset:0;background:#000;color:#fff;z-index:999;display:none;flex-direction:column}
+  #pv.on{display:flex}
+  #pv .bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#111;flex-wrap:wrap}
+  #pv .bar button{background:#222;color:#fff;border:1px solid #555;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+  #pv .bar button.act{background:var(--gold);color:#000;border-color:var(--gold)}
+  #pv .bar .pos{margin-left:auto;font-size:14px;color:#d8c79b}
+  #pv .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:4vw;overflow:hidden}
+  #pv .line{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;text-align:center;line-height:1.7;white-space:pre-wrap}
+  #pv .scrollwrap{flex:1;overflow-y:auto;padding:20vh 6vw}
+  #pv .scrollwrap .sl{font-family:"Hiragino Mincho ProN",serif;font-weight:600;line-height:1.9;margin:5vh 0;text-align:center;white-space:pre-wrap}
+  #pv .scrollwrap .sl .tag{display:block;font-size:14px;color:#d8c79b;font-family:sans-serif;margin-bottom:8px}
+  #pv.mirror .stage,#pv.mirror .scrollwrap{transform:scaleX(-1)}
+  #pv .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:#888;font-size:34px;padding:18px 10px;cursor:pointer;border-radius:10px}
+  #pv .prev{left:8px}#pv .next{right:8px}
+  @media(max-width:640px){.cards3{grid-template-columns:1fr}header h1{font-size:20px}}
+  @media print{.prompter-btn,#pv{display:none!important}body{background:#fff}section{box-shadow:none;page-break-inside:avoid}}
+  /* ===== 太郎さん専用ガイド ===== */
+  .taro{background:#fffaf0;border:3px solid var(--gold);border-radius:14px;padding:8px 22px 22px}
+  .taro h2{font-size:20px;border:none;background:var(--gold);color:#3a2c08;padding:6px 16px;border-radius:10px;display:block;margin:14px 0 6px}
+  .taro .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.5;margin:6px 0}
+  .taro .row{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+  .taro .ico{font-size:30px;flex:0 0 40px;text-align:center;line-height:1.2}
+  .taro .ttl{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.04em}
+  .taro .txt{font-size:16px;color:var(--ink);line-height:1.75;margin-top:2px}
+  .taro .txt b{color:var(--navy)}
+  .taro .tell{background:#eef7f0;border-left:5px solid var(--green)}
+  .taro .tell .ttl{color:var(--green)}
+  .taro ul.gist{list-style:none;margin:4px 0 0}
+  .taro ul.gist li{position:relative;padding:6px 0 6px 26px;font-size:16px;line-height:1.6}
+  .taro ul.gist li::before{content:"💬";position:absolute;left:0;top:5px;font-size:15px}
+  .taro .tip{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 14px;margin-top:10px;font-size:14.5px;color:#7a5f1e}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ SCRIPT v6</div>
+  <h1>PG20｜通し実演（寝姿勢15分＋立ち・座り姿勢15分）</h1>
+  <div class="meta"><span>尺：約35分（30〜35分レンジ上限）</span><span>形式：実演回（通し2本・解説はナレ＋テロップ）</span><span>台本v6（2026-07-02）</span><span>層：<span class="chip c1">🎬 層1 太郎</span> <span class="chip c2">🎙 層2 ナレ</span> <span class="chip c3">📺 層3 テロップ</span></span></div>
+</header>
+<div class="wrap">
+  <div class="prompter-btn"><button onclick="openPv(0)">🎬 プロンプターを開く（太郎さんセリフ）</button></div>
+
+  <section class="taro">
+  <h2>👤 太郎さん、まずこれだけ（撮影前に読む）</h2>
+  <div class="big">同じ15分のヘッドマッサージを、「寝ているお客様」と「椅子に座ったお客様」に、1本ずつ通しでやって見せる回です。</div>
+
+  <div class="row"><div class="ico">🤔</div><div><div class="ttl">なんで大事？</div>
+    <div class="txt">先週、生徒さんは「自分のサロンで使う15分メニュー」を紙に書きました。今日はその<b>お手本（答え合わせ）</b>です。生徒さんは太郎さんの手を見て「あ、自分のはここが足りなかった」と気づきます。<br>たとえるなら、料理教室で先生が最初から最後まで一度も止めずに1品作って見せるのと同じ。<b>途中で止めない・切らない</b>から「本当はこう続くのか」が伝わります。だから今日は、うまく見せることより、<b>15分を止めずに最後までやりきること</b>がいちばん大事です。</div></div></div>
+
+  <div class="row"><div class="ico">🙌</div><div><div class="ttl">太郎さんがやること</div>
+    <div class="txt">🤲 <b>手：</b>①ベッドに寝たお客様に15分マッサージを1本、止めずに通す（太郎さんは丸椅子に座って）。②椅子に座ったお客様に、同じ15分を1本、止めずに通す（今度は立って。半歩踏み込んで圧をかける足元まで撮ります）。手の順番は2本とも同じです。<br>🗣 <b>口：</b>しゃべるのは「1本の前後だけ」。始める前のあいさつ、各本の「始めます／終わりです」の一言、最後の宿題説明だけ。<b>マッサージの最中はしゃべりません</b>（説明はナレとテロップが全部やります）。セリフは下のプロンプターに出るので読めばOKです。</div></div></div>
+
+  <div class="row tell"><div class="ico">💬</div><div><div class="ttl">言いたいことは、ざっくりこれ</div>
+    <ul class="gist"><li>「こんにちは、山口太郎です。今日は15分の実演を2本見せます」——最初のあいさつ。</li><li>「1本目は寝てる人、2本目は座ってる人。先週書いた自分のメニューと見比べてね」——今日のねらい。</li><li>「では始めます」→（15分やる）→「これで寝姿勢の15分。コツは、最後まで急がないこと」——1本目の入りと締め。</li><li>「今度は椅子の人。手の順番は同じ、でも体の使い方が違うよ」→（15分やる）→「立ちの15分でした」——2本目の入りと締め。</li><li>「宿題です。自分のメニューを今日の映像と見比べて、直す所を3つ書いて、時計を見ずに通しで1回やってみて。じゃあ、また来週」——最後のしめ。</li></ul></div></div>
+
+  <div class="tip">💡 <b>コツ：</b>下の台本は、丸暗記しなくて大丈夫。<b>「言いたいこと（上の💬）」さえ分かっていれば</b>、プロンプターの文はスッと自然に出てきます。読むんじゃなく、"分かってる人がしゃべる"感じで。</div>
+  </section>
+
+  <section style="border-left:5px solid var(--gold)">
+  <h2>📌 この回の設計図（まずこれだけ読めばOK）</h2>
+
+  <div style="background:#fbf6ea;border:1px solid var(--gold-l);border-radius:10px;padding:14px 18px;margin:10px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em">① この回でやること</div>
+    <div style="font-size:16px;font-weight:700;color:var(--navy);margin:4px 0">先週受講生がつくった「自分の15分メニュー」の答え合わせとして、太郎さんが同じ15分の施術を、ベッド（寝姿勢）と椅子（立ち姿勢）で1本ずつ、ノーカットで見せる回</div>
+    <ol style="margin:6px 0 0 22px;font-size:13.5px">
+      <li>先週の宿題「自分の15分メニュー設計図」の良い例を1枚見せる（00:30・ナレ紹介）</li>
+      <li>15分を5ブロックに分けた共通設計図と、見比べる3観点（順番／時間配分／離れ方）を図解で見せる（01:10）</li>
+      <li>【1本目】ベッドに寝たお客様への15分施術をノーカットで見せる（02:25–17:25）</li>
+      <li>【2本目】椅子に座ったお客様への同じ15分をノーカットで見せる。画面左下に1本目の小窓を並べて比較（18:45–33:45）</li>
+      <li>2本の違い＝圧のつくり方（寝＝座った上半身の重み／立ち＝半歩の踏み込み）を1枚の図解でまとめる（34:05）</li>
+      <li>宿題を出す：自分のメニューの直しを3つ書く→直した設計図で通し1回（34:35）</li>
+    </ol>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">② 太郎さんのタスク（手でやること／口で読むこと）</div>
+    <table>
+      <tr><th style="width:50%">🤲 手でやること（実演・撮る絵）</th><th>🗣 口で読むこと（プロンプター）</th></tr>
+      <tr><td>・ベッドに寝たモデルへの15分施術を1本ノーカット（術者はスツールに座る）。流れ＝静止タッチ2分→側頭・前頭4分→後頭下・首肩4分→反復リズム3分→クールダウン＋離れ方2分<br>・椅子に座ったモデルへの同じ15分を1本ノーカット（術者は立ち。半歩踏み込んで圧をつくる足元まで映す）<br>・各通しの前に手指消毒のカット（5秒）</td><td>・S01–S02 冒頭挨拶＋今日の説明（カメラ前）<br>・S03 1本目の開始宣言（ベッド脇・手を止めて）<br>・S04 1本目の締め一言（手を離してから）<br>・S05 2本目の開始宣言（椅子の後ろ・手を止めて）<br>・S06 2本目の締め一言（手を離してから）<br>・S07–S10 宿題の説明＋締め（カメラ前）</td></tr>
+    </table>
+    <div style="font-size:12px;color:var(--mut);margin-top:4px">合計拘束目安：実演30分（15分×2本）＋読み約2分（S01〜S10・プロンプター使用・演技不要）※ほかにベッド→セット面の転換時間あり</div>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">③ 画面に入れるクリエイティブ（編集チームへの発注リスト）</div>
+    <table>
+      <tr><th style="width:110px">種類</th><th>作るもの</th><th style="width:130px">使う場面</th></tr>
+      <tr><td>テンプレ見本</td><td>受講生の15分メニュー設計図の見本（「静止タッチ2分」「離れ方まで記載」の2箇所を丸囲い）</td><td>00:30 N1裏</td></tr>
+      <tr><td>図解</td><td>15分＝5ブロックの横帯タイムライン図（各ブロックに参照PGバッジ付き）</td><td>01:10 N2裏</td></tr>
+      <tr><td>図解</td><td>簡易解剖図（側頭筋・咬筋／前頭部／後頭下筋群／僧帽筋上部）</td><td>N4・N5／N10・N11</td></tr>
+      <tr><td>テロップ</td><td>経過時間タイマー「00:00 / 15:00」＋「寝」「立ち」の姿勢アイコン</td><td>両通し中 常時</td></tr>
+      <tr><td>実演インサート</td><td>1本目（寝）の同ブロック映像ワイプ（各ブロック冒頭30秒・「寝ver ①静止タッチ」等ラベル付き）</td><td>2本目 18:45–33:45</td></tr>
+      <tr><td>比較テロップ</td><td>圧の出どころ左右対比「寝＝座った上半身の重み／立ち＝半歩の踏み込み＋腕・肩の角度」＋体重移動の矢印</td><td>20:45 ブロック②</td></tr>
+      <tr><td>アニメ図</td><td>メトロノーム振り子アニメ（テンポ一定の可視化）</td><td>28:45 ブロック④</td></tr>
+      <tr><td>図解</td><td>圧の抜きグラフ「10割→8→5→2→包み込み約3秒」</td><td>31:45 ブロック⑤</td></tr>
+      <tr><td>図解</td><td>比較まとめ左右分割表（寝／立ちの圧の出どころ＋長所、下帯「現場と相手で選ぶ」）</td><td>34:05 N14裏</td></tr>
+      <tr><td>テロップ</td><td>大テロップ「圧は、腕でつくらない。姿勢でつくる。」＋宿題テロップ（直し3つ＋通し1回）</td><td>34:20–35:10 ED</td></tr>
+    </table>
+  </div>
+
+  <div class="cards3" style="margin-top:12px">
+    <div class="oc"><div class="l">今日から現場で使える1つ</div><div class="v">「圧は、腕でつくらない。姿勢でつくる。」（寝＝座った上半身の重み／立ち＝半歩の踏み込み＋腕・肩の角度）</div></div>
+    <div class="oc"><div class="l">宿題</div><div class="v">①自分の15分メニューを今日の模範2本と見比べ、直したいところを3つ書く（順番／時間配分／離れ方）　②直した設計図で時計を見ずに通し1回、離れ方まで完走</div></div>
+    <div class="oc"><div class="l">配布物</div><div class="v">15分メニュー共通設計図（5ブロック・書き込み式）／姿勢別比較シート／答え合わせチェックシート（配布物パック_v6.md 収録）</div></div>
+  </div>
+  </section>
+  <section><h2>基本情報</h2><table><tr><th>プログラム番号</th><td>PG20</td></tr><tr><th>タイトル</th><td>通し実演（寝姿勢15分＋立ち・座り姿勢15分）</td></tr><tr><th>位置づけ</th><td>旧PG16（立ちver）／旧PG17（ベッドver）を1本に統合。<b>前週に受講生が設計した「自分の15分メニュー」の模範答え合わせ回</b>。※「クイックコース」の呼称は使わない</td></tr><tr><th>想定尺</th><td>約35分（30〜35分レンジ上限。15分通し×2本を含むため）</td></tr><tr><th>収録形態</th><td>実演回（太郎さんが手技を通しで2本見せる。解説はすべてナレーションとテロップ）</td></tr><tr><th>施術ポジション</th><td>前半：ベッド仰臥位（術者はキャスタースツールに座位）／後半：セット面の理容椅子（お客様は座位・術者は立位）</td></tr><tr><th>必要モデル</th><td>1名（仰臥位15分＋座位15分に耐えられる方。髪は乾いた状態、整髪料なし推奨）</td></tr><tr><th>必要機材</th><td>マッサージベッド（フェイスクレードル付き）、術者用キャスタースツール、タオル2枚／セット面ミラー、理容椅子（背もたれやや起こし）、経過時間テロップ用タイマー、フェイスガーゼ、手指消毒</td></tr><tr><th>カメラ</th><td>【寝】A：術者背側ハイアングル俯瞰／B：顔横ローアングル／C：手元クローズ　【立ち】A：正面ミラー越し全身（足元まで）／B：手元アップ（斜め後ろ45度）／C：真上俯瞰（頭頂）</td></tr><tr><th>参照PG</th><td>PG06（タッピング）／PG09（太郎ハンド3種）／PG10（あおり手＋摘み手）／PG11（筋膜リリース頭皮）／PG13（首肩コリのリリース）／PG14（コンビネーション）／前週回（自分の15分メニュー設計）<b style="color:#c0392b">〔要確認: 前週のPG番号〕</b></td></tr><tr><th>コンプラ</th><td>効能断定禁止。「リラクゼーションを目的に」「〜と言われています」「研究で示唆されています」に統一。治る／改善／自律神経が整う等の断定表現はNG</td></tr></table></section>
+  <section><h2>タイムコード構成表</h2><table><tr><th>時間</th><th>パート</th><th>内容</th><th>層</th></tr><tr><td>00:00–00:30</td><td>OP</td><td>太郎さん挨拶＋今日のゴール（S01・S02）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>00:30–01:10</td><td>先週の宿題・良い例紹介</td><td>前週の「自分の15分メニュー設計」の良い例をナレで紹介</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>01:10–02:10</td><td>共通設計図＋答え合わせの3観点</td><td>5ブロック15分の設計図と、自分のメニューと見比べる観点</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span>（図解）</td></tr><tr><td>02:10–02:25</td><td>通し導入（寝）</td><td>太郎さん一言（S03）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>02:25–17:25</td><td><b>【1本目】寝姿勢15分ノーカット通し</b></td><td>ベッド仰臥位。経過時間テロップ常時</td><td><span class="chip c1">🎬 層1</span>（実演） <span class="chip c2">🎙 層2</span>（薄め）</td></tr><tr><td>└ 02:25–04:25</td><td>①静止タッチ＋導入軽擦（2分）</td><td>両手を頭に置く静止→低速軽擦</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>└ 04:25–08:25</td><td>②側頭・前頭リリース（4分）</td><td>太郎ハンド＋母指球で側頭筋・前頭部</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>└ 08:25–12:25</td><td>③後頭下・首肩リリース（4分）</td><td>頭の重みを受けて後頭下→首肩へ</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>└ 12:25–15:25</td><td>④低速反復リズム（3分）</td><td>ギャロップ・タッピングで全頭リズム</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>└ 15:25–17:25</td><td>⑤呼吸同期クールダウン＋離れ方（2分）</td><td>呼吸合わせ→静止→包んで離れる</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>17:25–17:45</td><td>寝通し締め</td><td>太郎さん一言（S04）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>17:45–18:30</td><td>転換＋比較の見方</td><td>セット転換映像＋「2本目はここを見る」予告ナレ</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>18:30–18:45</td><td>通し導入（立ち・座り）</td><td>太郎さん一言（S05）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>18:45–33:45</td><td><b>【2本目】立ち・座り姿勢15分ノーカット通し</b></td><td>セット面椅子。<b>姿勢比較テロップ＋寝verワイプを随時</b></td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span>（薄め） <span class="chip c3">📺 層3</span>（比較）</td></tr><tr><td>└ 18:45–20:45</td><td>①静止タッチ＋導入軽擦（2分）</td><td>肩・後頭部に手を置く→低速軽擦</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span>（比較）</td></tr><tr><td>└ 20:45–24:45</td><td>②側頭・前頭リリース（4分）</td><td>あおり手＋母指球。半歩踏み込む体重移動</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span>（比較）</td></tr><tr><td>└ 24:45–28:45</td><td>③後頭・首肩リリース（4分）</td><td>真後ろで重心を落とし摘み手＋揉捏</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span>（比較）</td></tr><tr><td>└ 28:45–31:45</td><td>④低速反復リズム（3分）</td><td>テンポ一定の反復（メトロノーム表示）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span>（比較）</td></tr><tr><td>└ 31:45–33:45</td><td>⑤呼吸同期クールダウン＋離れ方（2分）</td><td>呼吸合わせ→静止→段階的に離れる</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span>（比較）</td></tr><tr><td>33:45–34:05</td><td>立ち通し締め</td><td>太郎さん一言（S06）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>34:05–34:35</td><td>比較まとめ＋「今日から現場で使える1つ」</td><td>姿勢別の圧の出どころを1枚図解で総括</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>34:35–35:10</td><td>ED：宿題＋締め</td><td>太郎さん締めセリフ（S07〜S10）＋宿題テロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td colspan="4">合計：約35分10秒</td></tr></table></section>
+  <section><h2>太郎さんセリフ（クリックでその行からプロンプター起動）</h2><div class="memo" style="margin-bottom:10px">1文は短く。静かな職人トーンで。誇張なし。間を大切に。</div><div class="serif-card"><div class="sid"><span class="sno">S01</span><span class="scene">OP挨拶（00:00–00:15）</span></div><div class="stx">こんにちは。山口太郎です。今日は、15分の通し実演を、2本お見せします。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S02</span><span class="scene">今日のゴール（00:15–00:30）</span></div><div class="stx">1本目は、ベッドに寝たお客様。2本目は、椅子に座ったお客様です。先週つくった自分のメニューと、見比べてください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S03</span><span class="scene">1本目導入（02:10–02:25）｜ベッド脇で、手を止めて言う</span></div><div class="stx">では、寝た姿勢から。15分、始めます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S04</span><span class="scene">1本目締め（17:25–17:45）｜施術の手を離してから</span></div><div class="stx">これで、寝姿勢の15分です。コツはひとつ。最後まで、急がないことです。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S05</span><span class="scene">2本目導入（18:30–18:45）｜セット面の椅子の後ろで、手を止めて言う</span></div><div class="stx">次は、椅子のお客様です。同じ順番で、15分やります。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S06</span><span class="scene">2本目締め（33:45–34:05）｜施術の手を離してから</span></div><div class="stx">これで、立ちの15分です。手の順番は同じです。体の使い方が、違います。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S07</span><span class="scene">ED・宿題導入（34:35–34:45）</span></div><div class="stx">今週の宿題です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S08</span><span class="scene">ED・宿題内容1（34:45–34:55）</span></div><div class="stx">自分のメニューを、今日の映像と見比べて、直したいところを3つ、書いてください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S09</span><span class="scene">ED・宿題内容2（34:55–35:03）</span></div><div class="stx">直したら、時計を見ないで、通しで1回やってみてください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S10</span><span class="scene">ED・締め（35:03–35:10）</span></div><div class="stx">終わったら、手は急に離さず、そっと離してください。それでは、また来週。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div></section>
+  <section><h2>ナレーション全文</h2><div class="nar"><h3>N1｜先週の宿題・良い例紹介（00:30–01:10）</h3><p>先週の宿題は、自分のサロンで使う15分メニューを、一枚の設計図にすることでした。良い例をひとつ紹介します。この設計図には、最初の「静止タッチ」にきちんと2分が確保され、最後の「離れ方」まで手順として書き込まれていました。触れる前と、離れたあとまで設計する。それがこの講座で積み上げてきた考え方です。今日は、その答え合わせです。太郎さんの15分を2本、通しで見て、自分の設計図と見比べてください。</p></div><div class="nar"><h3>N2｜共通設計図＋答え合わせの3観点（01:10–02:10）</h3><p>2本の通しは、どちらも同じ設計図で行います。15分を5つのブロックに分けます。①静止タッチと導入の軽擦に2分。②側頭と前頭のリリースに4分。③後頭と首肩のリリースに4分。④低速の反復リズムに3分。⑤呼吸を合わせるクールダウンと、離れ方に2分。合計で15分です。これまでPG09からPG14で学んだ手技を、「順番と緩急」で一本の流れに組み立てたものです。答え合わせの観点は3つ。第一に、順番。導入で安心をつくり、ほどいて、鎮めて、離れる、の流れになっているか。第二に、時間配分。特に最初の2分を「待つ時間」に使えているか。第三に、離れ方まで設計されているか。この3つを、自分の設計図と照らしながらご覧ください。</p></div><div class="nar"><h3>N3｜寝①静止タッチ＋導入軽擦（02:25–04:25）</h3><p>1本目は、ベッドの仰臥位です。術者はスツールに座ります。最初の2分は、何もしないことから始まります。両手を頭にそっと置き、ただ止まる。この静止タッチには意味があります。これから何が起きるのかを、相手の体に予告しているのです。次に何が来るかが予測できると、人は安心しやすい、と研究で示唆されています。手を置いたら、すぐには動かしません。お互いの呼吸が落ち着くのを待ちます。落ち着いてきたら、ごく低速の軽擦へ。撫でる速さは、およそ1秒に3センチから5センチ。心地よさと関連するとされる、ゆっくりした触れ方の目安です。座った術者は、手だけを動かすのではなく、上半身を小さく前後させて、手についてこさせるように動かします。</p></div><div class="nar"><h3>N4｜寝②側頭・前頭リリース（04:25–08:25）</h3><p>ブロック②、側頭部と前頭部です。側頭筋と咬筋のまわりは、食いしばりや日中の緊張がたまりやすい場所のひとつとされています。太郎さんは、PG09の太郎ハンドの指先と母指球を使い分けながら、面で触れていきます。注目してほしいのは圧の方向です。押し込むのではなく、皮膚と頭皮のあいだを、わずかにずらす。PG11で扱った筋膜リリースの考え方です。ベッドでは頭が固定されているので、頭を支える心配がいりません。そのぶん、両手をより自由に、左右対称に使えます。中程度の圧でゆっくり続けることは、心拍や血圧の落ち着きと関連する、と研究で示唆されています。あくまで、リラクゼーションを目的とした圧です。眉の上から生え際の手前へ。速度は変えません。お客様の呼吸が深くなり始めたら、次のブロックへ進む合図です。</p></div><div class="nar"><h3>N5｜寝③後頭下・首肩リリース（08:25–12:25）</h3><p>ブロック③、後頭部の下から首、肩へ。後頭下の筋群は、頭の重さを支え続けている部分で、緊張が集まりやすい場所とされています。仰臥位のまま、太郎さんは両手で頭を持ち上げるようにして、指の腹を後頭部の生え際にあてます。指を立てて点で刺さないこと。頭の重みを手のひら全体で受け止め、その重さが戻る力を、そのまま自然な圧として使います。ここが寝姿勢の最大の利点です。力は、いりません。続いて、PG13で学んだ首肩のリリースへ。僧帽筋の上部を、摘んで、揺らして、離す。強く押し込みません。中程度の圧が、心地よさと関連すると言われています。痛みは緊張を呼びます。あくまで、預けてもらえる強さで。</p></div><div class="nar"><h3>N6｜寝④低速反復リズム（12:25–15:25）</h3><p>ブロック④。全頭に戻り、リズムを作ります。PG09の太郎ハンド、ギャロップ。そしてPG06のタッピング。一定のテンポで、頭全体に軽い刺激を繰り返します。狙いは、ほどよい単調さ。同じリズムの反復が、鎮静や眠気につながりやすいことが研究で示唆されています。太郎さんの手は、強弱を作らず、振り子のように同じ速さで続きます。速くしない、強くしない。3分間、テンポを変えずに続けることが、いちばん難しく、いちばん大切です。</p></div><div class="nar"><h3>N7｜寝⑤呼吸同期クールダウン＋離れ方（15:25–17:25）</h3><p>最後のブロック、クールダウンです。太郎さんは、お客様の呼吸に自分の手の動きを合わせていきます。目安は、1分間におよそ6回のゆったりした呼吸。ゆっくりした呼吸に手の動きを合わせることは、落ち着きと関連すると言われています。動きを少しずつ小さくして、最初と同じ静止タッチに戻します。そして、離れ方。急に手を離すと、せっかくの落ち着きが途切れてしまいます。圧を少しずつ、段階的に抜き、最後は手のひらで頭を包んでから、音もなく離れる。ここまでが、寝姿勢の15分です。</p></div><div class="nar"><h3>N8｜転換＋比較の見方（17:45–18:30）</h3><p>ここでセットを替えます。2本目は、セット面の椅子。お客様は座り、術者は立って行います。手の順番も、時間配分も、いま見た1本目と同じです。違うのは、体の使い方と、圧のつくり方。寝姿勢では、座った上半身の重みを垂直に手へ落としました。立ちでは、その重みが床に逃げます。だから、半歩の踏み込みと、腕と肩の角度で圧をつくります。2本目では、各ブロックで画面に比較テロップと、1本目の同じ場面の小窓を出します。「同じ手順を、姿勢がどう変えるか」。そこだけを見てください。</p></div><div class="nar"><h3>N9｜立ち①静止タッチ＋導入軽擦（18:45–20:45）</h3><p>2本目、開始です。最初のブロックは、1本目と同じ静止タッチから。太郎さんの手は、まず肩と後頭部に「置かれる」だけ。約30秒、動かしません。予測できる、ゆっくりとした始まりが、安心を作ると言われています。そこから、毎秒3センチから5センチの、非常に遅い軽擦へ。ここまでは寝姿勢と同じです。違いは足元。立ちでは、術者の立ち姿勢が安定していることが、そのまま手の安定になります。両足を前後に開き、重心を低く。画面の小窓と見比べてください。</p></div><div class="nar"><h3>N10｜立ち②側頭・前頭リリース（20:45–24:45）</h3><p>ブロック②、側頭と前頭。使う手技は1本目と同じ、母指球で「押さえて、待つ」です。円を描かず、面で圧をかけて、組織がゆるむのを待つ。違うのは、圧の出どころです。寝姿勢では座った体の重みが垂直に落ちましたが、立ちでは、術者は半歩踏み込み、体重をわずかに前へ移します。腕の力ではなく、姿勢で圧を作る。ここが今日いちばんの比較ポイントです。テロップの矢印で、体重の向きを示します。側頭から前頭へ。眉の上、生え際の手前を、指の腹でゆっくりと上方向へ。速度は変えません。一定のリズムを保つことが、鎮静や眠気につながると示唆されています。</p></div><div class="nar"><h3>N11｜立ち③後頭・首肩リリース（24:45–28:45）</h3><p>ブロック③、後頭部から首、肩へ。PG10の摘み手です。後頭部の生え際を、親指と他の指でやさしく摘まみ、ゆっくり離す。寝姿勢では頭の重みを手で受けましたが、座位のお客様の頭は、支えがありません。だから太郎さんは、お客様の真後ろに立ち、自分の重心を落とし、手だけでなく体ごと支えるように扱います。首から肩へ。僧帽筋の上部を、摘んで、揺らして、離す。お客様の肩が一段下りたら、力が抜けたサインです。手を離す瞬間を作らず、一連の流れを切らさないこと。それが、安心を切らさないコツです。</p></div><div class="nar"><h3>N12｜立ち④低速反復リズム（28:45–31:45）</h3><p>ブロック④、反復リズム。ギャロップとタッピングを、一定のテンポで。ここは姿勢が変わっても、要求されることが変わりません。人は無意識に、だんだん速くなります。それを抑える。一定であることそのものが技術です。画面のメトロノーム表示と、太郎さんの手を見比べてください。1本目の小窓とも、テンポが揃っているはずです。</p></div><div class="nar"><h3>N13｜立ち⑤呼吸同期クールダウン＋離れ方（31:45–33:45）</h3><p>最後のブロック。呼吸に手を合わせ、動きを小さくして、静止へ。そして離れ方です。スローで見ると分かりますが、太郎さんは一度で離しません。圧を段階的に、少しずつ抜きながら、そっと手を引きます。この「離れ方」までが施術です。余韻を壊さないことが、満足度を決めます。寝ていても、座っていても、終わりの所作は同じです。</p></div><div class="nar"><h3>N14｜比較まとめ＋今日から現場で使える1つ（34:05–34:35）</h3><p>2本の15分を整理します。手の順番と時間配分は、まったく同じでした。違ったのは、圧の出どころです。寝姿勢では、座った上半身の重みが垂直に手へ落ちる。だから、長い圧を疲れずに、安定して保てます。立ちでは、体重は床に逃げるぶん、半歩の踏み込みと腕・肩の角度で圧をつくる。小回りと自由度が利きます。どちらが上ではありません。現場と相手に合わせて選ぶ。それが皆さんの判断です。今日から現場で使える1つは、これです。「圧は、腕でつくらない。姿勢でつくる。」</p></div></section>
+  <section><h2>テロップ・図解指示</h2><ul class="plain"><li><b>【OP〜導入】OPテロップ</b>：「山口流 理容道｜PG20　通し実演〈寝姿勢15分＋立ち・座り姿勢15分〉」（ブランドカラー #1B2A4A 背景＋#C5A55A 文字）</li><li><b>先週の宿題・良い例（N1裏）</b>：受講生の設計図（画像またはイラスト再現）を画面中央に表示し、「静止タッチ2分」「離れ方まで記載」の2箇所を丸囲いハイライト。<b style="color:#c0392b">〔要確認: 実例の掲載許可。許可が取れない場合は運営で作成した見本設計図に差し替え〕</b></li><li><b>共通設計図図解（N2裏）</b>：15分を5ブロックに区切った横帯タイムライン図。①静止タッチ＋軽擦 2分／②側頭・前頭 4分／③後頭・首肩 4分／④反復リズム 3分／⑤クールダウン＋離れ方 2分。各ブロックに参照PGバッジ（②→PG09・PG11、③→PG10・PG13、④→PG06・PG09、⑤→呼吸同期）</li><li><b>答え合わせの3観点テロップ（N2後半）</b>：「①順番（安心→ほどく→鎮める→離れる）／②時間配分（最初の2分＝待つ時間）／③離れ方まで設計」</li><li><b>【通し中・両本共通】経過時間テロップ</b>：画面右上に「00:00 / 15:00」形式で常時。1本目・2本目それぞれ独立してカウント</li><li><b>姿勢アイコン</b>：経過時間の横に「寝」「立ち」の小アイコンを常時表示（どちらの通しか一目で分かるように）</li><li><b>ブロック名チップ</b>：ブロック切替時に画面下部へ「①静止タッチ」等を小さく表示</li><li><b>解剖インサート図</b>：側頭筋・咬筋／前頭部／後頭下筋群／僧帽筋上部の簡易解剖図。N4・N5（寝）とN10・N11（立ち）で重ねる</li><li><b>速度テロップ</b>：①ブロックで「軽擦の目安 約3〜5cm/秒（ゆっくり）」</li><li><b>コンプラ注記</b>（小さく画面下、各通しの初出時のみ）：「※リラクゼーションを目的とした施術です。効果には個人差があります。」</li><li><b>【2本目のみ・今回の核心】ワイプ（小窓）</b>：2本目の各ブロック冒頭〜30秒間、画面左下に1本目（寝姿勢）の同ブロック映像を小窓で同時表示。「寝ver ①静止タッチ」等のラベル付き</li><li><b>ブロック①比較</b>：「寝＝スツールに座り上半身を前後／立ち＝両足を前後に開き重心を低く」</li><li><b>ブロック②比較（最重要）</b>：左右対比テロップ。寝「圧の出どころ＝座った上半身の重み（垂直に落ちる）」／立ち「圧の出どころ＝半歩の踏み込み＋腕・肩の角度」。体重移動の向きを矢印で図示</li><li><b>ブロック③比較</b>：「寝＝頭の重みを手のひらで受ける／立ち＝真後ろで重心を落とし、体ごと支える」＋注意テロップ「指を立てない／点で刺さない」</li><li><b>ブロック④比較</b>：メトロノーム表示（画面隅に振り子アニメ）＋「テンポ一定＝技術。姿勢が変わっても変えない」</li><li><b>ブロック⑤比較</b>：圧の抜きグラフ「10割→8→5→2→包み込み約3秒」＋「離れ方は姿勢が変わっても同じ」</li><li><b>【まとめ〜ED】比較まとめ1枚図解（N14裏）</b>：左右分割表。左「寝姿勢｜圧の出どころ＝座った上半身の重み／長所＝安定・持続」、右「立ち・座り姿勢｜圧の出どころ＝踏み込み＋腕・肩の角度／長所＝小回り・自由度」、下帯「どちらが上ではない。現場と相手で選ぶ」</li><li><b>「今日から現場で使える1つ」まとめテロップ</b>：「圧は、腕でつくらない。姿勢でつくる。」（#1B2A4A 背景・大きく・高コントラスト）</li><li><b>宿題テロップ（S08〜S09裏）</b>：「今週の宿題：①自分の15分メニューを今日の映像と見比べ、直しを3つ書く　②直した設計図で、時計を見ずに通し1回」</li><li><b>締めテロップ</b>：「それでは、また来週。」（#1B2A4A 背景）</li></ul></section>
+  <section><h2>宿題・配布物</h2><ul class="plain"><li><b>【宿題1】</b>前週に作った自分の15分メニューの設計図を、今日の模範2本と見比べて、直したいところを<b>3つ</b>書き出す（観点：順番／時間配分／離れ方）</li><li><b>【宿題2】</b>直した設計図で、時計を見ずに、手の順番だけで通しを1回行う。離れ方まで含めて完走する</li><li><b>【チェックシート1】</b>自分の設計図に「静止タッチ＝待つ時間」が確保されているか（目安2分）</li><li><b>【チェックシート2】</b>導入の軽擦を、毎秒3〜5cmの遅さで保てたか</li><li><b>【チェックシート3】</b>圧を腕の力でなく、姿勢（寝＝座った上半身の重み／立ち＝半歩の踏み込み）でつくれたか</li><li><b>【チェックシート4】</b>反復リズムを、最初から最後までテンポを速めずに一定を保てたか</li><li><b>【チェックシート5】</b>終わりに、いきなり離さず、圧を段階的に抜いてそっと離れられたか</li><li><b>【配布物（配布物パック_v6.md 収録）】</b>15分メニュー共通設計図（5ブロック・書き込み式）／姿勢別比較シート（寝／立ち・座りの圧の出どころ早見表）／答え合わせチェックシート（直し3つ記入欄＋○×5項目）</li></ul></section>
+  <section><h2>制作メモ</h2><div class="memo"><b>【撮影】</b><br>・<b>2本ともノーカットを死守</b>。各3カメ同時回し。編集で切らない前提で、開始前にタイマー・カード残量・バッテリーを確認<br>・セット転換（17:45–18:30）：ベッド→セット面への転換は撮影を止めてよい。転換中の映像は早回し（タイムラプス）で45秒に収め、N8を重ねる<br>・1本目（ベッド）：仰臥位のまま15分を通す（伏臥位への移行は今回行わない。ノーカット比較の条件を2本で揃えるため）<br>・1本目カメラ：A＝術者背側ハイアングル（両手の対称性）／B＝顔横ローアングル（静止の「間」・表情のゆるみ）／C＝手元クローズ（指の腹・母指球の接地、圧の方向）<br>・2本目カメラ：A＝正面ミラー越し全身（<b>足元まで</b>。踏み込みの体重移動が比較の核心のため必ず収める）／B＝手元アップ斜め後ろ45度／C＝真上俯瞰（摘み手の指形）<br>・立ち位置のテープ目印を床に貼る（編集では映さない）／施術前に手指消毒のカット（N1裏で5秒）。清潔感の担保<br>・モデル動作：各通し開始前に深呼吸1回。施術中は目を閉じ自然な呼吸。演技で寝ない。私語・うなずき禁止（音を拾うため）<br>・撮影トーン：静か。BGMは最小限または無音。ASMR的な手の音は活かす。ガンマイク位置に注意<br><br><b>【編集】</b><br>・<b>ワイプ同期が最重要</b>：2本目の各ブロック冒頭で出す1本目の小窓は、ブロック経過時間を揃えて再生する（例：2本目②の開始30秒＝1本目②の開始30秒）。両通しの経過時間テロップを基準に合わせる<br>・経過時間テロップは収録時に実時間で回し、ポスプロで再描画<br>・比較テロップは「出しっぱなし」にしない。各ブロック冒頭30秒＋ナレが触れた瞬間のみ表示し、実演の邪魔をしない<br>・「クイックコース」という言葉は<b>テロップ・ナレとも使用禁止</b>。呼称は「15分の通し実演」「15分メニュー」で統一<br>・旧PG16・PG17の素材との混用はしない（本作は同一モデル・同日収録で2本撮る。照明・服装を揃え、比較ワイプの説得力を担保する）<br><br><b>【セリフ運用】</b><br>・S03・S05は手を止めて言う。本編中に太郎さんのセリフは入れない（説明はすべてナレとテロップが担う）<br>・S04・S06は施術の手を離し、余韻を2秒置いてからゆっくり読む<br><br><b>【要確認事項】</b><br>・<b style="color:#c0392b">〔要確認: 前週のPG番号（自分の15分メニュー設計回）。N1・S02・宿題テロップの文言に反映〕</b><br>・<b style="color:#c0392b">〔要確認: 受講生の設計図実例の掲載許可。不可なら運営作成の見本に差し替え〕</b><br>・<b style="color:#c0392b">〔要確認: 1本目の伏臥位移行の要否（現状は仰臥位のまま通す設計。太郎さんの現場手順で移行が必須の場合は③ブロック内で静かに移行し、移行込みでノーカットとする）〕</b></div></section>
+  <footer>山口流 理容道｜台本v6｜PG20 通し実演（寝姿勢15分＋立ち・座り姿勢15分）｜ⓒ Prorium（社外秘）</footer>
+</div>
+
+<div id="pv">
+  <div class="bar">
+    <button onclick="closePv()">✕ 閉じる(Esc)</button>
+    <button id="mSingle" class="act" onclick="setMode('single')">1枚ずつ</button>
+    <button id="mScroll" onclick="setMode('scroll')">自動スクロール</button>
+    <button onclick="fsz(1)">文字＋</button><button onclick="fsz(-1)">文字−</button>
+    <button id="spD" onclick="spd(-1)" style="display:none">遅く</button><button id="spU" onclick="spd(1)" style="display:none">速く</button>
+    <button id="mir" onclick="mirror()">🪞 ミラー反転</button>
+    <span class="pos" id="pos"></span>
+  </div>
+  <div class="stage" id="stage"><div class="line" id="line"></div></div>
+  <div class="scrollwrap" id="sw" style="display:none"></div>
+  <button class="nav prev" onclick="mv(-1)">‹</button>
+  <button class="nav next" onclick="mv(1)">›</button>
+</div>
+
+<script>
+const LINES = [{"id":"S01","text":"こんにちは。山口太郎です。今日は、15分の通し実演を、2本お見せします。"},{"id":"S02","text":"1本目は、ベッドに寝たお客様。2本目は、椅子に座ったお客様です。先週つくった自分のメニューと、見比べてください。"},{"id":"S03","text":"では、寝た姿勢から。15分、始めます。"},{"id":"S04","text":"これで、寝姿勢の15分です。コツはひとつ。最後まで、急がないことです。"},{"id":"S05","text":"次は、椅子のお客様です。同じ順番で、15分やります。"},{"id":"S06","text":"これで、立ちの15分です。手の順番は同じです。体の使い方が、違います。"},{"id":"S07","text":"今週の宿題です。"},{"id":"S08","text":"自分のメニューを、今日の映像と見比べて、直したいところを3つ、書いてください。"},{"id":"S09","text":"直したら、時計を見ないで、通しで1回やってみてください。"},{"id":"S10","text":"終わったら、手は急に離さず、そっと離してください。それでは、また来週。"}];
+let idx=0, fs=6.4, mode='single', speed=1, raf=null;
+const pv=document.getElementById('pv'), line=document.getElementById('line'), pos=document.getElementById('pos'), sw=document.getElementById('sw'), stage=document.getElementById('stage');
+function openPv(i){ if(!LINES.length) return; idx=i||0; pv.classList.add('on'); render(); }
+function closePv(){ pv.classList.remove('on'); stopScroll(); }
+function render(){
+  if(mode==='single'){
+    stage.style.display='flex'; sw.style.display='none';
+    const L=LINES[idx]; line.style.fontSize=fs+'vw'; line.textContent=L.text;
+    pos.textContent=(L.id||('#'+(idx+1)))+'　'+(idx+1)+' / '+LINES.length;
+  }else{
+    stage.style.display='none'; sw.style.display='block';
+    sw.innerHTML=LINES.map(L=>'<div class="sl" style="font-size:'+fs+'vw"><span class="tag">'+(L.id||'')+'</span>'+L.text.replace(/</g,'&lt;')+'</div>').join('');
+    pos.textContent='自動スクロール（速度 '+speed+'）— クリックで一時停止/再開';
+    startScroll();
+  }
+}
+function mv(d){ if(mode!=='single')return; idx=Math.min(LINES.length-1,Math.max(0,idx+d)); render(); }
+function fsz(d){ fs=Math.min(14,Math.max(2.4,fs+d*0.8)); render(); }
+function mirror(){ pv.classList.toggle('mirror'); document.getElementById('mir').classList.toggle('act'); }
+function setMode(m){ mode=m; stopScroll();
+  document.getElementById('mSingle').classList.toggle('act',m==='single');
+  document.getElementById('mScroll').classList.toggle('act',m==='scroll');
+  document.getElementById('spD').style.display=m==='scroll'?'':'none';
+  document.getElementById('spU').style.display=m==='scroll'?'':'none';
+  render(); }
+function spd(d){ speed=Math.min(5,Math.max(1,speed+d)); pos.textContent='自動スクロール（速度 '+speed+'）'; }
+let paused=false;
+function startScroll(){ paused=false; sw.scrollTop=0; const step=()=>{ if(!paused){ sw.scrollTop+=0.4*speed; } raf=requestAnimationFrame(step); }; raf=requestAnimationFrame(step); }
+function stopScroll(){ if(raf)cancelAnimationFrame(raf); raf=null; }
+sw.addEventListener('click',()=>{ paused=!paused; });
+document.addEventListener('keydown',e=>{
+  if(!pv.classList.contains('on'))return;
+  if(e.key==='Escape')closePv();
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();mv(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();mv(-1);}
+});
+document.querySelectorAll('.serif-card').forEach((el,i)=>el.addEventListener('click',()=>openPv(i)));
+</script>
+</body>
+</html>

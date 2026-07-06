@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>撮影香盤表｜7/6(月) 11:00〜｜山口流 理容道</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:0 16px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:34px 24px 28px;margin:0 -16px 20px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:26px;font-weight:600;margin:8px 0 6px}
+  header .meta{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:#c9d2e0}
+  header .meta b{color:#fff}
+  .goal{background:#fff;border:3px solid var(--gold);border-radius:14px;padding:14px 20px;margin-bottom:18px;font-size:15px}
+  .goal b{color:var(--navy)}
+  .flow{background:#fffaf0;border:1px solid var(--gold-l);border-radius:12px;padding:14px 18px;margin-bottom:20px;font-size:14px}
+  .flow b{color:#9a7b27}
+  /* timeline */
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:19px;margin:26px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--gold);display:inline-block}
+  .slot{display:flex;gap:0;background:#fff;border:1px solid var(--line);border-radius:12px;margin:10px 0;overflow:hidden}
+  .slot .time{flex:0 0 96px;background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;font-size:15px;padding:10px 4px}
+  .slot .time small{font-weight:400;font-size:10.5px;color:#c9d2e0}
+  .slot.break .time{background:#8b93a3}
+  .slot.bonus .time{background:var(--gold);color:#3a2c08}
+  .slot .body{flex:1;padding:12px 18px}
+  .slot .ttl{font-size:16.5px;font-weight:800;color:var(--navy)}
+  .slot .ttl .pg{background:var(--gold);color:#fff;border-radius:6px;font-size:12px;padding:1px 10px;margin-right:8px;vertical-align:2px}
+  .tags{margin:4px 0 6px}
+  .tag{display:inline-block;font-size:11px;font-weight:700;border-radius:10px;padding:1px 10px;margin-right:6px}
+  .t-hand{background:#fbf3dc;color:#9a7b27}.t-mouth{background:#eaf1fa;color:var(--blue)}.t-model{background:#fdecea;color:var(--red)}.t-fig{background:#eef7f0;color:var(--green)}
+  .what{font-size:13.5px;margin:2px 0}
+  .what b{color:var(--navy)}
+  .links{margin-top:8px}
+  .links a{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-size:12.5px;font-weight:700;border-radius:20px;padding:6px 16px;margin:2px 6px 2px 0}
+  .links a.fig{background:var(--green)}
+  .links a.guide{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+  /* figure gallery */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0}
+  .gal figure{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;cursor:pointer;margin:0}
+  .gal img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+  .gal figcaption{font-size:11.5px;padding:6px 10px;color:var(--ink);line-height:1.4}
+  .gal figcaption b{color:var(--navy)}
+  /* checklist */
+  ul.chk{list-style:none;margin:6px 0}
+  ul.chk li{position:relative;padding:5px 0 5px 30px;font-size:14px}
+  ul.chk li::before{content:"☐";position:absolute;left:4px;top:4px;color:var(--gold);font-size:16px}
+  .note{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin:12px 0;color:#7a5f1e}
+  table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;border-radius:10px;overflow:hidden;margin-top:8px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  .p0{color:var(--red);font-weight:800}.p1{color:#b9821f;font-weight:700}.p2{color:var(--blue)}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:34px}
+  /* viewer */
+  #vw{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;z-index:999;flex-direction:column}
+  #vw.on{display:flex}
+  #vw img{max-width:96vw;max-height:82vh;object-fit:contain;border-radius:8px}
+  #vw .cap{color:#e3d3a6;font-size:16px;margin-top:12px;text-align:center;padding:0 20px}
+  #vw .x{position:absolute;top:14px;right:18px;background:#222;color:#fff;border:1px solid #555;border-radius:8px;padding:8px 16px;font-size:14px;cursor:pointer}
+  #vw .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:none;color:#aaa;font-size:36px;padding:16px 12px;cursor:pointer;border-radius:10px}
+  #vw .prev{left:10px}#vw .next{right:10px}
+  @media print{.links a,#vw{display:none!important}body{background:#fff}.slot{page-break-inside:avoid}}
+  @media(max-width:640px){.gal{grid-template-columns:repeat(2,1fr)}.slot .time{flex-basis:74px;font-size:13px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ SHOOTING SCHEDULE</div>
+  <h1>撮影香盤表｜7月6日（月）</h1>
+  <div class="meta"><span><b>11:00</b> 撮影スタート</span><span>目標：<b>5本</b>（＋余力1本）</span><span>すべて台本・プロンプター準備済み</span></div>
+</header>
+<div class="wrap">
+
+  <div class="goal">
+    🎯 <b>今日のゴール：PG10・13・17・18・19 の5本を撮り切る</b>（撮影済みの旧素材と合わせて、配信19週目まで＝約5ヶ月分が完成します）。余力があれば PG21 もセットが同じなので続けて撮れます。
+  </div>
+
+  <div class="flow">
+    <b>🖥 今日の進め方（太郎さんがラクな方式）：</b>①各回の撮影前に、台本の一番上「<b>👤 太郎さん、まずこれだけ</b>」を1分読む → ②解剖学の回は、<b>モニター（iPad/TV）にこのページの解剖図を全画面表示</b>し、太郎さんは<b>図を指差してから、同じ場所をモデルの頭で触る</b> → ③セリフはプロンプター（各台本の右上ボタン。ミラー反転対応）。<br>
+    <b>暗記ゼロ・アドリブゼロでOK。</b>「図を見せる→触って見せる→一言読む」の繰り返しです。
+  </div>
+
+  <h2>タイムテーブル</h2>
+
+  <div class="slot"><div class="time">11:00<small>20分</small></div><div class="body">
+    <div class="ttl">セットアップ＆読み合わせ</div>
+    <ul class="chk">
+      <li>ベッド・照明・カメラ3台（正面／手元／俯瞰）・ピンマイク</li>
+      <li>モニター or iPad（解剖図表示用）をベッド脇に設置</li>
+      <li>プロンプター（iPad可）動作確認・モデルさん体調確認</li>
+      <li>太郎さんと本日5本の「まずこれだけ」を順に確認（各1分）</li>
+    </ul>
+  </div></div>
+
+  <div class="slot"><div class="time">11:20<small>50分</small></div><div class="body">
+    <div class="ttl"><span class="pg">1本目</span>PG10｜解剖学①頭の地図</div>
+    <div class="tags"><span class="tag t-model">モデル要</span><span class="tag t-fig">解剖図3枚</span><span class="tag t-hand">手：触診デモ</span><span class="tag t-mouth">口：S01-S10（約3分）</span></div>
+    <div class="what"><b>撮る絵：</b>①図を指差す → ②モデルの頭で同じ場所を触る（前頭筋→側頭筋→後頭筋→帽状腱膜）→ ③自分の頭でセルフ触診の見本。もみほぐしはしない（場所を覚える回）。</div>
+    <div class="links"><a class="guide" href="PG10_解剖学①頭の地図（頭蓋頭皮筋）.html">📖 台本を開く</a><a href="PG10_解剖学①頭の地図（頭蓋頭皮筋）.html">🎬 プロンプター</a><a class="fig" href="#fig10">🖼 解剖図（下に表示）</a></div>
+  </div></div>
+
+  <div class="slot"><div class="time">12:10<small>40分</small></div><div class="body">
+    <div class="ttl"><span class="pg">2本目</span>PG13｜解剖学②首肩・後頭下＝コリの震源</div>
+    <div class="tags"><span class="tag t-model">モデル要</span><span class="tag t-fig">解剖図3枚</span><span class="tag t-hand">手：触診デモ3カ所</span><span class="tag t-mouth">口：S01-S08（約2分）</span></div>
+    <div class="what"><b>撮る絵：</b>僧帽筋（手のひらで包む）→ 後頭下筋群（骨のフチの下に指）→ 胸鎖乳突筋（<b>そっとなでるだけ・強く押さない</b>）→ 自分の首でセルフ触診。</div>
+    <div class="links"><a class="guide" href="PG13_解剖学②首肩後頭下＝コリの震源.html">📖 台本を開く</a><a href="PG13_解剖学②首肩後頭下＝コリの震源.html">🎬 プロンプター</a><a class="fig" href="#fig13">🖼 解剖図（下に表示）</a></div>
+  </div></div>
+
+  <div class="slot break"><div class="time">12:50<small>40分</small></div><div class="body"><div class="ttl">🍱 昼休憩</div><div class="what">モデルさんも休憩。午後イチはいちばん体力を使うPG17。</div></div></div>
+
+  <div class="slot"><div class="time">13:30<small>70分</small></div><div class="body">
+    <div class="ttl"><span class="pg">3本目</span>PG17｜9週分の答え合わせ（10のクセと直し方＋安全・禁忌）</div>
+    <div class="tags"><span class="tag t-model">モデル要</span><span class="tag t-hand">手：NG→OK比較×10（約25分）</span><span class="tag t-mouth">口：S01-S10＋断り方カード（約3分）</span></div>
+    <div class="what"><b>撮る絵：</b>手技ごとに「ありがちな間違い」→「正しいやり方」を交互に実演（タッピング刺さり／叩打リズム／指ドリル滑り／点圧／摘み手引っ張り／さすり速すぎ／親指圧／首肩強すぎ／両手つられ／姿勢崩れ）。最後に「今日は施術しない日」の断り方カードを読む。</div>
+    <div class="links"><a class="guide" href="PG17_9週分の答え合わせありがちな.html">📖 台本を開く</a><a href="PG17_9週分の答え合わせありがちな.html">🎬 プロンプター</a></div>
+  </div></div>
+
+  <div class="slot break"><div class="time">14:40<small>10分</small></div><div class="body"><div class="ttl">☕ 休憩（モデルさん一旦解放OK）</div></div></div>
+
+  <div class="slot"><div class="time">14:50<small>30分</small></div><div class="body">
+    <div class="ttl"><span class="pg">4本目</span>PG18｜あなたの15分に値札をつける（値付け＋伝え方）</div>
+    <div class="tags"><span class="tag t-mouth">口：S01-S10・読みのみ（約7分）</span><span class="tag t-hand">手：なし（座り収録）</span></div>
+    <div class="what"><b>撮る絵：</b>座りでプロンプターを読むだけ。値上げの切り出し・断られた時の返しは<b>カードを読むデモ</b>（S05〜S09）。いちばんラクな回なので、PG17の後のクールダウンに最適。</div>
+    <div class="links"><a class="guide" href="PG18_あなたの15分に値札をつける.html">📖 台本を開く</a><a href="PG18_あなたの15分に値札をつける.html">🎬 プロンプター</a></div>
+  </div></div>
+
+  <div class="slot"><div class="time">15:20<small>50分</small></div><div class="body">
+    <div class="ttl"><span class="pg">5本目</span>PG19｜自分のメニューに組み込む実習（属性別3パターン）</div>
+    <div class="tags"><span class="tag t-model">モデル要（後半のみ）</span><span class="tag t-hand">手：ウェットデモ1カ所（約10分）</span><span class="tag t-mouth">口：S01-S10（約3分）</span></div>
+    <div class="what"><b>撮る絵：</b>オイルで滑る手→「つまむ技はNG」→「指の腹の静圧に切り替え」のデモ1カ所だけ。あとは読み。ワークシートの説明はナレが担当。</div>
+    <div class="links"><a class="guide" href="PG19_自分のメニューに組み込む実習.html">📖 台本を開く</a><a href="PG19_自分のメニューに組み込む実習.html">🎬 プロンプター</a></div>
+  </div></div>
+
+  <div class="slot bonus"><div class="time">16:20<small>余力枠<br>50分</small></div><div class="body">
+    <div class="ttl"><span class="pg">＋α</span>PG21｜なぜ心地よいのか（脳疲労・自律神経）</div>
+    <div class="tags"><span class="tag t-model">モデル要</span><span class="tag t-fig">概念図3枚</span><span class="tag t-hand">手：触診デモ4種</span><span class="tag t-mouth">口：S01-S08</span></div>
+    <div class="what"><b>解剖学と同じセット（ベッド＋モデル＋モニター）なので、体力と時間が残っていれば今日撮るのが最も効率的。</b>無理はしない——5本撮れていれば今日は大成功。</div>
+    <div class="links"><a class="guide" href="PG21_なぜ心地よいのか_脳疲労自律神経.html">📖 台本を開く</a><a href="PG21_なぜ心地よいのか_脳疲労自律神経.html">🎬 プロンプター</a><a class="fig" href="#fig21">🖼 概念図（下に表示）</a></div>
+  </div></div>
+
+  <div class="slot break"><div class="time">17:10<small>〜17:30</small></div><div class="body"><div class="ttl">バラシ・データバックアップ</div><div class="what">SDカード2箇所バックアップ／撮れ高チェック（各回の締めセリフまで撮れているか）</div></div></div>
+
+  <div class="note">💡 <b>もし旧素材（筋膜リリース・首肩・コンビネーション等）に撮り残しが見つかった場合</b>：今日のベッド＋モデルのセットでそのまま撮り足せます。余力枠をそちらに振り替えてOK。</div>
+
+  <h2>🖼 現場モニター用・解剖図ギャラリー（タップで全画面）</h2>
+  <p style="font-size:13px;color:var(--mut)">撮影中、iPad/TVでこのページを開き、該当の図をタップ→全画面にしてベッド脇に。太郎さんは<b>図を指差してから、同じ場所を触って</b>ください。矢印キー/スワイプで次の図へ。</p>
+
+  <h2 id="fig10" style="font-size:15px">PG10｜頭の地図</h2>
+  <div class="gal">
+    <figure onclick="openV(0)"><img src="img/PG10_01_head_muscle_map_side.png" alt=""><figcaption><b>①筋肉マップ（横顔）</b><br>ゴールド＝前頭筋／グレー＝側頭筋・後頭筋</figcaption></figure>
+    <figure onclick="openV(1)"><img src="img/PG10_02_scalp_layers_cross.png" alt=""><figcaption><b>②頭皮の層構造</b><br>皮ふ→帽状腱膜(金)→筋肉→頭蓋骨</figcaption></figure>
+    <figure onclick="openV(2)"><img src="img/PG10_03_galea_top_view.png" alt=""><figcaption><b>③頭頂から俯瞰</b><br>帽状腱膜が前後の筋をつなぐ</figcaption></figure>
+  </div>
+
+  <h2 id="fig13" style="font-size:15px">PG13｜首肩・後頭下</h2>
+  <div class="gal">
+    <figure onclick="openV(3)"><img src="img/PG13_01_trapezius_back.png" alt=""><figcaption><b>①僧帽筋（背面）</b><br>肩の付け根〜肩先の帯</figcaption></figure>
+    <figure onclick="openV(4)"><img src="img/PG13_02_suboccipital_back.png" alt=""><figcaption><b>②後頭下筋群</b><br>後頭骨のフチのすぐ下</figcaption></figure>
+    <figure onclick="openV(5)"><img src="img/PG13_03_scm_side.png" alt=""><figcaption><b>③胸鎖乳突筋</b><br>赤＝頸動脈。<span style="color:var(--red);font-weight:700">強く押さない</span></figcaption></figure>
+  </div>
+
+  <h2 id="fig21" style="font-size:15px">PG21｜なぜ心地よいのか（余力枠用）</h2>
+  <div class="gal">
+    <figure onclick="openV(6)"><img src="img/PG21_01_autonomic_balance.png" alt=""><figcaption><b>①自律神経のシーソー</b><br>金＝休息／グレー＝緊張</figcaption></figure>
+    <figure onclick="openV(7)"><img src="img/PG21_02_head_neck_circulation.png" alt=""><figcaption><b>②頭〜首のめぐり</b></figcaption></figure>
+    <figure onclick="openV(8)"><img src="img/PG21_03_c_tactile_fibers.png" alt=""><figcaption><b>③ゆっくり触れると気持ちいい神経</b></figcaption></figure>
+  </div>
+
+  <h2>📋 編集の優先順位（週1配信からの逆算）</h2>
+  <table>
+    <tr><th>優先</th><th>対象</th><th>理由・期限目安</th></tr>
+    <tr><td class="p0">P0 今週</td><td>v6 #1〜#4（開幕2本＋タッピング・叩打法）</td><td>入会者（7/8〜）が最初の1ヶ月で視聴。#1は入校日に即必要</td></tr>
+    <tr><td class="p1">P1 来週</td><td>v6 #5〜#9（宣言・指ドリル・太郎ハンド・三軸・あおり手）</td><td>配信5〜9週目（8月上旬まで）</td></tr>
+    <tr><td class="p1">P1 撮影後すぐ</td><td><b>今日撮る PG10・PG13</b>（解剖図の画面インサートあり）</td><td>図の差し込みが必要なので編集リードタイムを長めに確保</td></tr>
+    <tr><td class="p2">P2</td><td>v6 #11・12・14・15・16（旧素材）</td><td>配信11〜16週目（9月中）</td></tr>
+    <tr><td class="p2">P3</td><td>今日撮る PG17・18・19</td><td>配信17〜19週目（10月）。焦らなくてよい</td></tr>
+  </table>
+  <p style="font-size:12.5px;color:var(--mut);margin-top:6px">※次回撮影：PG20（通し実演30分×2・モデル長時間拘束のため単独日推奨）→ PG22〜30。台本はすべて完成済み。</p>
+
+  <footer>山口流 理容道｜撮影香盤表 2026-07-06｜台本ライブラリ：<a href="index.html">index.html</a>｜ⓒ Prorium</footer>
+</div>
+
+<div id="vw" onclick="closeV(event)">
+  <button class="x" onclick="closeV()">✕ 閉じる</button>
+  <button class="nav prev" onclick="mv(-1);event.stopPropagation()">‹</button>
+  <img id="vimg" src="" alt="">
+  <div class="cap" id="vcap"></div>
+  <button class="nav next" onclick="mv(1);event.stopPropagation()">›</button>
+</div>
+<script>
+const FIGS=[
+ ["img/PG10_01_head_muscle_map_side.png","PG10① 頭の筋肉マップ（横顔）— ゴールド＝前頭筋"],
+ ["img/PG10_02_scalp_layers_cross.png","PG10② 頭皮の層構造 — 皮ふ→帽状腱膜(金)→筋肉→頭蓋骨"],
+ ["img/PG10_03_galea_top_view.png","PG10③ 頭頂からの俯瞰 — 帽状腱膜が前後をつなぐ"],
+ ["img/PG13_01_trapezius_back.png","PG13① 僧帽筋（背面）— 肩の付け根〜肩先の帯"],
+ ["img/PG13_02_suboccipital_back.png","PG13② 後頭下筋群 — 後頭骨のフチのすぐ下"],
+ ["img/PG13_03_scm_side.png","PG13③ 胸鎖乳突筋 — 赤い線＝頸動脈。強く押さない"],
+ ["img/PG21_01_autonomic_balance.png","PG21① 自律神経のシーソー — 金＝休息／グレー＝緊張"],
+ ["img/PG21_02_head_neck_circulation.png","PG21② 頭〜首のめぐりのイメージ"],
+ ["img/PG21_03_c_tactile_fibers.png","PG21③ ゆっくり触れると気持ちいい神経（指→皮ふ→脳）"]];
+let vi=0;
+const vw=document.getElementById('vw'),vimg=document.getElementById('vimg'),vcap=document.getElementById('vcap');
+function openV(i){vi=i;render();vw.classList.add('on')}
+function render(){vimg.src=FIGS[vi][0];vcap.textContent=FIGS[vi][1]}
+function closeV(e){if(e&&e.target&&e.target.tagName==='IMG')return;vw.classList.remove('on')}
+function mv(d){vi=(vi+d+FIGS.length)%FIGS.length;render()}
+document.addEventListener('keydown',e=>{if(!vw.classList.contains('on'))return;
+ if(e.key==='Escape')vw.classList.remove('on');
+ if(e.key==='ArrowRight')mv(1); if(e.key==='ArrowLeft')mv(-1);});
+</script>
+</body>
+</html>

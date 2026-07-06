@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG21｜なぜ心地よいのか（脳疲労・自律神経）＋お客様への説明台本｜山口流 理容道 台本v6</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:38px 26px 32px;margin:0 -18px 24px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:24px;font-weight:600;margin:8px 0 8px;line-height:1.5}
+  header .meta{font-size:12.5px;color:#c9d2e0;display:flex;gap:16px;flex-wrap:wrap}
+  .prompter-btn{position:sticky;top:10px;z-index:50;display:flex;justify-content:flex-end;margin-bottom:6px}
+  .prompter-btn button{background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:30px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,26,46,.3)}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:16px 0;box-shadow:0 2px 10px rgba(27,42,74,.05)}
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .oc{background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .oc .l{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+  .oc .v{font-size:13.5px;color:var(--ink);margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  .chip{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;white-space:nowrap}
+  .c1{background:#fbf3dc;color:#9a7b27}.c2{background:#eaf1fa;color:var(--blue)}.c3{background:#eef7f0;color:var(--green)}
+  .serif-card{background:#fffdf8;border:1px solid var(--gold-l);border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0;cursor:pointer}
+  .serif-card:hover{background:#fdf8ec}
+  .serif-card .sid{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .serif-card .sno{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 10px}
+  .serif-card .scene{font-size:11.5px;color:var(--mut)}
+  .serif-card .stx{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;color:var(--ink);line-height:1.9}
+  .serif-card .hint{font-size:10.5px;color:#b6a26d;margin-top:4px}
+  .nar{margin:14px 0}
+  .nar h3{font-size:14px;color:var(--navy);background:#eaf1fa;border-radius:8px;padding:6px 12px;margin-bottom:8px}
+  .nar p{font-size:13.5px;margin:8px 4px;color:#2c3644}
+  ul.plain{list-style:none}
+  ul.plain li{position:relative;padding-left:20px;margin:6px 0;font-size:13.5px}
+  ul.plain li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+  .memo{background:#fff8e8;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin-top:8px}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:30px}
+  /* ===== プロンプター ===== */
+  #pv{position:fixed;inset:0;background:#000;color:#fff;z-index:999;display:none;flex-direction:column}
+  #pv.on{display:flex}
+  #pv .bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#111;flex-wrap:wrap}
+  #pv .bar button{background:#222;color:#fff;border:1px solid #555;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+  #pv .bar button.act{background:var(--gold);color:#000;border-color:var(--gold)}
+  #pv .bar .pos{margin-left:auto;font-size:14px;color:#d8c79b}
+  #pv .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:4vw;overflow:hidden}
+  #pv .line{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;text-align:center;line-height:1.7;white-space:pre-wrap}
+  #pv .scrollwrap{flex:1;overflow-y:auto;padding:20vh 6vw}
+  #pv .scrollwrap .sl{font-family:"Hiragino Mincho ProN",serif;font-weight:600;line-height:1.9;margin:5vh 0;text-align:center;white-space:pre-wrap}
+  #pv .scrollwrap .sl .tag{display:block;font-size:14px;color:#d8c79b;font-family:sans-serif;margin-bottom:8px}
+  #pv.mirror .stage,#pv.mirror .scrollwrap{transform:scaleX(-1)}
+  #pv .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:#888;font-size:34px;padding:18px 10px;cursor:pointer;border-radius:10px}
+  #pv .prev{left:8px}#pv .next{right:8px}
+  @media(max-width:640px){.cards3{grid-template-columns:1fr}header h1{font-size:20px}}
+  @media print{.prompter-btn,#pv{display:none!important}body{background:#fff}section{box-shadow:none;page-break-inside:avoid}}
+  /* ===== 解剖図・図版ブロック ===== */
+  .anatomy{background:#fbf9f3;border:1px solid var(--line);border-radius:12px;padding:14px;margin:12px 0}
+  .anatomy .imgwrap{position:relative;width:100%;max-width:560px;margin:0 auto;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:#efe9dc}
+  .anatomy img{width:100%;height:100%;object-fit:cover;display:block}
+  .anatomy img.pending{display:none}
+  .anatomy .imgwrap.wait::after{content:"🖼 画像生成待ち（"attr(data-file)"）";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#9a8b6a;font-size:12px;text-align:center;padding:12px}
+  .anatomy figcaption{font-size:13.5px;margin-top:8px;color:var(--ink)}
+  .anatomy figcaption b{color:var(--navy)}
+  .anatomy .legend{list-style:none;display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;font-size:12.5px}
+  .anatomy .legend li{display:flex;align-items:center;gap:6px}
+  .anatomy .legend .sw{width:14px;height:14px;border-radius:4px;display:inline-block;border:1px solid #0002}
+  .anatomy .talk{background:#eef3fa;border-left:3px solid var(--blue);border-radius:6px;padding:8px 12px;margin-top:8px;font-size:13px}
+  .anatomy .talk b{color:var(--blue)}
+  /* ===== 太郎さん専用ガイド ===== */
+  .taro{background:#fffaf0;border:3px solid var(--gold);border-radius:14px;padding:8px 22px 22px}
+  .taro h2{font-size:20px;border:none;background:var(--gold);color:#3a2c08;padding:6px 16px;border-radius:10px;display:block;margin:14px 0 6px}
+  .taro .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.5;margin:6px 0}
+  .taro .row{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+  .taro .ico{font-size:30px;flex:0 0 40px;text-align:center;line-height:1.2}
+  .taro .ttl{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.04em}
+  .taro .txt{font-size:16px;color:var(--ink);line-height:1.75;margin-top:2px}
+  .taro .txt b{color:var(--navy)}
+  .taro .tell{background:#eef7f0;border-left:5px solid var(--green)}
+  .taro .tell .ttl{color:var(--green)}
+  .taro ul.gist{list-style:none;margin:4px 0 0}
+  .taro ul.gist li{position:relative;padding:6px 0 6px 26px;font-size:16px;line-height:1.6}
+  .taro ul.gist li::before{content:"💬";position:absolute;left:0;top:5px;font-size:15px}
+  .taro .tip{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 14px;margin-top:10px;font-size:14.5px;color:#7a5f1e}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ SCRIPT v6</div>
+  <h1>PG21｜なぜ心地よいのか（脳疲労・自律神経）＋お客様への説明台本</h1>
+  <div class="meta"><span>尺：約33分</span><span>形式：触診ナレ型（太郎さんはOP/ED＋一言インサートのみ）</span><span>台本v6（2026-07-02）</span><span>層：<span class="chip c1">🎬 層1 太郎</span> <span class="chip c2">🎙 層2 ナレ</span> <span class="chip c3">📺 層3 テロップ</span></span></div>
+</header>
+<div class="wrap">
+  <div class="prompter-btn"><button onclick="openPv(0)">🎬 プロンプターを開く（太郎さんセリフ）</button></div>
+
+  <section class="taro">
+    <h2>👤 太郎さん、まずこれだけ（撮影前に読む）</h2>
+    <div class="big">この回は「頭をさわると、なんで気持ちいいの？」を、体の仕組みで説明するだけの回です。手の動かし方は教えません。</div>
+
+    <div class="row"><div class="ico">🤔</div><div><div class="ttl">なんで大事？</div>
+      <div class="txt">同じようにマッサージをしても、<b>「なぜ気持ちいいか」を知っている人</b>の手は、変わります。たとえば、料理でも「なんとなく塩を入れる人」より「この塩で肉がやわらかくなる、と分かって入れる人」のほうが、手つきに自信が出ますよね。それと同じで、理由が腹落ちしていると、お客様に一言そえられて、<b>「この人ちゃんと分かってる」</b>と信頼されます。だから太郎さんが理由を分かっていること自体が、お店の強みになります。</div></div></div>
+
+    <div class="row"><div class="ico">🙌</div><div><div class="ttl">太郎さんがやること</div>
+      <div class="txt">🤲 <b>手：</b>モデルさんの頭に手を置くだけ（動かさない）、側頭部をゆっくりさわる、中くらいの強さで押す、額→頭のてっぺん→後ろへ<b>1秒で3〜5cm</b>のゆっくり撫で。この4つを静かに見せるだけ。しゃべりません。<br>🗣 <b>口：</b>始まりの挨拶（S01・S02）と、途中の短い一言4か所（S03〜S06）、まとめ（S07）、宿題（S08）だけ。全部プロンプターに出るので、読めばOK。お客様説明の台本①〜③は<b>ナレーターさんが読む</b>ので、太郎さんは読みません。</div></div></div>
+
+    <div class="row tell"><div class="ico">💬</div><div><div class="ttl">言いたいことは、ざっくりこれ</div>
+      <ul class="gist">
+        <li>今日は手の動かし方じゃなくて、「なんで気持ちいいのか」の理由を勉強する回ですよ。</li>
+        <li>体には、がんばる<b>アクセル</b>と、休む<b>ブレーキ</b>があって、僕らは休むブレーキを押す手伝いをしてるんです。</li>
+        <li>頭は<b>ゆっくり</b>撫でるほど気持ちよくなる。それにはちゃんと理由があるんです。</li>
+        <li>覚えた理由を、お客様にも一言そえてあげてください。話す言葉も、りっぱな技術ですよ。</li>
+      </ul></div></div>
+
+    <div class="tip">💡 <b>コツ：</b>下の台本は、丸暗記しなくて大丈夫。<b>「言いたいこと（上の💬）」さえ分かっていれば</b>、プロンプターの文はスッと自然に出てきます。読むんじゃなく、"分かってる人がしゃべる"感じで。</div>
+  </section>
+
+  <section style="border-left:5px solid var(--gold)">
+    <h2>📌 この回の設計図（まずこれだけ読めばOK）</h2>
+
+    <div style="background:#fbf6ea;border:1px solid var(--gold-l);border-radius:10px;padding:14px 18px;margin:10px 0">
+      <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em">① この回でやること</div>
+      <div style="font-size:16px;font-weight:700;color:var(--navy);margin:4px 0">ヘッドマッサージが「なぜ気持ちいいのか」を脳と神経の仕組みで説明できるようにして、その理由をお客様に話す台本まで覚える回。手の動かし方は教えない。</div>
+      <ol style="margin:6px 0 0 22px;font-size:13.5px">
+        <li>「脳疲労」と「自律神経」を、車のアクセル／ブレーキのたとえで図解して見せる。</li>
+        <li>気持ちよさに関わる4つの言葉（交感／副交感神経・HRV・コルチゾール・C触覚線維）を、1つずつ図解で見せる。</li>
+        <li>「なぜ気持ちいいのか」を、速さ・圧・時間・リズムの4つが1本につながるフロー図でまとめる。</li>
+        <li>「脳疲労チェックリスト7項目」を画面に出して、視聴者に自分で数えさせる。</li>
+        <li>お客様に言う説明台本を3本（施術前・施術中・施術後）読み上げて、字幕にする。</li>
+        <li>薬機法のOK／NG言い換え表（10対）を出して、言ってはいけない言葉を確認させる。</li>
+      </ol>
+    </div>
+
+    <div style="margin:12px 0">
+      <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">② 太郎さんのタスク（手でやること／口で読むこと）</div>
+      <table>
+        <tr><th style="width:50%">🤲 手でやること（実演・撮る絵）</th><th>🗣 口で読むこと（プロンプター）</th></tr>
+        <tr><td>
+          ・モデルの頭に手を置いて、動かさない（静止タッチ・①用）<br>
+          ・側頭部をゆっくり触る（低速タッチ・②用）<br>
+          ・側頭部を中くらいの圧で押す（指が沈むが、相手が顔をしかめない深さ・③用）<br>
+          ・額→頭頂→後頭を、1秒で3〜5cm撫でる（低速軽擦・タイマー焼き込み・⑤用）
+        </td><td>
+          ・S01-S02 冒頭挨拶＋ゴール宣言（座り・カメラ目線）<br>
+          ・S03 ②の頭で一言（手を止めて言う）<br>
+          ・S04 ⑤の頭で一言（ゆっくり読む）<br>
+          ・S05 ⑥の頭で一言<br>
+          ・S06 説明台本パート導入<br>
+          ・S07 まとめ（手を止めて言う）／S08 宿題（ED）<br>
+          ※台本①〜③（お客様説明）はナレーター読み上げ。太郎さんは読まない
+        </td></tr>
+      </table>
+      <div style="font-size:12px;color:var(--mut);margin-top:4px">合計拘束目安：実演約15分＋読み約5分（読みはプロンプター使用・演技不要）</div>
+    </div>
+
+    <div style="margin:12px 0">
+      <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">③ 画面に入れるクリエイティブ（編集チームへの発注リスト）</div>
+      <div style="font-size:12px;color:var(--mut);margin-bottom:6px">画像は本編セクション内の図版ブロックに差し込む。ファイルは <code>img/</code> 直下に配置（<code>onload</code> で自動的に「生成待ち」表示から差し替わる）。</div>
+      <table>
+        <tr><th style="width:120px">種類</th><th>ファイル名（img/直下）</th><th>作るもの</th><th style="width:130px">使う場面（TC）</th></tr>
+        <tr><td>AI生成解剖図</td><td><code>PG21_01_autonomic_balance.png</code></td><td>自律神経バランスの概念図。左＝交感神経（緊張）／右＝副交感神経（リラックス）のシーソー。副交感側をゴールド、交感側をグレーで色分け</td><td>04:30 ②交感・副交感</td></tr>
+        <tr><td>AI生成解剖図</td><td><code>PG21_02_head_neck_circulation.png</code></td><td>頭〜首の血のめぐりのイメージ図。頭部から首すじにかけて、めぐりが穏やかに広がる様子。めぐりをゴールド、頭部・首の輪郭をグレーで</td><td>01:00 ①脳疲労（頭〜首の巡り）</td></tr>
+        <tr><td>AI生成解剖図</td><td><code>PG21_03_c_tactile_fibers.png</code></td><td>ゆっくり触れると心地よい神経（C触覚線維）の概念図。皮膚から脳へ心地よさの信号が届くイメージ。C触覚線維をゴールド、その他の触覚神経をグレーで</td><td>15:30 ⑤C触覚線維</td></tr>
+        <tr><td>アニメ図（別途）</td><td>—</td><td>心拍波形が「一定」→「間隔がゆらぐ」に変わる図。施術後にHRVが上がる矢印</td><td>08:30 ③HRV</td></tr>
+        <tr><td>アニメ図（別途）</td><td>—</td><td>コルチゾールの高止まり曲線＋時間バー「15〜25分」を重ね、緩やかに下がる点線（「示唆」注記つき）</td><td>12:00 ④ホルモン</td></tr>
+        <tr><td>アニメ図（別途）</td><td>—</td><td>速さ・圧・時間・リズムの4本が1本の太い矢印「アクセル→ブレーキ」に合流するフロー図（速さ＝C線維／圧＝HRV／時間＝ホルモン／リズム＝鎮静の対応表示）</td><td>19:30 ⑥統合</td></tr>
+        <tr><td>大テロップ</td><td>—</td><td>各パート冒頭のキーワード提示6枚（脳疲労／アクセル・ブレーキ／HRV／コルチゾール＋15〜25分／C触覚線維3〜5cm/秒／なぜ心地よいのか）</td><td>各パート冒頭</td></tr>
+        <tr><td>図解</td><td>—</td><td>脳疲労チェックリスト7項目（配布物と同一デザイン）＋末尾に「医学的診断ではありません」注記</td><td>22:30 ⑦チェック</td></tr>
+        <tr><td>実演インサート</td><td>—</td><td>タイマー焼き込みの低速軽擦カット（3〜5cm/秒・手元寄り）。「遅さ」を実時間で見せる</td><td>15:30 ⑤内</td></tr>
+        <tr><td>字幕</td><td>—</td><td>お客様説明台本3本の話し言葉字幕（大きめ）。「〜と言われています」「〜を目的に」に下線</td><td>26:00 説明台本</td></tr>
+        <tr><td>比較テロップ</td><td>—</td><td>薬機法OK／NG対訳表10対（NG＝赤の取り消し線／OK＝緑）。1対ずつ→最後に一覧1枚</td><td>30:30 対訳表</td></tr>
+        <tr><td>まとめテロップ</td><td>—</td><td>中央大「今日の1つ ＝ ゆっくり触る理由を、ひとこと添える」</td><td>32:00 まとめ</td></tr>
+      </table>
+    </div>
+
+    <div class="cards3" style="margin-top:12px">
+      <div class="oc"><div class="l">今日から現場で使える1つ</div><div class="v">ゆっくり触る理由を、お客様にひとこと添える。それだけで伝わり方が変わる。</div></div>
+      <div class="oc"><div class="l">宿題</div><div class="v">脳疲労チェックリストを自分でやり、3つの説明台本のうち1つを声に出してお客様に話す。</div></div>
+      <div class="oc"><div class="l">配布物</div><div class="v">脳疲労チェックリスト／説明台本3本／薬機法OK-NG対訳表／宿題チェックシート</div></div>
+    </div>
+  </section>
+
+  <section><h2>基本情報</h2><table>
+    <tr><th>番号</th><td>PG21</td></tr>
+    <tr><th>タイトル</th><td>なぜ心地よいのか（脳疲労・自律神経）＋お客様への説明台本</td></tr>
+    <tr><th>尺</th><td>約33分（OP30秒＋宿題復習30秒＋本編⑦まで約25分＋説明台本30秒×3本＋対訳表約1.5分＋まとめ・宿題・ED）</td></tr>
+    <tr><th>収録形態</th><td>触診ナレ型。太郎さんはOP/ED＋本編の一言インサート（S03〜S06）を別撮り。本編はモデルへの触診デモ（層1＝太郎の手）にナレーション（層2）＋図解アニメーション（層3）を重ねる。説明台本パートはナレーター読み上げ＋字幕</td></tr>
+    <tr><th>必要機材</th><td>太郎さんOP/ED収録：正面カメラ1台＋ピンマイク（背景＝施術空間、ダークネイビー／ゴールド）／本編触診デモ：俯瞰A・サイド B・手元寄りC の3カメ、ベッドまたはチェア／ナレーション収録ブース（クリアな中低音）／図解アニメーション制作（脳・自律神経の配線図／アクセル・ブレーキ／HRV波形／コルチゾール曲線／皮膚断面とC触覚線維／30分タイムライン）／速度バー・時間バーのモーショングラフィック</td></tr>
+    <tr><th>モデル</th><td>施術を受ける役 1名（頭部の触診デモ用・ベッド仰臥位）。太郎さんはOP/EDのみ本人カメラ目線</td></tr>
+    <tr><th>参照PG</th><td>PG09 太郎ハンド3種／PG11 筋膜リリース頭皮さすり＆揉捏／PG13 首肩コリのリリース／PG18・PG19 30分コース通し実演（触診デモの手順ベース）／次回接続：PG22（エビデンス回）・PG23</td></tr>
+    <tr><th>コンプラ</th><td>効果の断定なし。「リラクゼーションを目的に」「〜と言われています」「研究で示唆されています」で統一。治る／改善／自律神経が整う／育毛 はNG。数字・実績は捏造せず、不明箇所は〔要確認〕を明記。監修クレジット<b style="color:#c0392b">〔要確認: 監修者表記（旧版は川上監修）〕</b></td></tr>
+  </table></section>
+
+  <section><h2>タイムコード構成表</h2><table><tr><th>時間</th><th>パート</th><th>内容</th><th>層</th></tr>
+    <tr><td>00:00–00:15</td><td>OP挨拶</td><td>太郎さん挨拶・カメラ目線（S01）</td><td><span class="chip c1">🎬 層1</span></td></tr>
+    <tr><td>00:15–00:30</td><td>今日のゴール宣言</td><td>太郎さんがゴールを言う（S02）／OPテロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>00:30–01:00</td><td>先週の宿題・良い例紹介</td><td>ナレーションで前回の宿題を振り返り、良い実践例を紹介</td><td><span class="chip c2">🎙 層2</span></td></tr>
+    <tr><td>01:00–04:30</td><td>① 脳疲労とは何か</td><td>「脳疲労」を平易に定義。自律神経の登場。頭〜首のめぐり図（PG21_02）を出し、ナレが図を指す → 太郎の手が同じ後頭部・側頭部に静止タッチ</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span> <span class="chip c1">🎬 層1</span></td></tr>
+    <tr><td>04:30–08:30</td><td>② 交感神経と副交感神経</td><td>自律神経バランス図（PG21_01・アクセル／ブレーキ）を出し、ナレが図を指す → 太郎の手が低速のやさしいタッチ。切り替えの話</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span> <span class="chip c1">🎬 層1</span></td></tr>
+    <tr><td>08:30–12:00</td><td>③ HRV（心拍のゆらぎ）</td><td>HRVとは何か。中程度の圧との関連</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span> <span class="chip c1">🎬 層1</span></td></tr>
+    <tr><td>12:00–15:30</td><td>④ ストレスホルモンと時間</td><td>コルチゾールと頭皮マッサージ15〜25分の示唆。30分コースとの重なり</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span> <span class="chip c1">🎬 層1</span></td></tr>
+    <tr><td>15:30–19:30</td><td>⑤ C触覚線維（速さ）</td><td>C触覚線維の図（PG21_03）と「3〜5cm/秒」を出し、ナレが図を指す → 太郎の手が額→頭頂→後頭を同じ速さで低速軽擦（S04）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>19:30–22:30</td><td>⑥ なぜ心地よいのか（統合）</td><td>速さ・圧・時間・リズムを1本の流れに統合（S05）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>22:30–25:30</td><td>⑦ 脳疲労チェックリスト</td><td>日常の脳疲労サイン7項目をテロップ提示</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>25:30–26:00</td><td>説明台本パート導入</td><td>太郎さん一言「言葉も、技術です。」（S06）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>26:00–30:30</td><td>★お客様への説明台本 30秒×3本</td><td>施術前／施術中／施術後の読み上げ用台本を実演字幕化</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>30:30–32:00</td><td>★薬機法 OK/NG言い換え対訳表</td><td>10対の言い換えをテロップで提示</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>32:00–32:30</td><td>今日から現場で使える1つ</td><td>まとめテロップ＋太郎さん一言（S07）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>32:30–33:00</td><td>宿題提示＋締め</td><td>太郎さん宿題（S08）＋テロップ「それでは、また来週。」</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>33:00–33:20</td><td>クロージング</td><td>ロゴ・次回予告（PG22）テロップ</td><td><span class="chip c3">📺 層3</span></td></tr>
+  </table>
+  <div class="memo" style="margin-top:12px">触診デモ（層1）は説明を担わない。手が「その触れ方」を静かに見せ、意味はすべて層2ナレーションと層3図解が運ぶ。①〜⑥は触診デモ＋図解、⑦以降は図解・字幕主体。<br><b>図と手の順番：</b>①②⑤は「まず解剖図（PG21_01/02/03）を画面に出してナレが位置を指す → そのあと太郎さんの手が同じ場所を触る」の順で見せる。図で位置を理解させてから、手で実物に触れさせる。</div>
+  </section>
+
+  <section><h2>太郎さんセリフ（クリックでその行からプロンプター起動）</h2>
+    <div class="serif-card"><div class="sid"><span class="sno">S01</span><span class="scene">OP挨拶・00:00</span></div><div class="stx">こんにちは。山口太郎です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S02</span><span class="scene">今日のゴール・00:15／ゆっくり読む</span></div><div class="stx">今日は、手の動かし方は、教えません。<br>ヘッドマッサージが、なぜ気持ちいいのか。<br>その理由を、学びます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S03</span><span class="scene">②の頭・一言インサート・04:30／手を止めて言う</span></div><div class="stx">体には、アクセルとブレーキがあります。<br>私たちは、休む側のブレーキを、押す手伝いをします。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S04</span><span class="scene">⑤の頭・一言インサート・15:30／ゆっくり読む</span></div><div class="stx">頭は、ゆっくり撫でるほど、気持ちよくなります。<br>なぜなのか、これから説明します。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S05</span><span class="scene">⑥の頭・一言インサート・19:30</span></div><div class="stx">速さも、圧も、時間も、つながっています。<br>どれも、気持ちよくするための、理由があります。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S06</span><span class="scene">説明台本パート導入・25:30／ゆっくり読む</span></div><div class="stx">学んだ理由を、お客様にも話してください。<br>話す言葉も、りっぱな技術です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S07</span><span class="scene">まとめ・32:00／手を止めて言う</span></div><div class="stx">今日から使えるのは、ひとつです。<br>ゆっくり触る理由を、ひとこと添える。<br>それだけで、伝わり方が変わります。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S08</span><span class="scene">ED宿題・32:30／ゆっくり読む</span></div><div class="stx">今週の宿題です。<br>チェックリストを、自分でやってみてください。<br>そして、説明台本を、ひとつ声に出してみましょう。<br>それでは、また来週。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">台本①</span><span class="scene">施術前の声かけ・約30秒（お客様への読み上げ用）</span></div><div class="stx">今日は、頭をゆっくり、優しく触れていきますね。頭皮には、ゆっくり撫でられると心地よさを感じる神経があると言われています。だから、私はわざと、ゆっくり動かします。急いでいるわけではないので、安心して、力を抜いてくださいね。途中で眠くなったら、しっかり休めているサインなので、そのまま眠ってしまって大丈夫ですよ。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">台本②</span><span class="scene">施術中のひとこと・約30秒（お客様への読み上げ用）</span></div><div class="stx">このあたり、こめかみや、あご、首の付け根は、知らないうちに力が入って、こわばりやすい場所だと言われています。一日のうち、ここをゆるめる時間って、なかなかないですよね。今は、活動モードから、お休みモードへ、ゆっくり切り替わっていくお手伝いをしています。呼吸も、だんだん深くなってきているかもしれませんね。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">台本③</span><span class="scene">施術後のクロージング・約30秒（お客様への読み上げ用）</span></div><div class="stx">お疲れさまでした。よく休めていらっしゃいましたね。十五分から二十五分くらい、ゆっくり頭をほぐす時間は、リラックスにつながると言われています。今日みたいに、頭が張ってきたなと感じたら、ためこむ前に、また休みにいらしてください。続けることが、いちばんのリラクゼーションになりますから。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+  </section>
+
+  <section><h2>ナレーション全文</h2>
+    <div class="nar"><h3>N00｜先週の宿題・良い例紹介（00:30–01:00）</h3>
+      <p>先週の宿題は、覚えていますか。<b style="color:#c0392b">〔要確認: 前回PGの宿題内容に合わせて1文を差し替え〕</b>。実際にやってみた、という報告をいくつもいただきました。中でも、いちばん多かったのは、「急がないだけで、相手の力の抜け方が変わった」という声です。手を速く動かす代わりに、少しゆっくりにしてみる。たったそれだけで、施術の入り方が変わる。今日は、その「ゆっくりが効く理由」を、体の仕組みから学びます。</p>
+    </div>
+    <div class="nar"><h3>N01｜① 脳疲労とは何か（01:00–04:30）</h3>
+      <p>今日のテーマは、「脳疲労」と「自律神経」です。手技は出てきません。けれど、これは、このスクールでいちばん大切な回のひとつです。なぜなら、理由がわかると、同じ手技でも、触れ方が変わるからです。</p>
+      <p>まず、「脳疲労」という言葉から始めます。これは、医学の正式な病名ではありません。私たちが、ふだんの暮らしで感じている、あの感覚を指す言葉です。体は動くのに、頭が重い。集中が続かない。寝ても、すっきりしない。寝つけない。これらをまとめて、ここでは「脳疲労」と呼びます。</p>
+      <p>体の疲れと、脳の疲れは、少し違います。体の疲れは、休めば回復しやすい。けれど、脳の疲れは、横になっても、頭の中が動き続けて、休まらないことがあります。考えごと、スマートフォン、絶え間ない情報。脳は、起きているあいだ、ほとんど休んでいません。</p>
+      <p>では、この「脳の休まらなさ」の中心に、何があるのか。それが、今日の主役、「自律神経」です。自律神経とは、自分の意思とは関係なく、体を自動で調整している神経のことです。心臓を動かす。汗をかく。胃腸を動かす。呼吸を整える。あなたが意識しなくても、二十四時間、休まずに働いています。</p>
+      <p>この自律神経が、ずっと緊張したまま、切り替わりにくくなる。これが、脳疲労の感覚に深く関わっていると考えられています。では、その「緊張」と「切り替え」とは、どういうことか。次のパートで、二つの神経に分けて見ていきます。</p>
+      <figure class="anatomy">
+        <div class="imgwrap wait" data-file="PG21_02_head_neck_circulation.png"><img class="pending" src="img/PG21_02_head_neck_circulation.png" alt="頭から首にかけての血のめぐりのイメージ図。頭部・首の巡りをやわらかく示す" onload="this.classList.remove('pending');this.parentElement.classList.remove('wait')"></div>
+        <figcaption><b>頭〜首の血のめぐりのイメージ</b> — 頭から首すじにかけて、めぐりが穏やかに広がる様子。緊張がゆるむと、めぐりも巡りやすい環境に近づくと言われています。</figcaption>
+        <ul class="legend">
+          <li><span class="sw" style="background:#C5A55A"></span>ゴールド＝めぐりのイメージ（頭〜首）</li>
+          <li><span class="sw" style="background:#7f8aa0"></span>グレー＝頭部・首の輪郭</li>
+        </ul>
+        <div class="talk"><b>お客様に言うなら：</b>頭から首すじにかけて、力が抜けると、めぐりやすい心地よさに近づくと言われています。</div>
+      </figure>
+      <p style="color:#8a9099;font-size:12px">（図で頭〜首のめぐりを見せる → 太郎さんの手で、モデルの後頭部と側頭部の同じ場所に手を置いたまま、動かさない静止タッチを見せる。ナレーションはその上に重なる。）</p>
+    </div>
+    <div class="nar"><h3>N02｜② 交感神経と副交感神経（04:30–08:30）</h3>
+      <p>自律神経は、大きく二つに分かれます。「交感神経」と、「副交感神経」です。名前は難しいですが、働きは、とてもシンプルです。</p>
+      <p>交感神経は、体を、活動モードにする神経です。車でいえば、アクセルです。仕事に集中するとき、緊張するとき、危険を感じたとき。交感神経が働くと、心臓は速く打ち、血圧は上がり、筋肉に力が入ります。体は、いつでも動ける状態になります。</p>
+      <p>もう一方の、副交感神経は、体を、休息モードにする神経です。こちらは、ブレーキです。くつろいでいるとき、眠るとき、食事のあと。副交感神経が働くと、心臓はゆっくりになり、筋肉はゆるみ、消化が進みます。体は、回復するほうへ向かいます。</p>
+      <p>心地よい状態とは、この二つが、状況に合わせて、なめらかに切り替わっていることだと言われています。昼はアクセル、夜はブレーキ。緊張するときはアクセル、くつろぐときはブレーキ。この切り替えが、うまくいっている状態です。</p>
+      <p>ところが、現代の暮らしでは、アクセルが、踏みっぱなしになりやすい。仕事のプレッシャー、人間関係、スマートフォンの通知。交感神経が、ずっと優位なまま、ブレーキに切り替わりにくい。すると、体は休んでいるつもりでも、内側は緊張したまま。これが、寝てもすっきりしない、頭が休まらない、という感覚につながると考えられています。</p>
+      <p>そして、ここが大切です。私たちが、ヘッドマッサージで行っているのは、この「ブレーキを、押す手伝い」です。緊張したアクセルから、休息のブレーキへ。その切り替えのきっかけを、手で作っている。これが、リラクゼーションを目的とした施術の、いちばん深いところです。</p>
+      <figure class="anatomy">
+        <div class="imgwrap wait" data-file="PG21_01_autonomic_balance.png"><img class="pending" src="img/PG21_01_autonomic_balance.png" alt="自律神経バランスの概念図。左に交感神経＝緊張、右に副交感神経＝リラックスのシーソー" onload="this.classList.remove('pending');this.parentElement.classList.remove('wait')"></div>
+        <figcaption><b>自律神経のバランス（アクセルとブレーキ）</b> — 左のアクセル＝交感神経（緊張）、右のブレーキ＝副交感神経（リラックス）がシーソーのように釣り合う。ヘッドマッサージは、傾いたシーソーを休む側へそっと戻すお手伝い。</figcaption>
+        <ul class="legend">
+          <li><span class="sw" style="background:#C5A55A"></span>ゴールド＝副交感神経（ブレーキ／休息側）</li>
+          <li><span class="sw" style="background:#7f8aa0"></span>グレー＝交感神経（アクセル／活動側）</li>
+        </ul>
+        <div class="talk"><b>お客様に言うなら：</b>体には、頑張るアクセルと、休むブレーキがあるんです。今は、休むほうへゆっくり切り替わるお手伝いをしていますね。</div>
+      </figure>
+      <p style="color:#8a9099;font-size:12px">（図を出す → 太郎さんの手で同じ「低速のやさしいタッチ」を見せる。層3：左にアクセル＝交感、右にブレーキ＝副交感の対比アニメ。）</p>
+    </div>
+    <div class="nar"><h3>N03｜③ HRV（心拍のゆらぎ）（08:30–12:00）</h3>
+      <p>では、心と体が休息のほうへ傾いているかどうかを、どうやって知るのか。それを示す、ひとつの指標を紹介します。「HRV」です。日本語では、「心拍のゆらぎ」と訳されます。</p>
+      <p>心臓は、一定のリズムで打っている、と思われがちです。けれど、本当は、一拍ごとに、ほんのわずかに、間隔が違っています。少し速かったり、少し遅かったり。この、拍と拍のあいだの、わずかなゆらぎ。それがHRVです。</p>
+      <p>意外に思うかもしれません。このゆらぎは、多いほうが、余裕のある状態だと言われています。心拍の間隔が、しなやかに変化できる。それは、アクセルとブレーキ、二つの神経が、どちらもよく働き、状況に応じて切り替えられているサインだと考えられているからです。</p>
+      <p>逆に、ゆらぎが少なく、機械のように一定になっているときは、交感神経が優位で、緊張が続いているサインのひとつ、と考えられています。アクセルを踏みっぱなしだと、心臓も、余裕なく、一定に打ち続ける。HRVは、その「余裕」を映す鏡のようなものです。</p>
+      <p>そして、複数のマッサージ研究では、中くらいの強さの圧で触れることが、心拍や血圧の低下、そしてHRVの上昇と関連している、と示唆されています。つまり、適切な圧のマッサージのあと、体が、休息のほうへ傾き、心拍に「ゆらぎ」という余裕が戻ってくる傾向が見られる、ということです。</p>
+      <p>ここで、思い出してください。PG11やPG18で、「圧は、中くらい」と繰り返しました。強すぎず、弱すぎず。その理由が、ここにあります。強すぎる圧は、かえって体を緊張させ、アクセルを踏ませてしまう。中くらいの圧こそが、ブレーキと、HRVの余裕に、関連すると考えられているのです。</p>
+      <p style="color:#8a9099;font-size:12px">（層1・触診デモ：側頭部への中程度の圧。指が沈むが、相手が顔をしかめない深さ。層3：一定波形→ゆらぎのある波形へ変化するアニメ。）</p>
+    </div>
+    <div class="nar"><h3>N04｜④ ストレスホルモンと時間（12:00–15:30）</h3>
+      <p>次に、目に見える「物質」の話をします。「ストレスホルモン」です。代表的なものに、「コルチゾール」という物質があります。</p>
+      <p>コルチゾールは、体がストレスを感じたときに出るホルモンです。それ自体は、悪者ではありません。朝、体を目覚めさせたり、ピンチのときに体を守ったりする、必要なものです。問題は、ストレスが長く続いて、このコルチゾールが、高いまま下がりにくくなることです。</p>
+      <p>コルチゾールが高い状態が続くと、寝つきや、気分、回復のしにくさと関連すると言われています。さきほどの「アクセル踏みっぱなし」の、化学的な側面、と考えると分かりやすいかもしれません。</p>
+      <p>ここで、注目すべき報告があります。頭皮へのマッサージを、およそ十五分から二十五分続けることが、このストレスに関わるホルモンの低下を示唆する、という研究報告です。あくまで、「示唆する」という段階の話です。すべての人に、必ず効く、という意味ではありません。けれど、これは、私たちの仕事にとって、とても心強い報告です。</p>
+      <p>なぜなら、思い出してください。PG18とPG19で組み立てた、あの「30分コース」。あの流れの中で、実際に手を動かしている時間は、ちょうど、この十五分から二十五分におさまる設計になっています。偶然ではありません。研究で示唆されている時間と、心地よい施術の時間が、自然と重なっている。だから私たちは、「リラクゼーションを目的に、この時間をかける」と、自信を持って言えるのです。</p>
+      <p>短すぎる施術では、もったいない。長すぎても、相手が疲れる。十五分から二十五分という時間そのものが、ひとつの技術だと考えてください。</p>
+      <p style="color:#8a9099;font-size:12px">（層3：コルチゾールの高止まり曲線＋時間バー「15〜25分」を重ね、緩やかな低下傾向を点線で。「示唆」注記を必ず添える。）</p>
+    </div>
+    <div class="nar"><h3>N05｜⑤ C触覚線維（速さ）（15:30–19:30）</h3>
+      <p>ここまでは、圧と、時間の話でした。最後に、「速さ」の話をします。これが、今日いちばん、面白い話かもしれません。「C触覚線維」という、神経のお話です。</p>
+      <p>私たちの皮膚には、触れられたことを脳に伝える、たくさんの神経があります。その中に、「C触覚線維」と呼ばれる、特別な一群があります。この神経は、何のためにあるか。痛みでも、危険を知らせるためでもありません。「心地よさ」を伝えるための神経だと考えられています。言わば、「気持ちいい、専用」の神経です。</p>
+      <p>そして、この神経には、面白い性質があります。どんな触れ方でも反応するわけではないのです。いちばんよく反応するのは、ゆっくりとした、優しい撫で。具体的には、一秒あたり、およそ三センチから五センチ。この、ゆっくりした速さの撫でが、心地よさと関連している、と触覚の神経科学で示唆されています。</p>
+      <p>速く撫でても、強く押しても、この神経は、あまり働きません。「ゆっくり、優しく」。この速さのときだけ、心地よさの神経が、よく反応する。これが、研究で示唆されていることです。</p>
+      <p>ここで、また思い出してください。PG09の太郎ハンド。PG11のさすり。そして、30分コースの「低速軽擦」。私たちは、ずっと、「一秒で三センチから五センチ」「急がない」と言い続けてきました。その理由が、ここにあります。あの遅さは、なんとなく、ではありません。心地よさの神経が、いちばんよく反応する速さを、狙っているのです。</p>
+      <p>そして、興味深いのは、C触覚線維からの信号が伝わる先です。それは、痛みや圧を判断する場所だけでなく、感情や、心地よさに関わる、脳の場所にも届くと考えられています。だから、ゆっくり撫でられると、頭で「気持ちいい」と考える前に、体と心が、先に、ゆるんでいく。理屈ではなく、心地よさが、生まれていく。これが、ゆっくり撫でることの、本当の意味です。</p>
+      <figure class="anatomy">
+        <div class="imgwrap wait" data-file="PG21_03_c_tactile_fibers.png"><img class="pending" src="img/PG21_03_c_tactile_fibers.png" alt="ゆっくり触れると心地よさを伝える神経（C触覚線維）の概念図。皮膚から脳へ信号が届くイメージ" onload="this.classList.remove('pending');this.parentElement.classList.remove('wait')"></div>
+        <figcaption><b>ゆっくり触れると心地よい神経（C触覚線維）</b> — 皮膚にある「心地よさ」を伝える神経。ゆっくりした撫で（およそ1秒で3〜5cm）のときに、いちばんよく反応すると言われています。</figcaption>
+        <ul class="legend">
+          <li><span class="sw" style="background:#C5A55A"></span>ゴールド＝C触覚線維（心地よさを伝える神経）</li>
+          <li><span class="sw" style="background:#7f8aa0"></span>グレー＝皮膚・その他の触覚の神経</li>
+        </ul>
+        <div class="talk"><b>お客様に言うなら：</b>頭皮には、ゆっくり撫でられると心地よさを感じる神経があると言われています。だから、わざとゆっくり動かしていますね。</div>
+      </figure>
+      <p style="color:#8a9099;font-size:12px">（図でC触覚線維と「3〜5cm/秒」を見せる → 太郎さんの手で、額から頭頂、後頭へと同じ速さの低速軽擦を実演。手元寄りC＋タイマー焼き込み。層3：速度バー「3〜5cm/秒」が反応最大ゾーンで光る。）</p>
+    </div>
+    <div class="nar"><h3>N06｜⑥ なぜ心地よいのか（統合）（19:30–22:30）</h3>
+      <p>ここまで、四つの言葉を学びました。交感神経と副交感神経。HRV。ストレスホルモン。そして、C触覚線維。ここで、これらを、ひとつの流れに、つなげます。これが、今日の結論です。</p>
+      <p>ヘッドマッサージが始まります。まず、ゆっくり、優しく撫でる。一秒で三センチから五センチ。すると、心地よさの神経、C触覚線維が反応します。その信号が、心地よさに関わる脳の場所に届きます。</p>
+      <p>その信号は、アクセルである交感神経をゆるめ、ブレーキである副交感神経を、後押しすると考えられています。中くらいの圧と、一定のリズムも、この後押しを助けると言われています。すると、心拍はゆっくりになり、HRVに、余裕のゆらぎが戻ってくる傾向が見られます。</p>
+      <p>さらに、十五分から二十五分という時間をかけることで、ストレスに関わるホルモンも、下がっていくことが示唆されています。一定のリズムの反復刺激は、鎮静や眠気と関連すると考えられています。ゆっくりした呼吸との同期は、リラックスに関わる神経の働きと関連すると言われています。</p>
+      <p>これらが、すべて、同じ方向を向いています。アクセルから、ブレーキへ。緊張から、休息へ。だから、お客様は、施術の途中で、眠くなる。眠くなるのは、退屈だからではありません。体が、休息のほうへ切り替わった、ひとつのサインです。「気持ちよくて、寝てしまった」。それは、私たちにとって、最高の褒め言葉なのです。</p>
+      <p>ばらばらの手技ではありません。すべての手技が、「心地よさへ導く」という、ひとつの目的でつながっています。速さは、C触覚線維のため。圧は、HRVのため。時間は、ホルモンのため。リズムは、鎮静のため。理由を知って触れる手は、なんとなく触れる手とは、まったく違うものになります。</p>
+      <p style="color:#8a9099;font-size:12px">（層3：⑤までの5要素が1本の太い矢印「アクセル→ブレーキ」に合流するフロー図。速さ＝C線維／圧＝HRV／時間＝ホルモン／リズム＝鎮静 の対応を明示。）</p>
+    </div>
+    <div class="nar"><h3>N07｜⑦ 脳疲労チェックリスト（22:30–25:30）</h3>
+      <p>最後に、これを、あなた自身と、お客様のために、使える形にします。「日常の脳疲労チェックリスト」です。画面に出る七つの項目を、一緒に見ていきましょう。当てはまるものを、心の中で数えてください。</p>
+      <p>一つ目。朝、目が覚めても、疲れが残っている。<br>二つ目。日中、ぼんやりして、集中が続かない。<br>三つ目。考えごとが止まらず、頭が休まらない。<br>四つ目。寝つきが悪い、または、夜中に目が覚める。<br>五つ目。肩や首、こめかみ、あごの周りが、いつも張っている。<br>六つ目。ちょっとしたことで、いらいらしたり、不安になったりする。<br>七つ目。休みの日に休んでも、すっきりしない。</p>
+      <p>いくつ、当てはまったでしょうか。これらは、病気の診断ではありません。けれど、多く当てはまるほど、アクセルが踏みっぱなしになっている、ひとつのサインかもしれない、と考えてみてください。</p>
+      <p>そして、五つ目を、もう一度見てください。「こめかみ、あご、首の張り」。側頭筋、咬筋、後頭下筋群。これは、緊張がたまりやすい場所として知られています。私たちが、30分コースで、ていねいにアプローチしてきた、まさにその場所です。</p>
+      <p>このチェックリストは、お客様との会話の入り口に使えます。「最近、こんなことはありませんか」。そう伝えることで、お客様は、自分の状態に気づき、施術の意味を、より深く受け取ってくれます。リストの配布物は、配信ページからダウンロードできるようにします。</p>
+    </div>
+    <div class="nar"><h3>N08｜説明台本パート導入（25:30–26:00）</h3>
+      <p>理論は、ここまでです。ここからは、学んだことを、お客様にどう伝えるか。専門用語のまま話す必要はありません。むしろ、難しい言葉を、やさしく言い換えることが、信頼につながります。三つの場面で、そのまま声に出せる説明台本を、読み上げます。それぞれ、断定はしていません。「〜と言われています」「〜を目的に」という言い方に、注目してください。</p>
+    </div>
+    <div class="nar"><h3>★お客様への説明台本 3本（26:00–30:30・読み上げ用／全文）</h3>
+      <p><b>台本① 施術前の声かけ（約30秒）</b><br>「今日は、頭をゆっくり、優しく触れていきますね。頭皮には、ゆっくり撫でられると心地よさを感じる神経があると言われています。だから、私はわざと、ゆっくり動かします。急いでいるわけではないので、安心して、力を抜いてくださいね。途中で眠くなったら、しっかり休めているサインなので、そのまま眠ってしまって大丈夫ですよ。」</p>
+      <p style="color:#8a9099;font-size:12px">ポイント：①「ゆっくり触る理由」を先に伝える。②「眠っていい」と許可を出す。③「神経があると言われています」と断定を避ける。</p>
+      <p><b>台本② 施術中のひとこと（約30秒）</b><br>「このあたり、こめかみや、あご、首の付け根は、知らないうちに力が入って、こわばりやすい場所だと言われています。一日のうち、ここをゆるめる時間って、なかなかないですよね。今は、活動モードから、お休みモードへ、ゆっくり切り替わっていくお手伝いをしています。呼吸も、だんだん深くなってきているかもしれませんね。」</p>
+      <p style="color:#8a9099;font-size:12px">ポイント：①「自分ごと」に感じられる具体的な部位を挙げる。②「アクセル／ブレーキ」を「活動モード／お休みモード」に言い換える。</p>
+      <p><b>台本③ 施術後のクロージング（約30秒）</b><br>「お疲れさまでした。よく休めていらっしゃいましたね。十五分から二十五分くらい、ゆっくり頭をほぐす時間は、リラックスにつながると言われています。今日みたいに、頭が張ってきたなと感じたら、ためこむ前に、また休みにいらしてください。続けることが、いちばんのリラクゼーションになりますから。」</p>
+      <p style="color:#8a9099;font-size:12px">ポイント：①価値を「〜と言われています」で止め、断定しない。②「また来てください」という次回への自然な入り口を作る。</p>
+    </div>
+  </section>
+
+  <section><h2>テロップ・図解指示</h2><ul class="plain">
+    <li><b>OPテロップ</b></li>
+    <li>中央：<code>PG21｜なぜ心地よいのか（脳疲労・自律神経）</code></li>
+    <li>サブ：<code>理由がわかると、触れ方が変わる。</code></li>
+    <li>右下小：<code>理論回・手技解説なし ／ 監修：〔要確認〕</code></li>
+    <li><b>キーワード提示（各パート冒頭に大テロップ）</b></li>
+    <li>①：<code>脳疲労 ＝ 頭が休まらない状態（正式な病名ではありません）</code></li>
+    <li>②：<code>交感神経＝アクセル ／ 副交感神経＝ブレーキ</code></li>
+    <li>③：<code>HRV ＝ 心拍のゆらぎ（多いほど「余裕」の指標）</code></li>
+    <li>④：<code>ストレスホルモン（コルチゾール）＋ 15〜25分</code></li>
+    <li>⑤：<code>C触覚線維 ＝ 「心地よさ」専用の神経（3〜5cm/秒）</code></li>
+    <li>⑥：<code>なぜ心地よいのか ＝ 速さ・圧・時間・リズムが同じ方向を向く</code></li>
+    <li><b>図解アニメーション（中核）</b></li>
+    <li>②：左にアクセル（交感・心拍速い／血圧上／筋緊張）、右にブレーキ（副交感・心拍遅い／筋ゆるむ／消化）の対比アニメ。「踏みっぱなし」を赤で表現。</li>
+    <li>③：一定間隔の心拍波形 → わずかに間隔が揺れる波形へ変化（ゆらぎ＝余裕）。HRVグラフが施術後に上昇する矢印。</li>
+    <li>④：コルチゾールの高止まり曲線 → 施術時間バー<code>15〜25分</code>を重ね、緩やかな低下傾向（点線・「示唆」注記）。</li>
+    <li>⑤：皮膚の断面図にC触覚線維をハイライト。速度バー<code>3〜5cm/秒</code>が「ちょうどいい」ゾーンで反応最大。信号が脳の感情・心地よさ領域へ届く矢印。</li>
+    <li>⑥：①〜⑤の5本の線が、1本の太い矢印「アクセル→ブレーキ」に合流するフロー図。手技と要素の対応（速さ＝C線維／圧＝HRV／時間＝ホルモン／リズム＝鎮静）。</li>
+    <li><b>エビデンス系テロップ（必ず「示唆／関連」表現・断定しない）</b></li>
+    <li>③：<code>中程度の圧 ＝ 心拍・血圧の低下、HRV上昇と関連、と示唆</code></li>
+    <li>④：<code>頭皮マッサージ 15〜25分 ＝ ストレスホルモン低下を示唆する報告も</code></li>
+    <li>⑤：<code>ゆっくりの撫で（約3〜5cm/秒）＝ 心地よさに関わる神経の働きと関連、と示唆</code></li>
+    <li>⑥：<code>一定リズムの反復＝鎮静・眠気と関連／ゆっくりの呼吸（約6回/分）＝リラックスに関わる神経と関連、と示唆</code></li>
+    <li>⑦：<code>側頭筋・咬筋・後頭下筋群＝緊張が集まりやすい部位、と報告</code></li>
+    <li><b>脳疲労チェックリスト（⑦・7項目を順次表示／配布物と同一デザイン）</b></li>
+    <li>1. 朝、目が覚めても疲れが残っている</li>
+    <li>2. 日中、ぼんやりして集中が続かない</li>
+    <li>3. 考えごとが止まらず、頭が休まらない</li>
+    <li>4. 寝つきが悪い、または夜中に目が覚める</li>
+    <li>5. 肩・首・こめかみ・あごがいつも張っている</li>
+    <li>6. ちょっとしたことでいらいら・不安になる</li>
+    <li>7. 休みの日に休んでもすっきりしない</li>
+    <li>末尾注記：<code>※医学的診断ではありません。多く当てはまるほど「アクセル優位」のサインかもしれません</code></li>
+    <li><b>説明台本テロップ（26:00–30:30・話し言葉を字幕化）</b></li>
+    <li>台本①〜③の本文を字幕で出し、<code>断定しない言い回し</code>に下線（例：<code>〜と言われています</code>／<code>〜を目的に</code>）。ポイント部分を色変え＋囲み。</li>
+    <li><b>薬機法 OK/NG対訳表テロップ（30:30–32:00）</b>：左（NG）は赤の取り消し線、右（OK）は緑で提示。1対ずつ順次表示、最後に10対を一覧で1枚。画面下部固定：<code>効果は約束しない。目的と傾向で語る。</code></li>
+    <li>1. <span style="color:#c0392b;text-decoration:line-through">血流が良くなる／血行促進</span> → <span style="color:#2f8a52">巡りをサポートすると言われています</span></li>
+    <li>2. <span style="color:#c0392b;text-decoration:line-through">自律神経が整う</span> → <span style="color:#2f8a52">活動モードからお休みモードへ、切り替わるお手伝いをします</span></li>
+    <li>3. <span style="color:#c0392b;text-decoration:line-through">疲れが取れる／疲労回復</span> → <span style="color:#2f8a52">ゆっくりお休みいただく時間を目的にしています</span></li>
+    <li>4. <span style="color:#c0392b;text-decoration:line-through">頭痛が治る／頭痛に効く</span> → <span style="color:#2f8a52">頭まわりの心地よさを目的にしています</span></li>
+    <li>5. <span style="color:#c0392b;text-decoration:line-through">不眠が改善する／よく眠れるようになる</span> → <span style="color:#2f8a52">眠くなる方が多いと言われています／おやすみ前のリラックスを目的に</span></li>
+    <li>6. <span style="color:#c0392b;text-decoration:line-through">ストレスホルモンが下がる／ストレスが消える</span> → <span style="color:#2f8a52">ゆっくり過ごす時間は、リラックスにつながると言われています</span></li>
+    <li>7. <span style="color:#c0392b;text-decoration:line-through">育毛効果がある／髪が生える</span> → <span style="color:#2f8a52">頭皮の心地よい環境づくりを目的にしています</span></li>
+    <li>8. <span style="color:#c0392b;text-decoration:line-through">むくみが取れる／老廃物を流す・デトックス</span> → <span style="color:#2f8a52">すっきりとした心地よさを目的にしています</span></li>
+    <li>9. <span style="color:#c0392b;text-decoration:line-through">血圧が下がる</span> → <span style="color:#2f8a52">落ち着いた心地に近づくと言われています</span></li>
+    <li>10. <span style="color:#c0392b;text-decoration:line-through">効果があります／効きます／必ず〜します</span> → <span style="color:#2f8a52">心地よさを感じていただけると言われています／リラクゼーションを目的にしています</span></li>
+    <li>共通の型：「治る・改善・必ず・下がります」→「〜を目的に／〜と言われています／研究で示唆されています」。効果を約束せず、目的と傾向で語る。</li>
+    <li><b>「今日から現場で使える1つ」まとめテロップ（32:00）</b>：中央大 <code>今日の1つ ＝ ゆっくり触る理由を、ひとこと添える</code></li>
+    <li><b>コンプライアンス固定注記（本編・ED付近に小さく常時可）</b>：<code>本コンテンツはリラクゼーションを目的とした手技と理論の紹介です。治療・効能を保証するものではありません。</code></li>
+  </ul></section>
+
+  <section><h2>宿題・配布物</h2><ul class="plain">
+    <li><b>今週の宿題（セリフS08／テロップ同時表示）</b></li>
+    <li>1. 本編⑦の「脳疲労チェックリスト（7項目）」を、まず自分自身でやってみる（当てはまった数を記録）。</li>
+    <li>2. 今週の施術で1回、3つの説明台本のうち、どれか<b>ひとつ</b>を、声に出してお客様に話してみる。</li>
+    <li>3. 話したあとの、お客様の反応（うなずき・質問・表情）を、ひとことメモする。</li>
+    <li><b>チェックシート（5項目／できたら✓）</b></li>
+    <li>□ 交感神経＝アクセル／副交感神経＝ブレーキ／HRV＝心拍のゆらぎ／C触覚線維＝心地よさ専用、の4つを見ずに説明できた。</li>
+    <li>□ 「速さ＝C触覚線維」「圧＝HRV」「時間（15〜25分）＝ホルモン」「リズム＝鎮静」の対応を1つ以上、口で言えた。</li>
+    <li>□ 脳疲労チェックリスト7項目を自分でやり、当てはまった数を記録した（記録：___／7）。</li>
+    <li>□ 3つの説明台本のうち1つを、現場でお客様に話せた（話した台本番号：①／②／③）。</li>
+    <li>□ お客様への説明で、「治る・必ず・下がります」等の断定を使わず、「〜と言われています／〜を目的に」で止められた。</li>
+    <li><b>配布物（配信ページに添付）</b></li>
+    <li>脳疲労チェックリスト（7項目・印刷用）</li>
+    <li>お客様への説明台本 3本（カード形式・読み上げ用）</li>
+    <li>薬機法 OK/NG言い換え対訳表（10対）</li>
+    <li>今週の宿題＋チェックシート</li>
+    <li>※すべて <code>配布物パック_v6.md</code> に収録。</li>
+  </ul></section>
+
+  <section><h2>制作メモ</h2><div class="memo">
+    <b>太郎さんの収録（最短で済む設計）</b><br>
+    新規収録は OP（S01・S02）／ED（S07・S08）／本編一言インサート（S03〜S06）のみ。すべて施術空間を背景に、固定カメラ1台・バストアップ・カメラ目線。セリフは短文、演技・アドリブ不要。指示は「ゆっくり読む」「手を止めて言う」のみ。カンペをカメラ脇に置いて読み上げでよい。一言インサート（S03〜S06）は同じ立ち位置・同じ画角で4本連続収録し編集で各TCに配置（1本5〜8秒）。<br><br>
+    <b>触診デモ（層1・モデルへの手）</b><br>
+    ①静止タッチ／②低速タッチ／③中程度の圧（側頭部）／⑤低速軽擦（3〜5cm/秒・タイマー焼き込み）をモデル頭部で静かに実演。手が説明するのではなく「その触れ方」を見せるだけ。声・解説は入れない。手元寄りCで圧の沈み込み・撫での速さを確保。⑤は等速＋タイマーで「遅さ」を実時間体感（初学者の最頻ミス＝速すぎの矯正）。<br><br>
+    <b>ナレーション収録</b><br>
+    ブース収録、落ち着いた中低音。専門用語→一拍→言い換えの間を意識。図解の進行（波形が動く・矢印が合流する）に合わせポーズ多めで収録。エビデンス語尾「示唆されています／関連すると考えられています／報告があります」は強調せず自然に、断定に聞こえないトーン。<br><br>
+    <b>コンプライアンス（最重要）</b><br>
+    全編で「治る／改善／自律神経が整う／育毛」を使わない。ナレーション・テロップ・説明台本すべてを納品前に対訳表で照合。「自律神経が整う」は概念説明でも使わず「活動モードとお休みモードの切り替え」で表現（本台本は準拠済み）。数字・実績は捏造しない。<br><br>
+    <b>編集</b><br>
+    説明台本パート（26:00–30:30）は字幕を大きく＝受講者がそのまま音読して練習できる速度。1本30秒目安・間を残す。「今日から現場で使える1つ」は1つに絞る（＝ゆっくり触る理由をひとこと添える）。宿題テロップと連動。次回予告テロップはPG22（エビデンス回）へ接続。<br><br>
+    <b style="color:#c0392b">〔要確認: 監修者表記（旧版は川上監修）〕</b>／<b style="color:#c0392b">〔要確認: 前回PGの宿題内容（N00の1文差し替え）〕</b>は確定後に差し替え、未確定のまま撮影に入らない。
+  </div></section>
+
+  <footer>山口流 理容道｜台本v6｜PG21 なぜ心地よいのか（脳疲労・自律神経）＋お客様への説明台本｜ⓒ Prorium（社外秘）</footer>
+</div>
+
+<div id="pv">
+  <div class="bar">
+    <button onclick="closePv()">✕ 閉じる(Esc)</button>
+    <button id="mSingle" class="act" onclick="setMode('single')">1枚ずつ</button>
+    <button id="mScroll" onclick="setMode('scroll')">自動スクロール</button>
+    <button onclick="fsz(1)">文字＋</button><button onclick="fsz(-1)">文字−</button>
+    <button id="spD" onclick="spd(-1)" style="display:none">遅く</button><button id="spU" onclick="spd(1)" style="display:none">速く</button>
+    <button id="mir" onclick="mirror()">🪞 ミラー反転</button>
+    <span class="pos" id="pos"></span>
+  </div>
+  <div class="stage" id="stage"><div class="line" id="line"></div></div>
+  <div class="scrollwrap" id="sw" style="display:none"></div>
+  <button class="nav prev" onclick="mv(-1)">‹</button>
+  <button class="nav next" onclick="mv(1)">›</button>
+</div>
+
+<script>
+const LINES = [
+{"id":"S01","text":"こんにちは。山口太郎です。"},
+{"id":"S02","text":"今日は、手の動かし方は、教えません。\nヘッドマッサージが、なぜ気持ちいいのか。\nその理由を、学びます。"},
+{"id":"S03","text":"体には、アクセルとブレーキがあります。\n私たちは、休む側のブレーキを、押す手伝いをします。"},
+{"id":"S04","text":"頭は、ゆっくり撫でるほど、気持ちよくなります。\nなぜなのか、これから説明します。"},
+{"id":"S05","text":"速さも、圧も、時間も、つながっています。\nどれも、気持ちよくするための、理由があります。"},
+{"id":"S06","text":"学んだ理由を、お客様にも話してください。\n話す言葉も、りっぱな技術です。"},
+{"id":"S07","text":"今日から使えるのは、ひとつです。\nゆっくり触る理由を、ひとこと添える。\nそれだけで、伝わり方が変わります。"},
+{"id":"S08","text":"今週の宿題です。\nチェックリストを、自分でやってみてください。\nそして、説明台本を、ひとつ声に出してみましょう。\nそれでは、また来週。"},
+{"id":"台本①","text":"今日は、頭をゆっくり、優しく触れていきますね。頭皮には、ゆっくり撫でられると心地よさを感じる神経があると言われています。だから、私はわざと、ゆっくり動かします。急いでいるわけではないので、安心して、力を抜いてくださいね。途中で眠くなったら、しっかり休めているサインなので、そのまま眠ってしまって大丈夫ですよ。"},
+{"id":"台本②","text":"このあたり、こめかみや、あご、首の付け根は、知らないうちに力が入って、こわばりやすい場所だと言われています。一日のうち、ここをゆるめる時間って、なかなかないですよね。今は、活動モードから、お休みモードへ、ゆっくり切り替わっていくお手伝いをしています。呼吸も、だんだん深くなってきているかもしれませんね。"},
+{"id":"台本③","text":"お疲れさまでした。よく休めていらっしゃいましたね。十五分から二十五分くらい、ゆっくり頭をほぐす時間は、リラックスにつながると言われています。今日みたいに、頭が張ってきたなと感じたら、ためこむ前に、また休みにいらしてください。続けることが、いちばんのリラクゼーションになりますから。"}
+];
+let idx=0, fs=6.4, mode='single', speed=1, raf=null;
+const pv=document.getElementById('pv'), line=document.getElementById('line'), pos=document.getElementById('pos'), sw=document.getElementById('sw'), stage=document.getElementById('stage');
+function openPv(i){ if(!LINES.length) return; idx=i||0; pv.classList.add('on'); render(); }
+function closePv(){ pv.classList.remove('on'); stopScroll(); }
+function render(){
+  if(mode==='single'){
+    stage.style.display='flex'; sw.style.display='none';
+    const L=LINES[idx]; line.style.fontSize=fs+'vw'; line.textContent=L.text;
+    pos.textContent=(L.id||('#'+(idx+1)))+'　'+(idx+1)+' / '+LINES.length;
+  }else{
+    stage.style.display='none'; sw.style.display='block';
+    sw.innerHTML=LINES.map(L=>'<div class="sl" style="font-size:'+fs+'vw"><span class="tag">'+(L.id||'')+'</span>'+L.text.replace(/</g,'&lt;')+'</div>').join('');
+    pos.textContent='自動スクロール（速度 '+speed+'）— クリックで一時停止/再開';
+    startScroll();
+  }
+}
+function mv(d){ if(mode!=='single')return; idx=Math.min(LINES.length-1,Math.max(0,idx+d)); render(); }
+function fsz(d){ fs=Math.min(14,Math.max(2.4,fs+d*0.8)); render(); }
+function mirror(){ pv.classList.toggle('mirror'); document.getElementById('mir').classList.toggle('act'); }
+function setMode(m){ mode=m; stopScroll();
+  document.getElementById('mSingle').classList.toggle('act',m==='single');
+  document.getElementById('mScroll').classList.toggle('act',m==='scroll');
+  document.getElementById('spD').style.display=m==='scroll'?'':'none';
+  document.getElementById('spU').style.display=m==='scroll'?'':'none';
+  render(); }
+function spd(d){ speed=Math.min(5,Math.max(1,speed+d)); pos.textContent='自動スクロール（速度 '+speed+'）'; }
+let paused=false;
+function startScroll(){ paused=false; sw.scrollTop=0; const step=()=>{ if(!paused){ sw.scrollTop+=0.4*speed; } raf=requestAnimationFrame(step); }; raf=requestAnimationFrame(step); }
+function stopScroll(){ if(raf)cancelAnimationFrame(raf); raf=null; }
+sw.addEventListener('click',()=>{ paused=!paused; });
+document.addEventListener('keydown',e=>{
+  if(!pv.classList.contains('on'))return;
+  if(e.key==='Escape')closePv();
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();mv(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();mv(-1);}
+});
+document.querySelectorAll('.serif-card').forEach((el,i)=>el.addEventListener('click',()=>openPv(i)));
+</script>
+</body>
+</html>

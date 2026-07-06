@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG00｜宿題・配布物パック（共通テンプレ集）｜山口流 理容道 台本v6</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:38px 26px 32px;margin:0 -18px 24px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:24px;font-weight:600;margin:8px 0 8px;line-height:1.5}
+  header .meta{font-size:12.5px;color:#c9d2e0;display:flex;gap:16px;flex-wrap:wrap}
+  .prompter-btn{position:sticky;top:10px;z-index:50;display:flex;justify-content:flex-end;margin-bottom:6px}
+  .prompter-btn button{background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:30px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,26,46,.3)}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:16px 0;box-shadow:0 2px 10px rgba(27,42,74,.05)}
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .oc{background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .oc .l{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+  .oc .v{font-size:13.5px;color:var(--ink);margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  .chip{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;white-space:nowrap}
+  .c1{background:#fbf3dc;color:#9a7b27}.c2{background:#eaf1fa;color:var(--blue)}.c3{background:#eef7f0;color:var(--green)}
+  .serif-card{background:#fffdf8;border:1px solid var(--gold-l);border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0;cursor:pointer}
+  .serif-card:hover{background:#fdf8ec}
+  .serif-card .sid{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .serif-card .sno{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 10px}
+  .serif-card .scene{font-size:11.5px;color:var(--mut)}
+  .serif-card .stx{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;color:var(--ink);line-height:1.9}
+  .serif-card .hint{font-size:10.5px;color:#b6a26d;margin-top:4px}
+  .nar{margin:14px 0}
+  .nar h3{font-size:14px;color:var(--navy);background:#eaf1fa;border-radius:8px;padding:6px 12px;margin-bottom:8px}
+  .nar p{font-size:13.5px;margin:8px 4px;color:#2c3644}
+  ul.plain{list-style:none}
+  ul.plain li{position:relative;padding-left:20px;margin:6px 0;font-size:13.5px}
+  ul.plain li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+  .memo{background:#fff8e8;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin-top:8px}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:30px}
+  /* ===== プロンプター ===== */
+  #pv{position:fixed;inset:0;background:#000;color:#fff;z-index:999;display:none;flex-direction:column}
+  #pv.on{display:flex}
+  #pv .bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#111;flex-wrap:wrap}
+  #pv .bar button{background:#222;color:#fff;border:1px solid #555;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+  #pv .bar button.act{background:var(--gold);color:#000;border-color:var(--gold)}
+  #pv .bar .pos{margin-left:auto;font-size:14px;color:#d8c79b}
+  #pv .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:4vw;overflow:hidden}
+  #pv .line{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;text-align:center;line-height:1.7;white-space:pre-wrap}
+  #pv .scrollwrap{flex:1;overflow-y:auto;padding:20vh 6vw}
+  #pv .scrollwrap .sl{font-family:"Hiragino Mincho ProN",serif;font-weight:600;line-height:1.9;margin:5vh 0;text-align:center;white-space:pre-wrap}
+  #pv .scrollwrap .sl .tag{display:block;font-size:14px;color:#d8c79b;font-family:sans-serif;margin-bottom:8px}
+  #pv.mirror .stage,#pv.mirror .scrollwrap{transform:scaleX(-1)}
+  #pv .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:#888;font-size:34px;padding:18px 10px;cursor:pointer;border-radius:10px}
+  #pv .prev{left:8px}#pv .next{right:8px}
+  @media(max-width:640px){.cards3{grid-template-columns:1fr}header h1{font-size:20px}}
+  @media print{.prompter-btn,#pv{display:none!important}body{background:#fff}section{box-shadow:none;page-break-inside:avoid}}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ SCRIPT v6</div>
+  <h1>PG00｜宿題・配布物パック（共通テンプレ集）</h1>
+  <div class="meta"><span>尺：―（映像なし）</span><span>形式：配布物マスター（太郎さん新規収録ゼロ）</span><span>台本v6（2026-07-02）</span><span>層：<span class="chip c1">🎬 層1 太郎</span> <span class="chip c2">🎙 層2 ナレ</span> <span class="chip c3">📺 層3 テロップ</span></span></div>
+</header>
+<div class="wrap">
+  <div class="prompter-btn"><button disabled>（この文書にセリフはありません）</button></div>
+
+  <section><h2>この回のゴール</h2><div class="cards3"><div class="oc"><div class="l">狙い</div><div class="v">全30週の宿題運用を支える共通テンプレ5点＋運営ルールを1つのマスターに集約。各週の配布PDFは本マスターの◆部分を差し替えるだけで量産する（1回あたり作業10分目安）</div></div><div class="oc"><div class="l">今日から現場で使える1つ</div><div class="v">実技回の宿題は毎週同じ「3分×3回・スマホ俯瞰固定・保存」。物差しは常に圧・リズム・密着の3つで固定＝受講生が体で覚える</div></div><div class="oc"><div class="l">宿題</div><div class="v">配布物5点＝①Day0記録の手順 ②実技回共通 宿題フォーマット ③セルフチェックリスト雛形 ④提出方法（LINE）＋良い例紹介の運用 ⑤ディプロマ3段階 課題・合格基準一覧</div></div></div></section>
+  <section><h2>基本情報</h2><table><tr><th>プログラム番号</th><td>PG00（配布物マスター。動画ではない＝太郎さんの新規収録ゼロ）</td></tr><tr><th>タイトル</th><td>宿題・配布物パック（共通テンプレ集）</td></tr><tr><th>位置づけ</th><td>全30週の宿題運用を支える共通テンプレ5点＋運営ルール。各週の配布PDFは本マスターの◆部分を差し替えるだけで量産する</td></tr><tr><th>尺</th><td>―（映像なし）</td></tr><tr><th>収録形態</th><td>なし。PG01・PG02は撮影済み映像が変更不可のため、宿題は本パックのPDFを「後付け」で配布する（概要欄＋公式LINE）</td></tr><tr><th>必要機材</th><td>受講生側：スマホ＋固定手段（三脚または立てかけ）のみ</td></tr><tr><th>モデル</th><td>―</td></tr><tr><th>参照PG</th><td>PG01（Day0記録）／PG02〜16の実技回／PG17（10のクセ＝合格基準と共通）／PG19（中級ディプロマ）／PG28（練習動画の素材回収）／PG30（上級ディプロマ・卒業制作）</td></tr><tr><th>コンプラ</th><td>効果断定なし。「リラクゼーションを目的に」「〜と言われています」「研究で示唆されています」で統一。治る／改善／自律神経が整う／育毛はNG</td></tr></table></section>
+  <section><h2>タイムコード構成表</h2><table><tr><th>時間</th><th>パート</th><th>内容</th><th>層</th></tr><tr><td>第1週の配信と同時（概要欄＋公式LINE）</td><td>① Day0記録の手順</td><td>第1週の宿題の正式指示書（映像変更不可のためPDFが担う）。対象PG：PG01</td><td>―（配布PDF）</td></tr><tr><td>第2週の配信と同時。以降、実技回のたびにリンク再掲</td><td>② 実技回共通 宿題フォーマット</td><td>3分×3回・スマホ俯瞰固定・保存の共通ルール（差し替えなし）。対象PG：PG02・03・04・06・07・09・11・12・14・16</td><td>―（配布PDF）</td></tr><tr><td>各実技回の配信と同時（◆を差し替えた回別版を添付）</td><td>③ セルフチェックリスト雛形</td><td>圧・リズム・密着／回別差し替え。対象PG：PG03・04・06・07・09・11・12・14・16</td><td>―（配布PDF）</td></tr><tr><td>受講生向け1枚は入会時＋第2週に配布。運営向け1枚は社内のみ</td><td>④ 提出方法（LINE）＋良い例紹介の運用</td><td>毎週の定型リズムの土台。冒頭30秒「良い例紹介」ナレ雛形を含む。対象PG：全PG</td><td><span class="chip c2">🎙 層2</span> ナレ雛形のみ</td></tr><tr><td>入会時に配布＋第16・19・30週の配信時に再配布</td><td>⑤ ディプロマ3段階 課題・合格基準一覧</td><td>「積み上げの地図」として最初に全体像を見せる。対象PG：PG16（初級）／PG19（中級）／PG30（上級）</td><td><span class="chip c1">🎬 層1</span> 太郎さん総評（第30週・台本読み収録）のみ</td></tr><tr><td>―</td><td>※本パックの対象外</td><td>解剖学回（PG10・PG13）の宿題は様式が異なる（触診→部位名を言いながら撮影）。各回の配布物を参照</td><td>―</td></tr></table></section>
+  <section><h2>太郎さんセリフ（クリックでその行からプロンプター起動）</h2><div class="memo">この文書（PG00）にセリフはありません。<b>太郎さんの新規収録は本パックでは一切不要</b>です。良い例紹介はナレーター雛形（配布物④）で回り、ディプロマ総評のみ第30週（PG30）に台本読みで収録します。</div></section>
+  <section><h2>ナレーション全文</h2><div class="nar"><h3>冒頭30秒「良い例紹介」ナレ雛形（配布物④・実文・◆のみ差し替え）</h3><p>「先週の宿題は、◆手技名◆を3分、3回でした。良い例をひとつ紹介します。◆お名前◆さんの、3回目の動画です。ご覧ください。◆良かった点を1文。例：手が速くならず、額から頭頂まで、たっぷり5秒かけています。◆　◆物差し1語：圧／リズム／密着◆が、ていねいに守られていました。今日の本編でも、この◆同じ物差し◆がポイントになります。」</p><p>※ナレーター収録のみで完結。太郎さんの追加収録は不要。</p></div><div class="nar"><h3>補足</h3><p>本パックは映像なしのため、ナレーションは上記の雛形（毎週の配信冒頭30秒に差し込み）のみ。それ以外のナレーションは存在しない。</p></div></section>
+  <section><h2>テロップ・図解指示</h2><ul class="plain"><li>本パックは映像なし。テロップ・図解ではなく<b>配布PDFのデザイン</b>が制作対象</li><li>デザインはブランドカラーで統一：ネイビー #1B2A4A／ゴールド #C5A55A／アイボリー #F5F0E6 でPDF化</li><li>判型：①②⑤＝A4・1枚／③＝A5・1枚／④受講生向け＝A5・1枚（運営向け1枚は社内のみ）</li><li>全配布物のフッターに共通コンプラ文を固定：「本資料はリラクゼーションを目的とした技術練習用です。効果には個人差があります。頭皮トラブル・体調不良がある場合は施術・練習を行わないでください。」</li><li>④良い例紹介の映像の扱い：ワイプは手元のみにトリミング。顔・室内の生活感が映るカットはズームで排除。表記は下のお名前かイニシャル</li><li>③の差し替え文言は配信前に必ず撮影済み映像の実際の言い回しと照合し、第17週「10のクセ」の物差しと1文字単位で揃える</li></ul></section>
+  <section><h2>宿題・配布物</h2><ul class="plain">
+    <li><b style="color:var(--navy);font-size:14.5px">配布物①｜Day0記録の手順（第1週の宿題）</b><br><span style="color:var(--mut);font-size:12.5px">A4・1枚。第1週「なぜ今“頭”なのか」の概要欄＋公式LINEでPDF配布。映像は変更不可のため、この紙が宿題の正式な指示書になる。</span>
+      <div style="background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:8px">
+        <div style="font-weight:700;color:var(--navy)">【第1週の宿題】Day0記録——7ヶ月半後の自分と見比べるために</div>
+        <p style="margin:6px 0"><b>今日のあなたを、2つだけ記録します。所要15分。</b><br>第30週の卒業制作で、この記録と「卒業後のあなた」を並べて見ます。今日しか撮れない映像です。上手く撮る必要はありません。今のままが、正解です。</p>
+        <div style="font-weight:700;color:var(--navy);margin-top:10px">記録1｜今の施術動画（5分）</div>
+        <ol style="padding-left:22px;margin:4px 0"><li>スマホを固定します（三脚、または棚・洗面台への立てかけ）。手持ちはNG。</li><li>頭と両手が画面に入る位置に置きます。斜め上から見下ろす角度（俯瞰）がおすすめ。</li><li>モデルは家族・同僚で。いなければ自分の頭でかまいません。</li><li>「今できる頭の施術」を5分、ノーカットで撮ります。習う前の、いつも通りのやり方で。</li><li>撮り直しは1回まで。きれいに見せる動画ではなく、記録です。</li></ol>
+        <div style="font-weight:700;color:var(--navy);margin-top:10px">記録2｜現メニューと価格のメモ</div>
+        <ul style="padding-left:22px;margin:4px 0"><li>今のメニュー表をスマホで撮る（なければ手書きメモ：メニュー名・時間・価格）。</li><li>ヘッド系メニューがまだない方は「なし」と書いてください。それも立派なDay0の記録です。</li></ul>
+        <div style="font-weight:700;color:var(--navy);margin-top:10px">保存（いちばん大事）</div>
+        <ul style="padding-left:22px;margin:4px 0"><li>スマホに新しいアルバム<b>「理容道」</b>を作り、動画とメニュー写真をその中へ。</li><li>動画のメモ欄（またはファイル名）に<b>「Day0」</b>と入れる。</li><li><b>絶対に消さない。</b>心配な方はGoogleフォト等のクラウドにもバックアップを。</li></ul>
+        <div style="font-weight:700;color:var(--navy);margin-top:10px">報告（公式LINEに3行だけ）</div>
+        <p style="margin:4px 0">動画そのものは送らなくてOKです（あなたの手元保存が正本です）。</p>
+        <pre style="background:#f4f2ec;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12.5px;white-space:pre-wrap;margin:6px 0;font-family:inherit;line-height:1.7">【Day0完了】
+お名前：
+現メニュー・価格：（「なし」もOK）</pre>
+        <div class="memo"><b>よくある質問</b><br>Q. 下手なところを残すのが恥ずかしい。<br>A. 誰にも見せません。第30週にこの動画を見るのは、あなた自身です。差が大きいほど、卒業の日がうれしくなります。<br>Q. 施術の経験がほとんどない。<br>A. 「今できること」を5分。撫でるだけでも記録になります。</div>
+        <p style="margin:8px 0 0;font-size:11.5px;color:var(--mut)">※本資料はリラクゼーションを目的とした技術練習用です。効果には個人差があります。</p>
+      </div>
+    </li>
+    <li><b style="color:var(--navy);font-size:14.5px">配布物②｜実技回共通 宿題フォーマット（3分×3回・スマホ俯瞰固定・保存）</b><br><span style="color:var(--mut);font-size:12.5px">A4・1枚。第2週の配信と同時に配布し、以降の実技回では毎回リンクを再掲する。文言は全実技回で共通（差し替えなし）。</span>
+      <div style="background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:8px">
+        <div style="font-weight:700;color:var(--navy)">【毎週の宿題・共通ルール】3分×3回、撮って、残す</div>
+        <p style="margin:6px 0">対象：実技回すべて（第2週・家系の手技 〜 第16週・コンビネーション）</p>
+        <div style="font-weight:700;color:var(--navy);margin-top:10px">今週やること（毎週同じ4つ）</div>
+        <ol style="padding-left:22px;margin:4px 0"><li>今週の手技を、<b>1回3分 × 週3回</b>、自分の頭または家族の頭で練習する。</li><li>3回とも、<b>スマホ俯瞰・固定</b>で撮影して、<b>保存</b>する。</li><li>3回目のあとに、セルフチェックリスト（別紙・その週の版）に○△✗をつける。</li><li>3回のうちいちばん良い1本を、公式LINEで提出する（出し方は「宿題の出し方」参照）。</li></ol>
+        <div style="font-weight:700;color:var(--navy);margin-top:10px">撮り方（毎週同じ画角で）</div>
+        <table><tr><th>項目</th><th>ルール</th></tr><tr><td>固定</td><td>三脚か立てかけ。手持ち・人に持ってもらうのはNG（毎週同じ画角にするため）</td></tr><tr><td>角度</td><td>俯瞰＝頭を斜め上から見下ろす。頭全体と両手が常に画面に入ること</td></tr><tr><td>画面</td><td>縦画面（9:16）推奨。この練習動画は第28週にそのままSNS投稿の素材になります</td></tr><tr><td>音</td><td>静かな部屋で、手技の音が入るように。テレビ・会話・換気扇はオフ。音はチェックの手がかりであり、将来の商品です</td></tr><tr><td>明るさ</td><td>昼の窓際か白い照明の下。手元に自分の影が落ちない位置で</td></tr></table>
+        <div style="font-weight:700;color:var(--navy);margin-top:10px">3回の使い分け</div>
+        <table><tr><th>回</th><th>ねらい</th></tr><tr><td>1回目</td><td>思い出す。配信動画を見た直後に、順番をなぞる</td></tr><tr><td>2回目</td><td>直す。セルフチェックの3点（圧・リズム・密着）を1つずつ意識する</td></tr><tr><td>3回目</td><td>通す。止まらずに3分。上手さより、心地よさ優先で</td></tr></table>
+        <div style="font-weight:700;color:var(--navy);margin-top:10px">保存ルール（第28週で効いてくる）</div>
+        <ul style="padding-left:22px;margin:4px 0"><li>アルバム<b>「理容道」</b>に保存し、メモ欄かファイル名に<b>「第◯週_手技名_◯回目」</b>。例：第3週_タッピング_3回目</li><li><b>消さない。</b>実技回だけで約30本たまります。これがあなたの投稿素材ストックになり、第28週「撮る」で、そのまま使います。</li></ul>
+        <div class="memo">モデルがいない週は、自分の頭でかまいません。自分の頭で感じた「気持ちいい／痛い」が、いちばんの先生です。</div>
+        <p style="margin:8px 0 0;font-size:11.5px;color:var(--mut)">※本資料はリラクゼーションを目的とした技術練習用です。効果には個人差があります。頭皮トラブル・体調不良があるときは練習を行わないでください。</p>
+      </div>
+    </li>
+    <li><b style="color:var(--navy);font-size:14.5px">配布物③｜セルフチェックリスト雛形（圧・リズム・密着／回別差し替え）</b><br><span style="color:var(--mut);font-size:12.5px">A5・1枚。◆〜◆の3箇所だけを回別に差し替えて、各実技回の配信と同時に配布する。共通の問いは全回で固定（受講生に「物差しはいつも同じ3つ」と体で覚えさせるため）。</span>
+      <div style="background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:8px">
+        <div style="font-weight:700;color:var(--navy)">雛形（このまま複製して◆を差し替える）｜セルフチェック｜第◆週【◆手技名◆】</div>
+        <p style="margin:6px 0">3回目の練習のあと、録画を見ながら○△✗をつけてください。全部○にする必要はありません。<b>✗は第17週「答え合わせ」でまとめて直します。</b>✗を見つけられたこと自体が、上達です。</p>
+        <table><tr><th>物差し</th><th>共通の問い（毎週同じ）</th><th>この回のチェック（回別差し替え枠）</th><th>○△✗</th></tr><tr><td>圧</td><td>力で効かせようとしていないか。指や手の重さ・体重で圧を作れているか</td><td>◆　　　　　　　　　　　　◆</td><td>　</td></tr><tr><td>リズム</td><td>速くなっていないか。同じテンポ・同じ速さを最後まで保てているか</td><td>◆　　　　　　　　　　　　◆</td><td>　</td></tr><tr><td>密着</td><td>点になっていないか。滑って髪をこすっていないか。面で触れているか</td><td>◆　　　　　　　　　　　　◆</td><td>　</td></tr></table>
+        <p style="margin:6px 0">ふりかえり（1行だけ）：来週までに直したいこと1つ「　　　　　　　　　　」</p>
+        <p style="margin:6px 0">判定の目安：○＝3回目にできた／△＝できたり、できなかったり／✗＝まだ</p>
+        <div style="font-weight:700;color:var(--navy);margin-top:10px">回別差し替え表（制作用。各回の映像・台本のセルフチェック合図と一致させる）</div>
+        <div style="overflow-x:auto"><table><tr><th>週</th><th>手技</th><th>圧の差し替え文</th><th>リズムの差し替え文</th><th>密着の差し替え文</th></tr><tr><td>第2週</td><td>家系の手技</td><td><b style="color:#c0392b">〔要確認: PG02映像内の言い回しに合わせて最終化〕</b></td><td>同左</td><td>同左</td></tr><tr><td>第3週</td><td>タッピング4種</td><td>音が「トントン」と低いか（「パチパチ」は刺さり）</td><td>3分間、同じテンポで叩けているか</td><td>指の重さが頭皮に「落ちて」いるか（腕で叩いていない）</td></tr><tr><td>第4週</td><td>叩打法6種</td><td>強さ7割・肩が上がっていないか</td><td>10秒間、同じ間隔で打ち続けられるか</td><td>手首のスナップで打点が頭皮に届いているか</td></tr><tr><td>第6週</td><td>指ドリル2種</td><td>押し込まず、頭皮ごと回せているか</td><td>円を描く速さが一定か</td><td>髪の擦れる音（シャリシャリ）がしないか＝滑っていないか</td></tr><tr><td>第7週</td><td>太郎ハンド3種</td><td>指の力でなく腕の重さを預けられているか</td><td>動きの速さが一定か</td><td>母指球が頭皮に着地しているか（手の甲が浮いていない）</td></tr><tr><td>第9週</td><td>あおり手＋摘み手</td><td>自分の髪で試して「引っ張られる痛み」がないか</td><td>速くならず、根元からゆっくり動かせているか</td><td>指が髪の根元まで沈み、頭皮ごと寄せられているか</td></tr><tr><td>第11週</td><td>筋膜リリース頭皮</td><td>押さえつけず、皮膚を「ずらせて」いるか</td><td>額→頭頂に5秒以上かけているか（毎秒3〜5cm）</td><td>頭皮ごと動いているか（髪だけ流れていない）</td></tr><tr><td>第12週</td><td>筋膜リリース腕＋手のひら</td><td>親指でなく体重移動で圧を作れているか（終わって親指が疲れていない）</td><td>体の揺れと手の動きが同じ速さか</td><td>手のひらの付け根・指の面で触れているか</td></tr><tr><td>第14週</td><td>首肩コリのリリース</td><td>「気持ちいい」で止めているか（相手の呼吸が止まらない・肩が上がらない）</td><td>揉みほぐしの速さが一定か</td><td>面でとらえて、点で刺していないか</td></tr><tr><td>第16週</td><td>コンビネーション</td><td>両手とも力みがないか</td><td>支えの手が、主役の手のリズムにつられていないか</td><td>支えの手が面で触れ続けているか</td></tr></table></div>
+        <p style="margin:8px 0 0;font-size:12px;color:var(--mut)">※差し替え文は第17週「ありがちな10のクセ」の物差しと完全に揃えてある（＝初級ディプロマの合格基準に直結）。配信前に、撮影済み映像内の実際の言い回しと必ず照合すること。</p>
+      </div>
+    </li>
+    <li><b style="color:var(--navy);font-size:14.5px">配布物④｜提出方法（LINE）＋良い例紹介の運用</b>
+      <div style="background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:8px">
+        <div style="font-weight:700;color:var(--navy)">受講生向け（A5・1枚。入会時＋第2週に配布）｜宿題の出し方（毎週同じ）</div>
+        <p style="margin:6px 0"><b>提出先</b>：山口流 理容道 公式LINE <b style="color:#c0392b">〔要確認: 受講生専用アカウントか既存公式LINEのセグメント運用か〕</b><br><b>締切</b>：次回配信の前日まで <b style="color:#c0392b">〔要確認: 配信曜日の確定後、曜日を明記〕</b><br><b>出すもの</b>：動画1本（3回のうち、いちばん良いもの）＋下のテンプレ</p>
+        <pre style="background:#f4f2ec;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12.5px;white-space:pre-wrap;margin:6px 0;font-family:inherit;line-height:1.7">【宿題提出】第◯週 ◯◯（手技名）
+お名前：
+セルフチェック：圧○ リズム△ 密着○（自分の判定をそのまま）
+ひとこと（任意）：うまくいかない点・質問など</pre>
+        <ul style="padding-left:22px;margin:4px 0"><li>提出は義務ではありません。ただ、<b>提出した人から上手くなります</b>。見られる前提の3分は、練習の密度が違います。</li><li>遅れても、いつでも受け付けます。第3週の宿題を第10週に出してもかまいません。</li><li>提出動画は、次回配信の冒頭「良い例紹介」で使われることがあります。<b>使う前に必ず本人へ確認します。</b>表記は下のお名前かイニシャル、映像は手元のみです。</li></ul>
+        <div style="font-weight:700;color:var(--navy);margin-top:12px">運営向け｜良い例紹介の運用ルール（社内のみ・毎週の型）</div>
+        <p style="margin:6px 0 0"><b>週次フロー（配信日をDとする）</b></p>
+        <table><tr><th>時点</th><th>作業</th></tr><tr><td>D+0〜D+5</td><td>提出受付。全提出に24時間以内に定型リアクションを返す（下記）</td></tr><tr><td>D+5</td><td>良い例を1件選定（基準は下記）</td></tr><tr><td>D+5</td><td>本人へ紹介可否の確認LINE（文例は下記）。NG・返信なしなら次点へ</td></tr><tr><td>D+6</td><td>次回動画の冒頭30秒ナレ原稿に差し込み。提出動画から手元ワイプを書き出し</td></tr><tr><td>D+7</td><td>次回配信（冒頭30秒で紹介）。配信後、本人へリンク付きお礼LINE</td></tr></table>
+        <p style="margin:8px 0 0"><b>選定基準（優先順）</b></p>
+        <ol style="padding-left:22px;margin:4px 0"><li>「直した跡」が見えるもの。上手さより変化（1回目→3回目の差でもよい）</li><li>圧・リズム・密着のどれか1点がはっきり良いもの（紹介コメントを具体的に書けるもの）</li><li>まだ紹介されたことのない人を優先。同じ人の2週連続はなし</li><li>迷ったら「ひとこと」欄に悩みを書いてくれた人（講座の双方向感が出る）</li></ol>
+        <p style="margin:8px 0 0"><b>本人確認の文例（コピペ用）</b></p>
+        <div class="memo">「◯◯さん、宿題動画ありがとうございます。とても良かったので、次回配信の冒頭で『良い例』として紹介させてください。表記は下のお名前、映像は手元のみ使用します。OKでしたら『OK』とだけご返信ください。難しければ遠慮なくお知らせください（紹介なしでも評価は変わりません）。」</div>
+        <p style="margin:8px 0 0"><b>定型リアクション（全提出者へ・24時間以内・落とさない）</b></p>
+        <div class="memo">「第◯週の宿題、受け取りました。◯◯（圧／リズム／密着のうち良かった点を1つ）が良いですね。続けましょう。」</div>
+        <p style="margin:6px 0;font-size:12.5px;color:var(--mut)">※ここでは個別の技術指導はしない。詳細なフィードバックは第17週の中間FBとディプロマ審査に集約する（AI一次チェック→運営確認→太郎さん名義、の順で品質と負荷を両立）。</p>
+        <p style="margin:8px 0 0"><b>冒頭30秒「良い例紹介」ナレ雛形（実文・◆のみ差し替え）</b>→「ナレーション全文」セクションに全文掲載。ナレーター収録のみで完結。太郎さんの追加収録は不要。</p>
+        <p style="margin:8px 0 0"><b>映像の扱い</b></p>
+        <ul style="padding-left:22px;margin:4px 0"><li>ワイプは手元のみにトリミング。顔・室内の生活感が映るカットはズームで排除</li><li>提出動画の保管場所と保持期間、本人からの削除依頼への対応は <b style="color:#c0392b">〔要確認: LINE内保管かDrive移管か・保持ルール〕</b></li></ul>
+      </div>
+    </li>
+    <li><b style="color:var(--navy);font-size:14.5px">配布物⑤｜ディプロマ3段階 課題・合格基準一覧</b><br><span style="color:var(--mut);font-size:12.5px">A4・1枚。入会時に配布し、第16・19・30週の配信時に再配布する。「積み上げの地図」として最初に全体像を見せるのが目的。</span>
+      <div style="background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:8px">
+        <div style="font-weight:700;color:var(--navy)">ディプロマ3段階——提出するたび、あなたの商品が完成に近づく</div>
+        <div style="overflow-x:auto"><table><tr><th>段階</th><th>週</th><th>課題（提出物）</th><th>審査の流れ</th><th>授与</th></tr><tr><td>初級</td><td>第16週</td><td>15分仮ルーティンの実技動画1本</td><td>チェックリスト自己採点 → AI一次チェック → 運営確認（第17週に太郎さん名義の中間フィードバックを返却）</td><td>初級ディプロマ</td></tr><tr><td>中級</td><td>第19週</td><td>自分のメニュー表＋価格（設計シート完成版）</td><td>必須5項目の充足確認 → 運営フィードバック</td><td>中級ディプロマ</td></tr><tr><td>上級</td><td>第30週</td><td>卒業制作3点セット（下記）</td><td>自己採点 → AI一次チェック → 運営確認 → 太郎さん総評（収録） → 授与</td><td>上級ディプロマ＋次の道の案内 <b style="color:#c0392b">〔要確認: 認定制度・上位講座の内容〕</b></td></tr></table></div>
+        <p style="margin:6px 0"><b>落とすための審査ではありません。</b>3段階とも、再提出は何度でも・期限を過ぎても受け付けます。直すための審査です。</p>
+        <div style="font-weight:700;color:var(--navy);margin-top:10px">初級（第16週）｜15分仮ルーティン動画</div>
+        <ul style="padding-left:22px;margin:4px 0"><li>撮り方：いつもの宿題と同じ、スマホ俯瞰・固定。15分ノーカット。</li><li>提出の前に：<b>Day0の動画と、自分で見比べてから出す</b>（この見比べ自体が課題の一部です）。</li><li>合格基準（「ありがちな10のクセ」チェックリスト＝第17週配布と共通）：<br>1. 15分、止まらずに最後まで通せている<br>2. 圧・リズム・密着の3点で、✗が3個以内 <b style="color:#c0392b">〔要確認: 合格ラインの最終値は太郎さん・運営で確定〕</b><br>3. 10のクセから「自分の3つ」を選んで書き出せている（まだ直っていなくてよい。第17週で直します）</li></ul>
+        <pre style="background:#f4f2ec;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12.5px;white-space:pre-wrap;margin:6px 0;font-family:inherit;line-height:1.7">【初級ディプロマ提出】
+お名前：
+Day0と見比べて変わった点（1つ）：
+自分の3つのクセ（番号で）：</pre>
+        <div style="font-weight:700;color:var(--navy);margin-top:10px">中級（第19週）｜自分のメニュー表＋価格</div>
+        <ul style="padding-left:22px;margin:4px 0"><li>提出物：マイメニュー設計シート（第19週配布物）の完成版＋実際のメニュー表（写真可）。</li><li>合格基準（必須5項目）：<br>1. メニュー名が決まっている（お客様にそのまま見せられる言葉で）<br>2. 時間と価格が明記されている（15分／30分など）<br>3. 既存メニューへの組込み位置が書かれている（アドオン／単品／セット）<br>4. 分単価が計算されている<br>5. 既存のお客様への案内の一言（第18週テンプレ）が1本書けている</li></ul>
+        <pre style="background:#f4f2ec;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12.5px;white-space:pre-wrap;margin:6px 0;font-family:inherit;line-height:1.7">【中級ディプロマ提出】
+お名前：
+メニュー名・時間・価格：
+いつから出すか：</pre>
+        <div style="font-weight:700;color:var(--navy);margin-top:10px">上級（第30週）｜卒業制作3点セット</div>
+        <table><tr><th>提出物</th><th>内容</th></tr><tr><td>① 認定ルーティン15分の実技動画</td><td>スマホ2アングル（A＝いつもの俯瞰固定／B＝横または斜め45度）</td></tr><tr><td>② 自分のメニュー表＋価格</td><td>第19週の完成版を、実際の運用にあわせて更新したもの</td></tr><tr><td>③ 告知文／プロフィール導線</td><td>第29週の完成版（プロフィール文＋公式LINE・予約リンクのスクショ）</td></tr></table>
+        <ul style="padding-left:22px;margin:6px 0"><li>合格基準：<br>・動画：10のクセチェックで✗ゼロ <b style="color:#c0392b">〔要確認: 最終ライン〕</b>。始まり（静止タッチ）と終わり（離れ方）が設計されている。施術前の安全・禁忌の確認（第17週）を口頭または所作で実施している<br>・メニュー：中級の5項目を満たし、実際に販売を開始している（または開始日が決まっている）<br>・導線：第三者がプロフィールから予約までたどり着ける</li><li>審査の流れ：チェックリスト自己採点 → AI一次チェック → 運営確認 → 太郎さん総評（収録・台本読みでOK） → 上級ディプロマ授与。</li><li>感動設計：<b>Day0動画と卒業動画を並べた比較映像</b>を運営が制作して本人へ贈る。本人の集客素材・スクールの受講生の声として二次活用する場合は、<b>事前に本人の使用許諾をLINEで取得</b>（文例は④の確認文例を流用）。</li></ul>
+        <p style="margin:6px 0"><b style="color:#c0392b">〔要確認: ディプロマの正式名称・証書デザイン・発行形態（PDF／紙・郵送）〕</b></p>
+        <p style="margin:8px 0 0;font-size:12px;color:var(--mut)">※効果・収入に関する断定はしない。「卒業の翌日からそのまま売れる状態」は商品・導線が完成している状態を指す表現であり、売上を保証するものではない旨を証書送付時の案内に明記。</p>
+      </div>
+    </li>
+  </ul></section>
+  <section><h2>制作メモ</h2><div class="memo">・<b>本パックはマスター</b>。各週の配布PDFは②③を複製して◆を差し替えるだけ（1回あたり作業10分目安）。デザインはブランドカラー（ネイビー#1B2A4A／ゴールド#C5A55A／アイボリー#F5F0E6）でPDF化。<br>・<b>PG01・PG02は映像変更不可</b>のため、宿題の正式指示は本パックのPDFが担う。概要欄と公式LINEの両方に導線を張る（片方だけだと届かない）。<br>・③の差し替え文言は配信前に必ず撮影済み映像の実際の言い回しと照合。<b>第17週「10のクセ」の物差しと1文字単位で揃える</b>（受講生が「同じ基準で見られている」と感じることが答え合わせ回の満足度の核）。<br>・④の良い例紹介は<b>冒頭30秒の定型リズムの燃料</b>。提出ゼロの週に備え、運営スタッフの練習動画を「運営の例」として紹介できるよう予備を1本常備（受講生の例と偽らない）。<br>・全配布物のフッターに共通コンプラ文を固定：「本資料はリラクゼーションを目的とした技術練習用です。効果には個人差があります。頭皮トラブル・体調不良がある場合は施術・練習を行わないでください。」<br>・太郎さんの新規収録は本パックでは一切不要（良い例紹介はナレ雛形で回る。ディプロマ総評のみ第30週に台本読みで収録）。<br>・提出動画・Day0動画の個人情報の扱い（保管場所・保持期間・削除依頼対応）は <b style="color:#c0392b">〔要確認: 運営で規程化〕</b>。</div></section>
+  <footer>山口流 理容道｜台本v6｜PG00 宿題・配布物パック（共通テンプレ集）｜ⓒ Prorium（社外秘）</footer>
+</div>
+
+<div id="pv">
+  <div class="bar">
+    <button onclick="closePv()">✕ 閉じる(Esc)</button>
+    <button id="mSingle" class="act" onclick="setMode('single')">1枚ずつ</button>
+    <button id="mScroll" onclick="setMode('scroll')">自動スクロール</button>
+    <button onclick="fsz(1)">文字＋</button><button onclick="fsz(-1)">文字−</button>
+    <button id="spD" onclick="spd(-1)" style="display:none">遅く</button><button id="spU" onclick="spd(1)" style="display:none">速く</button>
+    <button id="mir" onclick="mirror()">🪞 ミラー反転</button>
+    <span class="pos" id="pos"></span>
+  </div>
+  <div class="stage" id="stage"><div class="line" id="line"></div></div>
+  <div class="scrollwrap" id="sw" style="display:none"></div>
+  <button class="nav prev" onclick="mv(-1)">‹</button>
+  <button class="nav next" onclick="mv(1)">›</button>
+</div>
+
+<script>
+const LINES = [];
+let idx=0, fs=6.4, mode='single', speed=1, raf=null;
+const pv=document.getElementById('pv'), line=document.getElementById('line'), pos=document.getElementById('pos'), sw=document.getElementById('sw'), stage=document.getElementById('stage');
+function openPv(i){ if(!LINES.length) return; idx=i||0; pv.classList.add('on'); render(); }
+function closePv(){ pv.classList.remove('on'); stopScroll(); }
+function render(){
+  if(mode==='single'){
+    stage.style.display='flex'; sw.style.display='none';
+    const L=LINES[idx]; line.style.fontSize=fs+'vw'; line.textContent=L.text;
+    pos.textContent=(L.id||('#'+(idx+1)))+'　'+(idx+1)+' / '+LINES.length;
+  }else{
+    stage.style.display='none'; sw.style.display='block';
+    sw.innerHTML=LINES.map(L=>'<div class="sl" style="font-size:'+fs+'vw"><span class="tag">'+(L.id||'')+'</span>'+L.text.replace(/</g,'&lt;')+'</div>').join('');
+    pos.textContent='自動スクロール（速度 '+speed+'）— クリックで一時停止/再開';
+    startScroll();
+  }
+}
+function mv(d){ if(mode!=='single')return; idx=Math.min(LINES.length-1,Math.max(0,idx+d)); render(); }
+function fsz(d){ fs=Math.min(14,Math.max(2.4,fs+d*0.8)); render(); }
+function mirror(){ pv.classList.toggle('mirror'); document.getElementById('mir').classList.toggle('act'); }
+function setMode(m){ mode=m; stopScroll();
+  document.getElementById('mSingle').classList.toggle('act',m==='single');
+  document.getElementById('mScroll').classList.toggle('act',m==='scroll');
+  document.getElementById('spD').style.display=m==='scroll'?'':'none';
+  document.getElementById('spU').style.display=m==='scroll'?'':'none';
+  render(); }
+function spd(d){ speed=Math.min(5,Math.max(1,speed+d)); pos.textContent='自動スクロール（速度 '+speed+'）'; }
+let paused=false;
+function startScroll(){ paused=false; sw.scrollTop=0; const step=()=>{ if(!paused){ sw.scrollTop+=0.4*speed; } raf=requestAnimationFrame(step); }; raf=requestAnimationFrame(step); }
+function stopScroll(){ if(raf)cancelAnimationFrame(raf); raf=null; }
+sw.addEventListener('click',()=>{ paused=!paused; });
+document.addEventListener('keydown',e=>{
+  if(!pv.classList.contains('on'))return;
+  if(e.key==='Escape')closePv();
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();mv(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();mv(-1);}
+});
+document.querySelectorAll('.serif-card').forEach((el,i)=>el.addEventListener('click',()=>openPv(i)));
+</script>
+</body>
+</html>

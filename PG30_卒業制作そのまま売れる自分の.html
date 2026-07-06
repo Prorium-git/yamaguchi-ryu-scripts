@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG30｜卒業制作——「そのまま売れる自分の商品」を完成させる｜山口流 理容道 台本v6</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:38px 26px 32px;margin:0 -18px 24px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:24px;font-weight:600;margin:8px 0 8px;line-height:1.5}
+  header .meta{font-size:12.5px;color:#c9d2e0;display:flex;gap:16px;flex-wrap:wrap}
+  .prompter-btn{position:sticky;top:10px;z-index:50;display:flex;justify-content:flex-end;margin-bottom:6px}
+  .prompter-btn button{background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:30px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,26,46,.3)}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:16px 0;box-shadow:0 2px 10px rgba(27,42,74,.05)}
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .oc{background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .oc .l{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+  .oc .v{font-size:13.5px;color:var(--ink);margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  .chip{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;white-space:nowrap}
+  .c1{background:#fbf3dc;color:#9a7b27}.c2{background:#eaf1fa;color:var(--blue)}.c3{background:#eef7f0;color:var(--green)}
+  .serif-card{background:#fffdf8;border:1px solid var(--gold-l);border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0;cursor:pointer}
+  .serif-card:hover{background:#fdf8ec}
+  .serif-card .sid{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .serif-card .sno{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 10px}
+  .serif-card .scene{font-size:11.5px;color:var(--mut)}
+  .serif-card .stx{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;color:var(--ink);line-height:1.9}
+  .serif-card .hint{font-size:10.5px;color:#b6a26d;margin-top:4px}
+  .nar{margin:14px 0}
+  .nar h3{font-size:14px;color:var(--navy);background:#eaf1fa;border-radius:8px;padding:6px 12px;margin-bottom:8px}
+  .nar p{font-size:13.5px;margin:8px 4px;color:#2c3644}
+  ul.plain{list-style:none}
+  ul.plain li{position:relative;padding-left:20px;margin:6px 0;font-size:13.5px}
+  ul.plain li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+  .memo{background:#fff8e8;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin-top:8px}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:30px}
+  /* ===== プロンプター ===== */
+  #pv{position:fixed;inset:0;background:#000;color:#fff;z-index:999;display:none;flex-direction:column}
+  #pv.on{display:flex}
+  #pv .bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#111;flex-wrap:wrap}
+  #pv .bar button{background:#222;color:#fff;border:1px solid #555;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+  #pv .bar button.act{background:var(--gold);color:#000;border-color:var(--gold)}
+  #pv .bar .pos{margin-left:auto;font-size:14px;color:#d8c79b}
+  #pv .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:4vw;overflow:hidden}
+  #pv .line{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;text-align:center;line-height:1.7;white-space:pre-wrap}
+  #pv .scrollwrap{flex:1;overflow-y:auto;padding:20vh 6vw}
+  #pv .scrollwrap .sl{font-family:"Hiragino Mincho ProN",serif;font-weight:600;line-height:1.9;margin:5vh 0;text-align:center;white-space:pre-wrap}
+  #pv .scrollwrap .sl .tag{display:block;font-size:14px;color:#d8c79b;font-family:sans-serif;margin-bottom:8px}
+  #pv.mirror .stage,#pv.mirror .scrollwrap{transform:scaleX(-1)}
+  #pv .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:#888;font-size:34px;padding:18px 10px;cursor:pointer;border-radius:10px}
+  #pv .prev{left:8px}#pv .next{right:8px}
+  @media(max-width:640px){.cards3{grid-template-columns:1fr}header h1{font-size:20px}}
+  @media print{.prompter-btn,#pv{display:none!important}body{background:#fff}section{box-shadow:none;page-break-inside:avoid}}
+  /* ===== 太郎さん専用ガイド ===== */
+  .taro{background:#fffaf0;border:3px solid var(--gold);border-radius:14px;padding:8px 22px 22px}
+  .taro h2{font-size:20px;border:none;background:var(--gold);color:#3a2c08;padding:6px 16px;border-radius:10px;display:block;margin:14px 0 6px}
+  .taro .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.5;margin:6px 0}
+  .taro .row{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+  .taro .ico{font-size:30px;flex:0 0 40px;text-align:center;line-height:1.2}
+  .taro .ttl{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.04em}
+  .taro .txt{font-size:16px;color:var(--ink);line-height:1.75;margin-top:2px}
+  .taro .txt b{color:var(--navy)}
+  .taro .tell{background:#eef7f0;border-left:5px solid var(--green)}
+  .taro .tell .ttl{color:var(--green)}
+  .taro ul.gist{list-style:none;margin:4px 0 0}
+  .taro ul.gist li{position:relative;padding:6px 0 6px 26px;font-size:16px;line-height:1.6}
+  .taro ul.gist li::before{content:"💬";position:absolute;left:0;top:5px;font-size:15px}
+  .taro .tip{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 14px;margin-top:10px;font-size:14.5px;color:#7a5f1e}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ SCRIPT v6</div>
+  <h1>PG30｜卒業制作——「そのまま売れる自分の商品」を完成させる</h1>
+  <div class="meta"><span>尺：約31分</span><span>形式：ナレーション主体回（太郎さんはOP・一言3回・卒業メッセージ・EDのみ）</span><span>台本v6（2026-07-02）</span><span>層：<span class="chip c1">🎬 層1 太郎</span> <span class="chip c2">🎙 層2 ナレ</span> <span class="chip c3">📺 層3 テロップ</span></span></div>
+</header>
+<div class="wrap">
+  <div class="prompter-btn"><button onclick="openPv(0)">🎬 プロンプターを開く（太郎さんセリフ）</button></div>
+
+  <section class="taro">
+    <h2>👤 太郎さん、まずこれだけ（撮影前に読む）</h2>
+    <div class="big">今日は最後の回。生徒さんに「自分のお店で明日から使える商品」を3つ作らせて、その提出物を太郎さんが全部見て、卒業の証（上級ディプロマ）を渡す回です。</div>
+
+    <div class="row"><div class="ico">🤔</div><div><div class="ttl">なんで大事？</div>
+      <div class="txt">30回ずっと技術を教えてきましたが、生徒さん（＝お客さんに選ばれたい理容師・セラピスト）にとって本当のゴールは「うまくなること」じゃなく「<b>お店でお金をもらえること</b>」です。<br>たとえるなら、料理教室で30回みっちり習っても、<b>メニューも値段も看板も無いお店</b>は1円も稼げません。だから最後に、①腕（施術の動画）②値札（メニューと料金）③入り口（お知らせ文）の3つをそろえさせて、「明日から売れる自分の商品」を完成させます。太郎さんが全部に目を通す＝生徒さんにとって一番の安心と誇りになる回です。</div></div></div>
+
+    <div class="row"><div class="ico">🙌</div><div><div class="ttl">太郎さんがやること</div>
+      <div class="txt">🤲 <b>手：</b>実演（新しく施術を見せること）は無しでOK。カメラの前で座って話すのと、S10の最後に軽く一礼するだけ。スマホ2台の置き方デモはスタッフが撮ります。<br>🗣 <b>口：</b>OPのあいさつ→本編の途中で3回だけ短く一言（S03・S04・S05）→卒業メッセージ（S06〜S08）→宿題を出して締め（S09・S10）。<b>全部プロンプターに出るので、そのまま読めばOK</b>。別日に「総評テンプレ（T01〜T06）」も同じく読むだけで撮ります。</div></div></div>
+
+    <div class="row tell"><div class="ico">💬</div><div><div class="ttl">言いたいことは、ざっくりこれ</div>
+      <ul class="gist">
+        <li>今日で30回、最後の回です。今日は「自分の商品」を作る日。作るのは動画・メニュー表・お知らせ文の3つ。</li>
+        <li>これはテストじゃない。ここで作ったものは、そのまま自分のお店で使えるやつです。だから私も本気で見ます。</li>
+        <li>1回目に撮った「まだ何も知らなかった頃の自分の動画」は消さないで。今の自分と見比べると、どれだけうまくなったかがハッキリ分かるから。</li>
+        <li>出してくれた作品は、手を抜いたかどうかも含めて、私が全部ちゃんと見ます。だから自信を持って堂々と出してほしい。よく30回続けました。本当におめでとう。</li>
+      </ul></div></div>
+
+    <div class="tip">💡 <b>コツ：</b>下の台本は、丸暗記しなくて大丈夫。<b>「言いたいこと（上の💬）」さえ分かっていれば</b>、プロンプターの文はスッと自然に出てきます。読むんじゃなく、"分かってる人がしゃべる"感じで。</div>
+  </section>
+
+  <section style="border-left:5px solid var(--gold)">
+  <h2>📌 この回の設計図（まずこれだけ読めばOK）</h2>
+
+  <div style="background:#fbf6ea;border:1px solid var(--gold-l);border-radius:10px;padding:14px 18px;margin:10px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em">① この回でやること</div>
+    <div style="font-size:16px;font-weight:700;color:var(--navy);margin:4px 0">最終回。「15分の施術動画・メニュー表・告知文」の卒業制作3点を受講生に作らせて提出させ、太郎さんが全員分を見て上級ディプロマを渡す回</div>
+    <ol style="margin:6px 0 0 22px;font-size:13.5px">
+      <li>提出物3点を1つずつ見せる：①自分の15分メニューの施術動画 ②メニュー表＋税込価格 ③告知文1本＋プロフィールのスクショ1枚</li>
+      <li>動画の撮り方を見せる：スマホ2台の置き場所（A=頭の斜め上45度・60〜80cm／B=真横2〜3m）と撮影前チェック5</li>
+      <li>1週目のDay0動画と今の動画を左右2画面で見比べさせる（見る場所=最初の2分と離れ方／観点=圧・リズム・密着・離れ方）</li>
+      <li>メニュー表と告知文の合格ラインをOK例／NG例で見せる（基準=「明日の朝、店に出せるか」）</li>
+      <li>提出後の流れ4ステップを図で見せる：自己採点10項目→事務局チェック→太郎さん総評→上級ディプロマ発行</li>
+      <li>卒業メッセージを読み、宿題（3点セットの提出）を出して締める</li>
+    </ol>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">② 太郎さんのタスク（手でやること／口で読むこと）</div>
+    <table>
+      <tr><th style="width:50%">🤲 手でやること（実演・撮る絵）</th><th>🗣 口で読むこと（プロンプター）</th></tr>
+      <tr><td>・新規の実演なし（本編はBロール＋図解で進行）<br>・スマホ2台の設置デモはスタッフの手で撮影（太郎さん不要）<br>・S10の締めで軽く一礼のみ</td><td>・S01–S02 冒頭挨拶＋今日のゴール（00:00 座り・正面）<br>・S03 一言①「試験ではなく店で使うもの」（03:30）<br>・S04 一言②「Day0動画は消さない」（12:00）<br>・S05 一言③「全部、私が見ます」（23:00）<br>・S06–S08 卒業メッセージ（27:30 手紙調・ゆっくり）<br>・S09–S10 宿題＋締め（29:30）<br>・別収録：T01–T06 総評テンプレ（全パターンを同日まとめ撮り）</td></tr>
+    </table>
+    <div style="font-size:12px;color:var(--mut);margin-top:4px">合計拘束目安：実演0分＋読み約5分（本編S01–S10）＋別収録の総評読み約5分（読みはプロンプター使用・演技不要）</div>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">③ 画面に入れるクリエイティブ（編集チームへの発注リスト）</div>
+    <table>
+      <tr><th style="width:110px">種類</th><th>作るもの</th><th style="width:130px">使う場面</th></tr>
+      <tr><td>図解</td><td>3点セット図：中央「あなたの商品」＋①腕=15分動画 ②値札=メニュー表 ③入り口=告知文を円で結ぶ</td><td>01:10 導入</td></tr>
+      <tr><td>図解</td><td>スマホ2アングル設置図（ベッドと施術者の俯瞰イラスト。A=斜め上45度・60〜80cm／B=真横2〜3m）</td><td>04:00 本編①</td></tr>
+      <tr><td>実演インサート</td><td>ベッド脇にスマホ2台＋ミニ三脚を置く実写カット（スタッフの手でOK）</td><td>04:00 本編①</td></tr>
+      <tr><td>比較テロップ</td><td>撮影前チェック5（横画面／Aの画角／Bの画角／音／ノーカット準備）を1行ずつ表示</td><td>08:00 本編①末尾</td></tr>
+      <tr><td>実演インサート</td><td>Day0と30週後の左右2画面・同期再生（受講生素材は許可必須。なければPG17素材で代替）</td><td>09:00 本編②</td></tr>
+      <tr><td>テンプレ見本</td><td>メニュー表OK例／NG例（OK「じっくりヘッドスパ 30分 6,000円税込」／NG「Sコース 〜4,000円より」に赤線）</td><td>12:30 本編③</td></tr>
+      <tr><td>テンプレ見本</td><td>告知文の記入例（何が始まる・いつから・いくら・どう受けるの4要素入り）</td><td>16:00 本編④</td></tr>
+      <tr><td>画面キャプチャ</td><td>Googleビジネスプロフィールの見本スクショ（店名・新メニュー名と価格・予約方法の3点入り）</td><td>17:30 本編④</td></tr>
+      <tr><td>アニメ図</td><td>審査4ステップのフロー図（自己採点→一次チェック→太郎さん総評→上級ディプロマ発行）</td><td>19:30 本編⑤</td></tr>
+      <tr><td>図解</td><td>3段階ディプロマ図（初級→中級→上級を点灯）＋次の道4カード（応用編・AMC・月1ライブ・コミュニティ）</td><td>23:30 本編⑥</td></tr>
+    </table>
+  </div>
+
+  <div class="cards3" style="margin-top:12px">
+    <div class="oc"><div class="l">今日から現場で使える1つ</div><div class="v">「完成させてから磨かない。出してから磨く」。作った3点は審査を待たず、明日から店で使ってよい</div></div>
+    <div class="oc"><div class="l">宿題</div><div class="v">卒業制作3点セットを提出（①15分動画・スマホ2アングル ②メニュー表＋分単価メモ ③告知文1本＋プロフィールのスクショ1枚）。提出前に自己採点10項目を全部○に</div></div>
+    <div class="oc"><div class="l">配布物</div><div class="v">全5点：提出要項シート／スマホ2アングル撮影ガイド／自己採点チェックリスト10項目／Day0比較ワークシート（任意）／審査の流れと上級ディプロマ</div></div>
+  </div>
+  </section>
+  <section><h2>基本情報</h2><table><tr><th>プログラム番号</th><td>PG30（最終回）</td></tr><tr><th>タイトル</th><td>卒業制作——「そのまま売れる自分の商品」を完成させる</td></tr><tr><th>位置づけ</th><td>旧PG30（卒業・振り返り回）を強化改修。振り返り中心から「卒業制作3点セット（①認定ルーティン15分実技動画 ②メニュー表＋価格 ③告知文／プロフィール導線）の提出要項と撮り方」中心へ。Day0動画（1週目）との比較、審査フロー（自己採点→一次チェック→太郎さん総評）、上級ディプロマ授与と次の道までを1本で完結させる卒業回</td></tr><tr><th>想定尺</th><td>約31分</td></tr><tr><th>収録形態</th><td>ナレーション主体回。太郎さんはOP・本編の一言3回・卒業メッセージ・EDのみ（新規実演なし。本編はBロール＋図解）。※別収録として「総評読み上げ台本」（審査ステップ3用）を同日にまとめ撮り推奨</td></tr><tr><th>必要機材</th><td>固定カメラ2台（A：正面バストアップ／B：手元寄り・任意インサート用）、ピンマイク、Bロール再生環境。小道具：スマホ2台＋ミニ三脚2本（2アングル設置のデモ用）、メニュー表見本（OK例・NG例）、上級ディプロマ見本</td></tr><tr><th>必要素材</th><td>PG20の15分通し映像（寝・立ち）、PG17「直す前／直した後」映像、受講生のDay0動画と現在の動画（掲載許可済のもの）<b style="color:#c0392b">〔要確認: 受講生素材の許可〕</b>、PG18メニュー表・告知文の図版、PG26プロフィール画面のスクショ、次の道4種の案内ビジュアル</td></tr><tr><th>モデル</th><td>なし（本編はBロール中心）。太郎さんパートは太郎さんのみ</td></tr><tr><th>参照PG</th><td>PG01（1週目・Day0動画の撮影）／PG17（10のクセ・安全禁忌・初級ディプロマ）／PG18（松竹梅メニュー・価格・告知文）／PG19（マイメニュー設計・中級ディプロマ）／PG20（15分通し・5ブロック設計図）／PG26（Googleビジネスプロフィール）／PG27（衛生・手のケア）</td></tr><tr><th>コンプラ</th><td>効果効能の断定禁止（治る／改善／自律神経が整う／育毛はNG）。「リラクゼーションを目的に」「〜と言われています」「研究で示唆されています」で統一。提出物（メニュー表・告知文・プロフィール）にも同ルールを審査基準として明記。数字・実績の捏造なし</td></tr></table></section>
+  <section><h2>タイムコード構成表</h2><table><tr><th>時間</th><th>パート</th><th>内容</th><th>層</th></tr><tr><td>00:00–00:30</td><td>OP</td><td>太郎さん挨拶＋今日のゴール（S01・S02）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>00:30–01:10</td><td>先週の宿題・良い例紹介</td><td>先週の提出の良い例をナレで紹介（メニュー表の好例）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>01:10–03:30</td><td>導入</td><td>卒業制作とは。「そのまま売れる」の定義と3点セット全体像。Day0からの30週</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>03:30–04:00</td><td>太郎さん一言①</td><td>「これは試験ではなく、そのまま店で使うもの」（S03）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>04:00–09:00</td><td>本編①提出物1</td><td>認定ルーティン15分実技動画：提出要項＋スマホ2アングルの撮り方＋撮影前チェック5</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span><br>（Bロール：PG20通し映像、スマホ設置デモ）</td></tr><tr><td>09:00–12:00</td><td>本編②Day0比較</td><td>1週目のDay0動画と今の自分の見比べ方。左右2画面・4観点（圧・リズム・密着・離れ方）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span><br>（Bロール：受講生例 or PG17素材）</td></tr><tr><td>12:00–12:30</td><td>太郎さん一言②</td><td>「Day0は消さない。見比べると上達が分かる」（S04）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>12:30–16:00</td><td>本編③提出物2</td><td>メニュー表＋価格：要項（松竹梅・税込・分単価メモ・断定語ゼロ）。判定基準は「明日、店に出せるか」</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span><br>（OK例／NG例）</td></tr><tr><td>16:00–19:30</td><td>本編④提出物3</td><td>告知文（4要素）＋プロフィール導線（3点掲載のスクショ）。「導線は一本の線」</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>19:30–23:00</td><td>本編⑤審査フロー</td><td>4ステップ：自己採点チェックリスト10項目→一次チェック（事務局）→太郎さん総評（読み上げ）→上級ディプロマ発行。差し戻し＝減点なし</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span><br>（フロー図）</td></tr><tr><td>23:00–23:30</td><td>太郎さん一言③</td><td>「全部、私が見ます」（S05）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>23:30–26:30</td><td>本編⑥ディプロマと次の道</td><td>3段階（初級→中級→上級）の完成。授与の形。次の道4つ（応用編・大会AMC・月1ライブ・コミュニティ）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>26:30–27:30</td><td>まとめ</td><td>「今日から現場で使える1つ」＋3点セット再掲</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>27:30–29:30</td><td>卒業メッセージ</td><td>太郎さん手紙調（S06〜S08）＋直筆風テロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>29:30–30:30</td><td>ED：宿題＋締め</td><td>宿題＝卒業制作の提出（S09・S10）＋宿題テロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td colspan="4" style="background:#fbf9f3;color:var(--mut)">合計：約30分30秒</td></tr></table></section>
+  <section><h2>太郎さんセリフ（クリックでその行からプロンプター起動）</h2><p style="font-size:12.5px;color:var(--mut);margin:0 0 10px">1セリフ=1〜3文。短文。静かな職人トーンで、棒読みで成立する文のみ。動作指示は「ゆっくり読む」「手を止めて言う」程度に限定。すべてカメラA正面・カメラ目線。</p><div class="serif-card"><div class="sid"><span class="sno">S01</span><span class="scene">【OP挨拶】00:00–00:15</span></div><div class="stx">こんにちは。山口太郎です。今日で、最後の回です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S02</span><span class="scene">【今日のゴール】00:15–00:30</span></div><div class="stx">今日は、卒業制作です。15分の施術動画と、メニュー表と、告知文。この3つを作って、提出してもらいます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S03</span><span class="scene">【本編一言①】03:30–04:00 ※ゆっくり読む</span></div><div class="stx">これは、試験ではありません。ここで作るものは、そのまま自分の店で使えます。私も、本気で見ます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S04</span><span class="scene">【本編一言②】12:00–12:30 ※ゆっくり読む</span></div><div class="stx">1週目に撮ったDay0の動画は、消さないでください。今日の自分と見比べると、うまくなったところが、はっきり分かります。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S05</span><span class="scene">【本編一言③】23:00–23:30</span></div><div class="stx">提出された卒業制作は、全部、私が見ます。手を抜いたところは、見れば分かります。本気で作って、堂々と出してください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S06</span><span class="scene">【卒業メッセージ1】27:30–28:10 ※手紙を読むように、ゆっくり。1文ごとに間</span></div><div class="stx">ここから、少しだけ、私の言葉です。30回、ありがとうございました。よく、続けました。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S07</span><span class="scene">【卒業メッセージ2】28:10–28:50 ※ゆっくり読む</span></div><div class="stx">私は、喋るのが、得意ではありません。でも、手は、正直です。この30週、練習した分だけ、あなたの手は、確実に変わっています。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S08</span><span class="scene">【卒業メッセージ3】28:50–29:30 ※ゆっくり読む。読み終えたら3秒静止、カットしない</span></div><div class="stx">迷ったら、また、この講座の動画に戻ってきてください。何度でも、見返せます。本当に、おめでとうございます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S09</span><span class="scene">【ED：宿題提示】29:30–29:50</span></div><div class="stx">今週の宿題です。動画と、メニュー表と、告知文。この3点をそろえて、提出してください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S10</span><span class="scene">【ED：締め】29:50–30:30 ※ゆっくり読む。軽く一礼で終わる</span></div><div class="stx">提出した人から、卒業です。あなたの卒業制作を、待っています。それでは、また来週。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div style="margin:22px 0 6px;font-weight:700;color:var(--navy);font-size:14.5px;border-top:1px dashed var(--line);padding-top:14px">太郎さん総評 読み上げ台本（審査ステップ3用・別収録テンプレート）</div><p style="font-size:12.5px;color:var(--mut);margin:0 0 10px">本編とは別の収録物。一次チェック通過者一人ひとりに、太郎さん名義で公式LINEに届ける総評 <b style="color:#c0392b">〔要確認: 総評の形式（音声／動画／文面）〕</b>。運用：事務局が一次チェック時に「T03はA、T05はG」のように記号を指定し、【 】に名前を差し込んだカンペを作る。太郎さんは書いてある行をそのまま読むだけ。演技不要。1人あたり約40秒。</p><div class="serif-card"><div class="sid"><span class="sno">T01</span><span class="scene">（総評・全員共通）</span></div><div class="stx">【お名前】さん。卒業制作、確かに受け取りました。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">T02</span><span class="scene">（総評・全員共通）</span></div><div class="stx">動画と、メニュー表と、導線。3点、すべて拝見しました。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">T03</span><span class="scene">（良かった点：A〜Dから事務局指定の1つだけ読む）</span></div><div class="stx">A：圧が、腕ではなく、姿勢でつくれていました。<br>B：リズムが、最後まで一定でした。焦りが、ありませんでした。<br>C：手の密着が、良かったです。点ではなく、面で触れていました。<br>D：離れ方が、ていねいでした。最後まで、ゆっくり手を離せていました。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">T04</span><span class="scene">（商品面の良かった点：E・Fから該当時のみ1つ読む。なければ飛ばす）</span></div><div class="stx">E：メニュー表の名前と価格が、はっきり書けていました。<br>F：プロフィールから予約方法まで、迷わずたどり着けました。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">T05</span><span class="scene">（次の一歩：G〜Jから事務局指定の1つだけ読む）</span></div><div class="stx">G：次は、導入の2分を、もっとゆっくり。最初がゆっくりだと、お客様は安心できます。<br>H：次は、圧を、少しだけ弱めてください。痛いの手前、気持ちいい、で止めます。<br>I：次は、手を離すときに、あと3秒かけてください。最後の印象が、いちばん記憶に残ります。<br>J：次は、その商品を、実際にお客様に売ってください。売ってみると、次に直す点が見えます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">T06</span><span class="scene">（総評・全員共通・締め）</span></div><div class="stx">上級ディプロマを、授与します。おめでとうございます。現場で、会いましょう。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div></section>
+  <section><h2>ナレーション全文</h2><p style="font-size:12.5px;color:var(--mut);margin:0 0 6px">トーン：落ち着いた説明調。卒業回なので静かな高揚を、要項パートは明瞭に。エビデンス・効能は断定しない。</p><div class="nar"><h3>先週の宿題・良い例紹介（00:30–01:10）</h3><p>先週の宿題、おつかれさまでした。<b style="color:#c0392b">〔要確認: PG29の宿題内容に合わせて一文差し替え〕</b></p><p>良い例を、ひとつご紹介します。この方のメニュー表は、名前が日本語で、受けたあとの時間が想像できました。税込の価格が、大きく、堂々と書かれていました。<b style="color:#c0392b">〔要確認: 実際の受講生の提出例に差し替え〕</b></p><p>今日は、その仕上げです。30週の学びを、ひとつの商品に、まとめます。</p></div><div class="nar"><h3>導入：卒業制作とは・3点セット全体像（01:10–03:30）</h3><p>このプログラムは、30回シリーズの、最終回です。今日は、新しい手技は、お伝えしません。</p><p>今日つくるのは、卒業制作。「そのまま売れる、自分の商品」です。</p><p>そのまま売れる、とは。明日の朝、店を開けたら、もう売り始められる状態のことです。</p><p>商品は、3つの点がそろって、はじめて完成します。</p><p>ひとつめ、腕。認定ルーティン、15分の実技動画です。あなたの手そのものが、商品の中身です。</p><p>ふたつめ、値札。自分のメニュー表と、価格です。値段の決まっていないものは、売れません。</p><p>みっつめ、入り口。告知文と、プロフィールの導線です。知られていないものは、存在しないのと同じです。</p><p>この3点セットが、卒業制作です。そして、すべて、この30週で、すでに学んだことです。今日やるのは、新しい勉強ではなく、清書です。</p><p>思い出してください。1週目、あなたはDay0の動画を撮りました。まだ何も知らなかった頃の、自分の手です。今日の卒業制作は、その手が、どこまで来たかの、答えでもあります。</p><p>それでは、ひとつずつ、提出の要項と、つくり方を見ていきます。</p></div><div class="nar"><h3>本編①：認定ルーティン15分実技動画（要項と撮り方）（04:00–09:00）</h3><p>提出物の、ひとつめ。認定ルーティン、15分の実技動画です。</p><p>まず、要項です。</p><p>内容は、自分の15分メニューです。第20週で答え合わせをした、5つのブロックの設計図に沿って行います。導入で2分。ほどく前半で4分。ほどく後半で4分。鎮めるで3分。終えるで2分。時間は多少前後してかまいません。合計で、おおよそ15分です。</p><p>姿勢は、自分の現場のものを選んでください。ベッドの寝姿勢でも、セット面の立ち姿勢でも、どちらでも審査できます。</p><p>モデルは、ご家族や同僚の方でかまいません。始める前に、第17週の安全チェック。頭皮を見る10秒と、体調の確認を、必ず行ってください。</p><p>撮影は、ノーカットです。途中で止めない。編集しない。早送りも、BGMも、テロップも入れません。あなたの手と、接触音だけを、そのまま届けてください。</p><p>次に、撮り方です。スマホ2台、2つのアングルで撮ります。</p><p>アングルA、斜め俯瞰。モデルの頭の斜め上、45度くらいの高さから、手元と頭の全体が映る位置に置きます。スマホと頭の距離は、腕1本分。およそ60センチから80センチが目安です。このアングルで、手の密着と、手の順番を見ます。</p><p>アングルB、真横からの全身。2、3メートル離れて、あなたの足元から頭まで、全身が入る位置に置きます。このアングルで、姿勢と、圧のつくり方を見ます。圧は、腕でつくらない。姿勢でつくる。それが映るのが、この横からの画です。</p><p>どちらも、横画面で撮ってください。三脚がなければ、棚や、積んだ本に立てかけて固定してかまいません。動かなければ、それで十分です。</p><p>明るさは、窓の光が頭に当たる向きが、いちばんきれいに映ります。手元が自分の影にならないか、回す前に10秒だけ、確認してください。</p><p>音は、消さないでください。BGMは不要です。手が頭皮に触れる接触音は、審査の大事な材料です。</p><p>撮り始めたら、最初にひとこと。お名前と、日付と、メニュー名を言うか、紙に書いて見せてください。</p><p>スマホが1台しかない方へ。同じルーティンを2回行い、1回目をアングルAで、2回目をアングルBで撮って、2本提出してください。それでも審査できます。</p><p>最後に、撮影前のチェックを5つ、画面に出します。ひとつ、横画面になっている。ふたつ、Aは手と頭が見切れていない。みっつ、Bは全身が入っている。よっつ、音が録れている。いつつ、15分をノーカットで撮り切る準備ができている。この5つを確認してから、録画ボタンを押してください。</p></div><div class="nar"><h3>本編②：Day0動画（1週目）との比較（09:00–12:00）</h3><p>提出の前に、ひとつ、やってほしいことがあります。</p><p>1週目に撮った、Day0の動画。あれと、今日の自分の動画を、見比べてください。</p><p>見比べ方は、簡単です。2つの動画の、同じ場面だけを見ます。最初の2分と、最後の離れ方。この2か所です。</p><p>観点は、4つです。</p><p>圧。腕の力で押していないか。Day0のあなたは、たぶん、腕で押しています。今のあなたは、姿勢でつくれているはずです。</p><p>リズム。テンポが、途中で速くなっていないか。焦りは、手に出ます。</p><p>密着。手のひらが浮いて、点になっていないか。</p><p>離れ方。ぶつっと終わっていないか。段階的に、そっと離れられているか。</p><p>画面では、実際の例を、左右に並べてお見せします。左が、Day0。右が、30週後の同じ人の手です。<b style="color:#c0392b">〔要確認: 掲載許可済みの受講生素材。用意できない場合はPG17「直す前／直した後」素材で代替〕</b></p><p>何が変わったか。言葉にしてみてください。配布のワークシートに、気づきを3つ、書く欄があります。提出は任意ですが、卒業制作に添えて出すと、総評の材料になります。</p><p>Day0を撮っていなかった方へ。比較がなくても、卒業制作は提出できます。そのかわり、今日撮る動画を、消さずに残してください。それが、1年後のあなたの、Day0になります。</p></div><div class="nar"><h3>本編③：メニュー表＋価格（要項）（12:30–16:00）</h3><p>提出物の、ふたつめ。自分のメニュー表と、価格です。</p><p>要項です。</p><p>基本は、第18週で学んだ、松竹梅の3段です。お試しの梅。主役の竹。贅沢版の松。現場の事情で、まず1本から始める方は、竹の1本だけでもかまいません。ただしその1本は、主役として、堂々と書いてください。</p><p>書くことは、3つです。内容が伝わる日本語の名前。時間。そして、税込の価格。</p><p>名前は、受けたあとの時間が想像できるものに。「Sコース」では、伝わりません。</p><p>価格は、1分単価から逆算して、はっきり書きます。「〜円より」の、曖昧な書き方はしません。</p><p>そして、提出のときだけ、価格の根拠を、ひとことメモで添えてください。1分単価がいくらで、何分だから、この価格。それだけで十分です。根拠のある価格は、値引きに、負けません。</p><p>言葉のルールは、これまでと同じです。治る、改善、整う、育毛。効果を断定する言葉は、メニューには書きません。「リラクゼーションを目的とした」で、統一します。一行、「効果には個人差があります」と添えることを、おすすめします。</p><p>形式は、自由です。手書きでも、パソコンでも、すでに店に貼ったPOPの写真でも、かまいません。</p><p>判定の基準は、ひとつだけです。明日の朝、それを、そのまま店に出せるか。飾りの美しさは、審査しません。売れる状態かどうかを、見ます。</p></div><div class="nar"><h3>本編④：告知文／プロフィール導線（要項）（16:00–19:30）</h3><p>提出物の、みっつめ。告知文と、プロフィールの導線です。</p><p>腕があって、値札があっても、知られていなければ、売れません。最後の1点は、お客様への、入り口です。</p><p>まず、告知文。1本で結構です。店内掲示の貼り紙か、LINEの文面か、どちらかを選んでください。</p><p>第18週のテンプレートの、かっこの中を差し替えるだけで、かまいません。入っているべきことは、4つです。何が始まるか。いつからか。いくらか。どうすれば受けられるか。この4つがそろっていれば、合格です。</p><p>次に、プロフィールの導線です。</p><p>考え方は、一本の線です。あなたを知らない人が、検索して、見つけて、分かって、予約する。この線が、どこかで切れていないか。</p><p>確認する場所は、第26週で整えた、Googleビジネスプロフィール。もしくは、お使いのSNSのプロフィールです。どちらか1つで結構です。</p><p>載っているべきことは、3つです。ひとつ、何のお店で、誰がやっているか。ふたつ、新しいメニューの名前と、価格。みっつ、予約の方法。電話か、LINEか、予約サイトか。</p><p>この3つが載った画面の、スクリーンショットを1枚。それが、提出物です。</p><p>お客様は、あなたの腕を、事前に見ることができません。見えるのは、導線だけです。導線がていねいな店は、手もていねいだと、信じてもらえます。</p></div><div class="nar"><h3>本編⑤：審査フロー（4ステップ）（19:30–23:00）</h3><p>3点がそろったら、提出です。審査の流れを、ご説明します。全部で、4つのステップです。</p><p>ステップ1、自己採点です。配布する、10項目のチェックリストを使います。動画について5つ。メニュー表について3つ。告知と導線について2つ。すべてに丸がついてから、提出してください。丸がつかない項目は、直せばいいだけです。提出の前に自分で直せるのが、自己採点の、いいところです。</p><p>ステップ2、一次チェックです。事務局が、要項を満たしているかを確認します。15分あるか。2つのアングルがあるか。断定の言葉が入っていないか。足りないものがあれば、差し戻します。差し戻しは、不合格ではありません。減点もありません。直して、もう一度、出してください。何度でも、受け取ります。</p><p>ステップ3、太郎さんの総評です。一次チェックを通った卒業制作は、すべて、山口太郎が見ます。全員分です。そして、一人ひとりに、良かった点と、次の一歩を、太郎さんの言葉で、お返しします。総評は、公式LINEに届きます。<b style="color:#c0392b">〔要確認: 総評の形式（音声／動画／文面）と目安の返却期間〕</b>順番にお返しするため、届くまで、少し時間をください。</p><p>ステップ4、上級ディプロマの発行です。総評とともに、卒業の証を、お渡しします。</p><p>提出先と、締切は、画面のテロップと、概要欄、配布物にまとめてあります。<b style="color:#c0392b">〔要確認: 提出先URL（公式LINE／フォーム）・提出締切日〕</b></p></div><div class="nar"><h3>本編⑥：上級ディプロマ授与と次の道（23:30–26:30）</h3><p>上級ディプロマについて、ご案内します。</p><p>このシリーズの認定は、3段階でした。第16週、15分の仮ルーティンで、初級。第19週、自分のメニュー設計で、中級。そして今回、卒業制作で、上級です。</p><p>上級ディプロマは、デジタルで発行します。ご希望の方には、印刷用のデータも、お渡しします。額に入れて、店に掲げてください。お客様への、信頼の証になります。<b style="color:#c0392b">〔要確認: 認定の正式名称と、一般社団法人認定構想の現状〕</b></p><p>そして、卒業は、終わりではありません。ここから先に、4つの道が、続いています。</p><p>ひとつめは、応用編です。このシリーズで身につけた手技を、さらに深める道です。より長いコースの組み立て。お客様一人ひとりに合わせた応用。基礎を終えたあなたが、次に進むための、新しいプログラムです。</p><p>ふたつめは、大会、AMCです。学んだ技術を、舞台の上で、形にする道です。人前で見せることは、自分の手を、もう一段、磨き上げます。挑戦したい方の、背中を押す場所です。</p><p>みっつめは、月1のライブです。月に一度、オンラインで集まる、生配信の時間です。現場で困ったこと、うまくいかなかったこと、新しく試したいこと。その場で質問して、答えを持ち帰れます。卒業しても、つながり続けられる場です。</p><p>よっつめは、コミュニティです。理容師、美容師、セラピスト。職種を越えて、同じ道を歩む仲間と、現場の工夫や、お客様の声を、分かち合える場所です。</p><p>すべてに進む必要は、ありません。今の自分に合うものを、ひとつ、選んでください。学びを止めないこと。それが、いちばん大切です。</p></div><div class="nar"><h3>まとめ：「今日から現場で使える1つ」（26:30–27:30）</h3><p>今日のまとめです。</p><p>商品は、3つの点で完成します。腕。認定ルーティンの、15分動画。値札。メニュー表と、価格。入り口。告知文と、プロフィールの導線。どれかひとつが欠けると、売れません。逆に、3つそろえば、あなたの商品は、明日から売れる状態になります。</p><p>今日から現場で使える1つは、これです。「完成させてから磨くのではなく、出してから磨く」。</p><p>商品は、お客様の前に出て、はじめて育ちます。まず、出す。卒業制作は、その練習でもあります。</p></div><div class="nar"><h3>ED（29:30–30:30）</h3><p>（ナレーションなし。宿題テロップ用の補足ナレは不要。太郎さんのセリフ（S09・S10）と宿題テロップで完結）</p></div></section>
+  <section><h2>テロップ・図解指示</h2><ul class="plain"><li><b style="color:var(--navy)">▼ OP／導入</b></li><li>OPテロップ：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">PG30｜卒業制作——「そのまま売れる自分の商品」を完成させる</span>／サブ：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">最終回</span></li><li>導入で<b>3点セット図</b>を提示：中央に「あなたの商品」、周囲に「① 腕＝認定ルーティン15分動画」／「② 値札＝メニュー表＋価格」／「③ 入り口＝告知文＋プロフィール導線」。3点が線で結ばれて円になるデザイン</li><li>定義テロップ：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">そのまま売れる＝明日の朝、店に出せる状態</span></li><li><b style="color:var(--navy)">▼ 本編①（実技動画の要項・撮り方）</b></li><li><b>要項ボード</b>：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">15分ノーカット｜5ブロック設計図（導入2分→ほどく前半4分→ほどく後半4分→鎮める3分→終える2分）｜姿勢は自分の現場（寝／立ちどちらも可）｜モデルは家族・同僚可｜BGM・編集・テロップなし</span></li><li><b>スマホ2アングル設置図</b>（俯瞰イラスト）：「アングルA＝斜め俯瞰45度・頭から腕1本分（約60〜80cm）・手元と頭」／「アングルB＝真横・2〜3m・足元まで全身」。ベッドと施術者の配置図に2台のスマホアイコンを置く</li><li>標語テロップ：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">Aで密着と手順を見る／Bで姿勢と圧を見る</span>／<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">圧は、腕でつくらない。姿勢でつくる。</span></li><li><b>撮影前チェック5</b>（チェックボックス式）：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">① 横画面 ② Aは手と頭が見切れない ③ Bは全身が入る ④ 音が録れている ⑤ 15分ノーカットの準備</span></li><li>1台しかない場合の注記：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">スマホ1台の方＝同じルーティンを2回（A用・B用）撮影→2本提出でOK</span></li><li><b style="color:var(--navy)">▼ 本編②（Day0比較）</b></li><li><b>左右2画面</b>：左「Day0（1週目）」／右「30週後（今日）」のラベル。同一場面（最初の2分・離れ方）で同期再生</li><li><b>4観点バッジ</b>を順に点灯：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">圧＝腕でなく姿勢</span>／<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">リズム＝テンポ一定</span>／<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">密着＝点でなく面</span>／<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">離れ方＝段階的に</span></li><li>注記テロップ：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">Day0がない方も提出できます。今日の動画が、1年後のDay0になります</span></li><li><b style="color:var(--navy)">▼ 本編③（メニュー表）</b></li><li><b>OK例／NG例の対比</b>（PG18図版流用）：OK「じっくりヘッドスパ 30分 6,000円（税込）」／NG「Sコース 〜4,000円より」。NG側に赤線</li><li>要項テロップ：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">書くのは3つ＝日本語の名前・時間・税込価格</span>／<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">提出時のみ＋1＝分単価の根拠メモ</span></li><li>コンプラ注記：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">メニューに書かない言葉＝治る・改善・整う・育毛</span>／<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">「リラクゼーションを目的とした」で統一＋「効果には個人差があります」を一行</span></li><li>判定基準テロップ：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">審査基準はひとつ。明日の朝、店に出せるか。</span></li><li><b style="color:var(--navy)">▼ 本編④（告知文／導線）</b></li><li>告知文<b>4要素チェック</b>：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">① 何が始まるか ② いつからか ③ いくらか ④ どうすれば受けられるか</span></li><li><b>導線の一本線図</b>：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">知る（検索・プロフィール）→ 分かる（メニュー名と価格）→ 動ける（予約方法）</span>。線の途中に「ここが切れていませんか？」の注記</li><li>プロフィール掲載3点：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">① 何の店か・誰がやっているか ② 新メニュー名と価格 ③ 予約方法（電話／LINE／予約サイト）</span></li><li>提出物テロップ：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">提出＝3点が載った画面のスクリーンショット1枚</span></li><li><b style="color:var(--navy)">▼ 本編⑤（審査フロー）</b></li><li><b>4ステップ・フロー図</b>：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">STEP1 自己採点（10項目チェックリスト）→ STEP2 一次チェック（事務局・要項確認）→ STEP3 太郎さん総評（公式LINEに届く）→ STEP4 上級ディプロマ発行</span></li><li>差し戻し注記：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">差し戻し＝不合格ではありません。減点なし。直して再提出、何度でもOK</span></li><li>誘導テロップ：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">提出先・締切は概要欄と配布物へ</span> <b style="color:#c0392b">〔要確認: 提出先URL・締切日〕</b></li><li><b style="color:var(--navy)">▼ 本編⑥（ディプロマ・次の道）</b></li><li><b>3段階バッジ</b>：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">初級（第16週・仮ルーティン）→ 中級（第19週・マイメニュー設計）→ 上級（卒業制作）←今ここ</span>。上級を点灯</li><li>上級ディプロマ見本画像を提示 <b style="color:#c0392b">〔要確認: 認定の正式名称の表記〕</b></li><li><b>次の道4カード</b>（アイコン＋一言）：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">① 応用編＝手技をさらに深める</span>／<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">② 大会AMC＝舞台で形にする</span>／<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">③ 月1ライブ＝月に一度、直接質問</span>／<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">④ コミュニティ＝職種を越えた仲間</span></li><li>まとめテロップ：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">すべてに進まなくていい。今の自分に合う道を、ひとつ。</span></li><li><b style="color:var(--navy)">▼ まとめ</b></li><li><span style="background:#f1ecdd;border-radius:4px;padding:0 6px">今日から現場で使える1つ｜完成させてから磨かない。出してから、磨く。</span></li><li>3点セット図を再提示し、3点すべてにチェックマークを点灯</li><li><b style="color:var(--navy)">▼ 卒業メッセージ</b></li><li>S06〜S08に合わせ<b>直筆風テロップ</b>（アンティークゴールド#C5A55Aの手書きフォント、ウォームアイボリー#F5F0E6の余白）。大きく出すのは：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">30回、ありがとうございました。</span>／<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">手は、正直です。</span>／<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">本当に、おめでとうございます。</span></li><li>過度なエフェクト禁止。一文ずつ静かにフェードイン</li><li><b style="color:var(--navy)">▼ ED（宿題）</b></li><li>宿題テロップ：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">今週の宿題（卒業課題）｜卒業制作3点セットを提出</span><br><span style="background:#f1ecdd;border-radius:4px;padding:0 6px">① 認定ルーティン15分動画（スマホ2アングル・ノーカット） ② メニュー表＋価格（分単価メモ付き） ③ 告知文1本＋プロフィールのスクショ1枚</span><br><span style="background:#f1ecdd;border-radius:4px;padding:0 6px">提出前に自己採点チェックリスト10項目を全部○に</span>／提出先・締切：<b style="color:#c0392b">〔要確認: 提出先URL・締切日〕</b></li><li><b style="color:var(--navy)">▼ コンプライアンス共通</b></li><li>効能断定語（治る・改善する・必ず・効く）は音声・テロップ・提出物例のすべてで使わない。根拠は<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">〜と言われています／〜を示唆する研究も報告されています</span>で統一</li><li>画面下に小さく常設：<span style="background:#f1ecdd;border-radius:4px;padding:0 6px">※リラクゼーションを目的とした手技です。効果には個人差があります。</span></li></ul></section>
+  <section><h2>宿題・配布物</h2><ul class="plain"><li><b style="color:var(--navy)">▼ 今週の宿題（卒業課題）：卒業制作3点セットをそろえて提出する</b></li><li>① 認定ルーティン15分実技動画（スマホ2アングル。1台の場合は2回撮って2本）</li><li>② 自分のメニュー表＋価格（分単価の根拠メモ付き）</li><li>③ 告知文1本（店内掲示 or LINE）＋プロフィール導線のスクリーンショット1枚</li><li>提出前に「自己採点チェックリスト10項目」を全部○にする。Day0比較ワークシートの添付は任意（総評の材料になるため推奨）</li><li>提出先・締切：<b style="color:#c0392b">〔要確認: 提出先URL（公式LINE／フォーム）・提出締切日〕</b></li><li><b style="color:var(--navy)">▼ 配布物（配布物パック_v6.md「PG30 配布物」参照）</b></li><li>1. 卒業制作3点セット 提出要項シート</li><li>2. スマホ2アングル撮影ガイド（設置図＋撮影前チェック5）</li><li>3. 自己採点チェックリスト（10項目）</li><li>4. Day0比較ワークシート（任意提出）</li><li>5. 審査の流れと上級ディプロマ（4ステップ＋総評の届き方）</li></ul></section>
+  <section><h2>制作メモ</h2><div class="memo"><b>【太郎さんパートの撮影】</b><br>・S01〜S10はすべてカメラA（正面バストアップ）・カメラ目線。背景はブランドのダークネイビー基調（#1B2A4A）。<br>・卒業メッセージ（S06〜S08）のみアンティークゴールド（#C5A55A）のアクセント照明を一段足し、BGMを最小限に絞って声を主役にする。S08のあと3秒静止、カットせず余韻を残す。<br>・S10「それでは、また来週。」は最終回でもあえて定型を守る（次の道＝月1ライブ等へ続く含意）。軽い一礼で締める。<br>・演技指示は一切入れない。カンペは1セリフ1枚、文節で改行。<br><br><b>【総評読み上げ台本（別収録）】</b><br>・本編と同日に、T01〜T06の全パターン（A〜J含む）を一度ずつ収録しストックしておくと、以後は事務局が名前差し込み分（T01）だけ追加収録すれば回る運用も可 <b style="color:#c0392b">〔要確認: 総評を毎回新規収録するか、パターン収録＋名前差し込みで運用するか〕</b>。<br>・名前の読み間違いを防ぐため、カンペにはふりがなを必ず振る。<br><br><b>【本編Bロール】</b><br>・本編①：PG20の通し映像（寝・立ち）から5ブロックの代表カットを抜粋。スマホ2アングル設置のデモは、実際にベッド脇にスマホ2台＋ミニ三脚を置いた実写カットを撮る（スタッフの手でよい。太郎さんの新規実演は不要）。<br>・本編②：受講生のDay0／現在の左右2画面は、必ず本人の掲載許可を書面で取得 <b style="color:#c0392b">〔要確認: 受講生素材の許可〕</b>。用意できない場合はPG17「直す前／直した後」素材で代替。<br>・本編③④：PG18のメニュー表・告知文図版、PG26のプロフィール画面スクショを流用。個人名・店名・電話番号は見本用にダミー化するか、山口理容店の実データを使う場合は太郎さんの許可を得る。<br><br><b>【編集】</b><br>・Day0比較の左右2画面は、同じ場面（開始2分・離れ方）でタイムコードを揃えて同期再生。4観点バッジはナレーションの読み上げに同期して1つずつ点灯。<br>・撮影前チェック5・自己採点10項目などのリストは、読み上げに合わせて1行ずつ表示（一気に出さない）。<br>・接触音の扱い：Bロール部は元素材の接触音を薄く残しつつナレーションを主役に。卒業メッセージ部は太郎さんの声以外を極力引く。<br><br><b>【コンプライアンス最終確認】</b><br>・動画内・配布物・提出物の記入例のすべてで、効能断定語（治る／改善／自律神経が整う／育毛／血行促進 等）が入っていないか、納品前にチェックリストで確認。<br>・実績・数字は既存の確認済み情報のみ使用。新規の数字を編集で足さない。<br><br><b>【〔要確認〕一覧（撮影前に確定させる）】</b><br><b style="color:#c0392b">〔要確認: 1. 提出先URL（公式LINE／フォーム）と提出締切日〕</b><br><b style="color:#c0392b">〔要確認: 2. 総評の形式（音声／動画／文面）と目安の返却期間、収録運用（毎回新規 or パターン＋名前差し込み）〕</b><br><b style="color:#c0392b">〔要確認: 3. 上級ディプロマの正式名称の表記と、一般社団法人認定構想の現状〕</b><br><b style="color:#c0392b">〔要確認: 4. Day0比較に使う受講生素材の掲載許可〕</b><br><b style="color:#c0392b">〔要確認: 5. PG29の宿題内容（冒頭「先週の宿題」ナレの一文差し替え）〕</b><br><b style="color:#c0392b">〔要確認: 6. 応用編・大会AMC・月1ライブ・コミュニティの最新の開催情報・案内リンク〕</b></div></section>
+  <footer>山口流 理容道｜台本v6｜PG30 卒業制作——「そのまま売れる自分の商品」を完成させる｜ⓒ Prorium（社外秘）</footer>
+</div>
+
+<div id="pv">
+  <div class="bar">
+    <button onclick="closePv()">✕ 閉じる(Esc)</button>
+    <button id="mSingle" class="act" onclick="setMode('single')">1枚ずつ</button>
+    <button id="mScroll" onclick="setMode('scroll')">自動スクロール</button>
+    <button onclick="fsz(1)">文字＋</button><button onclick="fsz(-1)">文字−</button>
+    <button id="spD" onclick="spd(-1)" style="display:none">遅く</button><button id="spU" onclick="spd(1)" style="display:none">速く</button>
+    <button id="mir" onclick="mirror()">🪞 ミラー反転</button>
+    <span class="pos" id="pos"></span>
+  </div>
+  <div class="stage" id="stage"><div class="line" id="line"></div></div>
+  <div class="scrollwrap" id="sw" style="display:none"></div>
+  <button class="nav prev" onclick="mv(-1)">‹</button>
+  <button class="nav next" onclick="mv(1)">›</button>
+</div>
+
+<script>
+const LINES = [
+  {"id":"S01","text":"こんにちは。山口太郎です。今日で、最後の回です。"},
+  {"id":"S02","text":"今日は、卒業制作です。15分の施術動画と、メニュー表と、告知文。この3つを作って、提出してもらいます。"},
+  {"id":"S03","text":"これは、試験ではありません。ここで作るものは、そのまま自分の店で使えます。私も、本気で見ます。"},
+  {"id":"S04","text":"1週目に撮ったDay0の動画は、消さないでください。今日の自分と見比べると、うまくなったところが、はっきり分かります。"},
+  {"id":"S05","text":"提出された卒業制作は、全部、私が見ます。手を抜いたところは、見れば分かります。本気で作って、堂々と出してください。"},
+  {"id":"S06","text":"ここから、少しだけ、私の言葉です。30回、ありがとうございました。よく、続けました。"},
+  {"id":"S07","text":"私は、喋るのが、得意ではありません。でも、手は、正直です。この30週、練習した分だけ、あなたの手は、確実に変わっています。"},
+  {"id":"S08","text":"迷ったら、また、この講座の動画に戻ってきてください。何度でも、見返せます。本当に、おめでとうございます。"},
+  {"id":"S09","text":"今週の宿題です。動画と、メニュー表と、告知文。この3点をそろえて、提出してください。"},
+  {"id":"S10","text":"提出した人から、卒業です。あなたの卒業制作を、待っています。それでは、また来週。"},
+  {"id":"T01","text":"【お名前】さん。卒業制作、確かに受け取りました。"},
+  {"id":"T02","text":"動画と、メニュー表と、導線。3点、すべて拝見しました。"},
+  {"id":"T03","text":"A：圧が、腕ではなく、姿勢でつくれていました。\nB：リズムが、最後まで一定でした。焦りが、ありませんでした。\nC：手の密着が、良かったです。点ではなく、面で触れていました。\nD：離れ方が、ていねいでした。最後まで、ゆっくり手を離せていました。"},
+  {"id":"T04","text":"E：メニュー表の名前と価格が、はっきり書けていました。\nF：プロフィールから予約方法まで、迷わずたどり着けました。"},
+  {"id":"T05","text":"G：次は、導入の2分を、もっとゆっくり。最初がゆっくりだと、お客様は安心できます。\nH：次は、圧を、少しだけ弱めてください。痛いの手前、気持ちいい、で止めます。\nI：次は、手を離すときに、あと3秒かけてください。最後の印象が、いちばん記憶に残ります。\nJ：次は、その商品を、実際にお客様に売ってください。売ってみると、次に直す点が見えます。"},
+  {"id":"T06","text":"上級ディプロマを、授与します。おめでとうございます。現場で、会いましょう。"}
+];
+let idx=0, fs=6.4, mode='single', speed=1, raf=null;
+const pv=document.getElementById('pv'), line=document.getElementById('line'), pos=document.getElementById('pos'), sw=document.getElementById('sw'), stage=document.getElementById('stage');
+function openPv(i){ if(!LINES.length) return; idx=i||0; pv.classList.add('on'); render(); }
+function closePv(){ pv.classList.remove('on'); stopScroll(); }
+function render(){
+  if(mode==='single'){
+    stage.style.display='flex'; sw.style.display='none';
+    const L=LINES[idx]; line.style.fontSize=fs+'vw'; line.textContent=L.text;
+    pos.textContent=(L.id||('#'+(idx+1)))+'　'+(idx+1)+' / '+LINES.length;
+  }else{
+    stage.style.display='none'; sw.style.display='block';
+    sw.innerHTML=LINES.map(L=>'<div class="sl" style="font-size:'+fs+'vw"><span class="tag">'+(L.id||'')+'</span>'+L.text.replace(/</g,'&lt;')+'</div>').join('');
+    pos.textContent='自動スクロール（速度 '+speed+'）— クリックで一時停止/再開';
+    startScroll();
+  }
+}
+function mv(d){ if(mode!=='single')return; idx=Math.min(LINES.length-1,Math.max(0,idx+d)); render(); }
+function fsz(d){ fs=Math.min(14,Math.max(2.4,fs+d*0.8)); render(); }
+function mirror(){ pv.classList.toggle('mirror'); document.getElementById('mir').classList.toggle('act'); }
+function setMode(m){ mode=m; stopScroll();
+  document.getElementById('mSingle').classList.toggle('act',m==='single');
+  document.getElementById('mScroll').classList.toggle('act',m==='scroll');
+  document.getElementById('spD').style.display=m==='scroll'?'':'none';
+  document.getElementById('spU').style.display=m==='scroll'?'':'none';
+  render(); }
+function spd(d){ speed=Math.min(5,Math.max(1,speed+d)); pos.textContent='自動スクロール（速度 '+speed+'）'; }
+let paused=false;
+function startScroll(){ paused=false; sw.scrollTop=0; const step=()=>{ if(!paused){ sw.scrollTop+=0.4*speed; } raf=requestAnimationFrame(step); }; raf=requestAnimationFrame(step); }
+function stopScroll(){ if(raf)cancelAnimationFrame(raf); raf=null; }
+sw.addEventListener('click',()=>{ paused=!paused; });
+document.addEventListener('keydown',e=>{
+  if(!pv.classList.contains('on'))return;
+  if(e.key==='Escape')closePv();
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();mv(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();mv(-1);}
+});
+document.querySelectorAll('.serif-card').forEach((el,i)=>el.addEventListener('click',()=>openPv(i)));
+</script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG25｜「次、いつ空いてますか？」の仕組み——次回予約・カルテ・フォロー｜山口流 理容道 台本v6</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:38px 26px 32px;margin:0 -18px 24px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:24px;font-weight:600;margin:8px 0 8px;line-height:1.5}
+  header .meta{font-size:12.5px;color:#c9d2e0;display:flex;gap:16px;flex-wrap:wrap}
+  .prompter-btn{position:sticky;top:10px;z-index:50;display:flex;justify-content:flex-end;margin-bottom:6px}
+  .prompter-btn button{background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:30px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,26,46,.3)}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:16px 0;box-shadow:0 2px 10px rgba(27,42,74,.05)}
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .oc{background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .oc .l{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+  .oc .v{font-size:13.5px;color:var(--ink);margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  .chip{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;white-space:nowrap}
+  .c1{background:#fbf3dc;color:#9a7b27}.c2{background:#eaf1fa;color:var(--blue)}.c3{background:#eef7f0;color:var(--green)}
+  .serif-card{background:#fffdf8;border:1px solid var(--gold-l);border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0;cursor:pointer}
+  .serif-card:hover{background:#fdf8ec}
+  .serif-card .sid{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .serif-card .sno{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 10px}
+  .serif-card .scene{font-size:11.5px;color:var(--mut)}
+  .serif-card .stx{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;color:var(--ink);line-height:1.9}
+  .serif-card .hint{font-size:10.5px;color:#b6a26d;margin-top:4px}
+  .nar{margin:14px 0}
+  .nar h3{font-size:14px;color:var(--navy);background:#eaf1fa;border-radius:8px;padding:6px 12px;margin-bottom:8px}
+  .nar p{font-size:13.5px;margin:8px 4px;color:#2c3644}
+  ul.plain{list-style:none}
+  ul.plain li{position:relative;padding-left:20px;margin:6px 0;font-size:13.5px}
+  ul.plain li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+  .memo{background:#fff8e8;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin-top:8px}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:30px}
+  /* ===== プロンプター ===== */
+  #pv{position:fixed;inset:0;background:#000;color:#fff;z-index:999;display:none;flex-direction:column}
+  #pv.on{display:flex}
+  #pv .bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#111;flex-wrap:wrap}
+  #pv .bar button{background:#222;color:#fff;border:1px solid #555;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+  #pv .bar button.act{background:var(--gold);color:#000;border-color:var(--gold)}
+  #pv .bar .pos{margin-left:auto;font-size:14px;color:#d8c79b}
+  #pv .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:4vw;overflow:hidden}
+  #pv .line{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;text-align:center;line-height:1.7;white-space:pre-wrap}
+  #pv .scrollwrap{flex:1;overflow-y:auto;padding:20vh 6vw}
+  #pv .scrollwrap .sl{font-family:"Hiragino Mincho ProN",serif;font-weight:600;line-height:1.9;margin:5vh 0;text-align:center;white-space:pre-wrap}
+  #pv .scrollwrap .sl .tag{display:block;font-size:14px;color:#d8c79b;font-family:sans-serif;margin-bottom:8px}
+  #pv.mirror .stage,#pv.mirror .scrollwrap{transform:scaleX(-1)}
+  #pv .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:#888;font-size:34px;padding:18px 10px;cursor:pointer;border-radius:10px}
+  #pv .prev{left:8px}#pv .next{right:8px}
+  @media(max-width:640px){.cards3{grid-template-columns:1fr}header h1{font-size:20px}}
+  @media print{.prompter-btn,#pv{display:none!important}body{background:#fff}section{box-shadow:none;page-break-inside:avoid}}
+  /* ===== 太郎さん専用ガイド ===== */
+.taro{background:#fffaf0;border:3px solid var(--gold);border-radius:14px;padding:8px 22px 22px}
+.taro h2{font-size:20px;border:none;background:var(--gold);color:#3a2c08;padding:6px 16px;border-radius:10px;display:block;margin:14px 0 6px}
+.taro .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.5;margin:6px 0}
+.taro .row{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+.taro .ico{font-size:30px;flex:0 0 40px;text-align:center;line-height:1.2}
+.taro .ttl{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.04em}
+.taro .txt{font-size:16px;color:var(--ink);line-height:1.75;margin-top:2px}
+.taro .txt b{color:var(--navy)}
+.taro .tell{background:#eef7f0;border-left:5px solid var(--green)}
+.taro .tell .ttl{color:var(--green)}
+.taro ul.gist{list-style:none;margin:4px 0 0}
+.taro ul.gist li{position:relative;padding:6px 0 6px 26px;font-size:16px;line-height:1.6}
+.taro ul.gist li::before{content:"💬";position:absolute;left:0;top:5px;font-size:15px}
+.taro .tip{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 14px;margin-top:10px;font-size:14.5px;color:#7a5f1e}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ SCRIPT v6</div>
+  <h1>PG25｜「次、いつ空いてますか？」の仕組み——次回予約・カルテ・フォロー</h1>
+  <div class="meta"><span>尺：約33分</span><span>形式：ナレーション主体回＋会計シーン実演再現</span><span>台本v6（2026-07-02）</span><span>層：<span class="chip c1">🎬 層1 太郎</span> <span class="chip c2">🎙 層2 ナレ</span> <span class="chip c3">📺 層3 テロップ</span></span></div>
+</header>
+<div class="wrap">
+  <div class="prompter-btn"><button onclick="openPv(0)">🎬 プロンプターを開く（太郎さんセリフ）</button></div>
+
+<section class="taro">
+  <h2>👤 太郎さん、まずこれだけ（撮影前に読む）</h2>
+  <div class="big">お客さまに「また来たい」と思ってもらうために、お会計の前に一言かけて、小さな案内カードを渡す。その"型"を教える回です。</div>
+
+  <div class="row"><div class="ico">🤔</div><div><div class="ttl">なんで大事？</div>
+    <div class="txt">お店って、新しいお客さまを一人つかまえるより、<b>一度来てくれた人にもう一度来てもらう</b>ほうが、ずっとラクなんです。たとえば、行きつけの店を思い出してください。理由は「腕がすごいから」じゃなくて、「なんとなく、また行きやすいから」ですよね。太郎さんが<b>会計の前にひとこと</b>かけるだけで、お客さまの中に「じゃあまた来よう」という小さな理由ができる。それだけの話です。むずかしい営業トークは、一切いりません。</div></div></div>
+
+  <div class="row"><div class="ico">🙌</div><div><div class="ttl">太郎さんがやること</div>
+    <div class="txt">🤲 <b>手：</b>レジの前で、案内カードに次回の目安の日をペンで書いて、<b>両手で渡す</b>。あとは、ノートに日付を書く／カルテを書く、といった「手元」を実際にやって見せるだけ。<br>🗣 <b>口：</b>座って、はじめの挨拶・締めなどを読む。レジ前では、渡すときの一言(2文)を言う。<b>ぜんぶプロンプターに出るので、読めばOK</b>。演技や大きな声はいりません。</div></div></div>
+
+  <div class="row tell"><div class="ico">💬</div><div><div class="ttl">言いたいことは、ざっくりこれ</div>
+    <ul class="gist">
+      <li>今日はテクニックじゃなくて、「お客さまにまた来てもらう仕組み」の話をしますよ</li>
+      <li>まずは「何人がもう一度来てくれたか」を数えるところから。数えないと、増えてるかも分からないですよね</li>
+      <li>お会計の前に、こう言うだけ。「今日もありがとうございました。次回は3週間後くらいが目安です」→そして案内カードを渡す</li>
+      <li>お見送りしたらすぐ、体のことと話したことをメモしておく。次に来たとき「覚えててくれた」って伝わるから</li>
+    </ul></div></div>
+
+  <div class="tip">💡 <b>コツ：</b>下の台本は、丸暗記しなくて大丈夫。<b>「言いたいこと（上の💬）」さえ分かっていれば</b>、プロンプターの文はスッと自然に出てきます。読むんじゃなく、"分かってる人がしゃべる"感じで。</div>
+</section>
+
+  <section style="border-left:5px solid var(--gold)">
+  <h2>📌 この回の設計図（まずこれだけ読めばOK）</h2>
+
+  <div style="background:#fbf6ea;border:1px solid var(--gold-l);border-radius:10px;padding:14px 18px;margin:10px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em">① この回でやること</div>
+    <div style="font-size:16px;font-weight:700;color:var(--navy);margin:4px 0">会計の前に言う2文（「次回は、3週間後くらいが目安です」＋席の提案）と、案内カード・カルテ・フォローLINEの文面を、明日の営業でそのまま使える形で持ち帰らせる回</div>
+    <ol style="margin:6px 0 0 22px;font-size:13.5px">
+      <li>リピート率をノート1冊で数える方法を見せる（90日ノートに名前と日付を書く＋レジ横で正の字）</li>
+      <li>会計の「前」に言う2文を実演で見せる——「今日も、ありがとうございました。次回は、3週間後くらいが目安です」「ご予定が分かるようでしたら、先にお席を、押さえておきますね」</li>
+      <li>次回提案カード（名刺サイズ・書くのは4項目＝今日のメニュー／おすすめの間隔／次回の目安日／予約方法）を作らせる</li>
+      <li>カルテ（A5・5欄・1人1分）の書き方を見せる——いちばん大事なのは会話メモ1行</li>
+      <li>来店後24〜72時間のフォローLINEと、90日来ていない方への掘り起こしLINEの全文を配る</li>
+      <li>演習で受講生に決めさせる：締めの日数と間隔を決める→カードを手書きで1枚作る→2文を声に出して3回読む</li>
+    </ol>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">② 太郎さんのタスク（手でやること／口で読むこと）</div>
+    <table>
+      <tr><th style="width:50%">🤲 手でやること（実演・撮る絵）</th><th>🗣 口で読むこと（プロンプター）</th></tr>
+      <tr><td>・レジ前の会計実演：2文を言う→カードに目安日をペンで書く→両手で渡す（お客さま役はスタッフ・セリフなし）<br>・同じアングルでもう1テイク（24:30の通し実演用）<br>・通し実演内でカルテを実際に書く手元<br>・S08でカルテ用紙を持ってカメラに面を見せる</td><td>・S01-S02 冒頭挨拶＋ゴール（座り）<br>・S03 計測の一言（座り）<br>・S04-S07 会計実演の前置き＋2文＋断られた場合（レジ前・手元カードを見ながら読んでOK）<br>・S08-S09 カルテの一言（座り）<br>・S10 宿題と締め（座り）</td></tr>
+    </table>
+    <div style="font-size:12px;color:var(--mut);margin-top:4px">合計拘束目安：実演 約8分（レジ前4分×2テイク）＋読み 約4分（座り・プロンプター使用・演技不要）</div>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">③ 画面に入れるクリエイティブ（編集チームへの発注リスト）</div>
+    <table>
+      <tr><th style="width:110px">種類</th><th>作るもの</th><th style="width:130px">使う場面</th></tr>
+      <tr><td>図解</td><td>4点セット進行バー（①測る ②会計前のひとこと ③カルテ ④フォロー。各パート冒頭で該当ブロックが点灯）</td><td>01:00〜全編</td></tr>
+      <tr><td>図解</td><td>90日ノートの見開きモック（左＝名前・初回日、右＝2回目の日付。記入例3行＋空欄行に赤枠）</td><td>03:00 測るパート</td></tr>
+      <tr><td>図解</td><td>正の字ノートのモック（「新」「再」2列＋式「再÷(新＋再)」＋「1日10秒」バッジ）</td><td>05:30 測るパート</td></tr>
+      <tr><td>テンプレ見本</td><td>次回提案カードの実物モック（本日／間隔／目安日／予約方法の4項目・記入例入り）</td><td>07:00 カードパート</td></tr>
+      <tr><td>図解</td><td>「会計の前」タイムライン図（施術→鏡確認→★ここ→会計→お見送り）</td><td>10:00 実演パート</td></tr>
+      <tr><td>比較テロップ</td><td>実演セリフの字幕（S05〜S07全文・2秒以上ホールド）＋お客さま役の想定返答テロップ</td><td>10:00 実演パート</td></tr>
+      <tr><td>テンプレ見本</td><td>カルテA5モック（5欄・会話メモ欄をゴールド強調・「1人1分」バッジ）</td><td>13:30 カルテパート</td></tr>
+      <tr><td>画面キャプチャ</td><td>LINEトーク画面モック2種（フォロー4文／掘り起こし全文。送信時刻は日中表示）</td><td>17:30／21:00</td></tr>
+      <tr><td>実演インサート</td><td>手元素材4本（ノートに日付／正の字1画／カルテ5欄／カードに目安日。各10秒）</td><td>各パート差し込み</td></tr>
+    </table>
+  </div>
+
+  <div class="cards3" style="margin-top:12px">
+    <div class="oc"><div class="l">今日から現場で使える1つ</div><div class="v">会計の前に「次回は、3週間後くらいが目安です」と一言。カードがまだ無くても、明日から言える。</div></div>
+    <div class="oc"><div class="l">宿題</div><div class="v">今週来店したすべてのお客さまに、会計の前に次回の目安を一言→何人に言えたか件数を報告（できれば「その場で予定が決まった人数」も添える）。</div></div>
+    <div class="oc"><div class="l">配布物</div><div class="v">計測シート／次回提案カード／カルテテンプレ／LINE実文集／宿題・チェックシート（配布物パック_v6）</div></div>
+  </div>
+  </section>
+  <section><h2>基本情報</h2><table><tr><th>番号</th><td>PG25</td></tr><tr><th>タイトル</th><td>「次、いつ空いてますか？」の仕組み——次回予約・カルテ・フォロー</td></tr><tr><th>尺</th><td>約33分</td></tr><tr><th>収録形態</th><td>ナレーション主体回＋会計シーン実演再現。太郎さんは①座り収録（OP／計測の一言／カルテの一言／ED＝約4分）＋②レジ前の実演再現（会計前の一言・約4分×2テイク、うち1テイクは通し用）。本編説明はナレーション＋フルスクリーン図解＋手元インサート</td></tr><tr><th>必要機材</th><td>レジ・会計カウンター（実店舗のレジ前でOK）、次回提案カードの実物プロップ（空欄版＋記入例版）、ペン、カルテ用紙（A5）＋バインダー、計測ノート（正の字・90日ノートの記入済み見本）、座り収録用イス（ダークネイビー背景）、ピンマイク、カンペ（S01〜S10を大きく印刷）、スマホ（LINE画面モック用・実機でなく画面素材でも可）、図解用フルスクリーン素材</td></tr><tr><th>モデル</th><td>お客さま役1名（スタッフ可）。<b>セリフなし</b>——うなずき・会釈・カードを受け取る所作のみ。施術実演はなし</td></tr><tr><th>参照PG</th><td>PG17（安全・禁忌／断った日のカルテ記録）／PG18（LINE送信ルール4つ／切り出しの一言のタイミング／松竹梅メニュー）<b style="color:#c0392b">〔要確認: v6最終番号の確定後、ナレ・テロップの呼称を差し替え〕</b></td></tr><tr><th>コンプラ</th><td>効果の断定禁止。「リラクゼーションを目的に」「〜と言われています」に統一。治る／改善／自律神経が整う／育毛はNG。来店間隔の案内は「お店の案内としての目安」であり効果の約束ではない旨を本編・カード・配布物に明示。フォロー文・掘り起こし文に体調の変化を示唆する表現を入れない。掘り起こし1通目に値引きを付けない方針を明示。価格・日付・名前はすべて記入例</td></tr></table></section>
+  <section><h2>タイムコード構成表</h2><table><tr><th>時間</th><th>パート</th><th>内容</th><th>層</th></tr><tr><td>00:00–00:30</td><td>OP</td><td>太郎さん挨拶＋今日のゴール（S01・S02）＋OPテロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>00:30–01:00</td><td>先週の宿題</td><td>前回宿題のふり返り・良い提出例の紹介</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>01:00–03:00</td><td>導入</td><td>なぜ「次の一回」なのか／仕組みの4点セット提示</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>03:00–06:30</td><td>測る</td><td>リピート率の手書き計測法（90日ノート＋正の字）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span> ＋手元インサート</td></tr><tr><td>06:30–07:00</td><td>太郎さん一言</td><td>「数えることから」（S03）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>07:00–10:00</td><td>次回提案の考え方</td><td>会計「前」がベストな理由＋次回提案カードの作り方</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>10:00–13:30</td><td>会計シーン実演</td><td>実演再現（S04〜S06）＋断られた場合（S07）＋分解解説</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>13:30–17:00</td><td>カルテ</td><td>テンプレ5欄・1人1分の書き方・朝の1分の使い方</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span> ＋手元インサート</td></tr><tr><td>17:00–17:30</td><td>太郎さん一言</td><td>カルテを手に（S08・S09）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>17:30–21:00</td><td>LINEフォロー</td><td>来店後24〜72hの実文全文＋送信ルール4つ</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>21:00–24:30</td><td>失客掘り起こし</td><td>90日超の実文全文＋守ること4つ＋値引きを付けない理由</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>24:30–27:00</td><td>通し実演</td><td>会計前2文→カード→カルテ記入→翌日LINEの一連再現</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span></td></tr><tr><td>27:00–30:00</td><td>演習</td><td>一時停止式3ステップ（間隔を決める→カードを作る→声出し）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>30:00–31:30</td><td>復習</td><td>4点セット総ざらい</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>31:30–32:00</td><td>現場で使える1つ</td><td>まとめテロップ「会計の前に、目安をひとこと」</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>32:00–33:00</td><td>ED</td><td>宿題提示＋締め（S10）＋宿題テロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr></table></section>
+  <section><h2>太郎さんセリフ（クリックでその行からプロンプター起動）</h2><div class="serif-card"><div class="sid"><span class="sno">S01</span><span class="scene">OP 00:00–00:30｜座り収録（バストアップ正面・ダークネイビー背景）</span></div><div class="stx">こんにちは。山口太郎です。今日は技術の話ではありません。お客さまに、もう一度来てもらう仕組みを作ります。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S02</span><span class="scene">OP 00:00–00:30｜座り収録</span></div><div class="stx">ゴールはひとつです。会計の前に言う2文と、案内のカードを、明日からお店で使えるようにします。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S03</span><span class="scene">計測の一言 06:30–07:00｜座り収録</span></div><div class="stx">まず、数えるところからです。何人が、もう一度来てくれたか。数えていないと、増えたかどうかも分かりません。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S04</span><span class="scene">会計シーン実演 10:00–13:30｜レジ前・お客さま役と2人</span></div><div class="stx">ここからは、会計の場面を、実際にやってみます。わたしが言うのは、2文だけです。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S05</span><span class="scene">会計シーン実演｜手を止めて、お客さま役の正面で言う</span></div><div class="stx">今日も、ありがとうございました。次回は、3週間後くらいが目安です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S06</span><span class="scene">会計シーン実演｜カードに目安日をペンで書き込んでから、両手で差し出す</span></div><div class="stx">ご案内のカードです。ご予定が分かるようでしたら、先にお席を、押さえておきますね。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S07</span><span class="scene">会計シーン実演（断られた場合）｜カードに書き込んで手渡す</span></div><div class="stx">かしこまりました。目安だけ、こちらに書いておきますね。また、ご連絡ください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S08</span><span class="scene">カルテの一言 17:00–17:30｜カルテ用紙を手に持ち、カメラに面を見せる</span></div><div class="stx">お客さまをお見送りしたら、すぐ、これを書きます。書くのは2つだけです。体のことと、話したことです。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S09</span><span class="scene">カルテの一言 17:00–17:30｜座り収録</span></div><div class="stx">覚えていられないから、書きます。書いておけば、次にいらしたとき、すぐ思い出せます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S10</span><span class="scene">ED 32:00–33:00｜座り収録・言い終えたら軽く会釈</span></div><div class="stx">今週の宿題です。今週いらした、すべてのお客さまに、次回の目安を、ひとこと伝えてください。何人に言えたか、件数の報告をお待ちしています。それでは、また来週。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div></section>
+  <section><h2>ナレーション全文</h2><div class="nar"><h3>先週の宿題・良い例紹介（00:30–01:00）</h3><p>先週の宿題の提出、ありがとうございました。今週も、良い提出をひとつ紹介します。<b style="color:#c0392b">〔要確認: 前回PG24の宿題内容と実提出例。画面に提出物を表示〕</b>手を動かした人から、お店が変わっていきます。今日の宿題は、書くことに加えて、「言う」ことです。最後まで見て、そのまま今週の営業で使ってください。</p></div><div class="nar"><h3>導入：なぜ「次の一回」なのか（01:00–03:00）</h3><p>今日のテーマは、リピートです。タイトルの「次、いつ空いてますか？」は、お客さまの側から出てくる言葉です。この言葉が自然に出てくるお店には、才能ではなく、共通の仕組みがあります。今日は、その仕組みをまるごとお渡しします。</p><p>新しいお客さまを一人呼ぶことと、一度来てくださった方に、もう一度来ていただくこと。かかる手間は、まったく違います。広告も、SNSの発信も、今日は要りません。必要なのは、紙とペンと、LINEだけです。</p><p>今日の仕組みは、4点セットです。1つ、測る。自分の店のリピート率を、手書きで数えられるようにします。2つ、会計前のひとこと。次回の目安を、2文とカード1枚で伝えます。3つ、カルテ。体の記録と、会話のメモを残します。4つ、フォロー。来店後のLINEと、足が遠のいた方への連絡です。どれも、明日の営業からそのまま使える形でお渡しします。</p></div><div class="nar"><h3>測る：リピート率の手書き計測法（03:00–06:30）</h3><p>まず、測り方からです。理由は単純で、数えていないものは、増えたのか減ったのか、分からないからです。レジのシステムも、予約アプリも要りません。ノートが1冊あれば足ります。</p><p>言葉をひとつだけ決めます。この動画では、リピート率をこう決めます。「その月に初めて来てくださったお客さまのうち、90日以内にもう一度来てくださった方の割合」。90日は記入例です。カット中心のお店なら、髪が伸びる周期に合わせて60日でも構いません。大事なのは、自分の店の締めの日数を1つ決めて、途中で変えないことです。</p><p>つけ方です。ノートの見開きを、ひと月分にします。左のページに、その月に初めて来た方の名前と来店日を、1行ずつ書きます。「田中さま・10月2日・カット」。これだけです。その方が二度目に来たら、同じ行の右側に、日付を書き足します。月が締まって90日たったら、数えます。左に書いた人数で、右に日付が入った人数を割る。それが、あなたの店の新規リピート率です。</p><p>もうひとつ、毎日の習慣として、正の字をおすすめします。レジ横のノートに今日の欄をつくり、お会計のたびに、初めての方なら「新」、二度目以降の方なら「再」の下に、正の字を一画ずつ書く。月末に数えると、その月の来店のうち、何割が再来だったかが分かります。1日10秒の作業です。</p><p>数字が出たら、他の店と比べる必要はありません。比べる相手は、先月の自分の店だけです。今日の仕組みを続けて、来月、右側の日付が1人分でも増えていれば、それが答えです。</p></div><div class="nar"><h3>次回提案の考え方：会計「前」と、カード（07:00–10:00）</h3><p>次に、4点セットの2つ目。会計前のひとことです。</p><p>まず、タイミングの話をします。次回の話をするのに、いちばん良い瞬間は、会計の前です。施術が終わり、鏡で仕上がりを確認したあと。お客さまの気持ちが、いちばん落ち着いている時間です。会計が終わってからだと、お客さまはもう帰るモードに入っています。ドアの前で呼び止める形になり、お互いに気まずい。だから、会計の「前」。ここだけ、まず覚えてください。</p><p>そして、長く喋らないことです。次回の提案が押し売りに聞こえるのは、言葉が多いときです。今日は、言葉を2文まで減らします。減らせる理由が、カードです。</p><p>画面を見てください。次回提案カードです。名刺くらいの紙で作ります。書くことは4つ。今日のメニュー。おすすめの間隔。次回の目安日。予約の方法。記入例はこうです。「本日：ヘッドスパ30分。おすすめの間隔：3〜4週間。次回の目安：10月25日ごろ。ご予約はお電話、またはこのLINEで」。</p><p>ひとつ注意です。この間隔は、お店の案内としての目安であって、効果の約束ではありません。「ためたコリをリセット」のような効能の文句は、書きません。日付と方法だけ。それで十分です。</p><p>会計の前に、このカードに目安日をひとこと書き込んで、渡す。あなたが喋るのは2文。あとはカードが説明してくれます。紙に書いてあるものは、押し売りになりません。お客さまが持ち帰って、家でもう一度見られるからです。</p></div><div class="nar"><h3>会計シーン実演再現（10:00–13:30）</h3><p>※パート冒頭でナレーション→太郎さんS04→実演（S05・S06）→ナレ解説→断られた場合（S07）→ナレ解説、の順。</p><p>（S04の前）ここからは、実際の会計の場面を見ていただきます。場所はレジの前。施術が終わって、鏡で仕上がりを確認したあとです。お客さま役はスタッフです。皆さんは、太郎さんの言葉の少なさと、カードの動きだけを見てください。</p><p>（実演S05・S06のあと）いまの流れを分解します。言ったのは2文です。1文目、お礼と目安。「次回は、3週間後くらいが目安です」。2文目、提案。「ご予定が分かるようでしたら、先にお席を押さえておきますね」。ここで予定が決まれば、その場で予約を書き留めます。決まらなければ、日付を書いたカードを渡して終わり。どちらでも成功です。カードが、家まで付いていってくれます。</p><p>では、「予定が分からない」と言われた場合です。</p><p>（S07のあと）追いかけない。日付を書いたカードを渡して、終わりです。ここで粘ると、今日までの心地よい時間が、最後の10秒で消えます。会計前のひとことは、その場で決めさせる時間ではありません。あとで思い出せる形を、渡す時間です。</p></div><div class="nar"><h3>カルテ：5欄・1人1分（13:30–17:00）</h3><p>4点セットの3つ目、カルテです。</p><p>カルテと聞くと大げさに感じるかもしれませんが、A5の紙1枚、書く欄は5つだけです。1人あたり、1分で書けます。</p><p>欄を順番に見ます。1つ目、日付とメニュー。2つ目、体の記録。施術前に頭皮を見た10秒の結果、気になった部位、それから圧の好み。弱め・ふつう・しっかり、の三択に丸をつけるだけでいいです。3つ目、施術メモ。今日やった流れと、時間配分で変えたこと。4つ目が、今日いちばん覚えて帰ってほしい欄です。会話メモ。施術中にお客さまが話してくださったことを、1行だけ書きます。「来月、沖縄に家族旅行」「娘さんが受験」「首の右側は触られるのが苦手」。これだけです。5つ目、次回。カードに書いた目安日と、次回試したいことです。</p><p>なぜ、会話メモが大事なのか。次の来店のとき、開店前にカルテを1分だけ見返して、最初のあいさつにひとこと足せるからです。「沖縄、どうでしたか」。この一言で、お客さまは「覚えていてくれた」と感じます。技術の差は、お客さまには分かりにくいものです。でも、覚えていてくれたことは、一瞬で伝わります。</p><p>書くタイミングは、お客さまをお見送りした直後の1分です。次のお客さまの前に書く。夜にまとめて書こうとすると、忘れますし、続きません。</p><p>それからもうひとつ。安全・禁忌の回でお伝えした、施術をお断りした日の記録。あれも、このカルテに書きます。事実と理由を、ひとことで。カルテは、会話の帳面であると同時に、あなたとお客さまの両方を守る記録でもあります。</p></div><div class="nar"><h3>LINEフォロー：24〜72時間の実文（17:30–21:00）</h3><p>4点セットの4つ目、フォローです。まず、来店後のLINEから。</p><p>送る相手は、その週に来てくださったお客さま。特に、初めての方には必ず送ります。送る時間は、来店の24時間後から、72時間後までのあいだ。当日すぐに送ると、自動送信のようで事務的に見えます。1週間たつと、もう遅い。「翌日から3日以内」と覚えてください。</p><p>実文です。画面の全文を、そのまま使ってください。</p><p>「先日は、ご来店いただきありがとうございました。山口理容店です。仕上がりで気になるところがあれば、いつでもご連絡ください。次回は3週間後ごろが目安です。ご予約は、このLINEにひとことで大丈夫です。」</p><p>4文だけです。お礼。気になるところがあればどうぞ。目安。予約の窓口。これ以上、足さないでください。クーポンも、新メニューの宣伝も、この1通には入れません。この1通の仕事は、売ることではなく、「ここは連絡していいお店だ」と思ってもらうことです。</p><p>送るときのルールは4つです。ルール1、24時間から72時間のあいだに送る。ルール2、売り込みを足さない。ルール3、返信を求めない文にする。「いかがでしたか？」と聞くと、お客さまは返事を書かなければならなくなります。感想は聞かず、窓口だけ開けておく。ルール4、送るのはお店の営業時間内。夜遅くの通知は、それだけで印象を下げます。</p><p>セラピストの方など「仕上がり」という言葉が合わない業態は、「その後、なにか気になることがあれば」に差し替えてください。文の役割は同じです。</p></div><div class="nar"><h3>失客掘り起こし：90日超の実文（21:00–24:30）</h3><p>最後に、足が遠のいたお客さまへの連絡です。</p><p>先ほどの90日ノートを見てください。右側に日付が入らないまま、90日を過ぎた方。その方が、掘り起こしの相手です。ここでも、実文を用意しました。画面の全文です。</p><p>「ご無沙汰しています。山口理容店です。4月にご来店いただいてから少し間があいたので、ご連絡しました。またゆっくり、休みにいらしてください。このLINEへの返信で、ご予約いただけます。」</p><p>守ってほしいことが4つあります。1つ、責めない。「お久しぶりですね、どうされていましたか」は、責められているように読めます。書くのは、最後に来てくださった月の事実だけ。2つ、来なかった理由を聞かない。理由は、聞かれたくないものです。3つ、1通送って返信がなければ、追いかけない。次に送るのは、さらに3か月あとに1回だけ。合計2回で終わりにします。4つ、LINEがつながっていない方には、はがきで同じ文が使えます。手書きの一枚は、想像より強く届きます。</p><p>もうひとつだけ。掘り起こしのLINEに、割引を付けたくなります。でも、最初の1通には付けないでください。「離れた人だけ安くする」は、いま通い続けてくださっている方への説明が付きません。値引きで呼び戻すのではなく、思い出してもらう。それが、この1通の役割です。</p></div><div class="nar"><h3>通し実演：会計から翌日まで（24:30–27:00）</h3><p>仕組みの4点が、そろいました。最後に、会計から翌日までの流れを、通しで見ておきます。</p><p>（通し実演。ナレはポイントのみ被せる）会計の前。2文と、カード。……お見送りのあと、その場で1分、カルテ。体のことをひとつ、話したことをひとつ。……そして翌日。4文のLINEを1通。</p><p>ここまでにかかった時間は、合計でおよそ3分です。この3分が、次の「次、いつ空いてますか？」につながります。特別な話術は、ひとつも使っていません。全部、紙と、先に決めておいた言葉です。</p></div><div class="nar"><h3>演習：一時停止式3ステップ（27:00–30:00）</h3><p>ここからは、あなたの番です。紙とペンを用意して、ステップごとに動画を一時停止して、書き込んでください。</p><p>ステップ1。自分の店の「締めの日数」と「おすすめの間隔」を決めます。カット中心なら60日、リラクゼーションメニュー中心なら90日を目安に、締めの日数をひとつ。おすすめの間隔は、メニューごとにひとつ。決めたら、一時停止してください。</p><p>ステップ2。次回提案カードを1枚、手書きで作ります。書くことは4つ。今日のメニュー、おすすめの間隔、次回の目安、予約の方法。配布のテンプレートを、そのまま写すだけで構いません。効能の言葉が入っていないか、確かめてください。書けたら、一時停止してください。</p><p>ステップ3。会計前の2文を、声に出して3回読みます。「今日も、ありがとうございました。次回は、3週間後くらいが目安です。」「ご予定が分かるようでしたら、先にお席を、押さえておきますね。」数字は、自分の間隔に差し替えてください。3回読むと、明日、口から出るようになります。</p></div><div class="nar"><h3>復習：今日の総ざらい（30:00–31:30）</h3><p>今日の要点をまとめます。</p><p>仕組みは4点セット。測る。会計前のひとこと。カルテ。フォロー。</p><p>測る。ノート1冊。新規は90日で締めて数える。毎日は正の字。比べる相手は、先月の自分の店だけ。</p><p>会計前のひとこと。タイミングは、会計の前。言葉は2文まで。あとはカードに任せる。断られたら、日付を書いたカードを渡して終わり。追わない。</p><p>カルテは5欄、1人1分。いちばん大事なのは、会話メモの1行。書くのは、お見送りの直後。</p><p>フォローのLINEは、24時間から72時間のあいだに、4文だけ。売らない。失客の掘り起こしは、90日で1通。責めない、理由を聞かない、2回で終える、値引きを付けない。</p></div><div class="nar"><h3>今日から現場で使える1つ（31:30–32:00）</h3><p>今日から現場で使える1つは、これです。会計の前に、目安をひとこと。「次回は、3週間後くらいが目安です。」カードがまだ出来ていなくても、この一言だけは、明日から言えます。</p></div></section>
+  <section><h2>テロップ・図解指示</h2><ul class="plain"><li><b>OPテロップ</b>: 「PG25｜『次、いつ空いてますか？』の仕組み」／サブ「次回予約・カルテ・フォロー」。ブランドカラー（ネイビー＋ゴールド）。</li><li><b>先週の宿題（00:30）</b>: 提出物の画面キャプチャを枠付きで表示。<b style="color:#c0392b">〔要確認: PG24宿題の実提出例〕</b></li><li><b>4点セット図（01:00）</b>: 「①測る ②会計前のひとこと ③カルテ ④フォロー」を横並び4ブロックで。以降、各パート冒頭で該当ブロックが点灯する進行バーとして再利用。</li><li><b>リピート率の定義（03:00）</b>: 中央大で「リピート率 ＝ 90日以内に2回目が入った人数 ÷ その月の新規人数」。注記「90日は記入例。カット中心なら60日でも可／締めの日数は1つ決めて変えない」。</li><li><b>90日ノート図解（03:30）</b>: 見開きノートのビジュアルモック。左列「名前・初回日・メニュー」、右列「2回目の日付」。記入例3行（田中さま・10/2・カット→10/28／佐藤さま・10/5・ヘッドスパ→空欄／鈴木さま・10/12・カット→11/20）。空欄の行を赤枠で「→90日過ぎたら掘り起こしの相手」と接続。</li><li><b>正の字図解（05:30）</b>: レジ横ノートのモック。「新」「再」2列に正の字。下部に「月末に数える：再 ÷（新＋再）」。「1日10秒」バッジ。</li><li><b>次回提案カード（07:00）</b>: 名刺サイズカードの実物モックをフルスクリーン。「本日：ヘッドスパ30分／おすすめの間隔：3〜4週間／次回の目安：10月25日ごろ／ご予約：お電話・LINE」。注記「※間隔はお店の案内としての目安です（効果の約束ではありません）」「※効能の文句は書かない」。</li><li><b>会計シーン実演（10:00）</b>: 太郎さんの発話に合わせ、画面下1/3にセリフ全文を字幕表示（S05〜S07。受講生が書き写せるよう2秒以上ホールド）。お客さま役の想定返答はテロップのみで表示（例:「じゃあ、その頃にまた連絡します」）——お客さま役は発声しない。「会計の【前】」を強調するタイムライン図（施術→鏡確認→★ここ→会計→お見送り）。</li><li><b>カルテテンプレ（13:30）</b>: A5用紙モックをフルスクリーン。5欄（①日付・メニュー ②体の記録〔頭皮を見た10秒の結果・気になった部位・圧の好み三択〕 ③施術メモ ④会話メモ〔1行〕 ⑤次回〔目安日・次回試したいこと〕）。会話メモ欄をゴールドで強調。「1人1分／お見送りの直後に書く」バッジ。</li><li><b>フォローLINE実文（17:30）</b>: スマホのトーク画面モックで全文表示。4文それぞれに役割ラベル（お礼／窓口／目安／予約）。ルール4つは1枚ずつテロップ（①24〜72h ②売り込まない ③返信を求めない ④営業時間内）。</li><li><b>失客掘り起こし実文（21:00）</b>: トーク画面モックで全文表示。「責めない・理由を聞かない・2回で終える・値引きを付けない」を番号バッジで。90日ノートの空欄行→この画面への接続矢印を再掲。はがき版の注記を小さく。</li><li><b>通し実演（24:30）</b>: 画面隅に工程チェックリスト（□2文とカード→□カルテ1分→□翌日LINE）が順に埋まる演出。「合計約3分」テロップ。</li><li><b>演習画面（27:00）</b>: ステップ番号を左上大。各ステップ末に一時停止アイコン＋「ここで書き込む」テロップ2秒。</li><li><b>復習テロップ（30:00）</b>: 「4点セット」→「測る」→「会計前のひとこと」→「カルテ」→「フォロー」を1枚ずつ。</li><li><b>まとめテロップ（31:30）</b>: 「今日から現場で使える1つ：会計の前に、目安をひとこと——『次回は、3週間後くらいが目安です。』」</li><li><b>EDテロップ</b>: 「今週の宿題：今週来店した全てのお客さまに『次回の目安』をひとこと→何人に言えたか件数を報告」。</li><li><b>共通コンプラ表記</b>: 間隔・フォローに触れる箇所に常時小さく「※来店間隔はお店の案内としての目安です／リラクゼーションを目的とした内容です」。</li><li><b>注記</b>: 図解内の日付・店名（山口理容店）・名前（田中さま等）・価格・間隔はすべて記入例。テロップに小さく「※日付・店名・間隔はご自身のものに差し替えてください」を併記。</li></ul></section>
+  <section><h2>宿題・配布物</h2><ul class="plain"><li><b>今週の宿題</b>: 今週来店した<b>すべてのお客さま</b>に、会計の前に「次回の目安」をひとこと伝える（例:「次回は、3週間後くらいが目安です」）。カードが間に合わなければ、一言だけでもOK。<b>何人に言えたか、件数を報告する</b>（できれば「うち、その場で次回の予定が決まった人数」も添える）。提出先: <b style="color:#c0392b">〔要確認: 公式LINE／会員サイトのどちらか〕</b></li><li><b>チェックシート1</b>: □ 締めの日数（60日 or 90日）と、メニューごとの「おすすめの間隔」を決めたか</li><li><b>チェックシート2</b>: □ 次回提案カードを作ったか（効能の文句が入っていないか）</li><li><b>チェックシート3</b>: □ 会計前の2文を、声に出して3回読んだか</li><li><b>チェックシート4</b>: □ 伝えたのは会計の「前」だったか（会計後・ドアの前になっていないか）</li><li><b>チェックシート5</b>: □ カルテに会話メモを1行、お見送りの直後に書いたか</li><li><b>配布物</b>（配布物パック_v6.md 参照）: リピート率 手書き計測シート（90日ノート転記用＋正の字デイリー欄）</li><li><b>配布物</b>: 次回提案カード（印刷用原稿・空欄版＋記入例）</li><li><b>配布物</b>: カルテテンプレ（A5・5欄・記入例つき）</li><li><b>配布物</b>: フォローLINE実文集（サンキュー24〜72h／失客90日／失客2回目・はがき流用可）</li><li><b>配布物</b>: 今週の宿題＋件数報告フォーマット＋チェックシート（上記5項目）</li></ul></section>
+  <section><h2>制作メモ</h2><div class="memo"><b>収録形態</b>: 太郎さん収録は2形態・計約12分。①座り収録（OP／S03／S08・S09／ED＝約4分。バストアップ正面・ダークネイビー背景）②レジ前の実演再現（S04〜S07＝約4分×2テイク、うち1テイクは24:30通し用）。実演はロング（レジ前の2人の引き）と手元（カード記入・受け渡し）の2カメ推奨。1カメの場合はカード手元を別撮りしてインサート。<br><b>セリフの読み方</b>: 静かな職人文体。1文ごとに軽く間を取る。実演中のセリフは手元のカードを見ながらゆっくり読んでよい（「決めた言葉を読む」姿がそのまま受講生の手本になる）。ナレ声質は落ち着いた中低音・急がない・専門用語は直後にかみ砕く。<br><b>お客さま役</b>: セリフなし。うなずき・会釈・カードを両手で受け取る、の3所作のみ事前に打ち合わせ。想定返答はすべてテロップで処理する（太郎さんに掛け合い演技をさせない）。<br><b>実演セリフの字幕は必須</b>: 太郎さんの音声と画面の実文を完全一致させる（受講生がそのまま書き写す前提）。S05〜S07は手元カードを見ながらの読み上げで構わない。<br><b>通し実演（24:30）</b>: 10:00の実演と同アングルでもう1テイク回し、「カルテ記入の手元」「翌日のスマホ画面（モック）」を編集でつなぐ。カルテ記入は実際に書いている手元を撮る（文字が読める必要はない。書いている事実が伝わればよい）。<br><b>手元インサート素材</b>: ①90日ノートに日付を書き足す手元 ②正の字を1画書く手元 ③カルテ5欄を書く手元 ④カードに目安日を書く手元。各10秒程度で先に撮り溜めておく。<br><b>LINE画面モック</b>: 実在のお客さま名・アイコンが映らないダミーで作成。店名は「山口理容店」で統一。送信時刻表示は日中（例: 11:00）にする（ルール4「営業時間内」と矛盾させない）。<br><b>数値の扱い</b>: 90日・60日・3〜4週間・3分などはすべて「記入例・目安」であり、業界平均や実績値として提示しない（出典のない数字を断定で載せない）。リピート率の目標値も提示しない（「比べる相手は先月の自分」で統一）。<br><b>コンプラ最終チェック</b>: カード・LINE実文・カルテ記入例に「治る／改善／整う／スッキリ／コリ解消」等が入っていないか納品前に全文検索。間隔の根拠を体の変化で説明しない（「お店の案内としての目安」で通す）。<br><b style="color:#c0392b">〔要確認: ①前回PG24の宿題内容と実提出例（00:30パートの差し替え） ②参照するPG17・PG18のv6最終番号（ナレの「安全・禁忌の回」等の呼称） ③宿題の件数報告の提出先（公式LINEか会員サイトか）に合わせてEDテロップの文言を確定〕</b></div></section>
+  <footer>山口流 理容道｜台本v6｜PG25 「次、いつ空いてますか？」の仕組み——次回予約・カルテ・フォロー｜ⓒ Prorium（社外秘）</footer>
+</div>
+
+<div id="pv">
+  <div class="bar">
+    <button onclick="closePv()">✕ 閉じる(Esc)</button>
+    <button id="mSingle" class="act" onclick="setMode('single')">1枚ずつ</button>
+    <button id="mScroll" onclick="setMode('scroll')">自動スクロール</button>
+    <button onclick="fsz(1)">文字＋</button><button onclick="fsz(-1)">文字−</button>
+    <button id="spD" onclick="spd(-1)" style="display:none">遅く</button><button id="spU" onclick="spd(1)" style="display:none">速く</button>
+    <button id="mir" onclick="mirror()">🪞 ミラー反転</button>
+    <span class="pos" id="pos"></span>
+  </div>
+  <div class="stage" id="stage"><div class="line" id="line"></div></div>
+  <div class="scrollwrap" id="sw" style="display:none"></div>
+  <button class="nav prev" onclick="mv(-1)">‹</button>
+  <button class="nav next" onclick="mv(1)">›</button>
+</div>
+
+<script>
+const LINES = [{"id":"S01","text":"こんにちは。山口太郎です。今日は技術の話ではありません。お客さまに、もう一度来てもらう仕組みを作ります。"},{"id":"S02","text":"ゴールはひとつです。会計の前に言う2文と、案内のカードを、明日からお店で使えるようにします。"},{"id":"S03","text":"まず、数えるところからです。何人が、もう一度来てくれたか。数えていないと、増えたかどうかも分かりません。"},{"id":"S04","text":"ここからは、会計の場面を、実際にやってみます。わたしが言うのは、2文だけです。"},{"id":"S05","text":"今日も、ありがとうございました。次回は、3週間後くらいが目安です。"},{"id":"S06","text":"ご案内のカードです。ご予定が分かるようでしたら、先にお席を、押さえておきますね。"},{"id":"S07","text":"かしこまりました。目安だけ、こちらに書いておきますね。また、ご連絡ください。"},{"id":"S08","text":"お客さまをお見送りしたら、すぐ、これを書きます。書くのは2つだけです。体のことと、話したことです。"},{"id":"S09","text":"覚えていられないから、書きます。書いておけば、次にいらしたとき、すぐ思い出せます。"},{"id":"S10","text":"今週の宿題です。今週いらした、すべてのお客さまに、次回の目安を、ひとこと伝えてください。何人に言えたか、件数の報告をお待ちしています。それでは、また来週。"}];
+let idx=0, fs=6.4, mode='single', speed=1, raf=null;
+const pv=document.getElementById('pv'), line=document.getElementById('line'), pos=document.getElementById('pos'), sw=document.getElementById('sw'), stage=document.getElementById('stage');
+function openPv(i){ if(!LINES.length) return; idx=i||0; pv.classList.add('on'); render(); }
+function closePv(){ pv.classList.remove('on'); stopScroll(); }
+function render(){
+  if(mode==='single'){
+    stage.style.display='flex'; sw.style.display='none';
+    const L=LINES[idx]; line.style.fontSize=fs+'vw'; line.textContent=L.text;
+    pos.textContent=(L.id||('#'+(idx+1)))+'　'+(idx+1)+' / '+LINES.length;
+  }else{
+    stage.style.display='none'; sw.style.display='block';
+    sw.innerHTML=LINES.map(L=>'<div class="sl" style="font-size:'+fs+'vw"><span class="tag">'+(L.id||'')+'</span>'+L.text.replace(/</g,'&lt;')+'</div>').join('');
+    pos.textContent='自動スクロール（速度 '+speed+'）— クリックで一時停止/再開';
+    startScroll();
+  }
+}
+function mv(d){ if(mode!=='single')return; idx=Math.min(LINES.length-1,Math.max(0,idx+d)); render(); }
+function fsz(d){ fs=Math.min(14,Math.max(2.4,fs+d*0.8)); render(); }
+function mirror(){ pv.classList.toggle('mirror'); document.getElementById('mir').classList.toggle('act'); }
+function setMode(m){ mode=m; stopScroll();
+  document.getElementById('mSingle').classList.toggle('act',m==='single');
+  document.getElementById('mScroll').classList.toggle('act',m==='scroll');
+  document.getElementById('spD').style.display=m==='scroll'?'':'none';
+  document.getElementById('spU').style.display=m==='scroll'?'':'none';
+  render(); }
+function spd(d){ speed=Math.min(5,Math.max(1,speed+d)); pos.textContent='自動スクロール（速度 '+speed+'）'; }
+let paused=false;
+function startScroll(){ paused=false; sw.scrollTop=0; const step=()=>{ if(!paused){ sw.scrollTop+=0.4*speed; } raf=requestAnimationFrame(step); }; raf=requestAnimationFrame(step); }
+function stopScroll(){ if(raf)cancelAnimationFrame(raf); raf=null; }
+sw.addEventListener('click',()=>{ paused=!paused; });
+document.addEventListener('keydown',e=>{
+  if(!pv.classList.contains('on'))return;
+  if(e.key==='Escape')closePv();
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();mv(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();mv(-1);}
+});
+document.querySelectorAll('.serif-card').forEach((el,i)=>el.addEventListener('click',()=>openPv(i)));
+</script>
+</body>
+</html>

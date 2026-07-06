@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG24｜「また来たい」の接客・所作——静と動の使い分け｜山口流 理容道 台本v6</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:38px 26px 32px;margin:0 -18px 24px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:24px;font-weight:600;margin:8px 0 8px;line-height:1.5}
+  header .meta{font-size:12.5px;color:#c9d2e0;display:flex;gap:16px;flex-wrap:wrap}
+  .prompter-btn{position:sticky;top:10px;z-index:50;display:flex;justify-content:flex-end;margin-bottom:6px}
+  .prompter-btn button{background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:30px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,26,46,.3)}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:16px 0;box-shadow:0 2px 10px rgba(27,42,74,.05)}
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .oc{background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .oc .l{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+  .oc .v{font-size:13.5px;color:var(--ink);margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  .chip{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;white-space:nowrap}
+  .c1{background:#fbf3dc;color:#9a7b27}.c2{background:#eaf1fa;color:var(--blue)}.c3{background:#eef7f0;color:var(--green)}
+  .serif-card{background:#fffdf8;border:1px solid var(--gold-l);border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0;cursor:pointer}
+  .serif-card:hover{background:#fdf8ec}
+  .serif-card .sid{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .serif-card .sno{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 10px}
+  .serif-card .scene{font-size:11.5px;color:var(--mut)}
+  .serif-card .stx{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;color:var(--ink);line-height:1.9}
+  .serif-card .hint{font-size:10.5px;color:#b6a26d;margin-top:4px}
+  .nar{margin:14px 0}
+  .nar h3{font-size:14px;color:var(--navy);background:#eaf1fa;border-radius:8px;padding:6px 12px;margin-bottom:8px}
+  .nar p{font-size:13.5px;margin:8px 4px;color:#2c3644}
+  ul.plain{list-style:none}
+  ul.plain li{position:relative;padding-left:20px;margin:6px 0;font-size:13.5px}
+  ul.plain li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+  .memo{background:#fff8e8;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin-top:8px}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:30px}
+  /* ===== プロンプター ===== */
+  #pv{position:fixed;inset:0;background:#000;color:#fff;z-index:999;display:none;flex-direction:column}
+  #pv.on{display:flex}
+  #pv .bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#111;flex-wrap:wrap}
+  #pv .bar button{background:#222;color:#fff;border:1px solid #555;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+  #pv .bar button.act{background:var(--gold);color:#000;border-color:var(--gold)}
+  #pv .bar .pos{margin-left:auto;font-size:14px;color:#d8c79b}
+  #pv .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:4vw;overflow:hidden}
+  #pv .line{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;text-align:center;line-height:1.7;white-space:pre-wrap}
+  #pv .scrollwrap{flex:1;overflow-y:auto;padding:20vh 6vw}
+  #pv .scrollwrap .sl{font-family:"Hiragino Mincho ProN",serif;font-weight:600;line-height:1.9;margin:5vh 0;text-align:center;white-space:pre-wrap}
+  #pv .scrollwrap .sl .tag{display:block;font-size:14px;color:#d8c79b;font-family:sans-serif;margin-bottom:8px}
+  #pv.mirror .stage,#pv.mirror .scrollwrap{transform:scaleX(-1)}
+  #pv .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:#888;font-size:34px;padding:18px 10px;cursor:pointer;border-radius:10px}
+  #pv .prev{left:8px}#pv .next{right:8px}
+  @media(max-width:640px){.cards3{grid-template-columns:1fr}header h1{font-size:20px}}
+  @media print{.prompter-btn,#pv{display:none!important}body{background:#fff}section{box-shadow:none;page-break-inside:avoid}}
+  /* ===== 太郎さん専用ガイド ===== */
+  .taro{background:#fffaf0;border:3px solid var(--gold);border-radius:14px;padding:8px 22px 22px}
+  .taro h2{font-size:20px;border:none;background:var(--gold);color:#3a2c08;padding:6px 16px;border-radius:10px;display:block;margin:14px 0 6px}
+  .taro .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.5;margin:6px 0}
+  .taro .row{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+  .taro .ico{font-size:30px;flex:0 0 40px;text-align:center;line-height:1.2}
+  .taro .ttl{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.04em}
+  .taro .txt{font-size:16px;color:var(--ink);line-height:1.75;margin-top:2px}
+  .taro .txt b{color:var(--navy)}
+  .taro .tell{background:#eef7f0;border-left:5px solid var(--green)}
+  .taro .tell .ttl{color:var(--green)}
+  .taro ul.gist{list-style:none;margin:4px 0 0}
+  .taro ul.gist li{position:relative;padding:6px 0 6px 26px;font-size:16px;line-height:1.6}
+  .taro ul.gist li::before{content:"💬";position:absolute;left:0;top:5px;font-size:15px}
+  .taro .tip{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 14px;margin-top:10px;font-size:14.5px;color:#7a5f1e}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ SCRIPT v6</div>
+  <h1>PG24｜「また来たい」の接客・所作——静と動の使い分け</h1>
+  <div class="meta"><span>尺：約34分（合計 約33分40秒）</span><span>形式：実演回（正面セリフS01〜S10＋所作実演＋通し7分ノーカット・声はV01〜V07のみ）</span><span>台本v6（2026-07-02）</span><span>層：<span class="chip c1">🎬 層1 太郎</span> <span class="chip c2">🎙 層2 ナレ</span> <span class="chip c3">📺 層3 テロップ</span></span></div>
+</header>
+<div class="wrap">
+  <div class="prompter-btn"><button onclick="openPv(0)">🎬 プロンプターを開く（太郎さんセリフ）</button></div>
+
+<section class="taro">
+  <h2>👤 太郎さん、まずこれだけ（撮影前に読む）</h2>
+  <div class="big">今日は「あまり話さない接客」と「話す接客」を、お客さまごとに使い分けるやり方を教える回です。</div>
+
+  <div class="row"><div class="ico">🤔</div><div><div class="ttl">なんで大事？</div>
+    <div class="txt">お客さまには、しゃべって気がほぐれる人と、静かにされたほうが気持ちよくなる人がいます。たとえば、新幹線でとなりの人にずっと話しかけられたら、疲れる日もありますよね。でも、寂しがりの友だちには少し話しかけたほうが安心する。<b>お客さまも同じ</b>で、その人に合わせて話す量を変えられると、「またこの人にやってもらいたい」と思ってもらえます。だから、静かにするか話すかは、太郎さんが決めるんじゃなくて<b>お客さまが決める</b>——これが今日の一番の話です。</div></div></div>
+
+  <div class="row"><div class="ico">🙌</div><div><div class="ttl">太郎さんがやること</div>
+    <div class="txt">🤲 <b>手：</b>お迎え〜お見送りまでを、なるべく音を立てずに実演します。道具は「放す」んじゃなくて<b>最後まで指を残して置く</b>（カチャッと鳴らさない）。始める前に手を置いて2〜3秒止まる。お見送りは、そっと離れてドアで一礼。この一連を7分間ノーカットで通しでもやります。<br>🗣 <b>口：</b>正面カメラで読むセリフ（S01〜S10）と、接客中に言う短い決まり文句7つ（V01〜V07＝「いらっしゃいませ」など）。ぜんぶプロンプターに出るので、読めば大丈夫です。</div></div></div>
+
+  <div class="row tell"><div class="ico">💬</div><div><div class="ttl">言いたいことは、ざっくりこれ</div>
+    <ul class="gist"><li>今日は手技じゃなくて「接客」の回。声のかけ方と動き方をやります。</li><li>まず、声を7つだけにして、静かにお迎えからお見送りまで通しでやって見せます。</li><li>でも、静かにするのが全員の正解じゃない。話したいお客さまもいます。</li><li>話すか話さないかを決めるのは、わたしたちじゃなくて、お客さま。黙ってるのは手抜きじゃなくて、手に集中してる時間です。</li></ul></div></div>
+
+  <div class="tip">💡 <b>コツ：</b>下の台本は、丸暗記しなくて大丈夫。<b>「言いたいこと（上の💬）」さえ分かっていれば</b>、プロンプターの文はスッと自然に出てきます。読むんじゃなく、"分かってる人がしゃべる"感じで。</div>
+</section>
+
+  <section style="border-left:5px solid var(--gold)">
+  <h2>📌 この回の設計図（まずこれだけ読めばOK）</h2>
+
+  <div style="background:#fbf6ea;border:1px solid var(--gold-l);border-radius:10px;padding:14px 18px;margin:10px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em">① この回でやること</div>
+    <div style="font-size:16px;font-weight:700;color:var(--navy);margin:4px 0">「話さない接客」のやり方（声は7つ・音は消す）を通しでやって見せて、お客さまごとに話す量をどう決めるかまで持ち帰らせる回</div>
+    <ol style="margin:6px 0 0 22px;font-size:13.5px">
+      <li>迎え入れ〜見送りの所作5つを太郎さんの実演で見せる（手を止めて迎える／音を消す／「始めます」＋静止2〜3秒／圧の確認は序盤に1回だけ／段階的に離れて見送る）</li>
+      <li>お迎え〜お見送りを7分ノーカットで通しで見せる（太郎さんが話すのはV01〜V07の7語だけ。画面右上に「声 0/7」カウンター）</li>
+      <li>「会話でほぐれるお客さま」のサイン5つを、モデルの再現カット＋テロップで見せる</li>
+      <li>「沈黙で深まるお客さま」のサイン5つを、同じくモデル再現＋テロップで見せる</li>
+      <li>初めてのお客さまの見分け手順3つ（様子見のひとこと→返事の長さで仮決め→途中のサインで切り替え）を図解で教える</li>
+      <li>演習で受講生に書かせる（常連3人のタイプ分け／自分の様子見のひとこと／店で消す音1つ）→宿題として提出させる</li>
+    </ol>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">② 太郎さんのタスク（手でやること／口で読むこと）</div>
+    <table>
+      <tr><th style="width:50%">🤲 手でやること（実演・撮る絵）</th><th>🗣 口で読むこと（プロンプター）</th></tr>
+      <tr><td><ul class="plain"><li>所作①〜⑤の実演：手を止めて体を向けてから「いらっしゃいませ」／手のひらで示して半歩前を歩く案内／トレーに布を敷き、はさみ・コームを指を残して置く／クロスを「置く」→「始めます」→静止2〜3秒／圧を段階的に抜いて離れる→会計→ドアで一礼</li><li>通し7分ノーカット：入店対応→案内→クロス→頭部の施術（約2分半・既習手技）→蒸しタオル→クロス外し→会計→見送り</li><li>やらないこと：悪い例の実演なし（雑に置く音はスタッフ別撮り）／お客さま役との即興会話なし（サイン再現はモデル担当）</li></ul></td><td><ul class="plain"><li>S01–S02 冒頭挨拶（正面）</li><li>S03 通し導入（入口の前で手を止めて）</li><li>S04–S05 通し締め＋後半導入（見送り位置）</li><li>S06–S07 「決めるのはお客さま」（手を止めて）</li><li>S08–S10 宿題＋締め（正面）</li><li>V01–V07 接客の定型句7つ（棒読みでOK。所作実演と通しの中で言う）</li></ul></td></tr>
+    </table>
+    <div style="font-size:12px;color:var(--mut);margin-top:4px">合計拘束目安：実演 約17分（所作①〜⑤ 約10分＋通し7分ノーカット）＋読み 約3分（S01〜S10・V01〜V07。読みはプロンプター使用・演技不要）</div>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">③ 画面に入れるクリエイティブ（編集チームへの発注リスト）</div>
+    <table>
+      <tr><th style="width:110px">種類</th><th>作るもの</th><th style="width:130px">使う場面</th></tr>
+      <tr><td>図解</td><td>横帯タイムライン「入店→案内→施術→会計→見送り＝すべてが施術の一部」</td><td>01:10 導入</td></tr>
+      <tr><td>テロップ</td><td>「手を止める→体を向ける→声を出す」3ステップを順に点灯</td><td>03:00 所作①</td></tr>
+      <tr><td>実演インサート</td><td>置く音の聞き比べ（ふつうに置く vs 指を残して置く）＋実音の波形を並べて表示 ※悪い音はスタッフ手元で別撮り</td><td>05:30 所作②</td></tr>
+      <tr><td>カウンターUI</td><td>声カウンター「声 0/7」＋経過時間「00:00 / 07:00」常時表示（発話と完全同期・V字幕2秒ホールド）</td><td>14:20 通し実演</td></tr>
+      <tr><td>テロップ</td><td>場面チップ「お迎え／クロス／始まりの合図／施術／終わりの所作／お見送り」</td><td>通し実演中</td></tr>
+      <tr><td>テロップ＋再現</td><td>会話でほぐれるサイン5つ（番号バッジで1枚ずつ→一覧表。モデルの目線・指先に丸マーカー）</td><td>22:10 見分け①</td></tr>
+      <tr><td>テロップ＋再現</td><td>沈黙で深まるサイン5つ（同形式。まぶた・肩・手のひらに丸マーカー）</td><td>25:00 見分け②</td></tr>
+      <tr><td>アニメ図</td><td>見分けフローチャート「様子見のひとこと→返事の長さで仮決め→途中のサインで切り替え」（会話⇄沈黙の双方向矢印）</td><td>27:30 手順</td></tr>
+      <tr><td>テンプレ見本</td><td>演習画面（ステップ番号大＋一時停止アイコン＋記入例「毎週金曜の方｜沈黙の方｜目を閉じるのが早い」薄表示）</td><td>29:30 演習</td></tr>
+      <tr><td>テロップ</td><td>まとめ「様子見のひとことを、ひとつだけ置く。返ってきた長さに、合わせる。」（#1B2A4A背景・大きく高コントラスト）</td><td>32:30 まとめ</td></tr>
+    </table>
+  </div>
+
+  <div class="cards3" style="margin-top:12px">
+    <div class="oc"><div class="l">今日から現場で使える1つ</div><div class="v">様子見のひとことを、ひとつだけ置く。返ってきた返事の長さに、合わせる。明日の一人目のお客さまから。</div></div>
+    <div class="oc"><div class="l">宿題</div><div class="v">次の営業でお客さまを3人観察し「会話の方／沈黙の方／途中で変わる方」に分け、根拠のサインを1人1つ書いて提出（観察記録シート使用）。あわせて自分の店の「消せる音」を1つ消す。</div></div>
+    <div class="oc"><div class="l">配布物</div><div class="v">所作チェックリスト／接客の声カード（七つの声 V01〜V07）／タイプ見分けシート／観察記録シート＋自己採点シート</div></div>
+  </div>
+  </section>
+  <section><h2>基本情報</h2><table><tr><th>番号</th><td>PG24</td></tr><tr><th>タイトル</th><td>「また来たい」の接客・所作——静と動の使い分け</td></tr><tr><th>尺</th><td>約34分</td></tr><tr><th>収録形態</th><td>実演回。太郎さんは①正面カメラのセリフ（S01〜S10）②所作の実演（発話は定型句V01〜V07のみ）。解説はすべてナレーション（層2）＋テロップ・図解（層3）が担う。後半の「お客さまのサイン」はモデルの再現カット＋テロップで構成（太郎さんに演技をさせない）</td></tr><tr><th>必要機材</th><td>入口→セット面→レジ→ドアの動線が1本で撮れる店舗またはセット<b style="color:#c0392b">〔要確認: 実店舗（山口理容店）かスタジオか〕</b>、理容椅子、クロス・タオル一式、蒸しタオル、ワゴン＋トレー（布敷き用タオル1枚）、はさみ・コーム・ボトル等の道具（音の実演用）、レジまわり小物、ピンマイク（太郎さん）、ガンマイク（所作の実音収録用・生命線）、経過時間テロップ用タイマー、カンペ（S01〜S10大判＋V01〜V07カード）</td></tr><tr><th>モデル</th><td>1名（お客さま役。入店〜施術〜退店の一連＋後半のサイン再現の仕草演技。目を閉じる・指先が動く等の再現はモデルが担う）</td></tr><tr><th>参照PG</th><td>PG20（静止タッチ・段階的な離れ方・テンポ一定）／PG22（顧客体験の設計＝4場面の型。「沈黙は商品の一部」「圧の確認は前半に1回」を本回で技術として深掘りする）／頭皮の軽擦回・太郎ハンド回<b style="color:#c0392b">〔要確認: v6での最終番号。通し内の施術パートで使用する手技の呼称に反映〕</b></td></tr><tr><th>コンプラ</th><td>効果断定禁止。「リラクゼーションを目的に」「〜と言われています」「研究で示唆されています」に統一。治る／改善／自律神経が整う／育毛はNG。「リピート率◯％」等の裏取りのない数字は使わない（本回は定性的な表現のみで構成）。悪い例（雑な音・話しすぎ）は太郎さんに演じさせない</td></tr></table></section>
+  <section><h2>タイムコード構成表</h2><table><tr><th>時間</th><th>パート</th><th>内容</th><th>層</th></tr><tr><td>00:00–00:30</td><td>OP</td><td>太郎さん挨拶＋今日のゴール（S01・S02）＋OPテロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>00:30–01:10</td><td>先週の宿題</td><td>前回宿題のふり返り・良い提出例の紹介</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>01:10–03:00</td><td>導入</td><td>「また来たい」は施術時間だけで決まらない／静けさは所作で支える技術／一律無言は正解ではない（後半予告）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>03:00–05:30</td><td>所作①</td><td>迎え入れと案内——手を止める・手のひらで示す・半歩前</td><td><span class="chip c1">🎬 層1</span>（実演） <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>05:30–08:00</td><td>所作②</td><td>音を消す——トレーに布・最後まで指を残す・足音とドア</td><td><span class="chip c1">🎬 層1</span>（実演） <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>08:00–10:00</td><td>所作③</td><td>始まりの合図——布は置く・「始めます」＋静止2〜3秒</td><td><span class="chip c1">🎬 層1</span>（実演） <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>10:00–12:00</td><td>所作④</td><td>施術中の声——圧の確認は一度・二度目からは手で聞く・工程の予告</td><td><span class="chip c1">🎬 層1</span>（実演） <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>12:00–14:00</td><td>所作⑤</td><td>終わりと見送り——離れ方・会計・「お待ちしております」</td><td><span class="chip c1">🎬 層1</span>（実演） <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>14:00–14:20</td><td>通し導入</td><td>太郎さん一言（S03）※入口の前で手を止めて言う</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>14:20–21:20</td><td>【通し実演】</td><td>静けさの接客・お迎え〜お見送り 7分ノーカット（声は七つだけ・声カウンター表示）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span>（薄め） <span class="chip c3">📺 層3</span></td></tr><tr><td>└ 14:20–15:20</td><td>お迎え〜案内</td><td>V01「いらっしゃいませ」・V02「こちらへ、どうぞ」</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>└ 15:20–16:20</td><td>クロス・タオル</td><td>無言。布を「置く」所作・音を立てない</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>└ 16:20–16:50</td><td>始まりの合図</td><td>V03「始めます」＋静止タッチ2〜3秒</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>└ 16:50–19:20</td><td>施術（抜粋）</td><td>既習の頭部手技約2分半。序盤にV04・工程替わりにV05</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span>（薄め）</td></tr><tr><td>└ 19:20–20:20</td><td>終わりの所作</td><td>段階的に離れる→蒸しタオル→クロス外し→V06</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>└ 20:20–21:20</td><td>会計〜見送り</td><td>会計静かに→ドアまで→V07「お待ちしております」＋一礼</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>21:20–21:40</td><td>通し締め</td><td>太郎さん一言（S04）※見送りのあと、ゆっくり読む</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>21:40–22:10</td><td>後半導入</td><td>太郎さん一言（S05）＋橋渡しナレ「一律無言は正解ではない」</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span></td></tr><tr><td>22:10–25:00</td><td>見分け①</td><td>会話でほぐれるお客さまのサイン5つ（テロップ＋モデル再現）＋接し方ルール</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span>＋モデル再現</td></tr><tr><td>25:00–27:30</td><td>見分け②</td><td>沈黙で深まるお客さまのサイン5つ（テロップ＋モデル再現）＋沈黙と無視の違い</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span>＋モデル再現</td></tr><tr><td>27:30–29:00</td><td>見分けの手順</td><td>様子見のひとこと→返事の長さで決める→途中のサインで切り替え</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span>（図解）</td></tr><tr><td>29:00–29:30</td><td>太郎さん一言</td><td>「決めるのはお客さま」（S06・S07）※手を止めて言う</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>29:30–31:30</td><td>演習</td><td>一時停止式3ステップ（常連3人のタイプ分け→様子見のひとこと→消せる音）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>31:30–32:30</td><td>復習</td><td>七つの声・音消し／サイン早見／手順3つの総ざらい</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>32:30–33:00</td><td>現場で使える1つ</td><td>まとめテロップ「様子見のひとことを、ひとつだけ置く。返ってきた長さに、合わせる」</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>33:00–33:40</td><td>ED</td><td>宿題提示＋締め（S08〜S10）＋宿題テロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td colspan="4" style="background:var(--ivory);font-weight:700;color:var(--navy)">合計：約33分40秒</td></tr></table></section>
+  <section><h2>太郎さんセリフ（クリックでその行からプロンプター起動）</h2><div style="font-size:12px;color:var(--mut);margin-bottom:8px">静かな職人文体。1文ごとに軽く間を取る。動作指示は「手を止めて言う」「ゆっくり読む」のみ。S10のあとに軽く会釈。</div><div class="serif-card"><div class="sid"><span class="sno">S01</span><span class="scene">OP｜00:00–00:30</span></div><div class="stx">こんにちは。山口太郎です。今日は、手技ではなく、接客の回です。声のかけ方と、動き方をやります。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S02</span><span class="scene">OP｜00:00–00:30</span></div><div class="stx">ゴールはひとつ。お客さまに合わせて、話す接客と、話さない接客を使い分けることです。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S03</span><span class="scene">通し導入｜14:00–14:20（入口の前で、手を止めてから読む）</span></div><div class="stx">ここからは、お迎えからお見送りまで、通しでお見せします。わたしが話すのは、七つの声だけです。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S04</span><span class="scene">通し締め｜21:20–21:40（見送りの一礼のあと、余韻を2秒置いてゆっくり読む）</span></div><div class="stx">これが、静けさの接客です。声は七つだけでも、接客はきちんと成立します。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S05</span><span class="scene">後半導入｜21:40–21:55（S04と同ポジションで続けて収録可）</span></div><div class="stx">ただし、無言がいつも正解ではありません。会話のほうが、ほぐれるお客さまもいます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S06</span><span class="scene">見分けの核心｜29:00–29:30（手を止めて言う）</span></div><div class="stx">話すか、話さないか。決めるのは、わたしたちではありません。お客さまです。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S07</span><span class="scene">見分けの核心｜29:00–29:30</span></div><div class="stx">黙っている時間は、手抜きではありません。手に、集中している時間です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S08</span><span class="scene">ED｜33:00–33:40</span></div><div class="stx">今週の宿題です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S09</span><span class="scene">ED｜33:00–33:40</span></div><div class="stx">次の営業で、お客さまを3人、観察してください。会話の方か、沈黙の方か、途中で変わる方か。そう思った理由のサインを、ひとりに一つ、書いて提出してください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S10</span><span class="scene">ED｜33:00–33:40（このあと軽く会釈）</span></div><div class="stx">静も、動も、お客さまが決めます。それでは、また来週。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div style="font-size:12.5px;color:var(--navy);font-weight:700;margin:16px 0 6px;padding-top:10px;border-top:1px dashed var(--line)">通し内・接客の声（V01〜V07・定型句カード）——S番号外だがカンペに含める。毎回同じ調子の棒読みで構わない（定型句を同じ調子で言うことが、そのまま受講生の手本になる）。所作①〜⑤の実演中も同じ定型句を使う。</div><div class="serif-card"><div class="sid"><span class="sno">V01</span><span class="scene">迎え入れ（手を止めて、体を向けてから）</span></div><div class="stx">「いらっしゃいませ。」</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">V02</span><span class="scene">案内（手のひらで示しながら）</span></div><div class="stx">「こちらへ、どうぞ。」</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">V03</span><span class="scene">施術前の予告（このあと静止2〜3秒）</span></div><div class="stx">「始めます。」</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">V04</span><span class="scene">圧の確認（序盤に一度だけ。PG22の型と同じ文言）</span></div><div class="stx">「力加減、いかがですか。」</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">V05</span><span class="scene">工程が変わるときの予告</span></div><div class="stx">「次は、温かいタオルです。」</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">V06</span><span class="scene">終わりの一言（少しゆっくり）</span></div><div class="stx">「お疲れさまでした。」</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">V07</span><span class="scene">見送り（最後の一言）</span></div><div class="stx">「お待ちしております。」</div><div class="hint">▶ クリックでこの行からプロンプター</div></div></section>
+  <section><h2>ナレーション全文</h2><div class="memo">声質: 落ち着いた中低音。急がない。この回はとくに、ナレーション自体も「静けさ」を邪魔しないトーンで。</div><div class="nar"><h3>N1｜先週の宿題・良い例紹介（00:30–01:10）</h3><p>先週の宿題の提出、ありがとうございました。今週も、良い提出をひとつ紹介します。<b style="color:#c0392b">〔要確認: 前回PG23の宿題内容に合わせて、実際の提出例をここで紹介。画面に提出物を表示〕</b>手を動かした分だけ、現場は変わります。今日の宿題は、書くことに加えて「観察すること」です。最後にお伝えします。</p></div><div class="nar"><h3>N2｜導入：「また来たい」は所作で決まる（01:10–03:00）</h3><p>ここまでの回で、手技と、メニューと、価格がそろいました。そしてPG22では、お出迎えからお見送りまで、4つの場面の型を作りました。あの回で「沈黙は商品の一部」とお伝えしています。今日は、その沈黙を商品にするための、具体的な所作の話です。お客さまが「また来たい」と思うかどうかは、施術の時間だけで決まりません。入ってこられた瞬間から、店を出られる瞬間まで。声の掛け方、歩き方、物の置き方。そのすべてが、施術の一部です。</p><p>今日の前半は、「静けさの接客」です。喋らない接客、と言い換えてもいい。会話が得意でなくても成立する、接客の形です。ただし、黙っていればいい、という話ではありません。静けさは、所作の質で支える技術です。声を減らすなら、そのぶん、音と動きを整える必要があります。</p><p>そして後半。ここが今日の肝です。静けさは、すべてのお客さまの正解ではありません。会話でほぐれるお客さまと、沈黙で深まるお客さま。この二つを見分けるサインを、具体的にお渡しします。一律の無言は、接客ではありません。相手に合わせて静と動を使い分ける。それが今日のゴールです。</p></div><div class="nar"><h3>N3｜所作①：迎え入れと案内（03:00–05:30）</h3><p>所作の一つ目は、迎え入れです。画面の太郎さんを見てください。お客さまが入ってこられたら、まず、作業の手を止めて、立つ。何かをしながらの「いらっしゃいませ」は、声が届いても、気持ちが届きません。手を止める。体をお客さまに向ける。それから、声を出す。順番は、これだけです。</p><p>声はふたつで足ります。「いらっしゃいませ」。そして、「こちらへ、どうぞ」。案内のとき、指先で方向を差さないでください。手のひらを上に向けて、腕全体で示します。指差しは命令の形、手のひらは招く形、と言われています。</p><p>歩く速さにも、所作があります。お客さまの半歩前を、お客さまの速さで歩く。先に行きすぎると、置いていかれた感じになります。椅子の前まで来たら、椅子に軽く手を添えて、座る場所を示す。荷物の置き場所も、手のひらで示す。ここまで、声はふたつだけです。それでも、迷わせない。静けさの接客は、声の代わりに、体で案内します。</p></div><div class="nar"><h3>N4｜所作②：音を消す（05:30–08:00）</h3><p>所作の二つ目は、音です。目を閉じたお客さまにとって、音は、視界の代わりになります。金属の音がひとつ鳴るだけで、体は小さく身構えます。</p><p>まず、道具の音。ワゴンのトレーには、タオルを一枚敷いてください。はさみ、コーム、ボトル。置くときは、最後まで指を離さない。放すのではなく、置く。それだけで、金属音は消えます。</p><p>次に、足音とワゴンの音。かかとから、静かに歩く。ワゴンは施術の前に必要な位置へ動かしておき、施術中はキャスターを転がさない。そして、ドアと引き出し。閉まりきる最後の数センチを、手で受け止めます。</p><p>画面で、同じ動作の音を聞き比べてください。ふつうに置いた音と、指を残して置いた音。〔ここで音の比較カット。波形表示〕これは特別な技術ではありません。「最後まで指を残す」という、ひとつの決めごとです。声を減らす接客は、音も減らす接客です。静けさは、黙ることではなく、整えることで生まれます。</p></div><div class="nar"><h3>N5｜所作③：始まりの合図（08:00–10:00）</h3><p>所作の三つ目は、始まりの合図です。クロスやタオルは、掛けるのではなく、置く。布が体に触れる瞬間の重さと速さを、そろえてください。ふわりと置かれた布は、それだけで、始まりの静けさをつくります。</p><p>そして、施術に入る前に、短い予告をひとつ。「始めます」。この一言のあと、すぐには動きません。両手をそっと置いて、2〜3秒、止まる。PG20で扱った、静止タッチです。次に何が起きるかが予測できると、人は安心しやすい、と研究で示唆されています。予告して、置いて、待つ。この三拍子が、始まりの型です。</p><p>逆に、いちばん体がこわばるのは、無言のまま、いきなり触れられることです。静けさの接客でも、この予告だけは、省きません。</p></div><div class="nar"><h3>N6｜所作④：施術中の声は一度＋工程の予告（10:00–12:00）</h3><p>所作の四つ目は、施術中の声です。決めごとは、二つ。</p><p>一つ。圧の確認は、序盤に一度だけ。「力加減、いかがですか」。PG22でお渡しした型と、同じ文言です。序盤に一度聞けば、お客さまは安心して目を閉じられます。何度も聞くと、そのたびに、まどろみから引き戻してしまいます。二度目からは、手で聞いてください。肩が上がっていないか。呼吸が浅くなっていないか。眉のあたりに力が入っていないか。答えは、体に出ています。</p><p>二つ。工程が変わるときだけ、短く予告する。「次は、温かいタオルです」。温度や道具が変わる場面は、体にとって不意打ちになりやすい場面です。予告の声は、雑談ではありません。案内です。静けさの接客で削るのは雑談であって、案内の声は、最後まで削りません。ここを混同すると、静けさではなく、不親切になります。</p></div><div class="nar"><h3>N7｜所作⑤：終わりと見送り（12:00–14:00）</h3><p>所作の五つ目は、終わりと見送りです。終わりの印象は、その日全体の印象を左右しやすい、と言われています。最後の5分は、最初の5分と同じ濃さで扱ってください。</p><p>手の離れ方は、PG20のとおりです。圧を段階的に抜いて、そっと離れる。それから、「お疲れさまでした」。この一言は、少しだけゆっくり。急に事務の速さに戻ると、余韻が消えます。</p><p>会計は、急がせない。金額は、静かに、はっきり。お釣りとカードは、両手で。</p><p>そして、見送りです。ドアまで、あるいは、お客さまの背中が見えなくなるまで。最後にもう一言、「お待ちしております」。売り込みの言葉は、いりません。次の約束を迫るのでもありません。待っています、とだけ伝えて、締めくくる。ここまでが、施術です。</p></div><div class="nar"><h3>N8｜通し実演中・薄めナレ（14:20–21:20）</h3><p>（通し冒頭・14:20頃）ここからは、ナレーションを最小限にします。画面右上に、太郎さんが声を出した回数を表示します。七つの声と、所作だけで、接客がどこまで成立するか。ご自身のお店に置き換えながら、ご覧ください。</p><p>（施術中盤・18:00頃、一言だけ）声の確認は、序盤の一度きり。いまは、手で聞いています。</p><p>（以降、見送りまでナレなし。環境音と手の音を活かす）</p></div><div class="nar"><h3>N9｜後半への橋渡し（21:55–22:10・S05のあと）</h3><p>いま見ていただいた静けさの接客は、強力な型です。ですが、全員の正解ではありません。会話でほぐれるお客さまに沈黙を貫くと、それは静けさではなく、壁になります。ここからは、二つのタイプを見分けるサインを、順番にお渡しします。</p></div><div class="nar"><h3>N10｜見分け①：会話でほぐれるお客さまのサイン（22:10–25:00）</h3><p>まず、会話でほぐれるお客さまのサインです。画面に、五つ出します。</p><p>一つ。自分から話題を出す。こちらが聞いていないことを話し始めたら、それは「話したい」の合図です。</p><p>二つ。鏡越しに、目を合わせてくる。目が合う回数が多い方は、つながりを会話で確かめるタイプと考えてください。</p><p>三つ。返事が、聞いた以上の長さで返ってくる。ひとこと聞いただけで、その日の出来事まで返ってきたら、会話の方です。</p><p>四つ。沈黙になると、指先や足が動く。姿勢を何度も直す。静けさが、この方には落ち着きではなく、手持ち無沙汰になっています。</p><p>五つ。施術者の動きを、目で追っている。目を閉じないのは、眠りたいのではなく、関わっていたいからです。</p><p>このサインが見えたら、会話を受けてください。ただし、守ることが二つあります。一つ、ハンドルはお客さまに握らせたままにする。こちらから話題を継ぎ足したり、質問を重ねたりしない。受けて、返す。それだけで、会話は十分に続きます。二つ、話しながらでも、手の質を落とさない。会話でほぐれる方も、手が留守になった瞬間には、必ず気づきます。</p></div><div class="nar"><h3>N11｜見分け②：沈黙で深まるお客さまのサイン（25:00–27:30）</h3><p>次に、沈黙で深まるお客さまのサインです。五つ、出します。</p><p>一つ。返事が、だんだん短くなる。「はい」「大丈夫です」。これは不機嫌ではありません。言葉の置き場が、いらなくなってきた合図です。</p><p>二つ。目を閉じる。まぶたがゆっくり下りてきたら、会話は、もう仕事を終えています。</p><p>三つ。呼吸が、ゆっくり深くなる。</p><p>四つ。肩が下がる。膝の上の手が、ひらいてくる。</p><p>五つ。声が小さくなり、語尾が消えていく。</p><p>このサインが見えたら、声を一段、引いてください。話しかけるのをやめて、案内の声だけを残す。ここで話し続けると、せっかく深まりかけた時間を、こちらが壊すことになります。</p><p>気をつけてほしいのは、沈黙と無視の違いです。声を引いても、所作では応え続けます。予告はする。布は静かに置く。離れ方は丁寧に。沈黙の接客は、何もしない接客ではありません。声の代わりに、手と所作で、会話を続けている状態です。</p></div><div class="nar"><h3>N12｜見分けの手順3つ（27:30–29:00）</h3><p>では、初めてのお客さまを、どう見分けるか。手順は三つです。</p><p>手順一。最初の3分は、様子見と決める。席に案内して、施術に入るまでのあいだに、答えやすい軽いひとことを、ひとつだけ置きます。天気のこと、来店のお礼、今日のご希望。重い質問は、いりません。</p><p>手順二。返ってきた返事の「長さ」で決める。聞いた以上に長く返ってきたら、会話の方。短く返ってきたら、沈黙の方。この時点では、仮決めで構いません。</p><p>手順三。途中のサインで、いつでも切り替える。タイプは、固定ではありません。前半は話して、まどろんできたら静かになる方が、実際には多くいらっしゃいます。返事が短くなった。目を閉じた。その瞬間が、声を引く合図です。逆に、沈黙だった方が目を開けて鏡を見た。体を起こした。話しかけてきた。それは、会話に戻る合図です。受けて、返してください。</p><p>見分けを間違えても、大丈夫です。サインを見て、途中で合わせ直せばいい。合わせ直せること自体が、技術です。</p></div><div class="nar"><h3>N13｜演習：一時停止式3ステップ（29:30–31:30）</h3><p>ここからは、あなたの番です。紙とペンを用意して、ステップごとに動画を一時停止してください。</p><p>ステップ1。いまのお客さまを、3人思い浮かべてください。お名前でなくても、「毎週金曜の方」で構いません。それぞれを、会話の方、沈黙の方、途中で変わる方、のどれかに仮分けして、根拠になっているサインを、ひとつずつ書きます。書けたら、一時停止してください。</p><p>ステップ2。自分の「様子見のひとこと」を、ひとつ決めて書いてください。次の営業で、最初の3分に置く一言です。答えやすくて、軽いもの。書けたら、一時停止してください。</p><p>ステップ3。自分のお店で「消せる音」を、ひとつ書いてください。トレーの金属音、ドアの音、ワゴンの音。次の営業までに、ひとつだけ消してください。</p><p>これで、静と動の両方に、明日からの一歩がつきました。</p></div><div class="nar"><h3>N14｜復習：今日の総ざらい（31:30–32:30）</h3><p>今日の要点をまとめます。</p><p>前半、静けさの接客。声は、七つで足りる。迎えの二声、始まりの予告、圧の確認は一度、工程の予告、終わりの一言、見送りの一言。削るのは雑談で、案内の声は削らない。そして、声を減らすなら、音を減らす。置くときは、最後まで指を残す。</p><p>後半、見分け方。会話でほぐれる方のサインは、自分から話す、目が合う、返事が長い。沈黙で深まる方のサインは、返事が短くなる、目を閉じる、呼吸が深くなる。最初の3分に様子見のひとことを置いて、返事の長さで決める。途中のサインで、いつでも合わせ直す。</p><p>一律の無言は、正解ではありません。静も動も、お客さまが決めます。</p></div><div class="nar"><h3>N15｜今日から現場で使える1つ（32:30–33:00）</h3><p>今日から現場で使える1つは、これです。様子見のひとことを、ひとつだけ置く。そして、返ってきた返事の長さに、合わせる。明日の一人目のお客さまから、始めてください。</p></div></section>
+  <section><h2>テロップ・図解指示</h2><ul class="plain"><li><b>【OP〜導入】OPテロップ</b>：「山口流 理容道｜PG24　「また来たい」の接客・所作〈静と動の使い分け〉」（ブランドカラー #1B2A4A 背景＋#C5A55A 文字）</li><li><b>先週の宿題（N1裏）</b>：提出物の画面キャプチャを枠付きで表示。<b style="color:#c0392b">〔要確認: PG23宿題の実提出例。掲載許可が取れない場合は運営作成の見本に差し替え〕</b></li><li><b>導入図解（N2裏）</b>：横帯タイムライン「入店→案内→施術→会計→見送り」。施術ブロックだけでなく全帯に「＝すべてが施術の一部」の帯掛け。下部に「前半：静けさの接客の所作／後半：静と動の見分け方」の2部構成予告</li><li><b>所作①テロップ</b>：「手を止める → 体を向ける → 声を出す」（3ステップを順に点灯）／「指で差さない。手のひらで招く」／「半歩前を、お客さまの速さで」</li><li><b>所作②テロップ</b>：「音は、目を閉じたお客さまの視界」／「トレーに布を一枚」／「放さない。最後まで指を残す」。<b>音の聞き比べ演出</b>：「ふつうに置く」vs「指を残して置く」を連続再生し、画面下に実音の波形を並べて表示（差が一目で分かるように）</li><li><b>所作③テロップ</b>：「布は、掛けるのではなく、置く」／「予告して → 置いて → 待つ」（三拍子図）／静止タッチ時に「静止2〜3秒（PG20）」バッジ</li><li><b>所作④テロップ</b>：「圧の確認は、序盤に一度だけ」／「二度目からは、手で聞く：肩・呼吸・眉」（モデルの肩・胸・眉に丸マーカー）／「雑談は削る。案内の声は削らない」（対比枠）</li><li><b>所作⑤テロップ</b>：「最後の5分は、最初の5分と同じ濃さで」／離れ方に「圧を段階的に抜く（PG20）」バッジ／「見送り＝『お待ちしております』で締める」</li><li><b>【通し実演 14:20–21:20】声カウンター</b>：画面右上に「声 0/7」を常時表示。太郎さんが発話するたびに「声 1/7」→「声 7/7」と加算。各発話時は画面下に字幕（V01〜V07の全文）を2秒以上ホールド</li><li><b>経過時間テロップ</b>：声カウンターの下に「00:00 / 07:00」形式で常時</li><li><b>所作チップ</b>：場面切替時に画面下部へ「お迎え」「クロス」「始まりの合図」「施術」「終わりの所作」「お見送り」を小さく表示</li><li><b>無音の可視化</b>：クロス・会計など無言パートでは字幕を出さず、環境音を活かす（テロップ最小限。実演の邪魔をしない）</li><li><b>コンプラ注記</b>（施術パート初出時のみ・小さく）：「※リラクゼーションを目的とした施術です。効果には個人差があります。」</li><li><b>【後半 22:10–29:00】サインテロップ（最重要・仕様指定箇所）</b>：1枚ずつ番号バッジで提示→最後に一覧表<br>・会話でほぐれるお客さまのサイン（5つ）：①自分から話題を出す ②鏡越しに目を合わせてくる ③返事が「聞いた以上の長さ」で返ってくる ④沈黙になると指先・足が動く／姿勢を直す ⑤施術者の動きを目で追う<br>・沈黙で深まるお客さまのサイン（5つ）：①返事が短くなっていく（「はい」「大丈夫です」） ②目を閉じる／まぶたが下りる ③呼吸がゆっくり深くなる ④肩が下がる／手のひらがひらく ⑤声が小さくなり語尾が消える<br>・各サインはモデルの再現カット（目線・指先・肩のアップ）に重ねて表示。該当箇所に丸マーカー</li><li><b>接し方ルール枠（N10末）</b>：「会話の方へ：受けて、返す（話題を継ぎ足さない・質問を重ねない）／手の質を落とさない」</li><li><b>沈黙と無視の対比枠（N11末）</b>：「沈黙の接客＝声を引いても、所作で応え続ける（予告はする・布は静かに・離れ方は丁寧に）」</li><li><b>見分けフロー図解（N12裏）</b>：フローチャート「①最初の3分＝様子見のひとことを1つ置く → ②返事の長さで仮決め（長い＝会話の方／短い＝沈黙の方） → ③途中のサインでいつでも切り替え」。切り替え矢印を双方向で図示（会話⇄沈黙）。下部注記「タイプは固定ではない。合わせ直せることが技術」</li><li><b>【演習〜ED】演習画面</b>：ステップ番号を左上大。各ステップ末に一時停止アイコン＋「ここで書き込む」テロップ2秒。ステップ1は記入例（「毎週金曜の方｜沈黙の方｜目を閉じるのが早い」）を薄く表示</li><li><b>復習テロップ（31:30）</b>：「七つの声＋音を消す」「サイン早見（会話5／沈黙5）」「様子見→長さで決める→途中で合わせ直す」を1枚ずつ</li><li><b>まとめテロップ（32:30）</b>：「今日から現場で使える1つ：様子見のひとことを、ひとつだけ置く。返ってきた長さに、合わせる。」（#1B2A4A 背景・大きく・高コントラスト）</li><li><b>宿題テロップ（S09裏）</b>：「今週の宿題：お客さま3人を観察 →『会話の方／沈黙の方／途中で変わる方』に分け、根拠のサインを1つずつ書いて提出」</li><li><b>締めテロップ</b>：「静も、動も、お客さまが決めます。」→「それでは、また来週。」（#1B2A4A 背景）</li></ul></section>
+  <section><h2>宿題・配布物</h2><ul class="plain"><li><b>今週の宿題</b>：次の営業でお客さまを3人観察し、「会話の方／沈黙の方／途中で変わる方」のどれかに分けて、根拠になったサインを1人につき1つ書いて提出する（配布の観察記録シートを使用）。あわせて、自分の店の「消せる音」を1つ消す。</li><li><b>チェックシート（自己採点用・5項目）</b></li><li>□ お客さまを迎えるとき、手を止めて、体を向けてから声を出したか</li><li>□ 店の音をひとつ消したか（トレーに布／置くとき最後まで指を残す 等）</li><li>□ 圧の確認は序盤の一度にして、二度目からは手（肩・呼吸・眉）で聞いたか</li><li>□ 最初の3分に様子見のひとことを置き、返事の長さでその日の会話量を決めたか</li><li>□ 途中のサイン（返事が短くなる／目を閉じる／鏡を見る 等）で、声の量を合わせ直したか</li><li><b>配布物（配布物パック_v6.md 収録）</b></li><li>静けさの接客 所作チェックリスト（迎え〜見送り・音消しの決めごと）</li><li>接客の声カード（七つの声 V01〜V07・定型句）</li><li>お客さまタイプ見分けシート（サイン早見表＋見分けの手順3つ＋接し方ルール）</li><li>観察記録シート（3人分）＋自己採点チェックシート（上記5項目）</li></ul></section>
+  <section><h2>制作メモ</h2><div class="memo"><b>【撮影】</b><br>・撮影場所：入口→セット面→レジ→ドアの動線が1本で撮れることが必須。<b style="color:#c0392b">〔要確認: 実店舗（山口理容店）で撮るか、スタジオセットか。実店舗の場合は営業時間外に収録し、店内の生活音（冷蔵庫・エアコン・道路音）を事前チェック〕</b><br>・<b>音が生命線の回</b>：BGMなし推奨（付けるとしてもポスプロで最小限）。所作②の聞き比べと通しは、ガンマイクで実音を丁寧に収録。手の音・布の音・足音を活かす<br>・<b>通し7分はノーカット死守</b>：カメラはA＝動線を追う引き（入口・セット面・レジをカバーできる広角固定3点、またはジンバル1台）／B＝手元アップ／C＝表情・鏡越し。開始前にタイマー・カード残量・バッテリー確認<br>・<b>悪い例は太郎さんに演じさせない</b>：「ふつうに（雑に）置く音」の比較カットはスタッフの手元で別撮りする。「話しすぎる接客」の悪い例は映像化せず、ナレーションとテロップのみで扱う<br>・<b>V01〜V07のカンペ</b>はワゴン脇・鏡横など動線上に貼ってよい（画角に入らない位置）。毎回同じ調子の棒読みで構わない——定型句を同じ調子で言えることが手本になる<br>・<b>後半のサイン再現はすべてモデルが担う</b>：目を閉じる、指先が動く、姿勢を直す、鏡越しの目線、肩が下がる等。太郎さんは通常の施術所作のみ。「会話でほぐれる客」の再現は、モデルが話す姿＋太郎さんの手元カットで構成し、<b>太郎さんに即興の会話をさせない</b>（返答が必要な画は撮らず、手元・引きの画とナレで処理する）<br>・モデル動作：通し中は目を閉じ自然な呼吸。サイン再現カットのみ指定の仕草を演じる。私語は音を拾うため再現カット以外では禁止<br><br><b>【編集】</b><br>・<b>声カウンターの精度</b>：太郎さんの発話（V01〜V07）と字幕・カウント加算のタイミングを完全一致させる。発話以外（衣擦れ・咳払い等）はカウントしない<br>・通し中のテロップは最小限（声カウンター・経過時間・所作チップのみ）。静けさが主役の映像なので、画面を賑やかにしない<br>・サインテロップは1枚2秒以上ホールドし、受講生が書き写せる速度で。最後の一覧表は5秒以上表示<br>・施術パートの手技呼称は<b style="color:#c0392b">〔要確認: 軽擦回・太郎ハンド回のv6最終番号〕</b>確定後にバッジ・ナレ収録へ反映<br>・数字・実績の扱い：「リピートの◯割は接客で決まる」等の統計は本回では一切使わない（裏取りのある出典がないため）。定性的表現（「〜と言われています」）のみで構成済み<br><br><b>【セリフ運用】</b><br>・S03・S06は手を止めて言う。通し中に太郎さんのセリフ（S番号）は入れない——通し中の発話はV01〜V07の定型句のみ<br>・S04は見送りの一礼後、余韻を2秒置いてからゆっくり読む<br>・S05はS04と同ポジションで続けて収録してよい（後半への転換はテロップと音楽の変化で見せる）<br><br><b>【要確認事項】</b><br><b style="color:#c0392b">〔要確認: 前回PG23の宿題内容と実提出例（N1パートの差し替え）〕</b><br><b style="color:#c0392b">〔要確認: 撮影場所（実店舗か、動線を組めるスタジオセットか）〕</b><br><b style="color:#c0392b">〔要確認: 通し内の施術パートで使う手技回のv6最終番号（テロップバッジとナレ呼称）〕</b><br><b style="color:#c0392b">〔要確認: 提出方法（LINEか会員サイトか）に合わせて宿題テロップの提出先文言を確定〕</b></div></section>
+  <footer>山口流 理容道｜台本v6｜PG24 「また来たい」の接客・所作——静と動の使い分け｜ⓒ Prorium（社外秘）</footer>
+</div>
+
+<div id="pv">
+  <div class="bar">
+    <button onclick="closePv()">✕ 閉じる(Esc)</button>
+    <button id="mSingle" class="act" onclick="setMode('single')">1枚ずつ</button>
+    <button id="mScroll" onclick="setMode('scroll')">自動スクロール</button>
+    <button onclick="fsz(1)">文字＋</button><button onclick="fsz(-1)">文字−</button>
+    <button id="spD" onclick="spd(-1)" style="display:none">遅く</button><button id="spU" onclick="spd(1)" style="display:none">速く</button>
+    <button id="mir" onclick="mirror()">🪞 ミラー反転</button>
+    <span class="pos" id="pos"></span>
+  </div>
+  <div class="stage" id="stage"><div class="line" id="line"></div></div>
+  <div class="scrollwrap" id="sw" style="display:none"></div>
+  <button class="nav prev" onclick="mv(-1)">‹</button>
+  <button class="nav next" onclick="mv(1)">›</button>
+</div>
+
+<script>
+const LINES = [{"id":"S01","text":"こんにちは。山口太郎です。今日は、手技ではなく、接客の回です。声のかけ方と、動き方をやります。"},{"id":"S02","text":"ゴールはひとつ。お客さまに合わせて、話す接客と、話さない接客を使い分けることです。"},{"id":"S03","text":"ここからは、お迎えからお見送りまで、通しでお見せします。わたしが話すのは、七つの声だけです。"},{"id":"S04","text":"これが、静けさの接客です。声は七つだけでも、接客はきちんと成立します。"},{"id":"S05","text":"ただし、無言がいつも正解ではありません。会話のほうが、ほぐれるお客さまもいます。"},{"id":"S06","text":"話すか、話さないか。決めるのは、わたしたちではありません。お客さまです。"},{"id":"S07","text":"黙っている時間は、手抜きではありません。手に、集中している時間です。"},{"id":"S08","text":"今週の宿題です。"},{"id":"S09","text":"次の営業で、お客さまを3人、観察してください。会話の方か、沈黙の方か、途中で変わる方か。そう思った理由のサインを、ひとりに一つ、書いて提出してください。"},{"id":"S10","text":"静も、動も、お客さまが決めます。それでは、また来週。"},{"id":"V01","text":"「いらっしゃいませ。」"},{"id":"V02","text":"「こちらへ、どうぞ。」"},{"id":"V03","text":"「始めます。」"},{"id":"V04","text":"「力加減、いかがですか。」"},{"id":"V05","text":"「次は、温かいタオルです。」"},{"id":"V06","text":"「お疲れさまでした。」"},{"id":"V07","text":"「お待ちしております。」"}];
+let idx=0, fs=6.4, mode='single', speed=1, raf=null;
+const pv=document.getElementById('pv'), line=document.getElementById('line'), pos=document.getElementById('pos'), sw=document.getElementById('sw'), stage=document.getElementById('stage');
+function openPv(i){ if(!LINES.length) return; idx=i||0; pv.classList.add('on'); render(); }
+function closePv(){ pv.classList.remove('on'); stopScroll(); }
+function render(){
+  if(mode==='single'){
+    stage.style.display='flex'; sw.style.display='none';
+    const L=LINES[idx]; line.style.fontSize=fs+'vw'; line.textContent=L.text;
+    pos.textContent=(L.id||('#'+(idx+1)))+'　'+(idx+1)+' / '+LINES.length;
+  }else{
+    stage.style.display='none'; sw.style.display='block';
+    sw.innerHTML=LINES.map(L=>'<div class="sl" style="font-size:'+fs+'vw"><span class="tag">'+(L.id||'')+'</span>'+L.text.replace(/</g,'&lt;')+'</div>').join('');
+    pos.textContent='自動スクロール（速度 '+speed+'）— クリックで一時停止/再開';
+    startScroll();
+  }
+}
+function mv(d){ if(mode!=='single')return; idx=Math.min(LINES.length-1,Math.max(0,idx+d)); render(); }
+function fsz(d){ fs=Math.min(14,Math.max(2.4,fs+d*0.8)); render(); }
+function mirror(){ pv.classList.toggle('mirror'); document.getElementById('mir').classList.toggle('act'); }
+function setMode(m){ mode=m; stopScroll();
+  document.getElementById('mSingle').classList.toggle('act',m==='single');
+  document.getElementById('mScroll').classList.toggle('act',m==='scroll');
+  document.getElementById('spD').style.display=m==='scroll'?'':'none';
+  document.getElementById('spU').style.display=m==='scroll'?'':'none';
+  render(); }
+function spd(d){ speed=Math.min(5,Math.max(1,speed+d)); pos.textContent='自動スクロール（速度 '+speed+'）'; }
+let paused=false;
+function startScroll(){ paused=false; sw.scrollTop=0; const step=()=>{ if(!paused){ sw.scrollTop+=0.4*speed; } raf=requestAnimationFrame(step); }; raf=requestAnimationFrame(step); }
+function stopScroll(){ if(raf)cancelAnimationFrame(raf); raf=null; }
+sw.addEventListener('click',()=>{ paused=!paused; });
+document.addEventListener('keydown',e=>{
+  if(!pv.classList.contains('on'))return;
+  if(e.key==='Escape')closePv();
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();mv(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();mv(-1);}
+});
+document.querySelectorAll('.serif-card').forEach((el,i)=>el.addEventListener('click',()=>openPv(i)));
+</script>
+</body>
+</html>

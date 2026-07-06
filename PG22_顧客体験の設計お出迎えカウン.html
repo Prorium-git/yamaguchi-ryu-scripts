@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG22｜顧客体験の設計——お出迎え→カウンセリング→施術→お見送り｜山口流 理容道 台本v6</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:38px 26px 32px;margin:0 -18px 24px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:24px;font-weight:600;margin:8px 0 8px;line-height:1.5}
+  header .meta{font-size:12.5px;color:#c9d2e0;display:flex;gap:16px;flex-wrap:wrap}
+  .prompter-btn{position:sticky;top:10px;z-index:50;display:flex;justify-content:flex-end;margin-bottom:6px}
+  .prompter-btn button{background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:30px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,26,46,.3)}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:16px 0;box-shadow:0 2px 10px rgba(27,42,74,.05)}
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .oc{background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .oc .l{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+  .oc .v{font-size:13.5px;color:var(--ink);margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  .chip{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;white-space:nowrap}
+  .c1{background:#fbf3dc;color:#9a7b27}.c2{background:#eaf1fa;color:var(--blue)}.c3{background:#eef7f0;color:var(--green)}
+  .serif-card{background:#fffdf8;border:1px solid var(--gold-l);border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0;cursor:pointer}
+  .serif-card:hover{background:#fdf8ec}
+  .serif-card .sid{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .serif-card .sno{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 10px}
+  .serif-card .scene{font-size:11.5px;color:var(--mut)}
+  .serif-card .stx{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;color:var(--ink);line-height:1.9}
+  .serif-card .hint{font-size:10.5px;color:#b6a26d;margin-top:4px}
+  .nar{margin:14px 0}
+  .nar h3{font-size:14px;color:var(--navy);background:#eaf1fa;border-radius:8px;padding:6px 12px;margin-bottom:8px}
+  .nar p{font-size:13.5px;margin:8px 4px;color:#2c3644}
+  ul.plain{list-style:none}
+  ul.plain li{position:relative;padding-left:20px;margin:6px 0;font-size:13.5px}
+  ul.plain li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+  .memo{background:#fff8e8;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin-top:8px}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:30px}
+  /* ===== プロンプター ===== */
+  #pv{position:fixed;inset:0;background:#000;color:#fff;z-index:999;display:none;flex-direction:column}
+  #pv.on{display:flex}
+  #pv .bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#111;flex-wrap:wrap}
+  #pv .bar button{background:#222;color:#fff;border:1px solid #555;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+  #pv .bar button.act{background:var(--gold);color:#000;border-color:var(--gold)}
+  #pv .bar .pos{margin-left:auto;font-size:14px;color:#d8c79b}
+  #pv .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:4vw;overflow:hidden}
+  #pv .line{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;text-align:center;line-height:1.7;white-space:pre-wrap}
+  #pv .scrollwrap{flex:1;overflow-y:auto;padding:20vh 6vw}
+  #pv .scrollwrap .sl{font-family:"Hiragino Mincho ProN",serif;font-weight:600;line-height:1.9;margin:5vh 0;text-align:center;white-space:pre-wrap}
+  #pv .scrollwrap .sl .tag{display:block;font-size:14px;color:#d8c79b;font-family:sans-serif;margin-bottom:8px}
+  #pv.mirror .stage,#pv.mirror .scrollwrap{transform:scaleX(-1)}
+  #pv .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:#888;font-size:34px;padding:18px 10px;cursor:pointer;border-radius:10px}
+  #pv .prev{left:8px}#pv .next{right:8px}
+  @media(max-width:640px){.cards3{grid-template-columns:1fr}header h1{font-size:20px}}
+  @media print{.prompter-btn,#pv{display:none!important}body{background:#fff}section{box-shadow:none;page-break-inside:avoid}}
+  /* ===== 太郎さん専用ガイド ===== */
+  .taro{background:#fffaf0;border:3px solid var(--gold);border-radius:14px;padding:8px 22px 22px}
+  .taro h2{font-size:20px;border:none;background:var(--gold);color:#3a2c08;padding:6px 16px;border-radius:10px;display:block;margin:14px 0 6px}
+  .taro .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.5;margin:6px 0}
+  .taro .row{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+  .taro .ico{font-size:30px;flex:0 0 40px;text-align:center;line-height:1.2}
+  .taro .ttl{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.04em}
+  .taro .txt{font-size:16px;color:var(--ink);line-height:1.75;margin-top:2px}
+  .taro .txt b{color:var(--navy)}
+  .taro .tell{background:#eef7f0;border-left:5px solid var(--green)}
+  .taro .tell .ttl{color:var(--green)}
+  .taro ul.gist{list-style:none;margin:4px 0 0}
+  .taro ul.gist li{position:relative;padding:6px 0 6px 26px;font-size:16px;line-height:1.6}
+  .taro ul.gist li::before{content:"💬";position:absolute;left:0;top:5px;font-size:15px}
+  .taro .tip{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 14px;margin-top:10px;font-size:14.5px;color:#7a5f1e}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ SCRIPT v6</div>
+  <h1>PG22｜顧客体験の設計——お出迎え→カウンセリング→施術→お見送り</h1>
+  <div class="meta"><span>尺：約34分</span><span>形式：店内ロケ主体（山口理容店 想定）＋座り収録少量</span><span>台本v6（2026-07-02）</span><span>層：<span class="chip c1">🎬 層1 太郎</span> <span class="chip c2">🎙 層2 ナレ</span> <span class="chip c3">📺 層3 テロップ</span></span></div>
+</header>
+<div class="wrap">
+  <div class="prompter-btn"><button onclick="openPv(0)">🎬 プロンプターを開く（太郎さんセリフ）</button></div>
+
+  <section class="taro">
+    <h2>👤 太郎さん、まずこれだけ（撮影前に読む）</h2>
+    <div class="big">お客さんが「また来たい」と思うのは、腕だけじゃなく、入ってきた時から帰るまでの"接し方"で決まる。その流れを先に決めておく回です。</div>
+
+    <div class="row"><div class="ico">🤔</div><div><div class="ttl">なんで大事？</div>
+      <div class="txt">お客さんは、どこをどう揉んだかは覚えていません。覚えているのは「気持ちよく迎えてもらった」「ちゃんと話を聞いてもらえた」という<b>空気</b>のほうです。おいしいレストランでも、店員さんが感じ悪いと「もう行かない」となりますよね。それと同じで、施術の"外側"の接し方が、リピートを左右します。しかも、これは才能じゃなく<b>先に決めておくだけ</b>で誰でもできます。太郎さんの受講生は、お客さんに選ばれたい施術者。だからここが一番効きます。</div></div></div>
+
+    <div class="row"><div class="ico">🙌</div><div><div class="ttl">太郎さんがやること</div>
+      <div class="txt">🤲 <b>手：</b>お出迎え（手を止めて→席へ案内）、カウンセリング（カードを見ながら3つ質問→カルテにメモ→「始めます」と宣言）、お見送り（鏡の前で報告→ドアまで送って会釈）の実演。最後にお出迎え〜お見送りを通しでもう1回。<br>🗣 <b>口：</b>S01〜S10とカード1・2を読むだけ。<b>プロンプターに出る文をそのまま読めばOK</b>。質問はカードを見ながらでいいし、演技もいりません。</div></div></div>
+
+    <div class="row tell"><div class="ico">💬</div><div><div class="ttl">言いたいことは、ざっくりこれ</div>
+      <ul class="gist">
+        <li>お出迎え：「いらっしゃいませ、お待ちしてました。こちらへどうぞ」＝<b>あなたを待ってましたよ</b>と伝えて、席まで案内する。</li>
+        <li>3つ質問：「今日どこが疲れてます？」「力加減は強め？やさしめ？」「このあと予定あります？」＝<b>今日どこを・どのくらいの強さで・どんな終わり方にするか</b>を、お客さん本人に決めてもらう。</li>
+        <li>宣言：「では首と後頭部を中心に30分やります。始めます」＝<b>これから何をするかを先に言ってから</b>始める。これがあるだけでお客さんは安心して体を預けられる。</li>
+        <li>お見送り：「今日は首と後頭部をやりました。今夜はゆっくり休んでください」＝<b>やったことを報告して、ひと言そえて</b>、ドアまで送る。</li>
+      </ul></div></div>
+
+    <div class="tip">💡 <b>コツ：</b>下の台本は、丸暗記しなくて大丈夫。<b>「言いたいこと（上の💬）」さえ分かっていれば</b>、プロンプターの文はスッと自然に出てきます。読むんじゃなく、"分かってる人がしゃべる"感じで。</div>
+  </section>
+
+  <section style="border-left:5px solid var(--gold)">
+  <h2>📌 この回の設計図（まずこれだけ読めばOK）</h2>
+
+  <div style="background:#fbf6ea;border:1px solid var(--gold-l);border-radius:10px;padding:14px 18px;margin:10px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em">① この回でやること</div>
+    <div style="font-size:16px;font-weight:700;color:var(--navy);margin:4px 0">お出迎え→カウンセリング→施術→お見送りの4場面で「何を言うか・何をするか」を先に決めさせる回。核は施術前のヒアリング3質問（お疲れの場所／力加減／このあとの予定）</div>
+    <ol style="margin:6px 0 0 22px;font-size:13.5px">
+      <li>山口理容店のお出迎えを実演で見せる（作業の手を止める→名前で迎える→「どうぞ、こちらへ」と席へ案内）</li>
+      <li>体調確認＋ヒアリング3質問を、太郎さんがカウンセリングカードを読んで見せる（この読み上げが受講生の現場台本になる）</li>
+      <li>施術前の宣言「では、今日は◯◯を中心に、◯分いたします。始めます」の型を見せる</li>
+      <li>お見送りを実演で見せる（終わりの報告→「今夜は、ゆっくりお休みください」→ドアまで見送る）</li>
+      <li>店舗／自宅サロン／出張の3形態への置き換え表を見せる（出張は「到着の型」「辞去の型」に読み替え）</li>
+      <li>受講生に「4場面設計シート」を書かせ、体調確認→3質問→宣言を声に出して3回読ませる</li>
+    </ol>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">② 太郎さんのタスク（手でやること／口で読むこと）</div>
+    <table>
+      <tr><th style="width:50%">🤲 手でやること（実演・撮る絵）</th><th>🗣 口で読むこと（プロンプター）</th></tr>
+      <tr><td><ul style="margin:0 0 0 18px;padding:0">
+        <li>お出迎えの実演：ドアが開く→作業の手を止める→S03→席へ案内（お客さま役モデルあり）</li>
+        <li>カウンセリングの実演：カードを見ながらカード1＋S04〜S06→カルテにメモ→カードを置いてS07の宣言</li>
+        <li>お見送りの実演：鏡の前でS08→ドアを開けて見送り→会釈</li>
+        <li>通し実演：S03→カード1→S04〜S07→S08を同じ文言のままもう1回（施術部分は省略）</li>
+      </ul></td><td><ul style="margin:0 0 0 18px;padding:0">
+        <li>S01-S02 冒頭挨拶＋ゴール（座り収録）</li>
+        <li>S03 お出迎えの一言（店内・ドア前）</li>
+        <li>カード1＋S04-S06 体調確認と3質問（セット椅子・カードを見て読んでよい）</li>
+        <li>S07 施術宣言（セット椅子・カードを置いて）</li>
+        <li>S08 お見送りの一言（ドア前）</li>
+        <li>カード2 圧の確認（読み上げのみ・場面③用）</li>
+        <li>S09-S10 宿題＋締め（座り収録）</li>
+      </ul></td></tr>
+    </table>
+    <div style="font-size:12px;color:var(--mut);margin-top:4px">合計拘束目安：実演約20分（4本・営業前の店内でまとめ撮り）＋読み約5分（S01〜S10＋カード2枚・プロンプター使用・演技不要）</div>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">③ 画面に入れるクリエイティブ（編集チームへの発注リスト）</div>
+    <table>
+      <tr><th style="width:110px">種類</th><th>作るもの</th><th style="width:130px">使う場面</th></tr>
+      <tr><td>図解</td><td>4場面マップ（お出迎え→カウンセリング→施術→お見送りの横一列動線図。③施術だけ「PG10〜20で習得済み」バッジ）</td><td>01:00 導入</td></tr>
+      <tr><td>図解</td><td>お出迎えの型3つ（①手を止める ②名前でお迎え ③案内の一言）——実演リプレイに重ねる番号バッジ</td><td>03:00 場面①</td></tr>
+      <tr><td>図解</td><td>聞く技術の型5つ（手を止める／3つに絞る／復唱／書く／宣言）を1枚ずつ</td><td>07:00 場面②</td></tr>
+      <tr><td>テンプレ見本</td><td>カウンセリングカード実物（配布物1と同デザイン・撮影小道具と兼用）</td><td>07:00〜 場面②</td></tr>
+      <tr><td>比較テロップ</td><td>ヒアリング3質問の全文字幕（画面下1/3・各2秒以上ホールド）＋各質問後に「この質問で決まるもの」図解1枚</td><td>S04〜S06 読み上げ</td></tr>
+      <tr><td>図解</td><td>施術宣言カード「では、今日は◯◯を中心に、◯分いたします。始めます。」（◯◯を空欄強調・「自分のメニューを入れる」注記）</td><td>12:00前後 場面②末</td></tr>
+      <tr><td>図解</td><td>環境チェック4つ（音・温度・光・タオル）アイコン付き＋圧確認の実文カード「力加減、いかがですか。」</td><td>12:30〜 場面③</td></tr>
+      <tr><td>図解</td><td>3属性対応表（店舗／自宅サロン／出張×4場面のフルスクリーン表・ナレに合わせてセルをハイライト）</td><td>19:30 3属性</td></tr>
+      <tr><td>実演インサート</td><td>4場面設計シートの記入見本（手元カット）</td><td>27:30 演習</td></tr>
+      <tr><td>画面キャプチャ</td><td>PG21宿題の実提出例（枠付き表示）〔要確認: 実提出例〕</td><td>00:30 先週の宿題</td></tr>
+    </table>
+  </div>
+
+  <div class="cards3" style="margin-top:12px">
+    <div class="oc"><div class="l">今日から現場で使える1つ</div><div class="v">明日の1人目のお客さまから、ヒアリング3質問——お疲れの場所／力加減／このあとの予定。3つ聞いて、宣言してから始める。</div></div>
+    <div class="oc"><div class="l">宿題</div><div class="v">明日の1人目に3質問＋体調確認→答えをカウンセリングシートに記入して提出。実名NG（イニシャルか「40代・男性」等）。施術前の宣言まで言えたら満点。</div></div>
+    <div class="oc"><div class="l">配布物</div><div class="v">①カウンセリングシート ②4場面設計シート ③3属性対応 早見表 ④宿題チェックシート（配布物パック_v6.md 参照）</div></div>
+  </div>
+  </section>
+  <section><h2>基本情報</h2><table><tr><th>番号</th><td>PG22</td></tr><tr><th>タイトル</th><td>顧客体験の設計——お出迎え→カウンセリング→施術→お見送り</td></tr><tr><th>尺</th><td>約34分</td></tr><tr><th>収録形態</th><td>店内ロケ主体（山口理容店 想定）＋座り収録少量。太郎さんは所作の実演のみ（お出迎え／カウンセリング3質問の読み上げ／施術宣言／お見送り／通し実演）。説明はすべてナレーション（層2）＋図解テロップ（層3）</td></tr><tr><th>必要機材</th><td>店内ロケ画角（入口ドア〜セット椅子が1カットでつながる動線）、ピンマイク×2（太郎さん・環境音用）、カンペ（S01〜S10を大きく印刷）、カウンセリングカード（配布物1と同デザインの実物・小道具）、カルテ用バインダーとペン、お客さま役モデル1名分の上着・荷物（小道具）、図解用フルスクリーン素材、Bロール用施術風景（既存PG映像の流用可）</td></tr><tr><th>モデル</th><td>必要（お客さま役1名。施術なし・所作の相手役のみ。顔出し許諾を事前取得。<b style="color:#c0392b">〔要確認: モデル手配と許諾書〕</b>）</td></tr><tr><th>参照PG</th><td>PG17（安全・禁忌「迷ったら、やらない」）／PG18（切り出しの一言・告知）／PG20（通し実演・15分の型「削らず、絞る」）／PG21（お客様への説明台本・対訳表）／PG23（次回・ホットタオルワークへ接続）</td></tr><tr><th>コンプラ</th><td>効果の断定禁止。「リラクゼーションを目的に」「〜と言われています」「研究で示唆されています」に統一。治る／改善／自律神経が整う／育毛はNG。心理系の知見も断定せず「〜と言われています」で統一。店内映像に実在のお客さま・個人情報（カルテの実名等）が映らないこと</td></tr></table></section>
+  <section><h2>タイムコード構成表</h2><table><tr><th>時間</th><th>パート</th><th>内容</th><th>層</th></tr><tr><td>00:00–00:30</td><td>OP</td><td>太郎さん挨拶＋今日のゴール（S01・S02）＋OPテロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>00:30–01:00</td><td>先週の宿題</td><td>PG21「説明台本」宿題のふり返り・良い提出例の紹介</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>01:00–03:00</td><td>導入</td><td>「もう一度来たい」は施術の外で決まる——顧客体験4場面マップ</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>03:00–07:00</td><td>場面①お出迎え</td><td>山口理容店の型（手を止める／名前／案内の一言）＋太郎さん実演（S03）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>07:00–12:30</td><td>場面②カウンセリング</td><td>聞く技術の型5つ＋ヒアリング3質問の読み上げ（S04〜S06）＋施術宣言（S07）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>12:30–16:00</td><td>場面③施術中の体験</td><td>声の設計（始まりの一言・圧の確認は1回）＋環境の設計（音・温度・光・タオル）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span>＋Bロール</td></tr><tr><td>16:00–19:30</td><td>場面④お見送り</td><td>型3つ（終わりの報告／渡す一言／どこまで見送るか）＋太郎さん実演（S08）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>19:30–23:30</td><td>3属性対応表</td><td>店舗／自宅サロン／出張——4場面の翻訳表</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>23:30–27:30</td><td>通し実演</td><td>お出迎え→3質問→施術宣言→（施術は省略）→お見送りをノーカットで</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span>（最小）</td></tr><tr><td>27:30–30:30</td><td>演習</td><td>一時停止式3ステップ（自分の4場面シートを書く→声出し）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>30:30–32:00</td><td>復習</td><td>4場面の型＋聞く技術5つ＋3属性の総ざらい</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>32:00–32:30</td><td>現場で使える1つ</td><td>まとめテロップ「明日の1人目から、ヒアリング3質問」</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>32:30–33:30</td><td>ED</td><td>宿題提示（S09）＋締め（S10）＋宿題テロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr></table></section>
+  <section><h2>太郎さんセリフ（クリックでその行からプロンプター起動）</h2><div class="serif-card"><div class="sid"><span class="sno">S01</span><span class="scene">（OP・挨拶｜00:00–00:30）</span></div><div class="stx">こんにちは。山口太郎です。今日は、施術の前と後の接客を決めます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S02</span><span class="scene">（OP・今日のゴール｜00:00–00:30）</span></div><div class="stx">ゴールはひとつです。お出迎えからお見送りまで、自分の店の流れを決めることです。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S03</span><span class="scene">（場面①お出迎え・実演｜ドアの方へ体を向け、手を止めてから言う。言い終えてから席へ案内の所作）</span></div><div class="stx">いらっしゃいませ。お待ちしていました。どうぞ、こちらへ。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S04</span><span class="scene">（場面②カウンセリング・質問1｜カウンセリングカードを見ながら読んでよい。カメラ目線不要。答えを待つ間を置く）</span></div><div class="stx">今日は、どのあたりが、いちばんお疲れですか。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S05</span><span class="scene">（場面②カウンセリング・質問2｜カードを見ながら。1問ごとに答えを待つ間を置く）</span></div><div class="stx">力加減は、強めと、やさしめ、どちらがお好みですか。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S06</span><span class="scene">（場面②カウンセリング・質問3｜カードを見ながら。答えの音声は使わない・編集でナレを重ねる）</span></div><div class="stx">このあとは、お出かけですか。それとも、ゆっくりできますか。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S07</span><span class="scene">（場面②・施術宣言｜カードを置き、手を止めて言う）</span></div><div class="stx">では、今日は首と後頭部を中心に、30分いたします。始めます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S08</span><span class="scene">（場面④お見送り・実演｜ドアの前で。言い終えてから軽く会釈）</span></div><div class="stx">今日は、首と後頭部を中心にやりました。今夜は、ゆっくりお休みください。お気をつけて。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S09</span><span class="scene">（ED・宿題提示｜座り収録）</span></div><div class="stx">今週の宿題です。明日の1人目のお客さまに、今日の3つの質問を、使ってください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S10</span><span class="scene">（ED・締め｜座り収録。言い終えたあとに軽く会釈）</span></div><div class="stx">先に決めておけば、迷いません。今日の流れを、明日から使ってください。それでは、また来週。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">カード1</span><span class="scene">（読み上げ台本カード・体調確認｜質問に入る前に毎回・省略しない）</span></div><div class="stx">今日、体調で気になるところはありますか。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">カード2</span><span class="scene">（読み上げ台本カード・施術中の圧確認｜前半に1回だけ）</span></div><div class="stx">力加減、いかがですか。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div></section>
+  <section><h2>ナレーション全文</h2><p style="font-size:12px;color:#5b6676;margin:0 4px 6px">声質: 落ち着いた中低音。急がない。専門用語は直後にかみ砕く。</p><div class="nar"><h3>先週の宿題・良い例紹介（00:30–01:00）</h3><p>先週の宿題は、説明台本を1つ、実際にお客さまに話して、反応をメモすることでした。提出、ありがとうございました。今週も、良い提出をひとつ紹介します。<b style="color:#c0392b">〔要確認: 実提出例。確定後に画面に提出物を表示〕</b>「〜と言われています」で止める言い方、みなさん、きれいに守れていました。説明の言葉が決まると、施術に自信が乗ります。今日はその一歩先。言葉の「置き場所」、つまり、お客さまとの時間全体を設計します。</p></div><div class="nar"><h3>導入：「もう一度来たい」は施術の外で決まる（01:00–03:00）</h3><p>ここまでの回で、手技は揃いました。メニューと価格も作りました。説明の言葉も持ちました。それでも、お客さまが「もう一度来たい」と思うかどうかは、施術の腕だけでは決まりません。</p><p>思い出してみてください。自分が客として通っている店のことを。覚えているのは、施術の細かい手順ではないはずです。迎えられたときの空気。聞いてもらえたという感覚。帰りぎわの、ひとこと。体験の記憶は、施術の前と後ろに宿ります。終わりの印象が全体の記憶を大きく左右する、とも言われています。</p><p>今日は、山口理容店で行われている流れを、誰でも使える「型」にして渡します。<b style="color:#c0392b">〔要確認: 撮影前に太郎さんへ実際の流れをヒアリングし、型の細部をすり合わせること〕</b>場面は4つです。お出迎え。カウンセリング。施術。お見送り。この4場面を、順番に設計します。そして最後に、店舗の方、自宅サロンの方、出張の方、それぞれの形に翻訳します。</p><p>大事なことを先に言います。今日やることに、才能もセンスも要りません。全部、先に「決めておく」だけです。決めてあるから、迷わない。迷わないから、静かで、丁寧に見える。それが職人の接客です。</p></div><div class="nar"><h3>場面①お出迎え（03:00–07:00）</h3><p>場面の1つ目、お出迎えです。まず、実演をご覧ください。</p><p style="color:#5b6676">（太郎さん実演: ドアが開く→手を止める→S03→席へ案内。ナレは実演後に再開）</p><p>いまの流れを、型にします。お出迎えの型は3つです。</p><p>型の1、手を止める。ドアが開いたら、していた作業の手を止めて、体をお客さまに向けます。掃除をしながら、片付けをしながらの「ながら迎え」は、それだけで体験の始まりを軽くします。最初の10秒は、今日の時間の入り口です。予測できる、落ち着いた始まり方は、安心につながると研究で示唆されています。</p><p>型の2、名前でお迎えする。2回目以降のお客さまには、「いらっしゃいませ」の前か後ろに、名前をつけます。「田中さん、いらっしゃいませ」。名前を呼ばれた瞬間に、その人は「大勢の客のひとり」ではなく、「覚えられているひとり」になります。予約表を見て、次のお客さまの名前を先に確認しておく。それだけで、できることです。</p><p>型の3、案内の一言まで、自分の仕事にする。「どうぞ、こちらへ」。席を指で差すのではなく、言葉と体で案内します。上着や荷物があれば、「お預かりします」。お客さまが席に着いて、荷物の置き場所に迷わない状態まで作って、お出迎えは完了です。</p><p>もうひとつだけ。お出迎えは、ドアが開く前から始まっています。入り口まわりの床、ドアの取っ手、待ち席。お客さまが最初に目にする場所と、最初に手を触れる場所を、朝いちばんに整えておく。これも型のうちです。</p></div><div class="nar"><h3>場面②カウンセリング：聞く技術（07:00–12:30）</h3><p>場面の2つ目、カウンセリングです。今日の回の、中心です。</p><p>うまく話す必要はありません。カウンセリングは、話す技術ではなく、聞く技術です。そして聞く技術は、その場のセンスではなく、先に決めた質問を、順番に聞くことです。</p><p>聞く技術の型は5つです。1、手を止めて聞く。準備をしながら聞かない。2、質問は3つに絞る。多く聞くほど良いわけではありません。長い問診は、それだけでお客さまを疲れさせます。3、答えを復唱する。「首まわりですね」。オウム返しでかまいません。聞いてもらえた、という感覚は、復唱から生まれます。4、書く。カルテにメモを取る姿を、あえて見せてください。自分の答えが記録される、それは大切に扱われているということです。5、最後に宣言する。今日やることを、ひとことで伝えてから始めます。</p><p>質問に入る前に、確認をひとつ。「今日、体調で気になるところはありますか」。これは質問ではなく、安全のための確認です。PG17でやった「迷ったら、やらない」は、ここで働きます。体調がすぐれない日、皮ふに気になるところがある日は、無理をしない。ここは毎回、省略しません。</p><p>では、3つの質問です。ここからは、太郎さんが実際に読みます。この質問文が、そのまま、あなたの現場の台本になります。</p><p style="color:#5b6676"><b>（S04）</b></p><p>質問の1つ目は、今日の状態です。「どのあたりが、いちばんお疲れですか」。この質問で、今日の施術の中心が決まります。PG20でやりましたね。15分は、削らず、絞る。どこに絞るかを決めるのは、施術者の勘ではなく、お客さまの答えです。</p><p style="color:#5b6676"><b>（S05）</b></p><p>質問の2つ目は、力加減です。圧の好みは、人によってまったく違います。そして、圧のミスマッチは、不満のいちばん大きな原因になりやすいところです。先に聞いておけば、施術中に迷いません。「強め」と答えた方にも、最初はやや控えめから入って、様子を見て合わせていく。それはこれまでの回でやってきたとおりです。</p><p style="color:#5b6676"><b>（S06）</b></p><p>質問の3つ目は、このあとの予定です。意外に思うかもしれませんが、これが仕上がりを決めます。このあとお出かけの方なら、髪の仕上げを整えて、時間どおりに終える。このあとゆっくりできる方なら、リラクゼーションを目的に、余韻を残して終える。同じ30分でも、終わり方が変わります。予定を聞くことは、詮索ではなく、仕上がりの設計です。</p><p>3つの答えが揃ったら、復唱して、書いて、最後に宣言します。</p><p style="color:#5b6676"><b>（S07）</b></p><p>この宣言がある施術と、ない施術では、お客さまの安心がまるで違います。何をされるか分かっている時間と、分からない時間。同じ手技でも、体の預け方が変わります。カウンセリングは、ここまでで完了です。時間にして、2分から3分。それで十分です。</p></div><div class="nar"><h3>場面③施術中の体験（12:30–16:00）</h3><p>場面の3つ目、施術です。手技そのものは、これまでの回で学んだとおりです。ここで設計するのは、施術「中」の体験。つまり、声と、環境です。</p><p>まず、声の設計です。決めることは3つ。始まりの一言。「始めます」。これはさきほどの宣言の最後につけました。途中の声かけは、基本、なし。リラクゼーションを目的とした時間では、沈黙は気まずさではなく、商品の一部です。ただし、圧の確認だけは、前半に1回入れます。「力加減、いかがですか」。この一言だけ、画面に出しておきます。あなたの現場でそのまま使ってください。確認は1回で足ります。何度も聞くと、お客さまは休めません。</p><p>次に、環境の設計です。チェックは4つ。音。BGMの音量と、施術者自身が立てる音。ワゴンの物音、足音。道具は始まる前に、手の届く場所へ。温度。部屋の温度と、手の温度。冷たい手は、それだけで体をこわばらせます。光。仰向けの施術なら、照明がお客さまの目に直接入らないか、一度、自分が寝て確かめてください。そして、タオル。掛け方、外し方、最後の手の離れ方。PG20でやった「段階的な離れ方」は、体験の設計そのものです。</p><p>温めの演出については、次回、まるごと1本使ってやります。ホットタオルです。コストはほとんどかからずに、体験が一段上がる回になりますので、楽しみにしていてください。</p></div><div class="nar"><h3>場面④お見送り（16:00–19:30）</h3><p>場面の4つ目、お見送りです。まず、実演をご覧ください。</p><p style="color:#5b6676">（太郎さん実演: 施術後、鏡の前→S08→ドアまで見送り。ナレは実演後に再開）</p><p>お見送りの型は3つです。</p><p>型の1、終わりの報告。「今日は、首と後頭部を中心にやりました」。カウンセリングで聞いたこと、宣言したことと、報告がひとつの線でつながります。聞いて、宣言して、報告する。この3点が揃うと、お客さまの中で「ちゃんと見てもらえた」という記憶になります。</p><p>型の2、渡す一言。「今夜は、ゆっくりお休みください」。効果の約束ではありません。今夜の過ごし方を、ひとつだけ添える。言葉はこれだけで十分です。ここで長く話す必要はありません。</p><p>型の3、どこまで見送るかを決めておく。会計を終えたら、ドアまでお送りして、ドアを開ける。そして、お客さまの姿が見えているあいだは、まだ仕事の中です。最後の10秒の所作が、その日の体験全体の印象を締めくくります。終わりの印象が記憶を左右する、と言われている以上、ここを流してはいけません。</p></div><div class="nar"><h3>3属性対応表：店舗／自宅サロン／出張（19:30–23:30）</h3><p>ここまでの4場面を、あなたの営業の形に翻訳します。画面の対応表を見てください。店舗の方、自宅サロンの方、出張の方の3列です。</p><p>まず、店舗の方。今日の型は、ほぼそのまま使えます。強みは、動線が全部、自分のものだということです。入り口、待ち席、セット面。朝の整えから、ドアの外の見送りまで、今日の型をそのまま置いてください。</p><p>次に、自宅サロンの方。お出迎えは、玄関から始まります。表札や案内が分かりにくければ、予約時に道順と入り方をメッセージで先に送っておく。玄関には、お客さま用のスリッパと、荷物の置き場所。そして、生活感との仕切りです。施術の空間から、家族の気配や生活の音が見えない、聞こえない状態を作る。インターホンと家族には、施術中である時間を先に伝えておきます。お見送りは、玄関まで。ドアが閉まるまでが仕事です。</p><p>そして、出張の方。ここだけ、立場が逆になります。迎えるのではなく、お邪魔する側です。お出迎えの型は、「到着の型」に翻訳します。約束の5分前に着く。遅れそうなら早めに連絡する。玄関で靴を揃える。荷物を置く場所は、勝手に決めずに、お尋ねする。準備は、静かに、手早く。カウンセリングの3質問は、そのまま使います。ただし、準備をしながら聞かない。手を止めて聞く、はここでも同じです。環境は借り物ですから、持ち込むもので整えます。タオル、音、香りを使うなら、必ず先に許可をいただく。お見送りの型は、「辞去の型」に翻訳します。片付けを終えたら、使わせていただいた場所を、来たときより整えて帰る。最後の一言は同じです。「今夜は、ゆっくりお休みください」。</p><p>3つの形で、言葉と場所は変わります。でも、骨組みは1本です。手を止めて迎える。3つ聞いて、宣言する。静かに施術する。報告して、一言渡して、最後まで見送る。この骨組みは、どの形でも変わりません。</p></div><div class="nar"><h3>通し実演（23:30–27:30）</h3><p>ここからは、通しでご覧ください。お出迎えから、お見送りまで。使う言葉は、今日出てきたものだけです。新しいことは、何も起きません。それが今日の答えです。</p><p style="color:#5b6676">（通し実演: S03→体調確認の所作→S04〜S06→S07→〈施術は省略テロップ〉→S08。ナレなし・環境音のみ）</p><p>（通し終わりに）ご覧のとおりです。特別な話術は、ひとつもありませんでした。先に決めてあるから、迷わない。迷わないから、所作が静かになる。お客さまの体験は、この静けさの上に乗ります。</p></div><div class="nar"><h3>演習：一時停止式3ステップ（27:30–30:30）</h3><p>ここからは、あなたの番です。配布の「4場面設計シート」と、ペンを用意してください。ステップごとに動画を一時停止して、書き込んでください。</p><p>ステップ1。自分の店の、お出迎えの一言と、お見送りの一言を書きます。お出迎えは、「いらっしゃいませ」に何を足すか。名前か、「お待ちしていました」か。お見送りは、終わりの報告と、渡す一言。今日の型の言葉を、そのまま写すところから始めてかまいません。書けたら、一時停止してください。</p><p>ステップ2。ヒアリング3質問を、自分の店の言葉に直します。直さなくても使えるように作ってありますので、そのままでもかまいません。変えるなら、聞く順番は変えずに、言い回しだけ。体調確認の一言も、シートの先頭に入っています。書けたら、一時停止してください。</p><p>ステップ3。声に出して、3回読んでください。体調確認、質問1、2、3、そして宣言。「では、今日は◯◯を中心に、◯分いたします」の◯◯には、自分の主力メニューの中心を入れます。書く練習ではなく、口の練習です。3回読むと、明日、口から出ます。</p></div><div class="nar"><h3>復習：今日の総ざらい（30:30–32:00）</h3><p>今日の要点をまとめます。</p><p>顧客体験は4場面。お出迎えは、手を止める、名前、案内の一言。カウンセリングは、聞く技術。手を止めて、3つに絞って、復唱して、書いて、宣言する。施術中は、声を最小に、環境を整える。お見送りは、報告、渡す一言、最後まで見送る。</p><p>そして、店舗、自宅サロン、出張。形が違っても、骨組みは1本。全部、才能ではなく、先に決めておくことです。</p></div><div class="nar"><h3>今日から現場で使える1つ（32:00–32:30）</h3><p>今日から現場で使える1つは、これです。明日の1人目のお客さまから、ヒアリング3質問。どこがお疲れか。力加減はどうか。このあとの予定はどうか。この3つを聞いて、宣言してから、始めてください。施術は同じでも、体験が変わります。</p></div></section>
+  <section><h2>テロップ・図解指示</h2><ul class="plain"><li><b>OPテロップ</b>: 「PG22｜顧客体験の設計」／サブ「お出迎え→カウンセリング→施術→お見送り」。ブランドカラー（ネイビー#1B2A4A＋ゴールド#C5A55A）。</li><li><b>先週の宿題（00:30）</b>: 提出物の画面キャプチャを枠付きで表示。<b style="color:#c0392b">〔要確認: PG21宿題の実提出例〕</b></li><li><b>4場面マップ（01:00）</b>: 横一列の動線図「①お出迎え → ②カウンセリング → ③施術 → ④お見送り」。施術（③）だけ既習の印（「PG10〜20で習得済み」バッジ）を付け、今日の主戦場が①②④であることを色で示す。キーワード「先に決めておくだけ」を下部に大きく。</li><li><b>お出迎えの型（03:00）</b>: 実演リプレイに重ねて型3つを番号バッジで表示。「①手を止める ②名前でお迎え ③案内の一言まで」。補足テロップ「お出迎えはドアが開く前から（入口・取っ手・待ち席を朝いちに整える）」。コンプラ注記「※安心の記述は研究による示唆です」は不要（断定回避文体で処理済み）。</li><li><b>聞く技術の型5つ（07:00）</b>: 1枚ずつ「①手を止めて聞く ②質問は3つに絞る ③復唱する ④書く（姿を見せる） ⑤宣言して始める」。</li><li><b>体調確認テロップ（07:00台）</b>: カード風の枠で「今日、体調で気になるところはありますか。」全文表示。「※毎回・省略しない」を小さく併記。</li><li><b>ヒアリング3質問（S04〜S06）</b>: 太郎さんの読み上げに合わせ、画面下1/3に質問文全文を字幕表示（受講生が書き写せるよう各2秒以上ホールド）。各質問の後に「この質問で決まるもの」を1枚図解——質問1→「今日の中心（絞る場所）」／質問2→「圧の基準」／質問3→「終わり方・仕上がり」。</li><li><b>施術宣言（S07）</b>: カード風の枠で型を表示「では、今日は◯◯を中心に、◯分いたします。始めます。」（◯◯部分を空欄強調・「自分のメニューを入れる」注記）。</li><li><b>施術中の声の設計（12:30）</b>: 図解「始まりの一言 → （沈黙＝商品の一部） → 圧の確認は前半に1回だけ」。圧確認の実文カード「力加減、いかがですか。」を全文表示。</li><li><b>環境チェック4つ（14:00前後）</b>: アイコン付きで「音／温度／光／タオル」。「照明は一度、自分が寝て確かめる」を添える。</li><li><b>次回予告ミニテロップ（15:30前後）</b>: 「次回PG23：ホットタオルワーク——温めの演出」。</li><li><b>お見送りの型（16:00）</b>: 実演リプレイに重ねて「①終わりの報告 ②渡す一言 ③姿が見えるあいだは仕事」。線でつなぐ図解「聞く（質問1）→ 宣言（S07）→ 報告（S08）」＝一本の線。</li><li><b>3属性対応表（19:30）</b>: フルスクリーンの表。列＝店舗／自宅サロン／出張、行＝お出迎え／カウンセリング／施術／お見送り。ナレーションの読み上げに合わせてセルをハイライト。出張列は見出しを「到着の型」「辞去の型」に置き換え表示。下部注記「骨組みは1本。言葉と場所だけ翻訳する」。</li><li><b>通し実演（23:30）</b>: 冒頭に「通し——今日の言葉だけで」テロップ。施術パートは「〜施術（約30分）は省略〜」の中間テロップでジャンプ。字幕は太郎さんの発話と完全一致させる。</li><li><b>演習画面（27:30）</b>: ステップ番号を左上大。各ステップ末に一時停止アイコン＋「ここで書き込む」テロップ2秒。シートの記入見本（手元）をインサート。</li><li><b>復習テロップ（30:30）</b>: 「4場面の型」「聞く技術5つ」「3属性＝翻訳」を1枚ずつ。</li><li><b>まとめテロップ（32:00）</b>: 「今日から現場で使える1つ：明日の1人目から、ヒアリング3質問——お疲れの場所／力加減／このあとの予定」。</li><li><b>EDテロップ</b>: 「今週の宿題：明日の1人目のお客さまに3質問→カウンセリングシートに記入して提出」。<b style="color:#c0392b">〔要確認: 提出先（LINEか会員サイトか）の文言〕</b></li><li><b>共通コンプラ表記</b>: 効能に触れうる箇所に常時小さく「※リラクゼーションを目的とした内容です／効果には個人差があります」。</li><li><b>注記</b>: 図解内の店名・名前（田中さん等）・メニュー名・時間はすべて記入例。「※ご自身の店のものに差し替えてください」を併記。</li></ul></section>
+  <section><h2>宿題・配布物</h2><ul class="plain"><li><b>今週の宿題</b>: 明日の1人目のお客さまに、ヒアリング3質問（＋体調確認）を使う。答えをカウンセリングシートに記入して提出する。お客さまの実名は書かない（イニシャルか「40代・男性」等でOK）。施術に入る前の宣言（「では、今日は◯◯を中心に〜」）まで言えたら満点。</li><li><b>チェックシート（自己採点用）1</b>: □ 手を止めて、体を向けてからお出迎えできたか（ながら迎えをしなかったか）</li><li><b>チェックシート 2</b>: □ 体調確認のひとことを、省略せずに言えたか</li><li><b>チェックシート 3</b>: □ 3質問を順番どおりに聞き、答えを復唱してからメモしたか</li><li><b>チェックシート 4</b>: □ 施術前に「今日は◯◯を中心に、◯分」と宣言できたか</li><li><b>チェックシート 5</b>: □ お見送りで「終わりの報告＋渡す一言」を言い、最後まで見送れたか</li><li><b>配布物1</b>: カウンセリングシート（読み上げ質問文＋記入欄・現場でそのまま使える版）※配布物パック_v6.md 参照</li><li><b>配布物2</b>: 4場面設計シート（模範＝山口理容店の型を左、自分の店を右に書き込む式）</li><li><b>配布物3</b>: 3属性対応 早見表（店舗／自宅サロン／出張×4場面）</li><li><b>配布物4</b>: 宿題チェックシート（上記5項目）</li></ul></section>
+  <section><h2>制作メモ</h2><div class="memo"><b>撮影は店内ロケが本体。</b>入口ドア→待ち席→セット椅子→ドアの動線が撮れる時間帯（営業前推奨）に、実演4本（お出迎え／カウンセリング／お見送り／通し）をまとめて収録する。OPとEDは座り収録（バストアップ・ダークネイビー背景）でも店内でも可。<br><br><b style="color:#c0392b">〔要確認: 撮影前ヒアリング（最重要）〕</b> 本台本の「山口理容店の型」（お出迎えの流れ・お見送りの一言・見送る範囲）は制作側で設計した初稿。撮影前に太郎さんへ実際の流れを確認し、事実と異なる箇所は実演・図解・ナレの該当部分を差し替えること。太郎さんが普段使っている言い回しがあれば、S03・S08はそちらを優先してよい（1〜3文・平叙文の範囲で）。<br><br><b>お客さま役モデル</b>: 施術なし・所作の相手役のみ。入店→着席→（施術省略）→退店の動きだけ。顔出し許諾を書面で取得。モデルの音声（質問への答え）は本編で使わない——答える「間」だけ撮り、答えの内容はナレと図解で処理する（モデルのセリフ管理を不要にするため）。<br><br><b>S04〜S06の撮り方</b>: 太郎さんはカウンセリングカード（配布物1と同デザインの実物）を見ながら読んでよい。「カードを見ながら聞く」姿がそのまま受講生の手本になる。質問の語尾を上げる必要はない。平らな読みで成立するよう、字幕と図解で質問であることを示す。<br><br><b>通し実演</b>: ノーカット風に見せるが、実際はカットを割ってよい。施術部分は中間テロップでジャンプ。環境音（ドア、足音、布の音）を活かすため、通しのみBGMを絞る。通し実演（23:30–27:30）は新規セリフなし。S03→S04→S05→S06→S07→S08を同じ文言のまま通す。<br><br><b>カルテの小道具</b>: 実在のお客さま情報が映らないダミーを用意。記入例の名前は「田中」等の記入例で統一し、テロップで「記入例」と明示。<br><br><b>Bロール割当（12:30–16:00）</b>: 施術風景はPG20（通し実演）ほか既存映像を流用。タオルワークのカットは次回PG23の予告を兼ねるため、ホットタオルではなく通常タオルの掛け外しに限定する。<br><br><b>薬機法チェックポイント</b>: 「渡す一言」は過ごし方の挨拶であり、効果の約束にしないこと（「楽になります」「よく眠れます」等への言い換えはNG。台本どおり「今夜は、ゆっくりお休みください」を維持）。心理系知見（安心・記憶）はすべて「〜と言われています／示唆されています」で統一済み。編集時に断定形へ縮めない。<br><br><b>セリフの文体</b>: 静かな職人文体。1文ごとに軽く間を取る。動作指示は最小限のみ。<br><br><b style="color:#c0392b">〔要確認: 一覧〕</b> ①山口理容店の実際のお出迎え・お見送りの流れ（撮影前ヒアリングで型と実演を確定） ②PG21宿題の実提出例（00:30パートで画面表示するもの） ③宿題の提出先文言（LINEか会員サイトか） ④お客さま役モデルの手配と顔出し許諾 ⑤店内ロケの撮影可能日時（営業前枠）</div></section>
+  <footer>山口流 理容道｜台本v6｜PG22 顧客体験の設計——お出迎え→カウンセリング→施術→お見送り｜ⓒ Prorium（社外秘）</footer>
+</div>
+
+<div id="pv">
+  <div class="bar">
+    <button onclick="closePv()">✕ 閉じる(Esc)</button>
+    <button id="mSingle" class="act" onclick="setMode('single')">1枚ずつ</button>
+    <button id="mScroll" onclick="setMode('scroll')">自動スクロール</button>
+    <button onclick="fsz(1)">文字＋</button><button onclick="fsz(-1)">文字−</button>
+    <button id="spD" onclick="spd(-1)" style="display:none">遅く</button><button id="spU" onclick="spd(1)" style="display:none">速く</button>
+    <button id="mir" onclick="mirror()">🪞 ミラー反転</button>
+    <span class="pos" id="pos"></span>
+  </div>
+  <div class="stage" id="stage"><div class="line" id="line"></div></div>
+  <div class="scrollwrap" id="sw" style="display:none"></div>
+  <button class="nav prev" onclick="mv(-1)">‹</button>
+  <button class="nav next" onclick="mv(1)">›</button>
+</div>
+
+<script>
+const LINES = [{"id":"S01","text":"こんにちは。山口太郎です。今日は、施術の前と後の接客を決めます。"},{"id":"S02","text":"ゴールはひとつです。お出迎えからお見送りまで、自分の店の流れを決めることです。"},{"id":"S03","text":"いらっしゃいませ。お待ちしていました。どうぞ、こちらへ。"},{"id":"S04","text":"今日は、どのあたりが、いちばんお疲れですか。"},{"id":"S05","text":"力加減は、強めと、やさしめ、どちらがお好みですか。"},{"id":"S06","text":"このあとは、お出かけですか。それとも、ゆっくりできますか。"},{"id":"S07","text":"では、今日は首と後頭部を中心に、30分いたします。始めます。"},{"id":"S08","text":"今日は、首と後頭部を中心にやりました。今夜は、ゆっくりお休みください。お気をつけて。"},{"id":"S09","text":"今週の宿題です。明日の1人目のお客さまに、今日の3つの質問を、使ってください。"},{"id":"S10","text":"先に決めておけば、迷いません。今日の流れを、明日から使ってください。それでは、また来週。"},{"id":"カード1","text":"今日、体調で気になるところはありますか。"},{"id":"カード2","text":"力加減、いかがですか。"}];
+let idx=0, fs=6.4, mode='single', speed=1, raf=null;
+const pv=document.getElementById('pv'), line=document.getElementById('line'), pos=document.getElementById('pos'), sw=document.getElementById('sw'), stage=document.getElementById('stage');
+function openPv(i){ if(!LINES.length) return; idx=i||0; pv.classList.add('on'); render(); }
+function closePv(){ pv.classList.remove('on'); stopScroll(); }
+function render(){
+  if(mode==='single'){
+    stage.style.display='flex'; sw.style.display='none';
+    const L=LINES[idx]; line.style.fontSize=fs+'vw'; line.textContent=L.text;
+    pos.textContent=(L.id||('#'+(idx+1)))+'　'+(idx+1)+' / '+LINES.length;
+  }else{
+    stage.style.display='none'; sw.style.display='block';
+    sw.innerHTML=LINES.map(L=>'<div class="sl" style="font-size:'+fs+'vw"><span class="tag">'+(L.id||'')+'</span>'+L.text.replace(/</g,'&lt;')+'</div>').join('');
+    pos.textContent='自動スクロール（速度 '+speed+'）— クリックで一時停止/再開';
+    startScroll();
+  }
+}
+function mv(d){ if(mode!=='single')return; idx=Math.min(LINES.length-1,Math.max(0,idx+d)); render(); }
+function fsz(d){ fs=Math.min(14,Math.max(2.4,fs+d*0.8)); render(); }
+function mirror(){ pv.classList.toggle('mirror'); document.getElementById('mir').classList.toggle('act'); }
+function setMode(m){ mode=m; stopScroll();
+  document.getElementById('mSingle').classList.toggle('act',m==='single');
+  document.getElementById('mScroll').classList.toggle('act',m==='scroll');
+  document.getElementById('spD').style.display=m==='scroll'?'':'none';
+  document.getElementById('spU').style.display=m==='scroll'?'':'none';
+  render(); }
+function spd(d){ speed=Math.min(5,Math.max(1,speed+d)); pos.textContent='自動スクロール（速度 '+speed+'）'; }
+let paused=false;
+function startScroll(){ paused=false; sw.scrollTop=0; const step=()=>{ if(!paused){ sw.scrollTop+=0.4*speed; } raf=requestAnimationFrame(step); }; raf=requestAnimationFrame(step); }
+function stopScroll(){ if(raf)cancelAnimationFrame(raf); raf=null; }
+sw.addEventListener('click',()=>{ paused=!paused; });
+document.addEventListener('keydown',e=>{
+  if(!pv.classList.contains('on'))return;
+  if(e.key==='Escape')closePv();
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();mv(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();mv(-1);}
+});
+document.querySelectorAll('.serif-card').forEach((el,i)=>el.addEventListener('click',()=>openPv(i)));
+</script>
+</body>
+</html>

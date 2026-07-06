@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG27｜プロの土台——衛生・環境＋手を壊さないセルフケア｜山口流 理容道 台本v6</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:38px 26px 32px;margin:0 -18px 24px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:24px;font-weight:600;margin:8px 0 8px;line-height:1.5}
+  header .meta{font-size:12.5px;color:#c9d2e0;display:flex;gap:16px;flex-wrap:wrap}
+  .prompter-btn{position:sticky;top:10px;z-index:50;display:flex;justify-content:flex-end;margin-bottom:6px}
+  .prompter-btn button{background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:30px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,26,46,.3)}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:16px 0;box-shadow:0 2px 10px rgba(27,42,74,.05)}
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .oc{background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .oc .l{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+  .oc .v{font-size:13.5px;color:var(--ink);margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  .chip{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;white-space:nowrap}
+  .c1{background:#fbf3dc;color:#9a7b27}.c2{background:#eaf1fa;color:var(--blue)}.c3{background:#eef7f0;color:var(--green)}
+  .serif-card{background:#fffdf8;border:1px solid var(--gold-l);border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0;cursor:pointer}
+  .serif-card:hover{background:#fdf8ec}
+  .serif-card .sid{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .serif-card .sno{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 10px}
+  .serif-card .scene{font-size:11.5px;color:var(--mut)}
+  .serif-card .stx{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;color:var(--ink);line-height:1.9}
+  .serif-card .hint{font-size:10.5px;color:#b6a26d;margin-top:4px}
+  .nar{margin:14px 0}
+  .nar h3{font-size:14px;color:var(--navy);background:#eaf1fa;border-radius:8px;padding:6px 12px;margin-bottom:8px}
+  .nar p{font-size:13.5px;margin:8px 4px;color:#2c3644}
+  ul.plain{list-style:none}
+  ul.plain li{position:relative;padding-left:20px;margin:6px 0;font-size:13.5px}
+  ul.plain li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+  .memo{background:#fff8e8;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin-top:8px}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:30px}
+  /* ===== プロンプター ===== */
+  #pv{position:fixed;inset:0;background:#000;color:#fff;z-index:999;display:none;flex-direction:column}
+  #pv.on{display:flex}
+  #pv .bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#111;flex-wrap:wrap}
+  #pv .bar button{background:#222;color:#fff;border:1px solid #555;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+  #pv .bar button.act{background:var(--gold);color:#000;border-color:var(--gold)}
+  #pv .bar .pos{margin-left:auto;font-size:14px;color:#d8c79b}
+  #pv .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:4vw;overflow:hidden}
+  #pv .line{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;text-align:center;line-height:1.7;white-space:pre-wrap}
+  #pv .scrollwrap{flex:1;overflow-y:auto;padding:20vh 6vw}
+  #pv .scrollwrap .sl{font-family:"Hiragino Mincho ProN",serif;font-weight:600;line-height:1.9;margin:5vh 0;text-align:center;white-space:pre-wrap}
+  #pv .scrollwrap .sl .tag{display:block;font-size:14px;color:#d8c79b;font-family:sans-serif;margin-bottom:8px}
+  #pv.mirror .stage,#pv.mirror .scrollwrap{transform:scaleX(-1)}
+  #pv .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:#888;font-size:34px;padding:18px 10px;cursor:pointer;border-radius:10px}
+  #pv .prev{left:8px}#pv .next{right:8px}
+  @media(max-width:640px){.cards3{grid-template-columns:1fr}header h1{font-size:20px}}
+  @media print{.prompter-btn,#pv{display:none!important}body{background:#fff}section{box-shadow:none;page-break-inside:avoid}}
+  /* ===== 太郎さん専用ガイド ===== */
+  .taro{background:#fffaf0;border:3px solid var(--gold);border-radius:14px;padding:8px 22px 22px}
+  .taro h2{font-size:20px;border:none;background:var(--gold);color:#3a2c08;padding:6px 16px;border-radius:10px;display:block;margin:14px 0 6px}
+  .taro .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.5;margin:6px 0}
+  .taro .row{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+  .taro .ico{font-size:30px;flex:0 0 40px;text-align:center;line-height:1.2}
+  .taro .ttl{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.04em}
+  .taro .txt{font-size:16px;color:var(--ink);line-height:1.75;margin-top:2px}
+  .taro .txt b{color:var(--navy)}
+  .taro .tell{background:#eef7f0;border-left:5px solid var(--green)}
+  .taro .tell .ttl{color:var(--green)}
+  .taro ul.gist{list-style:none;margin:4px 0 0}
+  .taro ul.gist li{position:relative;padding:6px 0 6px 26px;font-size:16px;line-height:1.6}
+  .taro ul.gist li::before{content:"💬";position:absolute;left:0;top:5px;font-size:15px}
+  .taro .tip{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 14px;margin-top:10px;font-size:14.5px;color:#7a5f1e}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ SCRIPT v6</div>
+  <h1>PG27｜プロの土台——衛生・環境＋手を壊さないセルフケア</h1>
+  <div class="meta"><span>尺：約35分（本編実演 約21分＋分解リプレイ 約9分＋復習・宿題・ED 約5分）</span><span>形式：実演回（解説＝ナレ＋テロップ／太郎さんはOP・ED＋一言5回のみ発話）</span><span>台本v6（2026-07-02）</span><span>層：<span class="chip c1">🎬 層1 太郎</span> <span class="chip c2">🎙 層2 ナレ</span> <span class="chip c3">📺 層3 テロップ</span></span></div>
+</header>
+<div class="wrap">
+  <div class="prompter-btn"><button onclick="openPv(0)">🎬 プロンプターを開く（太郎さんセリフ）</button></div>
+
+  <section class="taro">
+    <h2>👤 太郎さん、まずこれだけ（撮影前に読む）</h2>
+    <div class="big">今日は、手技(マッサージ)はやりません。「手とタオルをきれいに保つ準備」と「自分の手を痛めないためのケア」を、そのままお手本として見せる回です。</div>
+
+    <div class="row"><div class="ico">🤔</div><div><div class="ttl">なんで大事？</div>
+      <div class="txt">お客様は、技術のうまさより先に「この人にさわられて大丈夫かな」を感じ取ります。<b>初めて入るお店で、テーブルがベタついていたら、料理を食べる前に帰りたくなりますよね。</b>それと同じで、手が清潔・爪がなめらか・タオルが気持ちいい——この土台があって初めて、お客様は安心してくれます。そしてもう一つ。太郎さんたちは「手」でごはんを食べている仕事です。<b>手が壊れたら、仕事そのものが止まります。</b>だから、お客様を守る準備と、自分の手を守るケア。この2つを見せる、いちばん大事な回です。</div></div></div>
+
+    <div class="row"><div class="ico">🙌</div><div><div class="ttl">太郎さんがやること</div>
+      <div class="txt">🤲 <b>手：</b>①20〜30秒の手洗いと爪やすり ②タオルを「きれい・温かい・使った」の3つに分けて置く ③ベッドの準備と、施術の前・後の片づけを通しでやる ④足を前後に開いて体重で押す立ち方 ⑤手のウォームアップとストレッチ＝朝の3分ルーティンを止めずに1本。<br>🗣 <b>口：</b>OPの挨拶(S01・S02)、実演の合間の一言(S03〜S07)、ED(S08〜S10)。全部プロンプターに出るので、<b>読めばOK。演技はいりません。</b></div></div></div>
+
+    <div class="row tell"><div class="ico">💬</div><div><div class="ttl">言いたいことは、ざっくりこれ</div>
+      <ul class="gist">
+        <li>今日はマッサージじゃなくて「準備」と「自分の手のケア」の回。地味だけど、これを省くプロはいない。</li>
+        <li>手洗いは、指の間とつめの先が残りやすい。急いでても、この2か所だけは絶対に省かない。</li>
+        <li>タオルは「きれい・温かい・使った」の3つに分ける。ぐちゃっと混ぜないこと、それだけ。</li>
+        <li>押すのは腕の力じゃなく、体重を前にかけた重さで。親指だけで押さない、手首はまっすぐ。そのほうが手が疲れない。</li>
+        <li>朝の3分ケアは、歯みがきと同じ習慣。続けた人だけが、長く現場に立てる。</li>
+      </ul></div></div>
+
+    <div class="tip">💡 <b>コツ：</b>下の台本は、丸暗記しなくて大丈夫。<b>「言いたいこと（上の💬）」さえ分かっていれば</b>、プロンプターの文はスッと自然に出てきます。読むんじゃなく、"分かってる人がしゃべる"感じで。</div>
+  </section>
+
+  <section style="border-left:5px solid var(--gold)">
+  <h2>📌 この回の設計図（まずこれだけ読めばOK）</h2>
+
+  <div style="background:#fbf6ea;border:1px solid var(--gold-l);border-radius:10px;padding:14px 18px;margin:10px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em">① この回でやること</div>
+    <div style="font-size:16px;font-weight:700;color:var(--navy);margin:4px 0">施術の前後に毎回やる衛生の手順（手洗い・タオル・ベッド準備）と、自分の手を痛めないための朝3分ストレッチを、そのまま真似できる形で見せる回</div>
+    <ol style="margin:6px 0 0 22px;font-size:13.5px">
+      <li>20〜30秒の手洗いと爪の整え方を実演で見せる（指の間・つめの先を手元マクロで撮る）</li>
+      <li>タオルを「清潔・温・使用済み」の三つに分けて置く実演を見せる（温タオルの作り方＋腕の内側での温度確認込み）</li>
+      <li>ベッドのシーツ・高さ・道具配置を整え、施術前5ステップ／施術後5ステップのルーティンを通しで見せる</li>
+      <li>手首をまっすぐ保ち、腕でなく体重で押す立ち方を横アングルで見せる（腱鞘炎の予防）</li>
+      <li>手のウォームアップ3動作＋ストレッチ4動作を、実際の秒数どおり等速で見せる</li>
+      <li>朝の3分ルーティンを、タイマー表示つきで止めずに1本通す</li>
+    </ol>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">② 太郎さんのタスク（手でやること／口で読むこと）</div>
+    <table>
+      <tr><th style="width:50%">🤲 手でやること（実演・撮る絵）</th><th>🗣 口で読むこと（プロンプター）</th></tr>
+      <tr><td><ul class="plain"><li>手洗い一連（ぬらす→泡立て→指の間→親指→指先・つめ→すすぎ→ペーパー→消毒）＋爪のやすりがけ（シンク前）</li><li>タオルを三分類の置き場に分ける／温タオルを作り、腕の内側で温度確認（タオル置き場前）</li><li>シーツ敷き・ベッドと椅子の高さ合わせ・道具トレー配置→施術前後ルーティンの通し（ベッド前。モデルは寝るだけ）</li><li>体重移動の立ち方デモ：片足前・ひざゆるめ・手首まっすぐ（横アングル。モデルは座るだけ）</li><li>ウォームアップ3動作＋ストレッチ4動作＋朝の3分ルーティン通し撮り（椅子・立ち）</li></ul></td><td><ul class="plain"><li>S01-S02 冒頭挨拶＋今日の二本柱（カメラ目線）</li><li>S03 手洗いの一言（シンク前・手を止めて）</li><li>S04 タオル三分類の一言（タオル置き場前・手を止めて）</li><li>S05 体重で押す一言（立ち姿勢のまま・手を止めて）</li><li>S06 親指と手首の一言（ストレッチ後・手を止めて）</li><li>S07 毎朝続ける一言（3分ルーティン後・ゆっくり）</li><li>S08-S10 ED：宿題2つ＋締め（カメラ目線・最後に一礼）</li></ul></td></tr>
+    </table>
+    <div style="font-size:12px;color:var(--mut);margin-top:4px">合計拘束目安：実演 約25分（等速撮り・前半／後半の2ブロック）＋読み 約3分（S01〜S10・プロンプター使用・演技不要）</div>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">③ 画面に入れるクリエイティブ（編集チームへの発注リスト）</div>
+    <table>
+      <tr><th style="width:110px">種類</th><th>作るもの</th><th style="width:130px">使う場面</th></tr>
+      <tr><td>図解</td><td>「外×内の土台マップ」2列×3段（左：手と爪／タオル／環境、右：体で押す／ストレッチ／毎朝3分。進行に合わせ現在地が点灯）</td><td>01:10 導入〜全編</td></tr>
+      <tr><td>比較テロップ</td><td>手洗い7ステップ番号テロップ（1 ぬらす〜7 指先・つめ）＋「目安20〜30秒」</td><td>02:40 本編①</td></tr>
+      <tr><td>実演インサート</td><td>爪のビフォー/アフター2枚（切りっぱなしの角→やすりがけ後・マクロ）</td><td>21:50 リプレイ①</td></tr>
+      <tr><td>図解</td><td>タオル三分類のゾーン枠＋動線矢印アニメ（使用済みが清潔ゾーンを通らない動き）</td><td>06:30 本編②／24:10 リプレイ②</td></tr>
+      <tr><td>図解</td><td>施術前後の2列フロー図（前：洗う→確認→敷く→置く→消毒／後：回収→交換→消毒→片づけ→洗う）</td><td>09:50 本編③／リプレイ②</td></tr>
+      <tr><td>アニメ図</td><td>腱鞘炎の模式図（腱がトンネル＝腱鞘の中でこすれる矢印）＋負担部位が点灯する人体図</td><td>12:50 本編④</td></tr>
+      <tr><td>比較テロップ</td><td>手首の角度 ○まっすぐ／×深く曲げ（補助線つきNG比較）</td><td>26:30 リプレイ③</td></tr>
+      <tr><td>テロップ</td><td>ストレッチ動作名＋回数・秒数の大型テロップ7種（手のひらこすり×10〜指反らし5本×約3秒）</td><td>16:10 本編⑤</td></tr>
+      <tr><td>図解</td><td>朝の3分ルーティン1枚地図（3ブロック色帯＋タイマー0:00→3:00＋代表カット小窓）</td><td>19:30 本編⑥／28:50 リプレイ④</td></tr>
+      <tr><td>テンプレ見本</td><td>配布物4点の見本画像（前後ルーティンカード／朝3分カード／体の使い方早見表／宿題チェックシート）</td><td>33:00 宿題解説</td></tr>
+    </table>
+  </div>
+
+  <div class="cards3" style="margin-top:12px">
+    <div class="oc"><div class="l">今日から現場で使える1つ</div><div class="v">次のお客様の前に「20秒の手洗い」＋空いた10秒で「親指のストレッチ」。この二つをワンセットの癖にする。</div></div>
+    <div class="oc"><div class="l">宿題</div><div class="v">①施術前後のルーティンを毎回同じ順番で1週間（開始前に鏡で手と爪を確認）　②朝の3分ルーティンを7日間毎朝（痛くない範囲で）。</div></div>
+    <div class="oc"><div class="l">配布物</div><div class="v">前後ルーティンカード／朝の3分ルーティンカード／疲れない体の使い方 早見表／宿題チェックシート（計4点）</div></div>
+  </div>
+</section>
+  <section><h2>基本情報</h2><table><tr><th>番号</th><td>PG27（旧PG25「衛生・タオル管理・施術環境」＋旧PG26「施術者のセルフケア」を1本に統合圧縮）</td></tr><tr><th>タイトル</th><td>プロの土台——衛生・環境＋手を壊さないセルフケア</td></tr><tr><th>尺</th><td>約35分（本編実演 約21分 ＋ 分解リプレイ 約9分 ＋ 復習・宿題・ED 約5分）</td></tr><tr><th>収録形態</th><td>実演回。前半＝準備と片づけの所作（手洗い・タオル・セッティング）、後半＝セルフケア動作（ストレッチ・体重移動・3分ルーティン）。解説はすべてナレーション（層2）とテロップ（層3）。太郎さんはOP／ED＋指定の一言5回のみ発話</td></tr><tr><th>必要機材</th><td>施術ベッド1台、施術用スツール（高さ調整可）、背もたれあり作業椅子1脚、手洗いシンク（または手洗い動作が映る場所）、固定カメラ3台（A＝俯瞰／B＝サイド／C＝手元マクロ）、ピンマイク＋接触音用ガンマイク。小物：石けん、ペーパータオル、アルコール手指消毒剤、爪切り・爪やすり、フェイスタオル複数枚、蒸し器（または温タオル）、清潔タオル用容器、蓋つき使用済み回収容器、シーツ／ヘッドペーパー、消毒用クロスとスプレー、道具トレー、施術用クリーム少量、タイマー（テロップ後乗せで可）</td></tr><tr><th>モデル</th><td>仰臥位で協力するモデル1名（前半のセッティング確認と、後半の体重移動デモの受け手。寝る・座るだけで手技は受けない）</td></tr><tr><th>参照PG</th><td>全実技回の施術前後ルーティンとして接続。体の使い方はPG20「圧は、腕でつくらない。姿勢でつくる」と直結。指ドリル・前腕リリースの回<b style="color:#c0392b">〔要確認: 新カリキュラムでの該当PG番号〕</b></td></tr><tr><th>コンプラ</th><td>効能断定禁止。「リラクゼーションを目的に」「〜と言われています」「〜と示唆されています」に統一。治る／改善／自律神経が整う／育毛はNG。セルフケアは「治療ではなく毎日の習慣」と明言し、強い痛み・しびれが続く場合は医療機関への相談を本編と宿題解説の2か所でテロップ明記。衛生基準は各自治体・各施設の規定に従う旨を常設表示</td></tr></table></section>
+  <section><h2>タイムコード構成表</h2><table><tr><th>時間</th><th>パート</th><th>内容</th><th>層</th></tr><tr><td>00:00–00:30</td><td>OP</td><td>太郎さん挨拶＋今日のゴール（S01・S02）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>00:30–01:10</td><td>先週の宿題・良い例紹介</td><td>前週宿題の良い例をナレで1つ紹介</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>01:10–02:40</td><td>導入</td><td>プロの土台は2つ。外の土台（衛生・環境）×内の土台（手と体のケア）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>02:40–06:10</td><td>本編① 手指衛生と爪</td><td>手洗い手順・消毒・爪の整え方を実演。3職種の適用</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>06:10–06:30</td><td>太郎さん一言①</td><td>手洗いの勘所（S03）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>06:30–09:30</td><td>本編② タオルの三分類</td><td>清潔／温／使用済み。温タオルの作り方と温度確認</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>09:30–09:50</td><td>太郎さん一言②</td><td>タオルの分け方（S04）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>09:50–12:50</td><td>本編③ セッティングと前後ルーティン</td><td>シーツ・高さ・導線・道具配置＋施術前後の所作を通しで</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>12:50–15:50</td><td>本編④ 腱鞘炎のしくみと疲れない体重移動</td><td>負担の集まる場所・腱鞘炎の模式図・立ち方・手首・体で押す・施術後のクールダウン</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>15:50–16:10</td><td>太郎さん一言③</td><td>体で押す、という考え方（S05）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>16:10–19:10</td><td>本編⑤ ウォームアップ＋手指・前腕ストレッチ</td><td>温める3動作＋伸ばす4動作（腱鞘炎予防の中心）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>19:10–19:30</td><td>太郎さん一言④</td><td>親指と手首のかばい方（S06）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>19:30–21:30</td><td>本編⑥ 朝の3分ルーティン通し</td><td>タイマー表示で、止めずに1本通す</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>21:30–21:50</td><td>太郎さん一言⑤</td><td>毎朝続けることの意味（S07）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>21:50–24:10</td><td>分解リプレイ① 手洗いと爪</td><td>スロー＋マクロで「指の間・つめの先・やすり」を見せ直す</td><td><span class="chip c3">📺 層3</span>（スロー）</td></tr><tr><td>24:10–26:30</td><td>分解リプレイ② タオル動線と前後ルーティン</td><td>俯瞰スロー＋三分類ゾーン枠＋2列フロー図</td><td><span class="chip c3">📺 層3</span>（スロー）</td></tr><tr><td>26:30–28:50</td><td>分解リプレイ③ 体重移動と手首の角度</td><td>横アングルスロー＋補助線＋NG比較</td><td><span class="chip c3">📺 層3</span>（スロー）</td></tr><tr><td>28:50–31:00</td><td>分解リプレイ④ 3分ルーティン地図</td><td>全動作を1枚の流れ図で。回数・秒数を総まとめ</td><td><span class="chip c3">📺 層3</span>（スロー）</td></tr><tr><td>31:00–33:00</td><td>復習</td><td>外×内の土台を一枚図で総ざらい＋「今日から現場で使える1つ」テロップ</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>33:00–34:20</td><td>宿題解説</td><td>宿題2本立てとチェックシートの説明。医療機関への相談注意</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>34:20–35:00</td><td>ED</td><td>宿題提示＋締め（S08〜S10）＋宿題テロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><th>合計</th><td colspan="3">約35分00秒</td></tr></table></section>
+  <section><h2>太郎さんセリフ（クリックでその行からプロンプター起動）</h2><p style="font-size:12.5px;color:var(--mut);margin-bottom:8px">1文は短く。静かな職人トーンで。誇張なし。間を大切に。動作指示は「ゆっくり読む」「手を止めて言う」のみ。OP・ED・一言①〜⑤はカメラ目線。</p><div class="serif-card"><div class="sid"><span class="sno">S01</span><span class="scene">OP挨拶（00:00–00:15）カメラ目線</span></div><div class="stx">こんにちは。山口太郎です。今日は、手技はやりません。施術の準備と、自分の手のケアをやります。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S02</span><span class="scene">今日のゴール（00:15–00:30）カメラ目線</span></div><div class="stx">覚えることは、二つです。ひとつ、手とタオルを清潔に保つ手順。ふたつ、自分の手を痛めないためのケア。今日は、この二つを順番にやります。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S03</span><span class="scene">一言①：手洗いの勘所（06:10–06:30）※手を止めて言う</span></div><div class="stx">手洗いで残りやすいのは、指の間と、つめの先です。急いでいるときも、この二か所は省かないでください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S04</span><span class="scene">一言②：タオルの分け方（09:30–09:50）※手を止めて言う</span></div><div class="stx">タオルは、三つに分けます。きれいなもの、温かいもの、使ったもの。混ぜないこと、それだけです。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S05</span><span class="scene">一言③：体で押す（15:50–16:10）※手を止めて言う</span></div><div class="stx">腕の力では、押しません。体重を前にかけて、その重さで押します。このほうが、手が疲れません。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S06</span><span class="scene">一言④：親指と手首（19:10–19:30）※手を止めて言う</span></div><div class="stx">いちばん痛むのは、親指です。親指だけで押さない。手首は、まっすぐが基本です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S07</span><span class="scene">一言⑤：毎朝続ける（21:30–21:50）※ゆっくり読む</span></div><div class="stx">たった3分です。毎朝、歯を磨くのと同じです。続けた人だけが、長く現場に立てます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S08</span><span class="scene">ED：宿題導入（34:20–34:35）カメラ目線</span></div><div class="stx">今週の宿題です。二つ、あります。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S09</span><span class="scene">ED：宿題内容（34:35–34:50）カメラ目線・宿題テロップ同時表示</span></div><div class="stx">施術の前と後のルーティンを、毎回同じ順番でやってください。そして、朝の3分ルーティンを、七日間続けてください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S10</span><span class="scene">ED：締め（34:50–35:00）※ゆっくり読む。言い終えたら軽い一礼</span></div><div class="stx">清潔で、お客様を守る。ケアで、自分の手を守る。この二つができて、プロです。それでは、また来週。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div></section>
+  <section><h2>ナレーション全文</h2><p style="font-size:12.5px;color:var(--mut);margin-bottom:8px">トーン：落ち着いた説明調。衛生は淡々と、要点は明確に。効能は断定せず「目的に」「〜と言われています」「〜と示唆されています」で統一。手順の数字（秒数・回数）は具体に言い切る。</p><div class="nar"><h3>N1（00:30–01:10）｜先週の宿題・良い例紹介</h3><p>先週の宿題は、<b style="color:#c0392b">〔要確認: 前週PG26の宿題内容に合わせて差し替え〕</b>でした。良い例をひとつ、紹介します。この方の提出には、決まった型がありました。毎回、同じ順番で、同じ書き方で記録されている。うまさより先に、型が安定している。それを、いちばんに褒めたい提出でした。実は、それが今日のテーマに、そのままつながります。今日は、派手なところがひとつもない回です。けれど、ここを省くプロはいません。</p></div><div class="nar"><h3>N2（01:10–02:40）｜導入：プロの土台は2つ</h3><p>このプログラムは、手技の回ではありません。手技より前の、土台の回です。土台は、2つあります。ひとつは、外の土台。清潔な手と、清潔なタオルと、整った環境です。施術は、お客様の頭や首に、直接、手で触れる仕事です。だからこそ、お客様は技術より先に、まず安心できるかどうかを感じ取ります。手は清潔か。爪は当たらないか。タオルは気持ちよいか。その積み重ねが、信頼をつくると考えられています。もうひとつは、内の土台。施術者自身の、手と体です。私たちは、手で稼いでいます。同じ動きを毎日くり返す仕事だからこそ、手が壊れたら、続けられません。今日は前半で、外の土台を3つ。手指衛生と爪、タオルの三分類、セッティングと前後ルーティン。後半で、内の土台を3つ。疲れない体の使い方、手を守るストレッチ、そして毎朝の3分ルーティン。「半端はゆるさない」。それを、基本動作で見ていきます。</p></div><div class="nar"><h3>N3（02:40–06:10）｜本編① 手指衛生と爪</h3><p>最初の土台は、手指衛生です。手は、施術者にとって最初の道具です。その道具を、まず清潔にします。画面で、手洗いの手順を見ていきます。流水で手をぬらし、石けんを十分に泡立てます。手のひらをこすり合わせ、次に手の甲。片方の手のひらで、反対の甲を伸ばすように洗います。左右、両方です。そして、指の間。両手の指を組んで、すきまを洗います。ここは、洗い残しやすい場所です。親指も忘れません。反対の手で握り、ねじるように洗います。最後に、指先と、つめの先。手のひらの上で指先を立てて、つめの先をこすります。ここが、いちばん大切です。全体で、目安は20秒から30秒。急いでいても、この時間は省きません。流水で十分にすすぎ、拭くときはペーパータオルを使います。共用の布タオルは避けます。仕上げに、アルコールの手指消毒剤を、指先と指の間まで、手全体になじませます。次に、爪です。頭皮や首は、皮ふがやわらかく、敏感な場所です。爪は短く。手のひら側から見て、白い部分がほとんど見えないくらいが目安です。切ったら、必ずやすりをかけます。切りっぱなしの角は鋭く、皮ふに引っかかります。確認の方法は、ひとつ。指の腹で、自分のもう片方の腕の内側をなでて、引っかかりがなければ合格です。爪の手入れは、施術直前ではなく、前夜や朝の日課にします。直前にあわてて切ると、角が残るからです。3つの現場では、こうです。理容師は、肌に直接触れる工程の前は特にていねいに。美容師は、薬剤やカラー剤のあと、ヘッドスパの前に必ず洗い直す。セラピストは、施術と施術の間に、手洗いと消毒を習慣にする。共通するのは、ひとつ。「お客様ごとに、清潔な手に戻す」ことです。</p></div><div class="nar"><h3>N4（06:30–09:30）｜本編② タオルの三分類</h3><p>ふたつめの土台は、タオルです。タオルは、施術で最も多く触れる布です。考え方は、シンプルです。三つに分けます。ひとつめ、清潔なタオル。洗濯済みの、乾いたタオルです。蓋のある容器や専用の棚に、たたんで入れ、ほこりや髪がつかないようにします。ふたつめ、温かいタオル。画面では、作り方を見ます。タオルを軽く湿らせ、巻いて、蒸し器へ。お湯で作る場合は、絞ってから温度を確かめます。温度の確認は、必ず、自分の腕の内側に当てて行います。お客様の顔や首に当てる前に、熱すぎないかを確かめる。やけどを防ぐためです。温かいタオルを使うのは、首や肩を温めて、くつろいでもらう目的です。温めることは、筋肉のこわばりがゆるむ方向と関連するとされています。みっつめ、使用済みのタオル。一度でも使ったタオルは、すぐに、蓋つきの回収容器に入れます。床や、清潔なタオルの近くには置きません。使ったタオルを、お客様から見える場所に放置しないこと。これも、安心につながります。そして、いちばん大切なこと。お客様ごとに、新しい清潔なタオルを使います。使い回しは、ありません。現場ごとの注意です。理容師は、蒸しタオルの清潔基準をヘッドスパでもそのまま保つ。美容師は、カラーやシャンプーで汚れたタオルの回収を、特に明確に分ける。セラピストは、肌に長く触れる布として、清潔さと肌ざわりの両方に気を配る。</p></div><div class="nar"><h3>N5（09:50–12:50）｜本編③ セッティングと前後ルーティン</h3><p>みっつめの土台は、場所の準備です。画面では、ベッドのセッティングから見ていきます。まず、シーツやヘッドペーパーを敷きます。お客様の肌が直接触れる面は、お客様ごとに、必ず替えます。次に、高さです。施術者が、背中を丸めずに、自然な姿勢で手を動かせる高さに合わせます。スツールに座るなら、スツールの高さも合わせます。高さが合っていないと、施術者が疲れ、手の力も安定しません。この「高さ」は、今日の後半、体の使い方の話に直結します。覚えておいてください。次に、道具と導線です。使うものをトレーにまとめ、利き手側の、手が届く位置に置きます。清潔なタオルと温かいタオルは取りやすい位置に、使用済みの回収容器は、清潔なものから離して置きます。自分が施術中に立つ位置と、動く向きも、あらかじめ決めておきます。照明はまぶしすぎないか。室温は寒くないか。音は落ち着いているか。予測できて、清潔で、整った空間が、くつろぎを後押しすると考えられています。最後に、これらを一つの流れにします。施術の前。手を洗い、爪と手を確認し、シーツを敷き、タオルと道具を置き、もう一度消毒してから、お客様に触れます。施術の後。使用済みタオルを回収し、シーツを替え、触れた場所を拭いて消毒し、道具を片づけ、手を洗います。前は、洗う・確認・敷く・置く・消毒。後は、回収・交換・消毒・片づけ・洗う。この流れが、毎回同じであること。それが、プロの土台です。</p></div><div class="nar"><h3>N6（12:50–15:50）｜本編④ 腱鞘炎のしくみと疲れない体重移動</h3><p>ここからは、内の土台。自分の手と体を守る話です。施術者の体には、決まった場所に負担が集まります。いちばんは、親指の付け根。次に手首、前腕、そして肩と首です。ここで知っておきたいのが、腱鞘炎（けんしょうえん）です。指や手首を動かす「腱（けん）」は、「腱鞘（けんしょう）」というトンネルの中を通っています。同じ動きをくり返すと、腱とトンネルがこすれて、炎症が起きやすくなります。これが腱鞘炎です。一度ひどくなると、施術を休まなければならないこともあります。だから、痛くなる前のケアです。今日のケアは、治療ではありません。負担を減らし、長く続けるための、毎日の習慣です。負担を減らす、いちばんの方法から見ます。手だけで施術しないことです。太郎さんの立ち方を見てください。足を肩幅に開き、片足を少し前に出します。ひざを、軽くゆるめます。棒のように突っぱらない。背中はまっすぐ、あごを軽く引きます。この姿勢から、半歩踏み込むように体重を前へ移すと、押す力は、足と腰から手に伝わります。腕の力ではなく、体重を、静かに乗せるイメージです。そして、手首。できるだけ、まっすぐに保ちます。手首を深く曲げたまま力を入れると、さきほどのトンネル、腱鞘に負担が集まります。先ほどのベッドと椅子の高さ合わせは、この姿勢をつくるためのものです。高さが合えば、体重は自然に乗り、手首はまっすぐに保てます。最後に、施術後です。肩を後ろに、ゆっくり5回まわします。首を左右に、10秒ずつ倒します。引っぱりすぎません。そして、手の保湿。クリームを少量、手の甲と指に塗り込み、一日の終わりに、自分の手をねぎらう時間をつくってください。</p></div><div class="nar"><h3>N7（16:10–19:10）｜本編⑤ ウォームアップ＋手指・前腕ストレッチ</h3><p>次は、施術前に手を起こし、手を守る動作です。まず、ウォームアップ。冷えてかたい手で、いきなり始めないこと。冷たい手は、お客様にとっても心地よくありません。3つの動作です。ひとつめ、手のひらをこすり合わせて10回。手のひらと指の付け根を温めます。ふたつめ、グーパー運動を10回。ぎゅっと握って、指をいっぱいに開きます。みっつめ、手首回し。両手を軽く握り、内回しに5回、外回しに5回。力を抜いて、大きくゆっくり円を描きます。ここまでで約1分。手が、じんわり温かくなります。続いて、ストレッチです。ここが、腱鞘炎予防の中心になります。伸ばすときは、痛くない範囲で。「気持ちいい」で止めます。4つの動作を、ゆっくり10秒ずつ。ひとつめ、片腕を前に伸ばし、手のひらを下に向け、反対の手で指先を体のほうへやさしく引きます。前腕の外側が伸びます。10秒、左右。ふたつめ、手のひらを上に向けて、指先を下へやさしく引きます。前腕の内側が伸びます。10秒、左右。この2つで、前腕の表と裏をゆるめます。みっつめ、親指のストレッチ。施術でいちばん使う指を、ていねいにケアします。親指を手のひらの中に軽く入れ、ほかの指で包み、手首を小指側へゆっくり倒します。親指の付け根が伸びます。10秒。強く引っぱらず、じんわりが、コツです。よっつめ、指反らし。反対の手で指を1本ずつ持ち、付け根からやさしく後ろへ反らせます。1本につき約3秒、5本。中程度の、気持ちのよい圧は、心拍や血圧が落ち着く方向と関連すると、研究で示唆されています。自分の手にも、同じやさしさで触れてください。施術の合間にも、親指と手首のストレッチを、こまめに入れてください。</p></div><div class="nar"><h3>N8（19:30–21:30）｜本編⑥ 朝の3分ルーティン通し</h3><p>それでは、いまの動作を、朝の3分ルーティンとして1本につなげます。画面のタイマーを見ながら、太郎さんの動きに合わせてください。最初の1分、ウォームアップ。手のひらこすり10回。グーパー10回。手首回し、内・外5回ずつ。次の1分半、ストレッチ。手首を手のひら側へ、左右10秒。手の甲側へ、左右10秒。親指のストレッチ、左右10秒。指反らし、5本ずつ。最後の30秒、仕上げ。肩を後ろに5回。首を左右に10秒ずつ。これで、3分です。手と前腕、肩と首までが、目覚めます。止めずに通すことで、体が順番を覚えていきます。</p></div><div class="nar"><h3>R1〜R4（21:50–31:00）｜分解リプレイ用ナレ小片（各リプレイ冒頭に1文ずつ。以降はテロップ主導）</h3><p>R1「もう一度、手洗いと爪を、ゆっくり見ます。省きやすい場所は、二つだけです。」</p><p>R2「タオルの動きを、上から見ます。使用済みが、清潔の近くを通らないことを確かめてください。」</p><p>R3「横から、体重の流れを見ます。補助線は、手首の角度です。」</p><p>R4「最後に、3分ルーティンを一枚の地図にします。朝は、この一枚だけ見てください。」</p></div><div class="nar"><h3>N9（31:00–33:00）｜復習</h3><p>今日の土台を、一枚の図にまとめます。外の土台が、3つ。ひとつ、手と爪。20秒から30秒の手洗い、指の間とつめの先、最後に消毒。爪は短く、やすりでなめらかに。ふたつ、タオル。清潔・温・使用済みの三分類。混ぜない。温度は腕の内側で確かめ、お客様ごとに新しいものを使う。みっつ、環境と前後ルーティン。シーツはお客様ごとに、高さは背中を丸めない位置に。前は、洗う・確認・敷く・置く・消毒。後は、回収・交換・消毒・片づけ・洗う。内の土台が、3つ。よっつ、体で押す。足を前後に、ひざをゆるめ、手首はまっすぐ。いつつ、手を守るストレッチ。親指だけで押さず、合間に10秒。むっつ、毎朝の3分ルーティン。外の土台はお客様を守り、内の土台はあなたを守ります。そして、今日から現場で使える1つ。次のお客様の前に、20秒の手洗い。空いた10秒で、親指のストレッチ。この二つを、ワンセットの癖にしてください。</p></div><div class="nar"><h3>N10（33:00–34:20）｜宿題解説</h3><p>今週の宿題は、2本立てです。ひとつめ。自分の現場で、施術前後のルーティンを、毎回同じ順番で実行すること。始める前に、鏡で自分の手と爪も見てください。お客様の立場で、触られたいかどうか。ふたつめ。朝の3分ルーティンを、7日間、毎朝続けること。痛くない範囲で、ゆっくりおこないます。チェックシートを2枚、用意しました。衛生・環境の5項目と、3分ルーティンの7日分です。ひとつ、大切なことを。施術中に親指や手首の痛みを感じたら、無理をせず、押し方を見直してください。強い痛みやしびれが続く場合は、自己流のケアで様子を見ず、専門の医療機関に相談してください。痛みが出てからでは、休む期間が必要になります。痛くない今こそ、始めどきです。</p></div></section>
+  <section><h2>テロップ・図解指示</h2><ul class="plain"><li><b>【OP／導入】</b>OPテロップ：「PG27｜プロの土台——衛生・環境＋手を壊さないセルフケア」／サブ：「お客様を守る清潔 × 自分を守るケア」</li><li><b>【OP／導入】</b>導入N2に合わせ、<b>2列×3段の土台マップ</b>を提示：左列「外の土台＝①手と爪 ②タオル ③環境と前後ルーティン」、右列「内の土台＝④体で押す ⑤手を守るストレッチ ⑥毎朝3分」。本編進行に合わせて現在地が点灯。</li><li><b>【本編①手指衛生と爪】</b>手洗い手順を番号付きステップテロップで同期：「1 ぬらす｜2 泡立て｜3 手のひら｜4 手の甲｜5 指の間｜6 親指｜7 指先・つめ」</li><li><b>【本編①】</b>数値テロップ：「手洗いの目安：20〜30秒」／「拭き取りはペーパータオル」／「仕上げにアルコール消毒」</li><li><b>【本編①】</b>爪のマクロ映像に重ねて：「爪＝手のひら側から白い部分がほぼ見えない」／「切ったら必ずやすり」／「チェック＝腕の内側をなでて引っかからない」</li><li><b>【本編①】</b>3職種バッジ：「理容＝肌に触れる工程前は特に｜美容＝薬剤後は洗い直し｜セラピスト＝施術間ごとに習慣化」</li><li><b>【本編②タオル】</b>俯瞰映像に<b>三分類のゾーン枠＋ラベル</b>：「清潔（洗濯済み・乾）」／「温（ホットタオル）」／「使用済み（蓋つき回収）」。「混ぜない」を強調枠で。</li><li><b>【本編②】</b>注意テロップ：「温度確認＝必ず自分の腕の内側で」／「お客様ごとに新しい清潔タオル」</li><li><b>【本編②】</b>注記（断定回避）：「温める＝筋肉のこわばりがゆるむ方向と関連するとされています」</li><li><b>【本編③セッティングと前後ルーティン】</b>俯瞰に<b>配置マップ</b>：清潔タオル／温タオル／使用済み回収／道具トレー（利き手側）／立ち位置と導線（矢印）</li><li><b>【本編③】</b>チェック項目：「シーツはお客様ごとに交換」／「高さ＝背中を丸めない姿勢」／「照明・室温・音を整える」</li><li><b>【本編③】</b><b>2列フロー図</b>：左「施術前」洗う→確認→敷く→置く→消毒／右「施術後」回収→交換→消毒→片づけ→洗う。「毎回、同じ順番で」を強調。</li><li><b>【本編④腱鞘炎と体重移動】</b>人体イラストに負担の集まる場所を点灯：親指の付け根→手首→前腕→肩首</li><li><b>【本編④】</b>腱鞘炎の模式図：「腱がトンネル（腱鞘）の中をこすれる」を矢印で。注記「治療ではなく、続けるための毎日の習慣」</li><li><b>【本編④】</b>立ち姿勢の横アングルに吹き出し：「足は肩幅・片足前」／「ひざゆるめる」／「背中まっすぐ」／「手首まっすぐ」。NG例「手首を深く曲げて押す」に×印</li><li><b>【本編④】</b>体重が「足→腰→腕→手」へ伝わる流れを矢印アニメで</li><li><b>【本編④】</b>クールダウン：「肩回し 後ろ×5」／「首倒し 左右10秒」／「手の保湿」</li><li><b>【本編④】</b>医療注意テロップ（本編④末尾）：「強い痛み・しびれが続く場合は医療機関に相談してください」</li><li><b>【本編⑤ウォームアップ＋ストレッチ】</b>動作名＋回数を大きく：「①手のひらこすり ×10」／「②グーパー ×10」／「③手首回し 内×5・外×5」（所要「約1分」のカウント）</li><li><b>【本編⑤】</b>ストレッチ4動作：「①手首・手のひら側へ 左右10秒」／「②手の甲側へ 左右10秒」／「③親指ストレッチ 左右10秒」／「④指反らし 5本×約3秒」。伸びる部位（前腕の外側／内側／親指付け根）を矢印＋半透明ハイライトで明示</li><li><b>【本編⑤】</b>注記：「痛くない範囲で・『気持ちいい』で止める」／「親指は強く引かない・じんわり」</li><li><b>【本編⑥3分ルーティン】</b>画面隅に大きめタイマー（0:00→3:00）。3ブロックを色帯で区切る：「①ウォームアップ 1:00」／「②ストレッチ 1:30」／「③仕上げ 0:30」。各動作名を下部テロップで順送り。</li><li><b>【分解リプレイ①】</b>（21:50–24:10）手洗いを0.5倍速、カメラCマクロで<b>指の間</b>と<b>つめの先</b>を拡大スロー。「ここを省かない」を矢印で。爪は「切りっぱなしの角」→「やすりがけ後」のビフォー/アフター2枚対比。</li><li><b>【分解リプレイ②】</b>（24:10–26:30）俯瞰スローに三分類ゾーン枠を点灯したまま、タオルが「清潔→温→回収容器」へ動く<b>動線を矢印アニメ</b>で。使用済みが清潔ゾーンを通らないことを強調。続けて前後ルーティンを遅いテンポで通し、2列フロー図を画面端に固定して現在ステップを点灯。</li><li><b>【分解リプレイ③】</b>（26:30–28:50）横プロファイル0.5倍速。手首の角度に<b>補助線</b>、「まっすぐ」を強調。NG（手首を深く曲げる）を一瞬重ねて×、すぐ正しい角度に戻す比較。体重の「足→腰→腕→手」を矢印アニメで。</li><li><b>【分解リプレイ④】</b>（28:50–31:00）3分ルーティン全動作を<b>1枚の流れ図</b>に並べ、ブロックごとに代表カットを小窓で重ね、回数・秒数を一覧化。「この1枚を見れば朝できる」状態にする最終整理。</li><li><b>【復習・ED】</b>復習：外×内の<b>土台マップ完成版</b>（6項目点灯）を1枚図で。</li><li><b>【復習・ED】</b>「今日から現場で使える1つ」テロップ：「次のお客様の前に：20秒の手洗い＋10秒の親指ストレッチ」</li><li><b>【復習・ED】</b>宿題テロップ（S09と同時）：「宿題① 前後ルーティンを毎回同じ順番で（1週間）」／「宿題② 朝の3分ルーティンを7日間」</li><li><b>【復習・ED】</b>宿題解説の医療注意を再掲：「強い痛み・しびれが続く場合は医療機関へ」</li><li><b>【コンプライアンス共通】</b>断定語（必ず防げる・治る・改善・整う）は使わない。根拠の言及は「〜と関連するとされています／〜と示唆されています」で統一。</li><li><b>【コンプライアンス共通】</b>画面下に小さく常設：「※リラクゼーションを目的とした手技です。衛生基準は各自治体・各施設の規定に従ってください。」</li></ul></section>
+  <section><h2>宿題・配布物</h2><ul class="plain"><li><b>宿題①｜前後ルーティン：</b>自分の現場で、施術前（洗う→確認→敷く→置く→消毒）と施術後（回収→交換→消毒→片づけ→洗う）を、毎回同じ順番で1週間実行する。開始前に、鏡で自分の手と爪を「お客様の立場で」確認する。</li><li><b>宿題②｜朝の3分ルーティン：</b>ウォームアップ1分＋ストレッチ1分半＋仕上げ30秒を、7日間毎朝続ける。痛くない範囲で、ゆっくり。強い痛み・しびれが続く場合は医療機関に相談する。</li><li><b>配布物1｜</b>施術前後ルーティンカード（衛生・環境チェック5項目つき）</li><li><b>配布物2｜</b>朝の3分ルーティンカード（動作・回数・秒数の1枚地図＋7日チェック欄）</li><li><b>配布物3｜</b>疲れない体の使い方 早見表（立ち方・手首・NG）</li><li><b>配布物4｜</b>今週の宿題＋チェックシート</li><li>※配布物の詳細は「配布物パック_v6.md」のPG27セクションを参照</li></ul></section>
+  <section><h2>制作メモ</h2><div class="memo"><b>収録は2ブロックに分けて同日撮影</b><br>・前半ブロック（本編①〜③）：施術環境セット。手洗いシンク→タオル置き場→ベッドの順に動けるレイアウトを事前に組む。カメラA俯瞰はタオル三分類と導線が1フレームに入る画角で固定。<br>・後半ブロック（本編④〜⑥）：椅子＋立ち位置。体重移動は横（プロファイル）アングル必須。ストレッチは伸ばす腕がカメラBに正対するよう体の向きを調整。<br><br><b>カメラ（3台固定）</b><br>・A：俯瞰（タオル三分類・道具配置・導線・手首回しの軌道）<br>・B：サイド（手洗い動作・ベッド高さ合わせ・立ち姿勢・ストレッチの伸びる面）<br>・C：手元マクロ（指の間・つめの先・やすり・温度確認・親指ストレッチ。今回の最重要カットは「つめの先を洗う瞬間」と「手首の角度」）<br><br><b>OP／ED／一言</b><br>・カメラA正面、バストアップ、カメラ目線。背景はブランドのダークネイビー基調（#1B2A4A）。カンペはレンズ脇ではなくレンズ直下に設置（目線ブレ防止）。1文ごとに軽い間。S10のあと、軽い一礼で締める。<br>・一言①〜⑤は、必ず実演の手を止めてから言わせる（手を動かしながら喋らせない）。<br><br><b>実演の等速ルール</b><br>・手洗いの20〜30秒、ストレッチの各10秒、3分ルーティンの通しは、本編では等速で見せる（早送りしない）。時間感覚そのものが教材のため。<br>・3分ルーティン通しは止めずに通し撮り。開始・終了で太郎さんに軽く合図してもらい、タイマーテロップを後乗せ。<br><br><b>モデル</b><br>・前半のセッティング確認で仰臥位に寝るだけ。後半の体重移動デモでは椅子に座るだけ。手技は行わない（受けない）。拘束時間が短いので、午前中に前半・午後に後半の想定で呼び時間を分けてよい。<br><br><b>音声</b><br>・手洗いの流水音、タオルを扱う布の音、道具を置く音は生かす（清潔感・ていねいさの演出）。ナレーションは各パートにかぶせ、実演の要所では音を引く。<br><br><b>編集</b><br>・分解リプレイは本編素材の再利用（0.5倍速＋テロップ）で新規撮影なし。R1〜R4のナレ小片のみ追加収録。<br>・旧PG25・旧PG26の素材と構成を圧縮統合した回のため、テロップの用語は両者で統一すること（例：「三分類」「前後ルーティン」「3分ルーティン」の表記ゆれ禁止）。<br>・医療機関への相談注意は、本編④末尾と宿題解説の<b>2か所</b>で必ず表示（音声＋テロップ両方）。<br><br><b>尺の管理</b><br>・合計35:00設計。押した場合の調整弁は、リプレイ②（−40秒まで可）と導入N2（−20秒まで可）。本編の等速実演部分は削らない。<br><br><b>参照PGの未確定事項</b><br>・指ドリル・前腕リリースの回 <b style="color:#c0392b">〔要確認: 新カリキュラムでの該当PG番号〕</b><br>・N1の前週宿題 <b style="color:#c0392b">〔要確認: 前週PG26の宿題内容に合わせて差し替え〕</b></div></section>
+  <footer>山口流 理容道｜台本v6｜PG27 プロの土台——衛生・環境＋手を壊さないセルフケア｜ⓒ Prorium（社外秘）</footer>
+</div>
+
+<div id="pv">
+  <div class="bar">
+    <button onclick="closePv()">✕ 閉じる(Esc)</button>
+    <button id="mSingle" class="act" onclick="setMode('single')">1枚ずつ</button>
+    <button id="mScroll" onclick="setMode('scroll')">自動スクロール</button>
+    <button onclick="fsz(1)">文字＋</button><button onclick="fsz(-1)">文字−</button>
+    <button id="spD" onclick="spd(-1)" style="display:none">遅く</button><button id="spU" onclick="spd(1)" style="display:none">速く</button>
+    <button id="mir" onclick="mirror()">🪞 ミラー反転</button>
+    <span class="pos" id="pos"></span>
+  </div>
+  <div class="stage" id="stage"><div class="line" id="line"></div></div>
+  <div class="scrollwrap" id="sw" style="display:none"></div>
+  <button class="nav prev" onclick="mv(-1)">‹</button>
+  <button class="nav next" onclick="mv(1)">›</button>
+</div>
+
+<script>
+const LINES = [{"id":"S01","text":"こんにちは。山口太郎です。今日は、手技はやりません。施術の準備と、自分の手のケアをやります。"},{"id":"S02","text":"覚えることは、二つです。ひとつ、手とタオルを清潔に保つ手順。ふたつ、自分の手を痛めないためのケア。今日は、この二つを順番にやります。"},{"id":"S03","text":"手洗いで残りやすいのは、指の間と、つめの先です。急いでいるときも、この二か所は省かないでください。"},{"id":"S04","text":"タオルは、三つに分けます。きれいなもの、温かいもの、使ったもの。混ぜないこと、それだけです。"},{"id":"S05","text":"腕の力では、押しません。体重を前にかけて、その重さで押します。このほうが、手が疲れません。"},{"id":"S06","text":"いちばん痛むのは、親指です。親指だけで押さない。手首は、まっすぐが基本です。"},{"id":"S07","text":"たった3分です。毎朝、歯を磨くのと同じです。続けた人だけが、長く現場に立てます。"},{"id":"S08","text":"今週の宿題です。二つ、あります。"},{"id":"S09","text":"施術の前と後のルーティンを、毎回同じ順番でやってください。そして、朝の3分ルーティンを、七日間続けてください。"},{"id":"S10","text":"清潔で、お客様を守る。ケアで、自分の手を守る。この二つができて、プロです。それでは、また来週。"}];
+let idx=0, fs=6.4, mode='single', speed=1, raf=null;
+const pv=document.getElementById('pv'), line=document.getElementById('line'), pos=document.getElementById('pos'), sw=document.getElementById('sw'), stage=document.getElementById('stage');
+function openPv(i){ if(!LINES.length) return; idx=i||0; pv.classList.add('on'); render(); }
+function closePv(){ pv.classList.remove('on'); stopScroll(); }
+function render(){
+  if(mode==='single'){
+    stage.style.display='flex'; sw.style.display='none';
+    const L=LINES[idx]; line.style.fontSize=fs+'vw'; line.textContent=L.text;
+    pos.textContent=(L.id||('#'+(idx+1)))+'　'+(idx+1)+' / '+LINES.length;
+  }else{
+    stage.style.display='none'; sw.style.display='block';
+    sw.innerHTML=LINES.map(L=>'<div class="sl" style="font-size:'+fs+'vw"><span class="tag">'+(L.id||'')+'</span>'+L.text.replace(/</g,'&lt;')+'</div>').join('');
+    pos.textContent='自動スクロール（速度 '+speed+'）— クリックで一時停止/再開';
+    startScroll();
+  }
+}
+function mv(d){ if(mode!=='single')return; idx=Math.min(LINES.length-1,Math.max(0,idx+d)); render(); }
+function fsz(d){ fs=Math.min(14,Math.max(2.4,fs+d*0.8)); render(); }
+function mirror(){ pv.classList.toggle('mirror'); document.getElementById('mir').classList.toggle('act'); }
+function setMode(m){ mode=m; stopScroll();
+  document.getElementById('mSingle').classList.toggle('act',m==='single');
+  document.getElementById('mScroll').classList.toggle('act',m==='scroll');
+  document.getElementById('spD').style.display=m==='scroll'?'':'none';
+  document.getElementById('spU').style.display=m==='scroll'?'':'none';
+  render(); }
+function spd(d){ speed=Math.min(5,Math.max(1,speed+d)); pos.textContent='自動スクロール（速度 '+speed+'）'; }
+let paused=false;
+function startScroll(){ paused=false; sw.scrollTop=0; const step=()=>{ if(!paused){ sw.scrollTop+=0.4*speed; } raf=requestAnimationFrame(step); }; raf=requestAnimationFrame(step); }
+function stopScroll(){ if(raf)cancelAnimationFrame(raf); raf=null; }
+sw.addEventListener('click',()=>{ paused=!paused; });
+document.addEventListener('keydown',e=>{
+  if(!pv.classList.contains('on'))return;
+  if(e.key==='Escape')closePv();
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();mv(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();mv(-1);}
+});
+document.querySelectorAll('.serif-card').forEach((el,i)=>el.addEventListener('click',()=>openPv(i)));
+</script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG17｜9週分の答え合わせ——ありがちな10のクセと直し方＋安全・禁忌｜山口流 理容道 台本v6</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:38px 26px 32px;margin:0 -18px 24px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:24px;font-weight:600;margin:8px 0 8px;line-height:1.5}
+  header .meta{font-size:12.5px;color:#c9d2e0;display:flex;gap:16px;flex-wrap:wrap}
+  .prompter-btn{position:sticky;top:10px;z-index:50;display:flex;justify-content:flex-end;margin-bottom:6px}
+  .prompter-btn button{background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:30px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,26,46,.3)}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:16px 0;box-shadow:0 2px 10px rgba(27,42,74,.05)}
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .oc{background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .oc .l{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+  .oc .v{font-size:13.5px;color:var(--ink);margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  .chip{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;white-space:nowrap}
+  .c1{background:#fbf3dc;color:#9a7b27}.c2{background:#eaf1fa;color:var(--blue)}.c3{background:#eef7f0;color:var(--green)}
+  .serif-card{background:#fffdf8;border:1px solid var(--gold-l);border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0;cursor:pointer}
+  .serif-card:hover{background:#fdf8ec}
+  .serif-card .sid{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .serif-card .sno{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 10px}
+  .serif-card .scene{font-size:11.5px;color:var(--mut)}
+  .serif-card .stx{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;color:var(--ink);line-height:1.9}
+  .serif-card .hint{font-size:10.5px;color:#b6a26d;margin-top:4px}
+  .nar{margin:14px 0}
+  .nar h3{font-size:14px;color:var(--navy);background:#eaf1fa;border-radius:8px;padding:6px 12px;margin-bottom:8px}
+  .nar p{font-size:13.5px;margin:8px 4px;color:#2c3644}
+  ul.plain{list-style:none}
+  ul.plain li{position:relative;padding-left:20px;margin:6px 0;font-size:13.5px}
+  ul.plain li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+  .memo{background:#fff8e8;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin-top:8px}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:30px}
+  /* ===== プロンプター ===== */
+  #pv{position:fixed;inset:0;background:#000;color:#fff;z-index:999;display:none;flex-direction:column}
+  #pv.on{display:flex}
+  #pv .bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#111;flex-wrap:wrap}
+  #pv .bar button{background:#222;color:#fff;border:1px solid #555;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+  #pv .bar button.act{background:var(--gold);color:#000;border-color:var(--gold)}
+  #pv .bar .pos{margin-left:auto;font-size:14px;color:#d8c79b}
+  #pv .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:4vw;overflow:hidden}
+  #pv .line{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;text-align:center;line-height:1.7;white-space:pre-wrap}
+  #pv .scrollwrap{flex:1;overflow-y:auto;padding:20vh 6vw}
+  #pv .scrollwrap .sl{font-family:"Hiragino Mincho ProN",serif;font-weight:600;line-height:1.9;margin:5vh 0;text-align:center;white-space:pre-wrap}
+  #pv .scrollwrap .sl .tag{display:block;font-size:14px;color:#d8c79b;font-family:sans-serif;margin-bottom:8px}
+  #pv.mirror .stage,#pv.mirror .scrollwrap{transform:scaleX(-1)}
+  #pv .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:#888;font-size:34px;padding:18px 10px;cursor:pointer;border-radius:10px}
+  #pv .prev{left:8px}#pv .next{right:8px}
+  @media(max-width:640px){.cards3{grid-template-columns:1fr}header h1{font-size:20px}}
+  @media print{.prompter-btn,#pv{display:none!important}body{background:#fff}section{box-shadow:none;page-break-inside:avoid}}
+  /* ===== 太郎さん専用ガイド ===== */
+  .taro{background:#fffaf0;border:3px solid var(--gold);border-radius:14px;padding:8px 22px 22px}
+  .taro h2{font-size:20px;border:none;background:var(--gold);color:#3a2c08;padding:6px 16px;border-radius:10px;display:block;margin:14px 0 6px}
+  .taro .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.5;margin:6px 0}
+  .taro .row{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+  .taro .ico{font-size:30px;flex:0 0 40px;text-align:center;line-height:1.2}
+  .taro .ttl{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.04em}
+  .taro .txt{font-size:16px;color:var(--ink);line-height:1.75;margin-top:2px}
+  .taro .txt b{color:var(--navy)}
+  .taro .tell{background:#eef7f0;border-left:5px solid var(--green)}
+  .taro .tell .ttl{color:var(--green)}
+  .taro ul.gist{list-style:none;margin:4px 0 0}
+  .taro ul.gist li{position:relative;padding:6px 0 6px 26px;font-size:16px;line-height:1.6}
+  .taro ul.gist li::before{content:"💬";position:absolute;left:0;top:5px;font-size:15px}
+  .taro .tip{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 14px;margin-top:10px;font-size:14.5px;color:#7a5f1e}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ SCRIPT v6</div>
+  <h1>PG17｜9週分の答え合わせ——ありがちな10のクセと直し方＋安全・禁忌</h1>
+  <div class="meta"><span>尺：約33分</span><span>形式：実演主体回（NG→正しい形の正誤比較＋台本読み）</span><span>台本v6（2026-07-02）</span><span>層：<span class="chip c1">🎬 層1 太郎</span> <span class="chip c2">🎙 層2 ナレ</span> <span class="chip c3">📺 層3 テロップ</span></span></div>
+</header>
+<div class="wrap">
+  <div class="prompter-btn"><button onclick="openPv(0)">🎬 プロンプターを開く（太郎さんセリフ）</button></div>
+
+  <section class="taro">
+    <h2>👤 太郎さん、まずこれだけ（撮影前に読む）</h2>
+    <div class="big">この回は「答え合わせ」。これまで教えた手の動かし方で、みんながやりがちな "うっかりミス" を10個ならべて直してあげて、最後に「今日はやめておいたほうがいい日」の見分け方と、上手な断り方の言葉を渡す回です。</div>
+
+    <div class="row"><div class="ico">🤔</div><div><div class="ttl">なんで大事？</div>
+      <div class="txt">受講生さん（お客さんに「あなたにお願いしたい」と選ばれたい施術者）にとって、いちばん怖いのは「がんばってるのに、少しズレたクセのせいでお客さんが気持ちよくない」こと。たとえば、りんごの皮むきと同じで、<b>包丁の"角度"がほんの少し違うだけ</b>で、うまく剥ける人と実がゴソッと減る人に分かれます。手技も、力の強さやスピードがほんの少しズレるだけで「気持ちいい」が「痛い・雑」に変わる。だからこの回で、そのズレを1個ずつ見せて直してあげると、みんなが一気に上手くなります。もうひとつ、後半の「断り方」は、<b>お客さんのケガや体調悪化を防ぐ、いちばんプロっぽい部分</b>。技の数より「今日はやらない」と言えることが本物の証、という話です。</div></div></div>
+
+    <div class="row"><div class="ico">🙌</div><div><div class="ttl">太郎さんがやること</div>
+      <div class="txt">🤲 <b>手：</b>10個のクセを「わざと悪い手→正しい手」の順で見せます。悪い手は演技しなくてOK。ディレクターが「もっと速く」「手首をカチカチに固めて」「親指だけで」と声をかけるので、言われたとおり手を動かすだけ。首肩のとこ（クセ⑧）だけは、モデルさんに本当に痛い力はかけず "強そうに見える画" を作ります。<br>🗣 <b>口：</b>しゃべるのは要所だけ（あいさつ・「一度に一つずつ直そうね」・安全パートへの切りかえ・お断りの見本読み・宿題）。全部プロンプターに出るので、そのまま読めば大丈夫。特にお断りの見本（S06・S07）は、この回の一番の見せ場です。</div></div></div>
+
+    <div class="row tell"><div class="ico">💬</div><div><div class="ttl">言いたいことは、ざっくりこれ</div>
+      <ul class="gist">
+        <li>今日は、9週間で習った手技の "答え合わせ"。よくあるクセを10個、悪い形と正しい形をならべて直していきましょう。</li>
+        <li>クセは誰にでも出るもの。恥ずかしがらなくていい、今日ここで直せばそれでOK。しかも直すのは一度に一つずつで十分です。</li>
+        <li>ここからは大事な話。「今日は施術をやめておいたほうがいい日」がある。それを見分けてお客さんを守れる人が、本物のプロです。</li>
+        <li>断るのは気まずい。でも私はこう言ってお断りしています——という見本をそのまま渡すので、迷ったらこの言葉を使ってください。断ることは、信頼が残る良いことです。</li>
+      </ul></div></div>
+
+    <div class="tip">💡 <b>コツ：</b>下の台本は、丸暗記しなくて大丈夫。<b>「言いたいこと（上の💬）」さえ分かっていれば</b>、プロンプターの文はスッと自然に出てきます。読むんじゃなく、"分かってる人がしゃべる"感じで。</div>
+  </section>
+
+  <section style="border-left:5px solid var(--gold)">
+    <h2>📌 この回の設計図（まずこれだけ読めばOK）</h2>
+
+    <div style="background:#fbf6ea;border:1px solid var(--gold-l);border-radius:10px;padding:14px 18px;margin:10px 0">
+      <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em">① この回でやること</div>
+      <div style="font-size:16px;font-weight:700;color:var(--navy);margin:4px 0">9週間で習った9本の手技の「ありがちなクセ」10個を、NGの手と正しい手の比較映像で直させて、後半で「施術を断るべき日」の見分け方と断り方の台本を渡す回</div>
+      <ol style="margin:6px 0 0 22px;font-size:13.5px">
+        <li>10のクセを1個ずつ「NGの手→正しい手→スロー2分割比較→セルフチェック」の順で見せる（1個110秒×10本）</li>
+        <li>10個の一覧を見せて動画を一時停止させ、配布チェックシートで「自分のクセ3つ」に丸をつけさせる</li>
+        <li>「施術しない日」のサイン3分類（頭皮トラブル／妊娠中／体調不良）を図解で見せる</li>
+        <li>断り方の台本を太郎さんが読み上げて見せ、そのまま読み上げて使える3場面カードとして配る</li>
+        <li>PG16提出動画への中間フィードバックが公式LINEで届くことを案内する</li>
+        <li>宿題（自分の3つを「直す前」「直した後」で撮影）を出す</li>
+      </ol>
+    </div>
+
+    <div style="margin:12px 0">
+      <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">② 太郎さんのタスク（手でやること／口で読むこと）</div>
+      <table>
+        <tr><th style="width:50%">🤲 手でやること（実演・撮る絵）</th><th>🗣 口で読むこと（プロンプター）</th></tr>
+        <tr><td>・10のクセ全部で「NGの手→正しい手」を同アングルで連続実演（新規収録）：①タッピング ②叩打法 ③指ドリル ④太郎ハンド ⑤あおり手＋摘み手 ⑥頭皮のさすり ⑦腕＋手のひら ⑧首肩 ⑨コンビネーション ⑩呼吸・姿勢（サイド引きで上半身）<br>・NGは演技不要。ディレクターの動作指示（「もっと速く」「手首を固めて」「親指だけで」）どおりに手を動かすだけ<br>・首肩（⑧）のNGは実際に痛い圧はかけない。強く見える画だけ作る</td><td>・S01–S02 挨拶＋今日のゴール（00:00・座り）<br>・S03 導入の締め（01:50）<br>・S04 「一度に一つ」（11:10・手を止めて）<br>・S05 安全パートへの転換（22:00・手を止めてカメラ目線）<br>・S06–S07 断り方の読み上げ（28:10・カメラ目線。この30秒が本PGの核・複数テイク）<br>・S08 中間フィードバック案内（29:30）<br>・S09–S10 宿題＋締め（31:45）</td></tr>
+      </table>
+      <div style="font-size:12px;color:var(--mut);margin-top:4px">合計拘束目安：実演 約25分＋読み 約3分（読みはプロンプター使用・演技不要）</div>
+    </div>
+
+    <div style="margin:12px 0">
+      <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">③ 画面に入れるクリエイティブ（編集チームへの発注リスト）</div>
+      <table>
+        <tr><th style="width:110px">種類</th><th>作るもの</th><th style="width:130px">使う場面</th></tr>
+        <tr><td>図解</td><td>全体マップ「10のクセ→安全・禁忌→中間フィードバック」の3ブロック横並び図</td><td>01:00 導入</td></tr>
+        <tr><td>テロップ</td><td>クセ番号カード×10（「クセ①｜タッピング（第3週）｜指が『刺さる』」形式＋圧/リズム/密着/姿勢アイコン）</td><td>02:00–20:40 各クセ冒頭</td></tr>
+        <tr><td>比較テロップ</td><td>NG（赤）/OK（金）ラベル＋左右2分割スロー比較（同アングル・同尺）×10本</td><td>02:00–20:40 各クセ内</td></tr>
+        <tr><td>アニメ図</td><td>叩打の打点間隔バー（等間隔／不等間隔の可視化）</td><td>03:50 クセ②</td></tr>
+        <tr><td>アニメ図</td><td>さすり速度バー（NG「2秒」／OK「6秒」の走行バー）</td><td>11:30 クセ⑥</td></tr>
+        <tr><td>図解</td><td>10のクセ総覧フルスクリーン一覧（2列×5行、番号＋手技名＋クセ名＋アイコン）</td><td>20:40 総覧</td></tr>
+        <tr><td>図解</td><td>「施術しない」サイン3分類図（頭皮トラブル／妊娠中／体調不良、具体項目つき）</td><td>22:30 安全・禁忌</td></tr>
+        <tr><td>テンプレ見本</td><td>断り方台本カード3場面（頭皮トラブル／体調不良／妊娠中）。S07読み上げ中は全文を縦書き風の全画面カードで1文ずつ点灯</td><td>27:30 断り方</td></tr>
+        <tr><td>図解</td><td>中間フィードバックのフロー図（提出動画→チェック→運営確認→太郎名義でLINEに届く）</td><td>29:30 FB案内</td></tr>
+        <tr><td>テロップ</td><td>まとめフルスクリーン「今日から現場で使える1つ：触れる前の『頭皮を見る10秒』」</td><td>31:00 まとめ</td></tr>
+      </table>
+    </div>
+
+    <div class="cards3" style="margin-top:12px">
+      <div class="oc"><div class="l">今日から現場で使える1つ</div><div class="v">触れる前の「頭皮を見る10秒」。席に案内したら施術前に10秒、頭皮を目で確認（傷・赤み・湿疹・かさぶた・できもの）。何かあれば断り方カードで断る</div></div>
+      <div class="oc"><div class="l">宿題</div><div class="v">10のクセから自分の3つを選んで丸→「直す前」「直した後」を各1分スマホ俯瞰固定で撮影→「頭皮を見る10秒」を今週毎回実施。初級ディプロマ未提出の方は動画提出も</div></div>
+      <div class="oc"><div class="l">配布物</div><div class="v">①10のクセ正誤チェックシート ②安全・禁忌チェックシート ③断り方台本カード（3場面） ④中間フィードバック受け取りガイド</div></div>
+    </div>
+  </section>
+  <section><h2>基本情報</h2><table><tr><th>番号</th><td>PG17（第17週配信／第3章「答え合わせと商品化」1本目）</td></tr><tr><th>タイトル</th><td>9週分の答え合わせ——ありがちな10のクセと直し方＋安全・禁忌</td></tr><tr><th>尺</th><td>約33分</td></tr><tr><th>収録形態</th><td>実演主体回。太郎さんは①OP/ED②本編中の一言インサート3箇所③安全パートの「断り方」模範読み上げ、のみ発話（すべて台本読み）。10のクセは太郎さんの手で「NG実演→正しい実演」を正誤比較で新規収録。説明はすべてナレーション＋テロップ・図解</td></tr><tr><th>必要機材</th><td>固定カメラ3台（俯瞰A／サイドB／手元寄せC）、ピンマイク、施術ベッドまたは施術チェア、正誤比較用の画面2分割テロップ素材、経過時間・速度バーのモーショングラフィック、断り方台本のカンペ（大判・手元）</td></tr><tr><th>モデル</th><td>1名（頭部施術を受けられるモデル。PG03〜PG16の撮影済回とモデルが異なっても可）</td></tr><tr><th>参照PG</th><td>PG03タッピング4種／PG04叩打法6種／PG06指ドリル2種／PG07太郎ハンド3種／PG09あおり手＋摘み手7手技／PG11筋膜リリース頭皮／PG12筋膜リリース腕＋手のひら／PG14首肩コリのリリース／PG16コンビネーション（初級ディプロマ提出回）。速度・圧の基準はPG20「通し実演」と共通の数値を使用</td></tr><tr><th>コンプラ</th><td>効果断定なし（「リラクゼーションを目的に」「〜と言われています」「研究で示唆されています」で統一）。治る/改善/自律神経が整う/育毛はNG。安全パートでは診断・治療にあたる発言をしない（「皮膚科など専門の受診をおすすめする」の案内までは可）。「事故ゼロ」は保証表現にしない（運用姿勢として語る）</td></tr></table></section>
+  <section><h2>タイムコード構成表</h2><table><tr><th>時間</th><th>パート</th><th>内容</th><th>層</th></tr><tr><td>00:00–00:30</td><td>OP</td><td>太郎さん挨拶＋今日のゴール宣言（S01・S02）＋OPテロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>00:30–01:00</td><td>先週の宿題・良い例</td><td>PG16初級ディプロマ提出動画から良い例を1本紹介（ナレ）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>01:00–02:00</td><td>導入：今日の地図</td><td>「答え合わせ回」の見方＝クセ10個→安全・禁忌→中間フィードバック案内。太郎さん一言（S03）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>02:00–03:50</td><td>クセ①タッピング</td><td>NG実演→スロー比較→直し方→セルフチェック</td><td><span class="chip c1">🎬 層1(手)</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>03:50–05:40</td><td>クセ②叩打法</td><td>同上</td><td><span class="chip c1">🎬 層1(手)</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>05:40–07:30</td><td>クセ③指ドリル</td><td>同上</td><td><span class="chip c1">🎬 層1(手)</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>07:30–09:20</td><td>クセ④太郎ハンド</td><td>同上</td><td><span class="chip c1">🎬 層1(手)</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>09:20–11:10</td><td>クセ⑤あおり手＋摘み手</td><td>同上</td><td><span class="chip c1">🎬 層1(手)</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>11:10–11:30</td><td>太郎さん一言</td><td>「一度に一つ」（S04・手を止めて言う）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>11:30–13:20</td><td>クセ⑥筋膜リリース頭皮</td><td>NG実演→スロー比較→直し方→セルフチェック</td><td><span class="chip c1">🎬 層1(手)</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>13:20–15:10</td><td>クセ⑦腕＋手のひら</td><td>同上</td><td><span class="chip c1">🎬 層1(手)</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>15:10–17:00</td><td>クセ⑧首肩コリ</td><td>同上</td><td><span class="chip c1">🎬 層1(手)</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>17:00–18:50</td><td>クセ⑨コンビネーション</td><td>同上</td><td><span class="chip c1">🎬 層1(手)</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>18:50–20:40</td><td>クセ⑩全手技共通（呼吸・姿勢）</td><td>同上</td><td><span class="chip c1">🎬 層1(手)</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>20:40–22:00</td><td>10のクセ総覧・自己判定</td><td>10個を一覧テロップで再提示。「自分の3つ」を選ばせる（一時停止推奨）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>22:00–22:30</td><td>転換</td><td>太郎さん、手を止めて安全パートへ（S05）</td><td><span class="chip c1">🎬 層1</span></td></tr><tr><td>22:30–26:00</td><td>安全・禁忌①サイン</td><td>施術しない3分類：頭皮トラブル／妊娠中／体調不良のサイン</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>26:00–27:30</td><td>安全・禁忌②判断基準</td><td>「迷ったらやらない」＋施術前チェック（見る・聞く・違和感）＋カウンセリング2質問</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>27:30–29:30</td><td>安全・禁忌③断り方</td><td>断り方の考え方（ナレ）→太郎さんの模範読み上げ（S06・S07）→3場面の言い換えテロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>29:30–31:00</td><td>中間フィードバック案内</td><td>PG16提出動画へのフィードバック運用の説明（S08＋ナレ＋テロップ）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>31:00–31:45</td><td>今日から現場で使える1つ</td><td>「触れる前の、頭皮を見る10秒」まとめテロップ</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>31:45–33:00</td><td>ED</td><td>宿題提示（S09＋宿題テロップ）→締め（S10）→次回予告（PG18）テロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr></table></section>
+  <section><h2>太郎さんセリフ（クリックでその行からプロンプター起動）</h2><div class="serif-card"><div class="sid"><span class="sno">S01</span><span class="scene">（OP挨拶｜00:00）</span></div><div class="stx">こんにちは。山口太郎です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S02</span><span class="scene">（今日のゴール｜00:10）</span></div><div class="stx">今日は、ここまで習った九本の手技の答え合わせです。<br>よく出るクセを十個、NGの形と正しい形を並べて直します。<br>後半は、施術をしてはいけない日の見分け方をやります。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S03</span><span class="scene">（導入の締め｜01:50）</span></div><div class="stx">クセは、誰にでも出ます。<br>今日、直せばいいだけです。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S04</span><span class="scene">（本編中の一言｜11:10・手を止めて言う）</span></div><div class="stx">直すのは、一度に一つでいいです。<br>全部を、いっぺんに直そうとしないでください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S05</span><span class="scene">（安全パートへの転換｜22:00・手を止めて、カメラに向かって言う）</span></div><div class="stx">ここからは、施術をしてはいけない日の話です。<br>お客さまを守るための、大事な話です。<br>必ず、最後まで見てください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S06</span><span class="scene">（断り方・前置き｜28:10）</span></div><div class="stx">私がお客さまにお断りするときは、こう言います。<br>そのまま、使ってください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S07</span><span class="scene">（断り方・模範読み上げ｜28:25・ゆっくり読む）</span></div><div class="stx">今日は、頭皮に少し赤みが出ています。<br>無理に施術をせず、お休みするのが安心です。<br>良い状態のときに、いちばん良い施術をさせてください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S08</span><span class="scene">（中間フィードバック案内｜29:30）</span></div><div class="stx">初級ディプロマの動画を出した方には、公式LINEで、私からフィードバックが届きます。<br>届いたら、今日の十個と見比べてください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S09</span><span class="scene">（ED・宿題提示｜31:45）</span></div><div class="stx">今週の宿題です。<br>今日の十個から、自分に当てはまるクセを三つ選んでください。<br>スマホで、直す前と直した後を一分ずつ撮って、見比べてください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S10</span><span class="scene">（締め｜32:40）</span></div><div class="stx">それでは、また来週。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">カード1</span><span class="scene">（断り方カード・体調不良の言い換え｜N16テロップ／配布カードの読み上げ文）</span></div><div class="stx">今日は少しお疲れのご様子です。こういう日は、施術がかえって負担になることがあります。次回、万全の状態でやらせてください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">カード2</span><span class="scene">（断り方カード・妊娠中の言い換え｜N16テロップ／配布カードの読み上げ文）</span></div><div class="stx">妊娠中は、体がとてもデリケートです。かかりつけのお医者さまに確認が取れてから、あらためてご案内させてください。ご予約は、いつでもお取りできます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div></section>
+  <section><h2>ナレーション全文</h2><div class="memo">声質：落ち着いた中低音。急がない。専門用語は直後にかみ砕く。エビデンスに触れるときは必ず「〜と言われています」「研究で示唆されています」で受ける。各クセは〔NG映像〕→〔何が起きているか〕→〔直し方〕→〔セルフチェック〕の順で読む。</div><div class="nar"><h3>N01｜先週の宿題・良い例（00:30–01:00）</h3><p>先週の宿題は、初級ディプロマ。15分の仮ルーティンの動画提出でした。今週も、提出動画の中から良い例をひとつ紹介します。画面を見てください。手技の切り替わりで、手が頭から離れていません。触れたまま、次の手技へ移っています。この「途切れない」感覚は、練習でしか身につきません。良い積み重ねです。</p></div><div class="nar"><h3>N02｜導入：今日の地図（01:00–01:50）</h3><p>第3週のタッピングから、先週のコンビネーションまで。あなたは9本の手技を積み上げてきました。今日は、その答え合わせです。提出動画や練習でよく見かける「ありがちなクセ」を10個。ひとつずつ、太郎さんがNGの形と正しい形を並べて実演します。見方はいつも同じです。まず、クセが出ている手。次に、何が起きているか。それから、直し方。最後に、自分で確認できるチェックの合図。判定の物差しは、これまでと同じ3つ。圧、リズム、密着です。後半は、安全と禁忌。そして、提出動画への中間フィードバックの案内です。</p></div><div class="nar"><h3>N03｜クセ①タッピング4種＝指が「刺さる」（第3週の回）（02:00–03:50）</h3><p>クセの1つ目は、第3週、タッピング4種で出ます。映像を見てください。こちらがNGの手です。手首が固まって、指が棒のように立っています。指先が頭皮に「落ちる」のではなく、「刺さって」います。音を聞いてください。パチ、パチ、と高く跳ねる音がします。タッピングは、指の重さだけを頭皮に落とす手技です。手首が固まると、腕の力がそのまま指先に乗ってしまい、一点に強い刺激が集中します。リラクゼーションを目的にした心地よい刺激から、遠ざかります。直し方です。叩く前に、一度、手首をぶらぶらと振って、力を抜きます。そして、腕を持ち上げるのではなく、指を頭皮の近くに置いたまま、指先だけを小さく落とす。スロー映像で比べます。左がNG、右が正しい形です。正しい形では、指が着地した瞬間、指先がわずかにしなっています。セルフチェックの合図はひとつ。音です。「パチパチ」と鳴ったら刺さっています。「トントン」と低く柔らかい音なら、指の重さで叩けています。練習を録画している人は、音だけ聞き返してみてください。</p></div><div class="nar"><h3>N04｜クセ②叩打法6種＝強さで効かせようとしてリズムが乱れる（第4週の回）（03:50–05:40）</h3><p>2つ目は、第4週、叩打法6種のクセです。NGの映像です。手の振りが大きく、肩が上がっています。強く当てようとするほど、肩と肘に力が入り、一打ごとの強さとテンポがばらつきます。聞いてください。トン、トトン、トン。間隔が揃っていません。叩打法の心地よさは、強さではなく、一定のリズムから生まれます。規則的な刺激は、予測ができる刺激です。次が読める刺激は、安心につながると言われています。直し方です。振りの大きさを半分にして、手首のスナップだけで打ちます。肩は下げたまま。強さを7割に落として、その代わりテンポを一定に保つ。メトロノームのように、同じ間隔で。画面下に、打点の間隔バーを出しています。NGはバーの長さがばらばら、正しい形はほぼ同じ長さです。セルフチェックは、10秒です。10秒間、同じテンポで打ち続けられるか。途中で速くなる人は、力で叩いています。</p></div><div class="nar"><h3>N05｜クセ③指ドリル2種＝頭皮の上を「滑って」摩擦になる（第6週の回）（05:40–07:30）</h3><p>3つ目は、第6週、指ドリル2種のクセです。NGの映像を手元寄せで見てください。指先が頭皮の上を滑って、髪がこすれています。回しているのは、頭皮ではなく、髪の毛です。これでは摩擦になり、髪を引っ張る不快感も出ます。指ドリルは、指の腹を頭皮に密着させたまま、頭皮ごと小さな円を描いて動かす手技です。皮膚の上を「滑る」のではなく、皮膚と一緒に「動く」。ここが分かれ目です。直し方です。円を小さくします。密着させたまま動かせる範囲は、思っているより狭い。無理に大きく回そうとするから、滑ります。まず密着、それから小さな円。物足りなく感じるくらいで、ちょうどいいです。スロー比較を見てください。NGでは髪が指と一緒に流れています。正しい形では、髪の根元と頭皮が一緒に動いて、指と髪の位置関係が変わりません。セルフチェックの合図は、これも音です。シャリシャリと髪の擦れる音がしたら、滑っています。正しく密着していれば、ほとんど無音です。</p></div><div class="nar"><h3>N06｜クセ④太郎ハンド3種＝母指球が浮いて「点」の圧になる（第7週の回）（07:30–09:20）</h3><p>4つ目は、第7週、太郎ハンド3種のクセです。NGの映像です。指先だけが頭に触れていて、手のひらの付け根、母指球が浮いています。指先という「点」だけで圧をかけている状態です。点の圧は、強さが一か所に集中して、受け手には「押される」感覚になります。太郎ハンドの土台は、指先から母指球まで、手のひら全体の「面」で頭を包むことでした。面で触れるから、同じ圧でも柔らかく伝わります。直し方です。指先を置く位置を決めたら、そのまま母指球を頭に「着地」させます。手のひらの真ん中に、薄く空気が入るくらいの密着。そして、圧は指の力ではなく、腕の重さを預けて作ります。俯瞰カメラで比べてください。NGは手の甲が高く浮いています。正しい形は、手全体が頭の丸みに沿って低く伏せています。セルフチェックです。施術の途中で、母指球が頭皮に触れているかを、自分で一度確認してください。触れていなければ、点に戻っています。</p></div><div class="nar"><h3>N07｜クセ⑤あおり手＋摘み手＝髪を引っ張ってしまう（第9週の回）（09:20–11:10）</h3><p>5つ目は、第9週、あおり手と摘み手のクセです。摘み手のNG映像です。髪の毛の中ほどをつまんで、持ち上げています。これは頭皮への手技ではなく、ただの毛引きです。受け手には、痛みと不安が残ります。摘み手は、髪の「根元」を面でとらえて、頭皮ごと優しく動かす手技です。毛先に近い場所を持つほど、テコの原理で根元に強い引きが集中します。直し方です。指を髪の根元まで沈めて、頭皮に触れてから、つまむ。持ち上げるのではなく、頭皮を寄せる。あおり手も同じです。リズムが速くなると、手が髪の表面だけを撫でて、あおりが浅くなります。ゆっくり、根元から。スロー比較です。NGは毛先が張り詰めて、頭皮が引っ張られて白くなっています。正しい形は、頭皮がふわりと寄って、髪に張りが出ていません。セルフチェックはひとつ。自分の髪で試して、「引っ張られる痛み」が少しでもあれば、持つ位置が根元から離れています。</p></div><div class="nar"><h3>N08｜クセ⑥筋膜リリース頭皮＝軽擦が速すぎる（第11週の回）（11:30–13:20）</h3><p>6つ目は、第11週、頭皮の筋膜リリースのクセです。これは提出動画でいちばん多いクセです。さすりの速度が、速すぎる。NG映像に、速度バーを重ねています。手が額から後頭部まで、およそ2秒で走り抜けています。基準を思い出してください。ゆっくりした撫では、1秒に3センチから5センチ。手の幅ひとつ分を、1秒以上かけて動かす速さです。この遅い撫でが、心地よさと関連すると研究で示唆されています。速く動かすと、その心地よさは引き出しにくくなると言われています。施術者は、緊張すると必ず速くなります。自分では、ゆっくりやっているつもりでも、です。直し方です。数字で直します。額から頭頂までを、心の中で5秒数えながら進む。速くなったと気づいたら、一度手を止めて、また遅さに戻す。止まることは、失敗ではありません。比較映像です。左のNGは2秒、右の正しい形は同じ距離を6秒かけています。受け手の表情ではなく、手の速さそのものを見てください。セルフチェックです。録画した自分の動画で、手が額から頭頂まで何秒かかっているか、数えてください。3秒を切っていたら、速すぎです。</p></div><div class="nar"><h3>N09｜クセ⑦筋膜リリース腕＋手のひら＝親指に力が入り、自分の手を痛める（第12週の回）（13:20–15:10）</h3><p>7つ目は、第12週、腕と手のひらの筋膜リリースのクセです。これは、お客さまではなく、あなた自身を痛めるクセです。NG映像です。親指を立てて、親指の力だけでぐいぐいと押しています。親指は小さな関節です。ここに全体重の圧を集めると、施術者の親指と手首に負担がたまります。プロとして長く続けるほど、この差が効いてきます。直し方です。親指で「押す」のではなく、手のひらの付け根や、指の面で「預ける」。圧は、腕の力ではなく、体重の移動で作ります。足の位置を半歩前に出して、体を前に傾ける。その重さが、そのまま圧になります。サイドカメラで比べてください。NGは腕だけが動いて、体が止まっています。正しい形は、体全体がゆっくり前後に揺れて、腕はその重さを伝えているだけです。セルフチェックです。10分続けたあと、自分の親指に疲れが残っていたら、力で押しています。施術のあと、自分の手が痛くない。それが正しい圧の作り方の証拠です。</p></div><div class="nar"><h3>N10｜クセ⑧首肩コリのリリース＝強い圧で押し込み、痛みを我慢させる（第14週の回）（15:10–17:00）</h3><p>8つ目は、第14週、首肩コリのリリースのクセです。NG映像です。首すじに、指が深く沈み込んでいます。受け手の肩に、きゅっと力が入ったのが分かるでしょうか。「強いほうが効いた気がする」という思い込みから、首や肩は特に強く押しがちです。ですが、基準は変わりません。リラクゼーションを目的にするなら、中程度の圧。中くらいの強さの心地よい圧が、落ち着きと関連すると研究で示唆されています。痛いほどの強い圧は、体を緊張させ、警戒させる方向に働きやすいと考えられています。そして首は、頭よりもデリケートな場所です。強い圧で「効かせる」場所ではありません。直し方です。圧の目安は、「気持ちいい痛み」ではなく、「気持ちいい」で止める。受け手が息を止めたり、肩が上がったりしたら、強すぎのサインです。そして、施術の途中で一度、言葉で確認します。「強さは、このくらいでどうですか」。聞くことは、技術の一部です。比較映像です。NGでは受け手の肩がすくみ、正しい形では肩が下がったままです。セルフチェックです。相手の呼吸を見てください。呼吸が浅く、止まりがちなら、あなたの圧は強すぎます。</p></div><div class="nar"><h3>N11｜クセ⑨コンビネーション＝両手が同じリズムにつられる（第16週の回）（17:00–18:50）</h3><p>9つ目は、先週、第16週のコンビネーションのクセです。NG映像です。右手はタッピング、左手はさすりのはずが、よく見ると、左手のさすりがタッピングのリズムに引っ張られて、小刻みに跳ねています。両手が同じリズムにつられる。コンビネーションでいちばん出やすいクセです。二つの手技を同時に行うときは、主役の手と、支えの手を決めます。主役はリズムを刻む手。支えは、ゆっくりと面で触れ続ける手。役割が分かれているから、受け手には、重なり合った豊かな心地よさが届きます。直し方です。練習の順番を変えます。まず、支えの手だけを置いて、10秒。ゆっくりの速さを体に覚えさせてから、主役の手を加える。つられてきたと感じたら、主役の手を止めて、支えの手のゆっくりに戻る。主役を止めるのは、失敗ではなく、リセットです。スロー比較です。NGでは左右の手が同じタイミングで動いています。正しい形では、右手が3回打つ間に、左手は手幅ひとつ分しか進んでいません。セルフチェックです。録画を見て、左右の手だけを別々に目で追ってください。支えの手が跳ねていたら、つられています。</p></div><div class="nar"><h3>N12｜クセ⑩全手技共通＝自分の呼吸が止まり、姿勢が崩れる（18:50–20:40）</h3><p>最後、10個目は、9本すべてに共通するクセです。手ではなく、あなたの体に出ます。NG映像を、サイドカメラで見てください。集中するほど、施術者の呼吸が止まり、顔がモデルに近づいて、背中が丸まっています。のぞき込みの姿勢です。呼吸が止まると、肩と腕に力が入り、圧が硬くなります。姿勢が崩れると、体重がうまく預けられず、手先の力に頼ることになります。つまり、ここまでの9つのクセの多くは、呼吸と姿勢から生まれています。直し方です。手技を始める前に、一度、自分がゆっくり息を吐く。施術中は、自分の足の裏に、時々意識を戻す。両足が床に着いて、背すじが長く保てていれば、腕の重さは自然に手へ流れます。比較映像です。NGは頭が下がり、肘が上がっています。正しい形は、目線だけ手元に落として、背すじはまっすぐのままです。セルフチェックです。録画の自分を、手ではなく、横からの姿勢だけ見てください。あごが前に出ていたら、崩れています。あなたの体が楽であることは、お客さまの心地よさの土台です。</p></div><div class="nar"><h3>N13｜10のクセ総覧・自己判定（20:40–22:00）</h3><p>10個、そろいました。画面に一覧を出します。①タッピング、指が刺さる。②叩打法、リズムが乱れる。③指ドリル、頭皮の上を滑る。④太郎ハンド、母指球が浮く。⑤摘み手、髪を引っ張る。⑥頭皮のさすり、速すぎる。⑦腕と手のひら、親指の力で押す。⑧首肩、強すぎる圧。⑨コンビネーション、両手がつられる。⑩共通、呼吸が止まり姿勢が崩れる。物差しは3つでした。圧。リズム。密着。そして10個目の、呼吸と姿勢。ここで動画を一時停止して、自分に当てはまるものを3つ、選んでください。全部当てはまる気がしても、大丈夫です。それが普通です。選ぶのは3つだけ。配布のチェックシートに、丸をつけてください。</p></div><div class="nar"><h3>N14｜安全・禁忌①「施術しない」サイン3分類（22:30–26:00）</h3><p>ここからは、この講座でいちばん大切なパートのひとつです。上手にやる話ではなく、「今日は、やらない」と決める話です。プロの条件は、手技の数ではありません。触れてはいけない日が分かることです。覚えるサインは、3つの分類です。</p><p>1つ目、頭皮のトラブルです。施術の前に、頭皮を見ます。傷。赤み。湿疹。かさぶた。できもの。フケが厚く固まっている状態。強いかゆみの訴え。ひとつでも見つけたら、その日は施術をしません。触って広げてしまう恐れや、痛みにつながる恐れがあるからです。ここで大事な線引きがあります。私たちは、頭皮の状態を「見て、気づく」ところまでが仕事です。それが何の症状かを判断すること、つまり診断は、医師にしかできません。「これは乾燥ですね」「これなら大丈夫」と言った瞬間に、線を越えます。私たちが言えるのは、「気になる状態なので、皮膚科など専門の先生に見てもらってから、また来てください」まで。ここを、はっきり覚えてください。</p><p>2つ目、妊娠中のお客さまです。妊娠中は、体調が変わりやすく、姿勢や刺激への配慮も必要になります。この講座の基準は、シンプルにひとつです。かかりつけのお医者さまへの確認が取れていない場合は、施術をしない。「大丈夫そうだから」で始めない。ご本人が希望されても、確認が先です。予約のときに妊娠中と分かったら、その時点でお医者さまへの確認をお願いしておくと、お互いに安心です。</p><p>3つ目、体調不良のサインです。発熱があるとき。飲酒のあと。強い頭痛やめまい、吐き気を訴えているとき。「いつもと違う、経験したことのない痛み」という言葉が出たとき。これらの日は、施術をしません。とくに「いつもと違う強い頭痛」は、触ってほぐす場面ではなく、受診をすすめる場面です。リラクゼーションを目的にした施術は、体調が整っている日にこそ、いちばん良い形で受けてもらえます。</p></div><div class="nar"><h3>N15｜安全・禁忌②判断基準「迷ったらやらない」（26:00–27:30）</h3><p>判断の基準は、一行です。「迷ったら、やらない」。グレーだと感じたら、黒として扱います。施術で得られるものより、無理をして失うものの方が、ずっと大きいからです。そのために、施術前の型を決めておきます。3つの動作です。1つ、「見る」。触れる前に、頭皮を10秒、目で確認する。2つ、「聞く」。カウンセリングで、次の2つの質問をする。「今日、お体の調子はいかがですか」。「頭やお肌で、気になっているところはありますか」。この2問だけで、申告の多くは引き出せます。3つ、「違和感」。見た目と申告に問題がなくても、いつもと様子が違うと感じたら、その感覚を無視しない。ひとつでも引っかかれば、その日はやらない。そして、断った事実と理由は、カルテにひとこと書き残します。記録は、あなたとお客さまの両方を守ります。</p></div><div class="nar"><h3>N16｜安全・禁忌③断り方——読み上げ台本（27:30–29:30）</h3><p>さて、いちばん難しいのは、判断ではなく、伝え方です。目の前のお客さまに、どう断るか。言葉に迷うと、つい施術してしまう。だから、断る言葉は、その場で考えないでください。あらかじめ決めた台本を、そのまま読み上げていい。台本には、3つの部品を入れます。1つ、理由をひとことで伝える。2つ、「やらないことが、あなたのためだ」と伝える。3つ、次につなげる。太郎さんが、実際に使っている形で読みます。</p><p><b>（→ここで太郎さんS06・S07。全文テロップを重ねる）</b></p><p>……この台本の芯は、最後の一文です。「良い状態のときに、いちばん良い施術をさせてください」。断りではなく、約束で終わっています。断ることは、失客ではありません。「この人は、無理をさせない人だ」という信頼が残ります。画面に、場面別の言い換えを2つ出します。体調不良のとき。「今日は少しお疲れのご様子です。こういう日は、施術がかえって負担になることがあります。次回、万全の状態でやらせてください」。妊娠中のお客さまのとき。「妊娠中は、体がとてもデリケートです。かかりつけのお医者さまに確認が取れてから、あらためてご案内させてください。ご予約は、いつでもお取りできます」。3つの台本は、配布物のカードにまとめてあります。印刷して、受付やカルテの近くに置いてください。読み上げていいのです。それがプロの誠実さです。</p></div><div class="nar"><h3>N17｜中間フィードバックの案内（29:30–31:00）</h3><p>最後に、中間フィードバックの案内です。先週、第16週で提出してもらった初級ディプロマ、15分の仮ルーティン動画。この動画に、一人ずつフィードバックをお返しします。届き方は、公式LINEです。フィードバックは、今日の10のクセと、圧・リズム・密着の3点を観点に作られ、運営の確認を経て、太郎さん名義で届きます。順番にお返しするので、届くまで少し時間をください。受け取ったら、やることは2つです。1つ、指摘されたクセの番号を、今日の動画で見直す。2つ、今週の宿題の「自分の3つ」に、その番号を入れる。まだ提出していない人も、遅れて提出して大丈夫です。締切は<b style="color:#c0392b">〔要確認: 中間フィードバックの提出締切日〕</b>、提出先は<b style="color:#c0392b">〔要確認: 提出先（公式LINE／フォームURL）〕</b>です。概要欄にも記載しています。出した人から、上手くなります。</p></div><div class="nar"><h3>N18｜今日から現場で使える1つ（31:00–31:45）</h3><p>今日から現場で使える1つは、これです。「触れる前の、頭皮を見る10秒」。お客さまを席に案内したら、施術を始める前に、10秒だけ、頭皮を目で確認する。傷、赤み、湿疹、かさぶた、できもの。何もなければ、そのまま始める。何かあれば、今日の台本で断る。たった10秒の習慣が、あなたのサロンを、長く続くサロンにします。明日の1人目から、始めてください。</p></div><div class="nar"><h3>ED補足ナレ（宿題テロップに重ねる）（31:45–32:40）</h3><p>宿題の撮り方は、いつもの共通フォーマットです。スマホ俯瞰固定で撮影して、保存。直す前と直した後、それぞれ1分ずつで十分です。この積み重ねが、第28週の投稿素材になります。</p></div></section>
+  <section><h2>テロップ・図解指示</h2><ul class="plain"><li><b>【OP 00:00–00:30】</b>OPテロップ：「第17週｜9週分の答え合わせ」→ サブ「ありがちな10のクセと直し方＋安全・禁忌」</li><li><b>【OP】</b>ゴールテロップ（S02に同期）：「今日のゴール：①自分のクセを3つ見つける ②『施術しない日』を判断できる」</li><li><b>【先週の良い例 00:30–01:00】</b>提出動画の上に帯テロップ：「先週の良い例｜手技の切り替えで手が離れていない」。顔・名前は映さない（手元のみ・匿名）</li><li><b>【導入 01:00–02:00】</b>全体マップ図解：「10のクセ（技術）→ 安全・禁忌（判断）→ 中間フィードバック（案内）」の3ブロック横並び。＋物差しテロップ：「判定の物差し＝圧・リズム・密着」</li><li><b>【クセ①〜⑩ 02:00–20:40 共通フォーマット】</b>各クセ冒頭に番号カード（3秒）：「クセ①｜タッピング（第3週）｜指が『刺さる』」の形式で①〜⑩統一。カテゴリアイコン（圧/リズム/密着/姿勢）を右上に付す</li><li><b>【クセ共通】</b>NG実演中は画面左上に赤ラベル「NG」、正実演中は金ラベル「OK」（ネイビー地・ゴールド文字のブランド配色）</li><li><b>【クセ共通】</b>スロー比較は左右2分割（左NG/右OK）。同一アングル・同一尺で揃える</li><li><b>【クセ共通】</b>各クセの締めにチェックテロップ「セルフチェック：〜」（1行・大きく）<br>①「音が『トントン』なら合格（『パチパチ』は刺さり）」<br>②「10秒間、同じテンポで打てるか」<br>③「髪の擦れる音がしたら滑っている」<br>④「母指球が頭皮に触れているか」<br>⑤「自分の髪で試して『引っ張られる痛み』がないか」<br>⑥「額→頭頂が3秒未満なら速すぎ（基準：1秒に3〜5cm）」<br>⑦「10分後、自分の親指が疲れていないか」<br>⑧「相手の呼吸が止まっていたら圧が強すぎ」<br>⑨「録画で左右の手を別々に追う（支えの手が跳ねていないか）」<br>⑩「横からの録画で、あごが前に出ていないか」</li><li><b>【クセ⑥】</b>速度バー必須：NG側「2秒」/ OK側「6秒」の走行バーを画面下に表示</li><li><b>【クセ②】</b>打点間隔バー（等間隔/不等間隔の可視化）</li><li><b>【総覧 20:40–22:00】</b>10個一覧のフルスクリーン図解（2列×5行、番号＋手技名＋クセ名＋カテゴリアイコン）。＋一時停止テロップ：「ここで一時停止。自分の3つに丸をつける（配布：正誤チェックシート）」</li><li><b>【安全・禁忌 22:30–29:30】</b>章替わりカード（3秒・黒背景）：「安全・禁忌——『今日は、やらない』判断」</li><li><b>【安全・禁忌】</b>サイン3分類の図解：「①頭皮トラブル（傷・赤み・湿疹・かさぶた・できもの・厚いフケ・強いかゆみ）／②妊娠中（医師確認なし＝施術しない）／③体調不良（発熱・飲酒後・強い頭痛/めまい/吐き気・『いつもと違う痛み』）」</li><li><b>【安全・禁忌】</b>線引きテロップ（N14に同期・強調）：「『気づく』まではプロの仕事／『診断』は医師の仕事」</li><li><b>【安全・禁忌】</b>判断基準テロップ：「迷ったら、やらない（グレーは黒）」＋3動作「見る（10秒）・聞く（2質問）・違和感」</li><li><b>【安全・禁忌】</b>カウンセリング2質問テロップ：「今日、お体の調子はいかがですか」「頭やお肌で、気になっているところはありますか」</li><li><b>【安全・禁忌】</b>S07読み上げ中：台本全文を縦書き風カードで全画面表示（太郎さんの声に同期して1文ずつ点灯）</li><li><b>【安全・禁忌】</b>言い換え2種（体調不良/妊娠中）はカード形式で順に表示、「配布物：断り方カード」の帯を付す</li><li><b>【中間フィードバック 29:30–31:00】</b>フロー図解：「提出動画 → チェック（10のクセ＋圧・リズム・密着）→ 運営確認 → 太郎名義でLINEに届く」</li><li><b>【中間フィードバック】</b>締切テロップ：「未提出の方：<b style="color:#c0392b">〔要確認: 提出締切日〕</b>まで受付／提出先：<b style="color:#c0392b">〔要確認: 公式LINE／フォームURL〕</b>」</li><li><b>【今日から現場で使える1つ 31:00–31:45】</b>フルスクリーンまとめテロップ：「今日から現場で使える1つ：触れる前の『頭皮を見る10秒』」</li><li><b>【ED 31:45–33:00】</b>宿題テロップ：「宿題：①自分のクセを3つ選ぶ ②直す前/直した後を撮影（俯瞰固定・各1分）③見比べる ※初級ディプロマ未提出の方は動画提出も」</li><li><b>【ED】</b>次回予告：「次回 第18週｜あなたの15分に値札をつける——メニューと価格＋既存客への伝え方」</li></ul></section>
+  <section><h2>宿題・配布物</h2><ul class="plain"><li><b>宿題1：</b>「ありがちな10のクセ 正誤チェックシート」で、自分に当てはまるクセを3つ選んで丸をつける</li><li><b>宿題2：</b>その3つについて、「直す前」「直した後」を各1分、スマホ俯瞰固定で撮影して保存（共通フォーマット。第28週の投稿素材ストックになります）</li><li><b>宿題3：</b>施術・練習の前に「頭皮を見る10秒」を今週、毎回実施</li><li><b>宿題4：</b>初級ディプロマ（15分仮ルーティン動画）未提出の方は、<b style="color:#c0392b">〔要確認: 提出締切日〕</b>までに提出</li><li><b>配布物1：</b>ありがちな10のクセ 正誤チェックシート（PDF A4・1枚）— 自己判定＋宿題の丸つけ</li><li><b>配布物2：</b>安全・禁忌チェックシート（施術前10秒チェック＋2質問）（PDF A4・1枚）— 受付・施術前ルーティン用</li><li><b>配布物3：</b>断り方 読み上げ台本カード（3場面）（PDF A6×3面）— 印刷して受付/カルテ横に常備</li><li><b>配布物4：</b>中間フィードバック受け取りガイド（PDF A4・1枚）— FBの読み方＋再提出の手順</li><li>※配布物4点の全文は「配布物パック_v6.md」のPG17セクション参照。宿題は概要欄/LINE掲載文としてそのまま使用可</li></ul></section>
+  <section><h2>制作メモ</h2><div class="memo"><b>収録トーン（S01〜S10）</b>：静かな職人トーン。1文は短く、1文ごとに軽く間を取る。誇張なし。演技不要、そのまま読む。<br><br><b>【撮影】</b><br>・NG実演はすべて太郎さんの手で新規収録。撮影済回（PG03〜16）の映像は「正しい形」の参照に使えるが、NGは既存映像に存在しないため必ず新規。正誤は同アングル・同ポジションで連続収録し、2分割比較でズレが出ないようにする<br>・NGの作り方：太郎さんに「悪い演技」を求めない。ディレクターがモニターを見ながら「もっと速く」「手首を固めて」「親指だけで」と動作指示を出し、動きとして作る（感情表現は不要）<br>・クセ⑩（呼吸・姿勢）はサイドカメラBが主。太郎さんの上半身全体が入る引きサイズを必ず押さえる<br>・S05・S06・S07は手を止めてカメラ目線。特にS07（断り方の読み上げ）は本人が普段の接客で言うトーンのまま、ゆっくり。ここだけはNGテイクを恐れず複数回録る（この30秒が本PGの核）<br>・首肩パート（クセ⑧）のNG実演は、モデルに事前説明し、実際に痛い圧はかけない。「強く見える」画作り（指の沈み込みの寄り＋モデルの肩の位置）で表現する<br>・先週の良い例：実受講生の提出動画を使用する場合は使用許諾を必ず取得 <b style="color:#c0392b">〔要確認: 該当受講生の許諾〕</b>。取れない場合は運営側で撮影した再現映像に差し替え（手元のみ・匿名なら再現で問題ない）<br><br><b>【編集】</b><br>・10のクセは1本あたり110秒厳守でテンポを保つ。NG→OK→スロー比較→チェックテロップの4カット構成をテンプレ化し、①で作ったタイムライン構造を②〜⑩に複製する<br>・音が判定基準になるクセ（①③）は実音を活かす。BGMを一時的に絞り、タッピング音・髪の擦れ音がはっきり聞こえるレベルまで上げる<br>・安全・禁忌パートはBGMを変える（実技パートより静かに）。「章が変わった」ことが音で分かるように<br>・中間フィードバックのフロー図解で「AI一次チェック」の文言は画面に出さない（受講生向けには「チェック→運営確認→太郎名義」の表現に留める。運用内部の呼称を露出しない）<br>・締切・提出先の <b style="color:#c0392b">〔要確認: 提出締切日／提出先（公式LINE・フォームURL）の2箇所〕</b> は配信前に必ず差し込み。未確定のまま書き出さない<br><br><b>【コンプラ最終チェック（納品前）】</b><br>・効果断定ゼロ確認：「ほぐれる/治る/改善/自律神経が整う/血流が良くなる」が音声・テロップに残っていないか全文検索<br>・安全パートで「診断」に踏み込む表現がないか（「〜という症状です」はNG。「気になる状態なので専門の受診を」まで）<br>・「事故ゼロ」を保証として言い切る箇所がないか（本台本では運用姿勢としてのみ言及、テロップ化しない）</div></section>
+  <footer>山口流 理容道｜台本v6｜PG17 9週分の答え合わせ——ありがちな10のクセと直し方＋安全・禁忌｜ⓒ Prorium（社外秘）</footer>
+</div>
+
+<div id="pv">
+  <div class="bar">
+    <button onclick="closePv()">✕ 閉じる(Esc)</button>
+    <button id="mSingle" class="act" onclick="setMode('single')">1枚ずつ</button>
+    <button id="mScroll" onclick="setMode('scroll')">自動スクロール</button>
+    <button onclick="fsz(1)">文字＋</button><button onclick="fsz(-1)">文字−</button>
+    <button id="spD" onclick="spd(-1)" style="display:none">遅く</button><button id="spU" onclick="spd(1)" style="display:none">速く</button>
+    <button id="mir" onclick="mirror()">🪞 ミラー反転</button>
+    <span class="pos" id="pos"></span>
+  </div>
+  <div class="stage" id="stage"><div class="line" id="line"></div></div>
+  <div class="scrollwrap" id="sw" style="display:none"></div>
+  <button class="nav prev" onclick="mv(-1)">‹</button>
+  <button class="nav next" onclick="mv(1)">›</button>
+</div>
+
+<script>
+const LINES = [{"id":"S01","text":"こんにちは。山口太郎です。"},{"id":"S02","text":"今日は、ここまで習った九本の手技の答え合わせです。\nよく出るクセを十個、NGの形と正しい形を並べて直します。\n後半は、施術をしてはいけない日の見分け方をやります。"},{"id":"S03","text":"クセは、誰にでも出ます。\n今日、直せばいいだけです。"},{"id":"S04","text":"直すのは、一度に一つでいいです。\n全部を、いっぺんに直そうとしないでください。"},{"id":"S05","text":"ここからは、施術をしてはいけない日の話です。\nお客さまを守るための、大事な話です。\n必ず、最後まで見てください。"},{"id":"S06","text":"私がお客さまにお断りするときは、こう言います。\nそのまま、使ってください。"},{"id":"S07","text":"今日は、頭皮に少し赤みが出ています。\n無理に施術をせず、お休みするのが安心です。\n良い状態のときに、いちばん良い施術をさせてください。"},{"id":"S08","text":"初級ディプロマの動画を出した方には、公式LINEで、私からフィードバックが届きます。\n届いたら、今日の十個と見比べてください。"},{"id":"S09","text":"今週の宿題です。\n今日の十個から、自分に当てはまるクセを三つ選んでください。\nスマホで、直す前と直した後を一分ずつ撮って、見比べてください。"},{"id":"S10","text":"それでは、また来週。"},{"id":"カード1","text":"今日は少しお疲れのご様子です。こういう日は、施術がかえって負担になることがあります。次回、万全の状態でやらせてください。"},{"id":"カード2","text":"妊娠中は、体がとてもデリケートです。かかりつけのお医者さまに確認が取れてから、あらためてご案内させてください。ご予約は、いつでもお取りできます。"}];
+let idx=0, fs=6.4, mode='single', speed=1, raf=null;
+const pv=document.getElementById('pv'), line=document.getElementById('line'), pos=document.getElementById('pos'), sw=document.getElementById('sw'), stage=document.getElementById('stage');
+function openPv(i){ if(!LINES.length) return; idx=i||0; pv.classList.add('on'); render(); }
+function closePv(){ pv.classList.remove('on'); stopScroll(); }
+function render(){
+  if(mode==='single'){
+    stage.style.display='flex'; sw.style.display='none';
+    const L=LINES[idx]; line.style.fontSize=fs+'vw'; line.textContent=L.text;
+    pos.textContent=(L.id||('#'+(idx+1)))+'　'+(idx+1)+' / '+LINES.length;
+  }else{
+    stage.style.display='none'; sw.style.display='block';
+    sw.innerHTML=LINES.map(L=>'<div class="sl" style="font-size:'+fs+'vw"><span class="tag">'+(L.id||'')+'</span>'+L.text.replace(/</g,'&lt;')+'</div>').join('');
+    pos.textContent='自動スクロール（速度 '+speed+'）— クリックで一時停止/再開';
+    startScroll();
+  }
+}
+function mv(d){ if(mode!=='single')return; idx=Math.min(LINES.length-1,Math.max(0,idx+d)); render(); }
+function fsz(d){ fs=Math.min(14,Math.max(2.4,fs+d*0.8)); render(); }
+function mirror(){ pv.classList.toggle('mirror'); document.getElementById('mir').classList.toggle('act'); }
+function setMode(m){ mode=m; stopScroll();
+  document.getElementById('mSingle').classList.toggle('act',m==='single');
+  document.getElementById('mScroll').classList.toggle('act',m==='scroll');
+  document.getElementById('spD').style.display=m==='scroll'?'':'none';
+  document.getElementById('spU').style.display=m==='scroll'?'':'none';
+  render(); }
+function spd(d){ speed=Math.min(5,Math.max(1,speed+d)); pos.textContent='自動スクロール（速度 '+speed+'）'; }
+let paused=false;
+function startScroll(){ paused=false; sw.scrollTop=0; const step=()=>{ if(!paused){ sw.scrollTop+=0.4*speed; } raf=requestAnimationFrame(step); }; raf=requestAnimationFrame(step); }
+function stopScroll(){ if(raf)cancelAnimationFrame(raf); raf=null; }
+sw.addEventListener('click',()=>{ paused=!paused; });
+document.addEventListener('keydown',e=>{
+  if(!pv.classList.contains('on'))return;
+  if(e.key==='Escape')closePv();
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();mv(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();mv(-1);}
+});
+document.querySelectorAll('.serif-card').forEach((el,i)=>el.addEventListener('click',()=>openPv(i)));
+</script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG19｜自分のメニューに組み込む実習（属性別3パターン）｜山口流 理容道 台本v6</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:38px 26px 32px;margin:0 -18px 24px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:24px;font-weight:600;margin:8px 0 8px;line-height:1.5}
+  header .meta{font-size:12.5px;color:#c9d2e0;display:flex;gap:16px;flex-wrap:wrap}
+  .prompter-btn{position:sticky;top:10px;z-index:50;display:flex;justify-content:flex-end;margin-bottom:6px}
+  .prompter-btn button{background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:30px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,26,46,.3)}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:16px 0;box-shadow:0 2px 10px rgba(27,42,74,.05)}
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .oc{background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .oc .l{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+  .oc .v{font-size:13.5px;color:var(--ink);margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  .chip{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;white-space:nowrap}
+  .c1{background:#fbf3dc;color:#9a7b27}.c2{background:#eaf1fa;color:var(--blue)}.c3{background:#eef7f0;color:var(--green)}
+  .serif-card{background:#fffdf8;border:1px solid var(--gold-l);border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0;cursor:pointer}
+  .serif-card:hover{background:#fdf8ec}
+  .serif-card .sid{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .serif-card .sno{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 10px}
+  .serif-card .scene{font-size:11.5px;color:var(--mut)}
+  .serif-card .stx{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;color:var(--ink);line-height:1.9}
+  .serif-card .hint{font-size:10.5px;color:#b6a26d;margin-top:4px}
+  .nar{margin:14px 0}
+  .nar h3{font-size:14px;color:var(--navy);background:#eaf1fa;border-radius:8px;padding:6px 12px;margin-bottom:8px}
+  .nar p{font-size:13.5px;margin:8px 4px;color:#2c3644}
+  ul.plain{list-style:none}
+  ul.plain li{position:relative;padding-left:20px;margin:6px 0;font-size:13.5px}
+  ul.plain li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+  .memo{background:#fff8e8;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin-top:8px}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:30px}
+  /* ===== プロンプター ===== */
+  #pv{position:fixed;inset:0;background:#000;color:#fff;z-index:999;display:none;flex-direction:column}
+  #pv.on{display:flex}
+  #pv .bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#111;flex-wrap:wrap}
+  #pv .bar button{background:#222;color:#fff;border:1px solid #555;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+  #pv .bar button.act{background:var(--gold);color:#000;border-color:var(--gold)}
+  #pv .bar .pos{margin-left:auto;font-size:14px;color:#d8c79b}
+  #pv .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:4vw;overflow:hidden}
+  #pv .line{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;text-align:center;line-height:1.7;white-space:pre-wrap}
+  #pv .scrollwrap{flex:1;overflow-y:auto;padding:20vh 6vw}
+  #pv .scrollwrap .sl{font-family:"Hiragino Mincho ProN",serif;font-weight:600;line-height:1.9;margin:5vh 0;text-align:center;white-space:pre-wrap}
+  #pv .scrollwrap .sl .tag{display:block;font-size:14px;color:#d8c79b;font-family:sans-serif;margin-bottom:8px}
+  #pv.mirror .stage,#pv.mirror .scrollwrap{transform:scaleX(-1)}
+  #pv .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:#888;font-size:34px;padding:18px 10px;cursor:pointer;border-radius:10px}
+  #pv .prev{left:8px}#pv .next{right:8px}
+  @media(max-width:640px){.cards3{grid-template-columns:1fr}header h1{font-size:20px}}
+  @media print{.prompter-btn,#pv{display:none!important}body{background:#fff}section{box-shadow:none;page-break-inside:avoid}}
+  /* ===== 太郎さん専用ガイド ===== */
+.taro{background:#fffaf0;border:3px solid var(--gold);border-radius:14px;padding:8px 22px 22px}
+.taro h2{font-size:20px;border:none;background:var(--gold);color:#3a2c08;padding:6px 16px;border-radius:10px;display:block;margin:14px 0 6px}
+.taro .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.5;margin:6px 0}
+.taro .row{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+.taro .ico{font-size:30px;flex:0 0 40px;text-align:center;line-height:1.2}
+.taro .ttl{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.04em}
+.taro .txt{font-size:16px;color:var(--ink);line-height:1.75;margin-top:2px}
+.taro .txt b{color:var(--navy)}
+.taro .tell{background:#eef7f0;border-left:5px solid var(--green)}
+.taro .tell .ttl{color:var(--green)}
+.taro ul.gist{list-style:none;margin:4px 0 0}
+.taro ul.gist li{position:relative;padding:6px 0 6px 26px;font-size:16px;line-height:1.6}
+.taro ul.gist li::before{content:"💬";position:absolute;left:0;top:5px;font-size:15px}
+.taro .tip{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 14px;margin-top:10px;font-size:14.5px;color:#7a5f1e}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ SCRIPT v6</div>
+  <h1>PG19｜自分のメニューに組み込む実習（属性別3パターン）</h1>
+  <div class="meta"><span>尺：約33分30秒（30〜35分レンジ内）</span><span>形式：実習回（図解＋ワークシート主体）</span><span>台本v6（2026-07-02）</span><span>層：<span class="chip c1">🎬 層1 太郎</span> <span class="chip c2">🎙 層2 ナレ</span> <span class="chip c3">📺 層3 テロップ</span></span></div>
+</header>
+<div class="wrap">
+  <div class="prompter-btn"><button onclick="openPv(0)">🎬 プロンプターを開く（太郎さんセリフ）</button></div>
+
+<section class="taro">
+  <h2>👤 太郎さん、まずこれだけ（撮影前に読む）</h2>
+  <div class="big">今日は、覚えた頭のマッサージに「名前・時間・値段」の3つをつけて、お店で売れる“メニュー”にする回です。</div>
+
+  <div class="row"><div class="ico">🤔</div><div><div class="ttl">なんで大事？</div>
+    <div class="txt">どんなに良い技術も、<b>「名前・時間・値段」が決まっていないと、お客さんは注文できません</b>。ラーメン屋さんで、味は最高なのに壁に品書きが1枚も貼っていなかったら、お客さんは「何を頼めばいいの？」となって帰ってしまいますよね。技術を“商品”として並べて、はじめて売上になります。この回は、太郎さんが受講生に「メニューの作り方」を見せる回です。</div></div></div>
+
+  <div class="row"><div class="ico">🙌</div><div><div class="ttl">太郎さんがやること</div>
+    <div class="txt">🤲 <b>手：</b>この回で手を動かすのは1か所だけです。<b>髪にオイルがついた“ぬるぬるの手”で頭をさわり、「つまむ技は指が滑ってできない」のを実際に見せる</b> → そのあと「指の腹で押さえる技」に切り替えて見せます（06:50〜10:30あたり）。あとは座ってしゃべるだけ。<br>🗣 <b>口：</b>最初の挨拶、3つのパターンの入り口の一言、途中のワーク（書く時間）への一言、最後の課題と締め。ぜんぶプロンプター（S01〜S10）に出るので、<b>読めばOK</b>です。</div></div></div>
+
+  <div class="row tell"><div class="ico">💬</div><div><div class="ttl">言いたいことは、ざっくりこれ</div>
+    <ul class="gist">
+      <li>今日は実習。覚えた技に、名前・時間・値段をつけて、お店のメニューにしますよ。</li>
+      <li>オイルで手が滑ると、できる技とできない技がある。つまむのは無理だから、指の腹で押さえる技に替えます。</li>
+      <li>やり方は3タイプある。オイルの人は今のコースに足す、ヘッドスパ専門の人は30分の単品、理容師・美容師さんはカットやシャンプーにくっつける。</li>
+      <li>最後は自分のシートに書いてもらう。完璧じゃなくていい、まず1枚メニューを作ってみよう。</li>
+    </ul></div></div>
+
+  <div class="tip">💡 <b>コツ：</b>下の台本は、丸暗記しなくて大丈夫。<b>「言いたいこと（上の💬）」さえ分かっていれば</b>、プロンプターの文はスッと自然に出てきます。読むんじゃなく、"分かってる人がしゃべる"感じで。</div>
+</section>
+
+  <section style="border-left:5px solid var(--gold)">
+  <h2>📌 この回の設計図（まずこれだけ読めばOK）</h2>
+
+  <div style="background:#fbf6ea;border:1px solid var(--gold-l);border-radius:10px;padding:14px 18px;margin:10px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em">① この回でやること</div>
+    <div style="font-size:16px;font-weight:700;color:var(--navy);margin:4px 0">習った手技に「名前・時間・値段」の3つを決めて、自分の店のメニュー表に載せるところまで作る回</div>
+    <ol style="margin:6px 0 0 22px;font-size:13.5px">
+      <li>自分がどの型かを選ばせる：オイル系＝60分コースに15分足す「アドオン」／ヘッドスパ専門＝30分の「単品」／理容・美容＝カットやシャンプーに10分足す「セット」（図解1）</li>
+      <li>オイルが残った手で「できる技・できない技」を太郎さんの実演で見せる（摘み手が滑る→指の腹で押さえる技に替える）（図解3）</li>
+      <li>値段の決め方を計算式で見せる：既存メニューの分単価 × 新メニューの分数（例：60分¥8,000 → 15分約¥2,000）（図解4）</li>
+      <li>メニュー名の付け方を見せる：「不眠改善」等の効果断定はNG／「深い休息の〜」等のリラクゼーション表現はOK（図解6）</li>
+      <li>「マイメニュー設計シート」10項目を、動画を止めながら受講者に書かせる（図解8）</li>
+      <li>書き上げたメニュー表＋設計シートを、中級ディプロマ課題として提出させる（ED）</li>
+    </ol>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">② 太郎さんのタスク（手でやること／口で読むこと）</div>
+    <table>
+      <tr><th style="width:50%">🤲 手でやること（実演・撮る絵）</th><th>🗣 口で読むこと（プロンプター）</th></tr>
+      <tr><td>・ウェットデモ（06:50–10:30／本回唯一の実技・モデル座位約10分）：オイルを手に薄くのばす → 摘み手が滑って挟めない瞬間を見せる → 指の腹の静圧 → 乾いたタオル越しのリリース → ゆっくりの軽擦<br>・S07でワークシート現物（A4）を手に持って見せる</td><td>S01–S02 冒頭挨拶（座り）／S03 パターンA導入（座り）／S04 デモ中・手を止めて一言（セット面）／S05 パターンB導入（座り）／S06 パターンC導入（座り）／S07 ワーク導入（シートを手に持って）／S08–S10 課題＋締め（座り）</td></tr>
+    </table>
+    <div style="font-size:12px;color:var(--mut);margin-top:4px">合計拘束目安：実演約10分＋読み約3分（読みはプロンプター使用・演技不要）</div>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">③ 画面に入れるクリエイティブ（編集チームへの発注リスト）</div>
+    <table>
+      <tr><th style="width:110px">種類</th><th>作るもの</th><th style="width:130px">使う場面</th></tr>
+      <tr><td>図解</td><td>3属性マップ（オイル＝アドオン／専門店＝単品／理美容＝セットの3カード＋「名前×時間×価格」の帯）</td><td>01:00 導入</td></tr>
+      <tr><td>アニメ図</td><td>60分オイルコースの帯に「＋15分ヘッド」を前／最後に差し込む挿入位置2択</td><td>03:50 パターンA設計</td></tr>
+      <tr><td>実演インサート</td><td>ウェット手技可否表（デモ映像に◎○×を順次重ねる＋「3本柱＝軽擦・静圧・タオル越し」まとめ）</td><td>06:50 ウェットデモ</td></tr>
+      <tr><td>アニメ図</td><td>アドオン価格の計算式（¥8,000÷60分＝約¥133 → ×15分＝約¥2,000）＋「※計算例です」常時注記</td><td>10:30 価格パート</td></tr>
+      <tr><td>アニメ図</td><td>予約枠45分の帯図（お迎え7分＋施術30分＋リセット8分）と30分詰め込みNG比較</td><td>13:10 パターンB設計</td></tr>
+      <tr><td>比較テロップ</td><td>メニュー名NG/OK表（NG側に赤斜線・OK側に金チェック＋免責一行の固定テロップ）</td><td>16:10 メニュー名</td></tr>
+      <tr><td>図解</td><td>理美容セット化3案カード（カット後10分アドオン／シャンプー延長5分／単品30分）＋推奨順の矢印</td><td>19:30 パターンC設計</td></tr>
+      <tr><td>テンプレ見本</td><td>マイメニュー設計シート10項目の1項目ずつ表示＋「⏸ ここで一時停止」10秒静止の記入ポーズ画面</td><td>25:30 ワーク実習</td></tr>
+      <tr><td>図解</td><td>3パターン比較まとめ表（型・時間・環境・手技の柱の4行）＋「分単価を計算する」全面テロップ</td><td>29:30 まとめ</td></tr>
+    </table>
+  </div>
+
+  <div class="cards3" style="margin-top:12px">
+    <div class="oc"><div class="l">今日から現場で使える1つ</div><div class="v">「既存メニューの分単価を計算する」。新メニューの値段は、感覚ではなく分単価から決める。</div></div>
+    <div class="oc"><div class="l">宿題</div><div class="v">中級ディプロマ課題＝①新メニューを載せたメニュー表 ②マイメニュー設計シート（10項目記入の写し）を提出。＋メニュー表を店内に1週間掲示（不可なら常連客1名に口頭案内）。</div></div>
+    <div class="oc"><div class="l">配布物</div><div class="v">①マイメニュー設計シート ②ウェット手技可否早見表 ③3パターン比較早見表 ④価格計算メモ ⑤課題提出要項</div></div>
+  </div>
+  </section>
+  <section><h2>基本情報</h2><table><tr><th>プログラム番号</th><td>PG19</td></tr><tr><th>タイトル</th><td>自分のメニューに組み込む実習（属性別3パターン）</td></tr><tr><th>カテゴリ</th><td>実習：メニュー設計（手技を商品に変えるビジネス回）</td></tr><tr><th>ディプロマ段階</th><td>③中級（本回が中級ディプロマ課題の提出回）<b style="color:#c0392b">〔要確認: 中級ディプロマの正式名称〕</b></td></tr><tr><th>想定尺</th><td>約33分30秒（30〜35分レンジ内）</td></tr><tr><th>収録形態</th><td>実習回（図解＋ワークシート主体。太郎さんはOP/ED＋ウェット環境の手技可否デモのみ出演。解説はすべてナレーション）</td></tr><tr><th>必要機材</th><td>カメラA：太郎さんバストアップ／カメラB：手元アップ（オイルデモ用マクロ寄り）／施術用オイル少量／ホットタオル1本・乾いたタオル1枚／セット面椅子／ワークシート現物（画面見せ用A4）</td></tr><tr><th>必要モデル</th><td>1名（座位10分程度。ウェット可否デモで髪にオイルが薄く付くことを了承済みの方。髪は乾いた状態で入り）</td></tr><tr><th>参照PG</th><td>PG18（あなたの15分に値札をつける：分単価・30分の型・松竹梅）／PG16（15分クイックコース通し実演・立ちver）／太郎ハンド3種・あおり手＋摘み手・筋膜リリース頭皮・首肩コリのリリース・コンビネーションの各手技回<b style="color:#c0392b">〔要確認: v6カリキュラム確定後、手技回のPG番号を差し替え〕</b></td></tr><tr><th>コンプラ</th><td>効能断定なし（「リラクゼーションを目的に」「〜と言われています」で統一）。価格・数字はすべて「計算例」として提示し実績としては扱わない。メニュー名の薬機法NG例／OK例を本編で明示</td></tr></table></section>
+  <section><h2>タイムコード構成表</h2><table><tr><th>時間</th><th>パート</th><th>内容</th><th>層</th></tr><tr><td>00:00–00:30</td><td>OP</td><td>太郎さん挨拶＋今日のゴール（S01・S02）</td><td><span class="chip c1">🎬 層1 太郎</span></td></tr><tr><td>00:30–01:00</td><td>宿題レビュー</td><td>先週の宿題・良い例紹介（N1）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>01:00–03:30</td><td>導入図解</td><td>「手技を商品に変える」3属性マップ＋商品化の3条件（N2・N3）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3 図解1</span></td></tr><tr><td>03:30–03:50</td><td>パターンA導入</td><td>太郎さん一言（S03）</td><td><span class="chip c1">🎬 層1 太郎</span></td></tr><tr><td>03:50–06:50</td><td>A-1 設計図解</td><td>60分オイル＋15分ヘッドアドオンの挿入位置2択・時間配分（N4・N5）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3 図解2</span></td></tr><tr><td>06:50–10:30</td><td>A-2 ウェット実演</td><td>オイルの残った手での手技可否デモ＋代替手技（S04・N6・N7）</td><td><span class="chip c1">🎬 層1 実演</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3 図解3</span></td></tr><tr><td>10:30–12:50</td><td>A-3 価格設計</td><td>アドオン価格の分単価計算例（N8）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3 図解4</span></td></tr><tr><td>12:50–13:10</td><td>パターンB導入</td><td>太郎さん一言（S05）</td><td><span class="chip c1">🎬 層1 太郎</span></td></tr><tr><td>13:10–16:10</td><td>B-1 30分単品設計</td><td>施術30分＋前後15分＝予約枠45分の設計（N9）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3 図解5</span></td></tr><tr><td>16:10–19:10</td><td>B-2 メニュー名</td><td>薬機法NG/OKとメニュー名の付け方（N10）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3 図解6</span></td></tr><tr><td>19:10–19:30</td><td>パターンC導入</td><td>太郎さん一言（S06）</td><td><span class="chip c1">🎬 層1 太郎</span></td></tr><tr><td>19:30–22:30</td><td>C-1 セット化3案</td><td>カット後10分アドオン／シャンプー延長5分／単品30分（N11）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3 図解7</span></td></tr><tr><td>22:30–25:00</td><td>C-2 動線・セット価格</td><td>セット価格の計算例と店内動線・声かけ（N12）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>25:00–25:30</td><td>ワーク導入</td><td>太郎さん一言（S07・手を止めて言う）</td><td><span class="chip c1">🎬 層1 太郎</span></td></tr><tr><td>25:30–29:30</td><td>ワークシート実習</td><td>「マイメニュー設計シート」穴埋め10項目を順に解説＋記入ポーズ画面（N13）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3 図解8</span></td></tr><tr><td>29:30–31:30</td><td>まとめ</td><td>3パターン比較＋「今日から現場で使える1つ」テロップ（N14）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3 図解9</span></td></tr><tr><td>31:30–33:30</td><td>ED</td><td>中級ディプロマ課題の提示＋締め（N15・S08〜S10）</td><td><span class="chip c1">🎬 層1 太郎</span> <span class="chip c3">📺 層3</span></td></tr><tr><td colspan="4" style="background:#fbf9f3;font-weight:700">合計：約33分30秒</td></tr></table></section>
+  <section><h2>太郎さんセリフ（クリックでその行からプロンプター起動）</h2><div class="serif-card"><div class="sid"><span class="sno">S01</span><span class="scene">OP：挨拶＋今日のゴール（00:00–00:30）</span></div><div class="stx">こんにちは。山口太郎です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S02</span><span class="scene">OP：挨拶＋今日のゴール（00:00–00:30）</span></div><div class="stx">今日は、実習です。習った手技に、名前と時間と値段をつけて、お店のメニューにします。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S03</span><span class="scene">パターンA導入（03:30–03:50）</span></div><div class="stx">オイルがついた手は、滑ります。できる技と、できない技を、これから整理します。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S04</span><span class="scene">A-2 ウェットデモ中（08:00頃・摘み手が滑るのを見せたあと、手を止めて言う）</span></div><div class="stx">手が滑って、つまめません。指の腹で押さえる技に、替えます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S05</span><span class="scene">パターンB導入（12:50–13:10）</span></div><div class="stx">ヘッドスパのお店の方は、30分のメニューを、1本作ります。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S06</span><span class="scene">パターンC導入（19:10–19:30）</span></div><div class="stx">理容師と美容師の方は、カットやシャンプーに、ヘッドの時間を足します。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S07</span><span class="scene">ワーク導入（25:00–25:30・手を止めて言う）</span></div><div class="stx">ここからは、書く時間です。このシートを、一緒に埋めていきます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S08</span><span class="scene">ED：課題＋締め（31:50–33:30）</span></div><div class="stx">課題です。新しいメニューを載せたメニュー表と、今日書いたシートを、提出してください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S09</span><span class="scene">ED：課題＋締め（31:50–33:30）</span></div><div class="stx">完璧じゃなくて、大丈夫です。まず一枚、作ってください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S10</span><span class="scene">ED：課題＋締め（31:50–33:30）</span></div><div class="stx">それでは、また来週。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div></section>
+  <section><h2>ナレーション全文</h2><div class="nar"><h3>N1｜宿題レビュー（00:30–01:00）</h3><p>先週の宿題は、自分のお店の告知文を1本書いて、提出することでした。今週も、良い提出が届いています。<b style="color:#c0392b">〔要確認: 実際の提出例を1つ画面表示して紹介〕</b>告知文が書けたら、次は、その中身です。今日は、告知の先にある「売るメニューそのもの」を設計します。手を動かして書く回です。</p></div><div class="nar"><h3>N2｜導入・商品化の3条件（01:00–02:15）</h3><p>山口流理容道、今回は実習回です。これまで学んできた手技を、あなたのお店の「売れるメニュー」に組み込みます。手技は、練習しただけでは収入になりません。名前がつき、時間が決まり、価格がついて、はじめて商品になります。名前、時間、価格。この3つを、今日この動画の中で決めてしまいます。手元にペンとワークシートをご用意ください。</p></div><div class="nar"><h3>N3｜3属性マップ（02:15–03:30）</h3><p>パターンは3つです。1つ目は、オイルトリートメントを提供しているセラピストの方。60分のオイルコースに、15分のヘッドを「アドオン」として足す形です。2つ目は、ヘッドスパ専門店の方。30分の「単品」メニューとして売る形。3つ目は、理容師・美容師の方。カットやシャンプーという、いつもの仕事に「セット」で組み込む形です。ご自分がどれに当たるか、考えながらご覧ください。他の属性の設計にも、必ず使える考え方が入っています。</p></div><div class="nar"><h3>N4｜A-1 挿入位置の2択（03:50–05:20）</h3><p>パターンA、オイルセラピストの方です。60分のオイルボディに15分のヘッドを足して、75分のコースにします。図をご覧ください。挿入位置には、2つの選択肢があります。選択肢1は、オイルの「前」。着衣のまま、乾いた髪に15分のヘッドを行い、それからボディに入る。この場合、学んだ手技はすべてそのまま使えます。選択肢2は、コースの「最後」。仰向けの流れの締めにヘッドを置く。お客様がいちばん深く休まれた状態で終われるのが利点です。ただしこの場合、手にオイルが残った「ウェット環境」でヘッドを行うことになります。</p></div><div class="nar"><h3>N5｜A-1 ウェット環境の前提（05:20–06:50）</h3><p>ウェット環境で問題になるのは、手の滑りです。オイルの残った手は、滑ります。滑る手では、できる技と、できない技が、はっきり分かれます。選択肢2を選ぶ方は、これから見せる可否表を必ず覚えてください。ここが、このパターンの分かれ目です。なお、ホットタオルで手のオイルを拭き取ってからヘッドに入る、という運用もあります。その場合も、手や髪に残る油分はゼロにはなりません。「完全なドライ環境には戻らない」前提で設計してください。</p></div><div class="nar"><h3>N6｜A-2 デモ前半・できない技（06:50–08:40）</h3><p>実際に見てみましょう。太郎さんの手には、いまオイルが薄く残っています。まず摘み手です。後頭部の生え際を摘まもうとすると、指が滑って、組織を挟めません。摘み手は、ウェット環境では使えない技です。次に、タッピングと叩打。油分を含んだ髪は束になり、音も感触も変わります。髪へのオイル付着も増えるため、おすすめしません。頭皮を動かす筋膜リリースも、指が滑って頭皮に圧が伝わらないため、素手では成立しません。</p></div><div class="nar"><h3>N7｜A-2 デモ後半・代替の3本柱（08:40–10:30）</h3><p>では、何に替えるか。摘み手の代わりは、指の腹の「静圧」です。摘まむのではなく、同じ場所に指の腹を当てて、押さえて、待つ。頭皮を動かしたい場合は、乾いたタオルを頭に掛け、タオル越しに行うと滑りません。そして軽擦。これはむしろ、オイルと相性の良い技です。毎秒3〜5センチの遅い軽擦は、ウェット環境でこそ主役になります。まとめます。ウェットでは「軽擦」「静圧」「タオル越しのリリース」の3本柱。摘み手・タッピング・叩打を使いたい方は、選択肢1の「先にヘッド」を選ぶか、その技を外して組んでください。</p></div><div class="nar"><h3>N8｜A-3 アドオン価格の計算例（10:30–12:50）</h3><p>次に、アドオンの価格です。ここからの数字は、すべて計算の例としてご覧ください。考え方は、前回「値札」の回で学んだ「分単価」です。例えば、60分のオイルコースが8,000円のお店なら、1分あたり約133円。15分なら約2,000円。これが価格の下限の目安です。ヘッドのアドオンは、コース全体の満足度を仕上げる「締めの15分」ですから、分単価を少し上げて2,500円前後に設定する考え方もあります。逆に、本体より分単価が安すぎる価格は、技術の価値を下げるので避けてください。ご自分のメニューの分単価は、このあとのワークシートで実際に計算します。</p></div><div class="nar"><h3>N9｜B-1 30分単品の設計（13:10–16:10）</h3><p>パターンB、ヘッドスパ専門店の方です。30分を、一本の商品として売ります。図をご覧ください。大事なのは、「施術30分」と「予約枠30分」は別物だ、ということです。施術そのものは30分。その前に、お迎えとカウンセリング。終わったあとに、お見送りと、消毒・タオル交換などのリセット。前後あわせて約15分かかります。つまり、予約枠は45分で設計します。30分商品を30分間隔で詰めると、リセットの時間が消え、施術の質から先に崩れます。回転を欲張らないことが、質と、次の予約を守ります。施術30分の中身は、前回「値札」の回で示した30分の型を、そのまま使ってください。15分クイックコースの5ブロックを土台に、側頭・前頭と、後頭・首肩を、それぞれのばした形です。</p></div><div class="nar"><h3>N10｜B-2 メニュー名と表現ルール（16:10–19:10）</h3><p>商品には、名前が要ります。ここで大事なのが、広告表現のルールです。ヘッドマッサージは医療ではありません。効果を断定する名前は使えません。図のNG例をご覧ください。「自律神経が整うヘッドスパ」。「不眠改善コース」。「育毛ヘッドスパ」。これらは効果の断定にあたるため、メニュー表にも、SNSにも、使わないでください。OK例はこうです。「深い休息のドライヘッドスパ 30分」。「目を閉じる30分。」のように、リラクゼーションを目的とした表現に整えます。迷ったときは、メニュー表の下に「リラクゼーションを目的とした施術です。効果には個人差があります。」と一行添えてください。名前は、効果を約束するためではなく、受けたあとの時間を想像してもらうためにつけます。</p></div><div class="nar"><h3>N11｜C-1 セット化3案（19:30–22:30）</h3><p>パターンC、理容師・美容師の方です。新しい商品をゼロから作るより先に、いつもの仕事に「足す」形から始めます。図の3案です。案1、カット後の10分アドオン。セット面で、立ったまま行います。15分クイックコースの流れを10分に圧縮し、静止タッチ、側頭、後頭・首肩、クールダウンの4ブロックに絞ります。案2、シャンプー延長の5分。シャンプー台で、洗髪の流れに続けて行います。髪が濡れたウェット環境ですから、パターンAと同じ考え方で、軽擦と静圧が中心です。案3、独立した30分単品。これはパターンBと同じ設計を、理容室・美容室の予約枠に載せる形です。おすすめの順番は、案1か案2で小さく始めて、お客様の反応を見てから案3に育てることです。</p></div><div class="nar"><h3>N12｜C-2 セット価格と動線（22:30–25:00）</h3><p>セット化の価格です。ここも計算例として聞いてください。カットが4,000円のお店で10分のヘッドを足すなら、単品換算で1,500円前後が目安です。前回の分単価の考え方から、本体より安売りしないことが前提です。「カット＋ヘッド」のセットにするときは、単品合計より少しだけ下げた価格にすると、セットを選ぶ理由が生まれます。次に、動線です。おすすめは、カットの後、仕上げの前。切った髪を払ったあと、クロスを外す前のタイミングなら、お客様の流れが途切れません。そしてもう一つ。施術の前の一言を決めておきます。「10分、頭を休める時間を足せます。」この一言まで含めて、メニュー設計です。声のかけ方が決まっていないメニューは、存在しないのと同じです。</p></div><div class="nar"><h3>N13｜ワークシート実習（25:30–29:30）</h3><p>いまから、ワークシート「マイメニュー設計シート」に書き込みます。画面に項目を出しますので、動画を止めながら、10個の空欄を埋めてください。1、あなたの属性。オイル・リラクゼーション系、ヘッドスパ専門、理容・美容、その他から選びます。2、いまの主力メニュー。名前と、時間と、価格。3、組み込みパターン。アドオン、単品、セットのどれか。4、新しいメニューの名前。先ほどの表現ルールを守ってつけます。5、時間配分。導入に何分、本編に何分、クールダウンに何分、合計で何分か。6、使う手技を3つ。学んだ回の番号も添えて書きます。7、使わない手技と、その理由。ウェット環境や設備の制約を、自分の言葉で書きます。8、価格と、その根拠。既存メニューの分単価、掛ける、新メニューの分数で計算します。9、提供のタイミングと動線。お客様の流れのどこに置くか。10、最初に試すお客様。顔が浮かぶ、一人の名前で書いてください。以上の10項目です。すべて埋まると、そのままメニュー表の下書きになります。</p></div><div class="nar"><h3>N14｜まとめ（29:30–31:30）</h3><p>3つのパターンを並べて見ましょう。オイルセラピストは、75分への「アドオン」。ヘッドを前に置けば全手技が使え、後ろに置くならウェットの3本柱で組む。ヘッドスパ専門店は、30分の「単品」。予約枠は45分で切る。理容師・美容師は、いつもの仕事への「セット」。10分アドオンから小さく始める。形は違っても、共通することは1つです。名前と、時間と、価格が決まって、はじめて手技は商品になります。今日から現場で使える1つ。「既存メニューの分単価を計算する」。新しいメニューの価格は、感覚ではなく、そこから決めてください。</p></div><div class="nar"><h3>N15｜ED導入（31:30–31:50）</h3><p>それでは、今回の課題です。この課題は、中級ディプロマの提出課題になります。</p></div></section>
+  <section><h2>テロップ・図解指示</h2><ul class="plain"><li><b>OPテロップ</b>：「山口流 理容道｜PG19　自分のメニューに組み込む実習〈属性別3パターン〉」（ブランドカラー #1B2A4A 背景＋#C5A55A 文字）</li><li><b>コンプラ注記</b>（画面下・小・初出時と価格パート冒頭に表示）：「※リラクゼーションを目的とした施術です。効果には個人差があります。」「※価格はすべて計算例です。」</li><li><b>章タイトルテロップ</b>：パターン切替時に「PATTERN A｜オイルセラピスト」「PATTERN B｜ヘッドスパ専門店」「PATTERN C｜理容・美容」を画面全面で1.5秒。</li><li><b>図解1（01:00–03:30）｜3属性マップ</b>：横並び3カード。①オイルセラピスト→「アドオン型」60分＋15分 ②ヘッドスパ専門店→「単品型」30分 ③理容・美容→「セット型」いつもの仕事＋α。上部に「商品化の3条件：名前 × 時間 × 価格」の帯。</li><li><b>図解2（03:50–06:50）｜アドオン挿入位置の2択</b>：60分オイルコースの横帯タイムライン（うつ伏せ→仰向け→クールダウン）。選択肢1：帯の先頭に「＋15分ヘッド（ドライ・全手技可）」を差し込むアニメ。選択肢2：帯の末尾に「＋15分ヘッド（ウェット・手技を選ぶ）」を差し込むアニメ。注記：「ホットタオルで拭いても、完全なドライには戻らない」。</li><li><b>図解3（06:50–10:30）｜ウェット環境 手技可否表</b>：デモ映像（カメラB手元アップ）に◎○×マークを順次重ねる。まとめテロップ：「ウェットの3本柱＝軽擦・静圧・タオル越し」<table><tr><th>手技</th><th>ウェット可否</th><th>代替</th></tr><tr><td>軽擦（低速・毎秒3〜5cm）</td><td>◎ むしろ相性が良い</td><td>—</td></tr><tr><td>母指球の静圧（押さえて待つ）</td><td>○ 面で固定すれば可</td><td>—</td></tr><tr><td>指腹の静圧</td><td>○ 摘み手の代替として主力</td><td>—</td></tr><tr><td>筋膜リリース（頭皮を動かす）</td><td>× 素手では滑る</td><td>乾いたタオル越しに行う</td></tr><tr><td>摘み手</td><td>× 滑って挟めない</td><td>指腹の静圧に置き換え</td></tr><tr><td>タッピング・叩打</td><td>× 髪が束になり音・感触が変わる</td><td>「先にヘッド」構成に回すか外す</td></tr></table></li><li><b>図解4（10:30–12:50）｜アドオン価格の計算式</b>：数式アニメ：「60分 ¥8,000（例）÷ 60分 ＝ 分単価 約¥133」→「×15分 ＝ 約¥2,000（下限の目安）」→「締めの15分価値 → ¥2,500前後の考え方も」。注記テロップ常時：「※計算例です。ご自身の価格で計算してください」</li><li><b>図解5（13:10–16:10）｜予約枠45分の帯図</b>：45分の横帯：お迎え・カウンセリング（約7分）→ 施術30分 → お見送り・リセット（約8分）。NG図を並置：30分間隔で詰めた予約表が崩れていく比較アニメ。テロップ：「施術30分 ≠ 予約枠30分」「枠は45分で切る」</li><li><b>図解6（16:10–19:10）｜メニュー名 NG/OK表</b>：NG側に赤の斜線、OK側に金色チェック。下部固定テロップ：「メニュー表に一行：リラクゼーションを目的とした施術です。効果には個人差があります。」<table><tr><th>NG（効果の断定）</th><th>OK（リラクゼーション表現）</th></tr><tr><td>自律神経が整うヘッドスパ</td><td>深い休息のドライヘッドスパ 30分</td></tr><tr><td>不眠改善コース</td><td>目を閉じる30分。</td></tr><tr><td>育毛ヘッドスパ</td><td>髪と頭皮をいたわる静かな時間</td></tr></table></li><li><b>図解7（19:30–22:30）｜理美容セット化3案</b>：3カード：案1「カット後10分アドオン（セット面・立ち）」／案2「シャンプー延長5分（ウェット→軽擦・静圧中心）」／案3「単品30分（パターンBと同設計）」。案1カード内に4ブロック圧縮図（静止タッチ→側頭→後頭・首肩→クールダウン）。推奨順の矢印：案1・案2 →（反応を見て）→ 案3。</li><li><b>図解8（25:30–29:30）｜マイメニュー設計シート（穴埋め10項目）</b>：画面に1項目ずつ表示→記入ポーズ画面（「⏸ ここで一時停止」テロップ＋10秒静止）を挟む。項目定義：<br>1. あなたの属性：□オイル・リラクゼーション系　□ヘッドスパ専門　□理容・美容　□その他（　　　）<br>2. いまの主力メニュー：名前（　　　）／時間（　　分）／価格（　　　円）<br>3. 組み込みパターン：□アドオン　□単品　□セット<br>4. 新メニュー名：（　　　　　　　　）※効果断定の言葉は使わない<br>5. 時間配分：導入（　分）＋本編（　分）＋クールダウン（　分）＝合計（　分）<br>6. 使う手技3つ：①（　　　）②（　　　）③（　　　）※学んだ回の番号も<br>7. 使わない手技とその理由：（　　　　　　　　）※ウェット環境・設備の制約など<br>8. 価格：（　　　円）／根拠：分単価（　　円/分）×（　分）＝（　　　円）<br>9. 提供タイミング・動線：（　　　　　　　　）<br>10. 最初に試すお客様：（　　　さん）※顔が浮かぶ一人の名前で</li><li><b>図解9（29:30–31:30）｜3パターン比較まとめ表</b>：まとめテロップ（全面・3秒）：「今日から現場で使える1つ：既存メニューの“分単価”を計算する」<table><tr><th></th><th>A オイル</th><th>B 専門店</th><th>C 理美容</th></tr><tr><th>型</th><td>アドオン</td><td>単品</td><td>セット</td></tr><tr><th>時間</th><td>＋15分（計75分）</td><td>30分（枠45分）</td><td>＋10分 or ＋5分</td></tr><tr><th>環境</th><td>前=ドライ／後=ウェット</td><td>ドライ</td><td>セット面=ドライ／シャンプー台=ウェット</td></tr><tr><th>手技の柱</th><td>全手技 or ウェット3本柱</td><td>5ブロック拡張</td><td>4ブロック圧縮</td></tr></table></li><li><b>ED（31:30–33:30）</b>：課題テロップ：「中級ディプロマ課題：①新メニューを載せた自分のメニュー表　②価格とその根拠（マイメニュー設計シートの写し）を提出」／提出方法テロップ：<b style="color:#c0392b">〔要確認: 提出先（会員サイト／公式LINE）と提出期限〕</b>／締めテロップ：「それでは、また来週。」（#1B2A4A 背景）</li></ul></section>
+  <section><h2>宿題・配布物</h2><ul class="plain"><li><b>中級ディプロマ課題（本回の提出課題）提出物①</b>：自分のメニュー表（新メニュー名・時間・価格を記載したもの。手書き・データどちらも可）</li><li><b>提出物②</b>：マイメニュー設計シート（穴埋め10項目をすべて記入した写し。写真提出可）</li><li><b>提出先・期限</b>：<b style="color:#c0392b">〔要確認: 会員サイト／公式LINEのどちらか、および期限設定〕</b></li><li><b>評価観点（ナレ・テロップでは非公開。運営用）</b>：(1)名前が表現ルールを守っているか (2)価格に分単価の根拠があるか (3)ウェット環境の制約を自分の設備に引きつけて書けているか</li><li><b>今週の宿題（課題と同一。追加アクション1つ）</b>：完成したメニュー表を、店内のお客様の目に入る場所に1週間掲示してみる（掲示できない事情がある場合は、常連のお客様1名に口頭で案内する）。</li><li><b>配布物（配布物パック_v6.md 参照）</b>：1. マイメニュー設計シート（A4・穴埋め10項目）／2. ウェット環境 手技可否 早見表（A5・サロン控室掲示用）／3. 3パターン比較 早見表／4. 価格計算メモ（分単価の計算式）／5. 中級ディプロマ課題 提出要項</li></ul></section>
+  <section><h2>制作メモ</h2><div class="memo"><b>【撮影】</b><br>・太郎さんの出演はOP・ED・各パターン導入の一言・ウェットデモのみ。<b>カンペはS01〜S10を1枚ずつ大きく</b>。1文は短く・静かな職人トーンで・間を大切に（演技・アドリブ不要）。読み上げで成立する文にしてあるため、抑揚の指示は不要。<br>・<b>A-2ウェットデモ（06:50–10:30）が本回唯一の実技収録</b>。カメラBはマクロ寄りで「指が滑って摘めない瞬間」を確実に押さえる。オイルは薄く、テカリが映る量に調整（照明の反射チェック必須）。<br>・デモの順番：①オイルを手に薄くのばすカット → ②摘み手が滑る → S04 → ③指腹の静圧 → ④タオル越しリリース → ⑤低速軽擦。NGテイクに備え、モデルの髪のオイル拭き取り用ホットタオルを2本以上用意。<br>・S04は「手を止めて言う」。施術しながら話させない。<br>・S07も「手を止めて言う」。ワークシート現物を手に持って見せるだけでよい（掲げる・指し示す等の演出は不要）。<br><br><b>【編集】</b><br>・本回は層3（図解）の物量が多い。図解1〜9はすべて事前制作し、ナレ収録後にタイミング合わせ。<br>・<b>記入ポーズ画面（図解8）</b>：各項目の後に「⏸ ここで一時停止」を10秒静止で挟む。BGMは絞らず一定（停止操作は受講者に委ねる）。<br>・価格が出る画面（図解4・N12区間）には「※計算例です」を<b>常時</b>表示。切り忘れ注意。<br>・メニュー名NG例（図解6）は、NG側を読み上げた直後に赤斜線を重ね、「使ってよい例」と誤認されない編集にする。<br>・経過時間テロップは本回不要（通し実演回ではないため）。<br><br><b>【要確認リスト（納品前に差し替え）】</b><br>・<b style="color:#c0392b">〔要確認: PG18宿題（告知文）の実際の提出例〕</b>→ N1で画面表示する提出物キャプチャ<br>・<b style="color:#c0392b">〔要確認: 中級ディプロマの正式名称〕</b>→ 基本情報・EDテロップ<br>・<b style="color:#c0392b">〔要確認: 課題の提出先（会員サイト／公式LINE）と期限〕</b>→ EDテロップ・提出要項<br>・<b style="color:#c0392b">〔要確認: v6カリキュラムでの手技各回のPG番号〕</b>→ 参照PG欄・図解8の項目6の注記</div></section>
+  <footer>山口流 理容道｜台本v6｜PG19 自分のメニューに組み込む実習（属性別3パターン）｜ⓒ Prorium（社外秘）</footer>
+</div>
+
+<div id="pv">
+  <div class="bar">
+    <button onclick="closePv()">✕ 閉じる(Esc)</button>
+    <button id="mSingle" class="act" onclick="setMode('single')">1枚ずつ</button>
+    <button id="mScroll" onclick="setMode('scroll')">自動スクロール</button>
+    <button onclick="fsz(1)">文字＋</button><button onclick="fsz(-1)">文字−</button>
+    <button id="spD" onclick="spd(-1)" style="display:none">遅く</button><button id="spU" onclick="spd(1)" style="display:none">速く</button>
+    <button id="mir" onclick="mirror()">🪞 ミラー反転</button>
+    <span class="pos" id="pos"></span>
+  </div>
+  <div class="stage" id="stage"><div class="line" id="line"></div></div>
+  <div class="scrollwrap" id="sw" style="display:none"></div>
+  <button class="nav prev" onclick="mv(-1)">‹</button>
+  <button class="nav next" onclick="mv(1)">›</button>
+</div>
+
+<script>
+const LINES = [{"id":"S01","text":"こんにちは。山口太郎です。"},{"id":"S02","text":"今日は、実習です。習った手技に、名前と時間と値段をつけて、お店のメニューにします。"},{"id":"S03","text":"オイルがついた手は、滑ります。できる技と、できない技を、これから整理します。"},{"id":"S04","text":"手が滑って、つまめません。指の腹で押さえる技に、替えます。"},{"id":"S05","text":"ヘッドスパのお店の方は、30分のメニューを、1本作ります。"},{"id":"S06","text":"理容師と美容師の方は、カットやシャンプーに、ヘッドの時間を足します。"},{"id":"S07","text":"ここからは、書く時間です。このシートを、一緒に埋めていきます。"},{"id":"S08","text":"課題です。新しいメニューを載せたメニュー表と、今日書いたシートを、提出してください。"},{"id":"S09","text":"完璧じゃなくて、大丈夫です。まず一枚、作ってください。"},{"id":"S10","text":"それでは、また来週。"}];
+let idx=0, fs=6.4, mode='single', speed=1, raf=null;
+const pv=document.getElementById('pv'), line=document.getElementById('line'), pos=document.getElementById('pos'), sw=document.getElementById('sw'), stage=document.getElementById('stage');
+function openPv(i){ if(!LINES.length) return; idx=i||0; pv.classList.add('on'); render(); }
+function closePv(){ pv.classList.remove('on'); stopScroll(); }
+function render(){
+  if(mode==='single'){
+    stage.style.display='flex'; sw.style.display='none';
+    const L=LINES[idx]; line.style.fontSize=fs+'vw'; line.textContent=L.text;
+    pos.textContent=(L.id||('#'+(idx+1)))+'　'+(idx+1)+' / '+LINES.length;
+  }else{
+    stage.style.display='none'; sw.style.display='block';
+    sw.innerHTML=LINES.map(L=>'<div class="sl" style="font-size:'+fs+'vw"><span class="tag">'+(L.id||'')+'</span>'+L.text.replace(/</g,'&lt;')+'</div>').join('');
+    pos.textContent='自動スクロール（速度 '+speed+'）— クリックで一時停止/再開';
+    startScroll();
+  }
+}
+function mv(d){ if(mode!=='single')return; idx=Math.min(LINES.length-1,Math.max(0,idx+d)); render(); }
+function fsz(d){ fs=Math.min(14,Math.max(2.4,fs+d*0.8)); render(); }
+function mirror(){ pv.classList.toggle('mirror'); document.getElementById('mir').classList.toggle('act'); }
+function setMode(m){ mode=m; stopScroll();
+  document.getElementById('mSingle').classList.toggle('act',m==='single');
+  document.getElementById('mScroll').classList.toggle('act',m==='scroll');
+  document.getElementById('spD').style.display=m==='scroll'?'':'none';
+  document.getElementById('spU').style.display=m==='scroll'?'':'none';
+  render(); }
+function spd(d){ speed=Math.min(5,Math.max(1,speed+d)); pos.textContent='自動スクロール（速度 '+speed+'）'; }
+let paused=false;
+function startScroll(){ paused=false; sw.scrollTop=0; const step=()=>{ if(!paused){ sw.scrollTop+=0.4*speed; } raf=requestAnimationFrame(step); }; raf=requestAnimationFrame(step); }
+function stopScroll(){ if(raf)cancelAnimationFrame(raf); raf=null; }
+sw.addEventListener('click',()=>{ paused=!paused; });
+document.addEventListener('keydown',e=>{
+  if(!pv.classList.contains('on'))return;
+  if(e.key==='Escape')closePv();
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();mv(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();mv(-1);}
+});
+document.querySelectorAll('.serif-card').forEach((el,i)=>el.addEventListener('click',()=>openPv(i)));
+</script>
+</body>
+</html>

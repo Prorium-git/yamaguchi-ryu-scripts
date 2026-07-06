@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG13｜解剖学②｜首肩・後頭下 ＝ コリの震源｜山口流 理容道 台本v6</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:38px 26px 32px;margin:0 -18px 24px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:24px;font-weight:600;margin:8px 0 8px;line-height:1.5}
+  header .meta{font-size:12.5px;color:#c9d2e0;display:flex;gap:16px;flex-wrap:wrap}
+  .prompter-btn{position:sticky;top:10px;z-index:50;display:flex;justify-content:flex-end;margin-bottom:6px}
+  .prompter-btn button{background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:30px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,26,46,.3)}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:16px 0;box-shadow:0 2px 10px rgba(27,42,74,.05)}
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .oc{background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .oc .l{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+  .oc .v{font-size:13.5px;color:var(--ink);margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  .chip{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;white-space:nowrap}
+  .c1{background:#fbf3dc;color:#9a7b27}.c2{background:#eaf1fa;color:var(--blue)}.c3{background:#eef7f0;color:var(--green)}
+  .serif-card{background:#fffdf8;border:1px solid var(--gold-l);border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0;cursor:pointer}
+  .serif-card:hover{background:#fdf8ec}
+  .serif-card .sid{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .serif-card .sno{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 10px}
+  .serif-card .scene{font-size:11.5px;color:var(--mut)}
+  .serif-card .stx{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;color:var(--ink);line-height:1.9}
+  .serif-card .hint{font-size:10.5px;color:#b6a26d;margin-top:4px}
+  .nar{margin:14px 0}
+  .nar h3{font-size:14px;color:var(--navy);background:#eaf1fa;border-radius:8px;padding:6px 12px;margin-bottom:8px}
+  .nar p{font-size:13.5px;margin:8px 4px;color:#2c3644}
+  ul.plain{list-style:none}
+  ul.plain li{position:relative;padding-left:20px;margin:6px 0;font-size:13.5px}
+  ul.plain li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+  .memo{background:#fff8e8;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin-top:8px}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:30px}
+  /* ===== プロンプター ===== */
+  #pv{position:fixed;inset:0;background:#000;color:#fff;z-index:999;display:none;flex-direction:column}
+  #pv.on{display:flex}
+  #pv .bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#111;flex-wrap:wrap}
+  #pv .bar button{background:#222;color:#fff;border:1px solid #555;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+  #pv .bar button.act{background:var(--gold);color:#000;border-color:var(--gold)}
+  #pv .bar .pos{margin-left:auto;font-size:14px;color:#d8c79b}
+  #pv .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:4vw;overflow:hidden}
+  #pv .line{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;text-align:center;line-height:1.7;white-space:pre-wrap}
+  #pv .scrollwrap{flex:1;overflow-y:auto;padding:20vh 6vw}
+  #pv .scrollwrap .sl{font-family:"Hiragino Mincho ProN",serif;font-weight:600;line-height:1.9;margin:5vh 0;text-align:center;white-space:pre-wrap}
+  #pv .scrollwrap .sl .tag{display:block;font-size:14px;color:#d8c79b;font-family:sans-serif;margin-bottom:8px}
+  #pv.mirror .stage,#pv.mirror .scrollwrap{transform:scaleX(-1)}
+  #pv .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:#888;font-size:34px;padding:18px 10px;cursor:pointer;border-radius:10px}
+  #pv .prev{left:8px}#pv .next{right:8px}
+  @media(max-width:640px){.cards3{grid-template-columns:1fr}header h1{font-size:20px}}
+  @media print{.prompter-btn,#pv{display:none!important}body{background:#fff}section{box-shadow:none;page-break-inside:avoid}}
+  /* ===== 解剖図スライド（画像で説明する） ===== */
+  .anatomy{background:#fbf9f3;border:1px solid var(--line);border-radius:12px;padding:14px;margin:12px 0}
+  .anatomy .imgwrap{position:relative;width:100%;max-width:560px;margin:0 auto;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:#efe9dc}
+  .anatomy img{width:100%;height:100%;object-fit:cover;display:block}
+  .anatomy img.pending{display:none}
+  .anatomy .imgwrap.wait::after{content:"🖼 画像生成待ち（"attr(data-file)"）";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#9a8b6a;font-size:12px;text-align:center;padding:12px}
+  .anatomy figcaption{font-size:13.5px;margin-top:8px;color:var(--ink)}
+  .anatomy figcaption b{color:var(--navy)}
+  .anatomy .legend{list-style:none;display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;font-size:12.5px}
+  .anatomy .legend li{display:flex;align-items:center;gap:6px}
+  .anatomy .legend .sw{width:14px;height:14px;border-radius:4px;display:inline-block;border:1px solid #0002}
+  .anatomy .talk{background:#eef3fa;border-left:3px solid var(--blue);border-radius:6px;padding:8px 12px;margin-top:8px;font-size:13px}
+  .anatomy .talk b{color:var(--blue)}
+  /* ===== 太郎さん専用ガイド ===== */
+  .taro{background:#fffaf0;border:3px solid var(--gold);border-radius:14px;padding:8px 22px 22px}
+  .taro h2{font-size:20px;border:none;background:var(--gold);color:#3a2c08;padding:6px 16px;border-radius:10px;display:block;margin:14px 0 6px}
+  .taro .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.5;margin:6px 0}
+  .taro .row{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+  .taro .ico{font-size:30px;flex:0 0 40px;text-align:center;line-height:1.2}
+  .taro .ttl{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.04em}
+  .taro .txt{font-size:16px;color:var(--ink);line-height:1.75;margin-top:2px}
+  .taro .txt b{color:var(--navy)}
+  .taro .tell{background:#eef7f0;border-left:5px solid var(--green)}
+  .taro .tell .ttl{color:var(--green)}
+  .taro ul.gist{list-style:none;margin:4px 0 0}
+  .taro ul.gist li{position:relative;padding:6px 0 6px 26px;font-size:16px;line-height:1.6}
+  .taro ul.gist li::before{content:"💬";position:absolute;left:0;top:5px;font-size:15px}
+  .taro .tip{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 14px;margin-top:10px;font-size:14.5px;color:#7a5f1e}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ SCRIPT v6</div>
+  <h1>PG13｜解剖学②｜首肩・後頭下 ＝ コリの震源</h1>
+  <div class="meta"><span>尺：約32分</span><span>形式：触診ナレ型（手技なし・場所を覚える回）</span><span>台本v6（2026-07-02）</span><span>層：<span class="chip c1">🎬 層1 太郎</span> <span class="chip c2">🎙 層2 ナレ</span> <span class="chip c3">📺 層3 テロップ</span></span></div>
+</header>
+<div class="wrap">
+  <div class="prompter-btn"><button onclick="openPv(0)">🎬 プロンプターを開く（太郎さんセリフ）</button></div>
+
+  <section class="taro">
+    <h2>👤 太郎さん、まずこれだけ（撮影前に読む）</h2>
+    <div class="big">今日は、もむ回じゃありません。首と肩のコリの「もと」になる筋肉3つの"場所"を、モデルさんの体を触りながら覚えてもらう回です。</div>
+
+    <div class="row"><div class="ico">🤔</div><div><div class="ttl">なんで大事？</div>
+      <div class="txt">お客さんは「こってる肩をもんで」と言いますが、こっている場所は、じつは"結果"であって"原因"じゃないことが多いんです。<br>たとえるなら地震。<b>ゆれている場所（＝こってる肩）</b>をいくら見ても、地震は止まりません。止めたいなら<b>震源（＝ゆれを生んでいる大もと）</b>を探しますよね。首肩の震源はだいたい決まっていて、それが今日の3つの筋肉。この"どこが震源か"を先に地図として持っている人が、選ばれる施術者になります。まずは太郎さんが場所を体で覚えるのが第一歩です。</div></div></div>
+
+    <div class="row"><div class="ico">🙌</div><div><div class="ttl">太郎さんがやること</div>
+      <div class="txt">🤲 <b>手：</b>モデルさんの体で3か所を順に触って見せます。①肩の付け根〜肩先の帯（僧帽筋）を手のひらで包む、②後頭部の骨のフチのすぐ下（後頭下筋群）に指を当てる、③顔を横に向けてもらい首の前に浮く筋（胸鎖乳突筋）をそっとなでる。最後に自分の首で3か所のセルフ触診を見本として見せます。<br>🗣 <b>口：</b>しゃべるのは決まった一言だけ（S01〜S08）。あとの解説はぜんぶナレーターがやります。プロンプターに出る文をそのまま読めばOKです。</div></div></div>
+
+    <div class="row tell"><div class="ico">💬</div><div><div class="ttl">言いたいことは、ざっくりこれ</div>
+      <ul class="gist">
+        <li>今日は手技はしない。首肩コリのもとになる3つの筋肉の"場所"を覚える回だよ、と最初に伝える（S01・S02）</li>
+        <li>肩の付け根の帯（僧帽筋）＝一日ぶんの肩の力が"のって"しまう所。指でえぐらず、手のひらで包む・つかまない（S03）</li>
+        <li>後頭部の骨のフチの下（後頭下筋群）＝目をよく使う人が張る所。グリグリせず、頭の重みを指で受けるだけ（S04）</li>
+        <li>首の前の筋（胸鎖乳突筋）＝見落としやすい所。近くに太い血管があるから強く押さず、そっとなでるだけ（S05）</li>
+        <li>最後に、自分の首で3か所を一緒に触って確認しよう→来週はこの3か所を実際にゆるめる回だよ、と締める（S06〜S08）</li>
+      </ul></div></div>
+
+    <div class="tip">💡 <b>コツ：</b>下の台本は、丸暗記しなくて大丈夫。<b>「言いたいこと（上の💬）」さえ分かっていれば</b>、プロンプターの文はスッと自然に出てきます。読むんじゃなく、"分かってる人がしゃべる"感じで。</div>
+  </section>
+
+  <section style="border-left:5px solid var(--gold)">
+    <h2>📌 この回の設計図（まずこれだけ読めばOK）</h2>
+
+    <div style="background:#fbf6ea;border:1px solid var(--gold-l);border-radius:10px;padding:14px 18px;margin:10px 0">
+      <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em">① この回でやること</div>
+      <div style="font-size:16px;font-weight:700;color:var(--navy);margin:4px 0">手技はしない回。首肩コリの原因になる3つの筋肉（僧帽筋・後頭下筋群・胸鎖乳突筋）の「場所」と「触り方」を、モデルの首肩を実際に触りながら覚えさせる回</div>
+      <ol style="margin:6px 0 0 22px;font-size:13.5px">
+        <li>「コリの震源」の考え方を見せる（こっている場所ではなく、原因の場所を探す）</li>
+        <li>僧帽筋の上部を、モデルの肩で触って見せる（首の付け根〜肩先の帯。手のひらで包む・つかまない）</li>
+        <li>後頭下筋群を、モデルの後頭部で触って見せる（骨の縁のすぐ下。頭の重みを指で受けるだけ）</li>
+        <li>胸鎖乳突筋を、モデルの首の前で触って見せる（顔を横に向けて筋を浮かせる。血管が近いのでそっとなでるだけ）</li>
+        <li>デスクワーク客にそのまま使える説明トーク3種を、ナレが読み上げて聞かせる</li>
+        <li>視聴者に自分の首で3か所を触らせる（セルフ触診3分・太郎さんが見本）</li>
+      </ol>
+    </div>
+
+    <div style="margin:12px 0">
+      <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">② 太郎さんのタスク（手でやること／口で読むこと）</div>
+      <table>
+        <tr><th style="width:50%">🤲 手でやること（実演・撮る絵）</th><th>🗣 口で読むこと（プロンプター）</th></tr>
+        <tr><td>・モデルの首の付け根→肩先を指でなぞる（僧帽筋の位置出し）<br>・その帯を手のひら全体で包む（つかまないデモ）<br>・後頭部の骨の縁のすぐ下に、指の腹4本を当てる（後頭下筋群）<br>・モデルに顔を横へ向けてもらい、浮いた筋をそっとなでる（胸鎖乳突筋。強く押さない）<br>・自分の首で3か所を触るセルフ触診の見本（3分・視聴者が真似できる向き）</td><td>S01–S02 挨拶＋今日やること（カメラA・座り）／S03 僧帽筋の一言（手を肩に置いたまま）／S04 後頭下の一言（指を骨の縁に当てたまま）／S05 胸鎖乳突筋の一言（手を止めて）／S06 セルフ触診の導入／S07–S08 宿題＋締め（カメラA）</td></tr>
+      </table>
+      <div style="font-size:12px;color:var(--mut);margin-top:4px">合計拘束目安：実演約15分＋読み約2分（読みはプロンプター使用・演技不要。解説はすべてナレーターが担当）</div>
+    </div>
+
+    <div style="margin:12px 0">
+      <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">③ 画面に入れるクリエイティブ（発注リスト）</div>
+      <div style="font-size:12px;color:var(--mut);margin-bottom:6px">この回は「解剖図を画面に出す→太郎さんの手が同じ場所を触る」の順で見せる。AI生成の解剖図3枚をメイン素材にし、実写の手（層1）と重ねる。画像は <code>img/</code> 直下に配置。凡例（色→部位名）はHTML側の日本語で付与し、画像には文字を入れない。</div>
+      <table>
+        <tr><th style="width:110px">種類</th><th>ファイル名</th><th>作るもの</th><th style="width:140px">使う場面（TC）</th></tr>
+        <tr><td>AI生成解剖図</td><td><code>PG13_01_trapezius_back.png</code></td><td>首肩を後ろから見たマップ。僧帽筋上部をゴールド強調、他はグレー</td><td>04:30 本編②僧帽筋</td></tr>
+        <tr><td>AI生成解剖図</td><td><code>PG13_02_suboccipital_back.png</code></td><td>後頭部アップ。後頭骨の下縁とその下の後頭下筋群をゴールド強調</td><td>09:00 本編③後頭下</td></tr>
+        <tr><td>AI生成解剖図</td><td><code>PG13_03_scm_side.png</code></td><td>横顔の首。胸鎖乳突筋をゴールド、近くの太い血管（頸動脈）をレッドで併記</td><td>13:30 本編④胸鎖乳突筋</td></tr>
+        <tr><td>図解</td><td>—</td><td>「コリの震源」対比図（こっている場所 ≠ 原因の場所）／デスクワーク姿勢図（頭前方偏位・肩すくみ）に3筋をうっすら重ねた1枚</td><td>01:20 全体像</td></tr>
+        <tr><td>警告テロップ</td><td>—</td><td>「⚠ 近くに太い血管。強く押さない・つかまない・そっと」（パート中は常時表示。解剖図の頸動脈と連動）</td><td>13:30 胸鎖乳突筋</td></tr>
+        <tr><td>図解</td><td>—</td><td>3筋連動フロー図（前＝引かれる／後ろ＝支える／付け根＝背負う→1つの姿勢に矢印集約）</td><td>18:00 連動パート</td></tr>
+        <tr><td>比較テロップ</td><td>—</td><td>説明トーク①〜③の全文字幕（「〜と言われています」に下線＋ゴールド）＋「配布あり」バッジ</td><td>21:00 説明トーク</td></tr>
+        <tr><td>図解</td><td>—</td><td>セルフ触診ミラー図（左右反転ガイド）＋残り時間バー（3:00→0:00）</td><td>24:00 セルフ触診</td></tr>
+        <tr><td>テンプレ見本</td><td>—</td><td>「今日から現場で使える1つ」全画面1枚（下カードの文言そのまま）</td><td>27:00 復習</td></tr>
+        <tr><td>テロップ</td><td>—</td><td>復習クイズ3問（一時停止アイコン＋正解をゴールドでハイライト）</td><td>29:30 クイズ</td></tr>
+        <tr><td>実演インサート</td><td>—</td><td>カメラC（斜め後ろ）で骨の縁・肩の稜線をなぞる別カット</td><td>位置説明の差し込み</td></tr>
+      </table>
+    </div>
+
+    <div class="cards3" style="margin-top:12px">
+      <div class="oc"><div class="l">今日から現場で使える1つ</div><div class="v">首肩は&quot;3つの震源&quot;で診る。前=胸鎖乳突筋・後ろ=後頭下筋群・付け根=僧帽筋。もむ前に、どこが原因かを&quot;面&quot;で確かめる。</div></div>
+      <div class="oc"><div class="l">宿題</div><div class="v">自分の首と肩で3か所を探し、筋肉の名前を声に出しながら触って撮影（強く押さない）。</div></div>
+      <div class="oc"><div class="l">配布物</div><div class="v">セルフ触診チェックシート＋説明トーク台本3種（配布物パック_v6のPG13）。</div></div>
+    </div>
+  </section>
+
+  <section><h2>基本情報</h2><table>
+    <tr><th>番号</th><td>PG13（カリキュラムv6）</td></tr>
+    <tr><th>タイトル</th><td>解剖学②｜首肩・後頭下 ＝ コリの震源</td></tr>
+    <tr><th>尺</th><td>約32分（OP・先週回収 約1分／本編 約20分／説明トーク例 約3分／セルフ触診 約3分／復習・クイズ・接続 約4分／ED 約1分）</td></tr>
+    <tr><th>収録形態</th><td><b>触診ナレ型</b>。画面は常に太郎さんの手がモデルの首肩の上。ナレーション＋図解テロップが「いま指が当たっているのが僧帽筋」と重なる。講義スライドなし。太郎さんはOP／ED＋本編の指定の一言（S03〜S05）＋セルフ触診の導入（S06）のみ発話。説明はすべてナレーション＋テロップが担う。</td></tr>
+    <tr><th>必要機材</th><td>①カメラA＝太郎さんOP/ED用（バストアップ）／②カメラB＝手元寄り（モデルの首肩に置いた太郎さんの手をアップで追う）／③カメラC＝斜め後ろ（後頭下・僧帽筋の触り方を別アングルで確保）／④ピンマイク（太郎さん）＋ナレーション収録ブース／⑤首肩CG（僧帽筋・後頭下筋群・胸鎖乳突筋を1つずつ点灯できるレイヤー）／⑥デスクワーク姿勢図（頭前方偏位・肩すくみ）／⑦セルフ触診ガイド図</td></tr>
+    <tr><th>モデル</th><td>首・肩・後頭部が触れる状態のモデル1名（襟を下げられる服またはケープ、髪をまとめる）。セルフ触診パートは太郎さんが自分の首で見本を見せる（視聴者が鏡のように真似できる向き）。</td></tr>
+    <tr><th>参照PG</th><td>流用元＝旧PG20「解剖学（統合1本）」首肩パート＋新規／前提＝PG10 解剖学①頭の地図／接続先＝<b>PG14 首肩コリのリリース（撮影済）</b>／関連手技＝PG09 太郎ハンド3種・PG11 頭皮の筋膜リリース</td></tr>
+    <tr><th>コンプラ</th><td>薬機法：効果断定なし。「リラクゼーションを目的に」「緊張がたまりやすい場所として知られています」「〜と言われています／示唆されています」で統一。治る・改善・血流が良くなる・自律神経が整う・育毛はNG。胸鎖乳突筋は頸動脈が近いため「強く押さない・そっと」を触診・テロップ・ナレの三層で明示。数字・実績は捏造しない。</td></tr>
+  </table></section>
+
+  <section><h2>タイムコード構成表</h2><table><tr><th>時間</th><th>パート</th><th>内容</th><th>層</th></tr>
+    <tr><td>00:00–00:30</td><td>OP</td><td>太郎さん挨拶＋今日のゴール宣言（S01・S02）</td><td><span class="chip c1">🎬 層1</span></td></tr>
+    <tr><td>00:30–01:00</td><td>先週回収</td><td>先週PG12（腕＋手のひらの筋膜リリース）の宿題・良い例紹介</td><td><span class="chip c2">🎙 層2</span></td></tr>
+    <tr><td>01:00–01:20</td><td>OPテロップ</td><td>タイトル＋今日の地図（3筋）予告</td><td><span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>01:20–04:30</td><td>本編① 全体像</td><td>「コリの震源」とは。デスクワーク姿勢が3筋を緊張させる。今日触る3つの筋を地図にする</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>04:30–08:30</td><td>本編② 僧帽筋（上部）</td><td>まず解剖図①（首肩の後ろ姿マップ）を画面に出し、ナレが位置・働き・触り方ガイド（肩に&quot;のせて&quot;しまう場所）を指す→太郎さんの手が同じ場所を触る触診実演</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>08:30–09:00</td><td>太郎さん一言①</td><td>僧帽筋の触れ方の勘所（S03）</td><td><span class="chip c1">🎬 層1</span></td></tr>
+    <tr><td>09:00–13:00</td><td>本編③ 後頭下筋群</td><td>解剖図②（後頭部アップ）を画面に出し、ナレが位置・働き・触り方（目と首の疲れの震源）を指す→太郎さんの手が骨の縁の下を触る触診実演</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>13:00–13:30</td><td>太郎さん一言②</td><td>後頭下の触れ方の勘所（S04）</td><td><span class="chip c1">🎬 層1</span></td></tr>
+    <tr><td>13:30–17:30</td><td>本編④ 胸鎖乳突筋</td><td>解剖図③（横顔の首・頸動脈を凡例で明示）を画面に出し、ナレが位置・働き・触り方（前側の見落とし・頸動脈注意）を指す→太郎さんの手が顔を横に向けて浮いた筋をそっとなでる触診実演</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>17:30–18:00</td><td>太郎さん一言③</td><td>胸鎖乳突筋の触れ方の勘所（S05）</td><td><span class="chip c1">🎬 層1</span></td></tr>
+    <tr><td>18:00–21:00</td><td>本編⑤ 3筋の連動</td><td>デスクワーク姿勢が「震源」を作る仕組み。3筋を1枚の地図に統合</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>21:00–24:00</td><td>説明トーク例</td><td>デスクワーク客への説明トーク3場面（読み上げ台本・ナレ実演）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>24:00–27:00</td><td>セルフ触診3分</td><td>視聴者が自分の首肩で3部位を確認（太郎さんが見本／ナレがガイド）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>27:00–29:30</td><td>復習</td><td>3筋を地図で総ざらい＋「今日から現場で使える1つ」まとめテロップ</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>29:30–31:30</td><td>復習クイズ＋接続</td><td>一時停止クイズ（3問）＋翌週PG14「首肩コリのリリース」への接続</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>31:30–32:30</td><td>ED</td><td>太郎さん 宿題1つ＋締め（S07・S08）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr>
+  </table></section>
+
+  <section><h2>太郎さんセリフ（クリックでその行からプロンプター起動）</h2>
+    <div class="serif-card"><div class="sid"><span class="sno">S01</span><span class="scene">OP（00:00–00:30）／挨拶・カメラA バストアップ</span></div><div class="stx">こんにちは。山口太郎です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S02</span><span class="scene">OP（00:00–00:30）／今日のゴール宣言</span></div><div class="stx">今日は、手技はしません。場所を覚える回です。<br>首と肩のコリのもとになる筋肉を、3つ覚えます。<br>僧帽筋。後頭下筋群。胸鎖乳突筋。<br>場所が分かれば、来週の実技で迷いません。<br>では、始めます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S03</span><span class="scene">本編 一言①（08:30–09:00）／僧帽筋パートの後・手を肩に置いたまま</span></div><div class="stx">ここが、僧帽筋です。肩こりで、いちばん張りやすい場所です。<br>指先で押さず、手のひら全体で、やさしく包んでください。<br>強くつかむ必要は、ありません。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S04</span><span class="scene">本編 一言②（13:00–13:30）／後頭下パートの後・指を骨の縁に当てたまま</span></div><div class="stx">ここが、後頭下筋群です。目をよく使う人が、張りやすい場所です。<br>グリグリこすらないでください。<br>指を当てて、頭の重みを支えるだけで大丈夫です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S05</span><span class="scene">本編 一言③（17:30–18:00）／胸鎖乳突筋パートの後・手を止めて言う</span></div><div class="stx">ここが、胸鎖乳突筋です。首の前側なので、見落としやすい場所です。<br>すぐ近くに太い血管があるので、強く押しません。<br>指の腹で、そっとなでるだけで大丈夫です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S06</span><span class="scene">セルフ触診 導入（24:00–24:20）</span></div><div class="stx">ここから3分、自分の首と肩を、いっしょに触ります。<br>ナレーションのとおりに、手を動かしてください。<br>強く押さなくて大丈夫です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S07</span><span class="scene">ED（31:30–32:30）／宿題</span></div><div class="stx">今週の宿題です。<br>自分の首と肩で、今日の3か所を探してください。<br>筋肉の名前を声に出しながら、ひとつずつ触ってください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S08</span><span class="scene">ED（31:30–32:30）／締め</span></div><div class="stx">来週は、今日の3か所を、実際に手でゆるめる回です。<br>場所を覚えておくと、来週の動画がよく分かります。<br>それでは、また来週。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+  </section>
+
+  <section><h2>ナレーション全文</h2>
+    <div class="nar"><h3>先週回収（00:30–01:00）</h3>
+      <p>先週は、腕と手のひらの、筋膜リリースでした。宿題は、自分の前腕と手のひらを、ゆっくりゆるめる、というものでしたね。</p>
+      <p>良い例を、ひとつ紹介します。ただ触るのではなく、「ここが前腕、ここが手のひら」と、場所の名前を、声に出しながら触れている。これが、いちばん身につく形です。名前と、指の感覚が、セットになるからです。</p>
+      <p>今日も、同じように進めます。首と肩を、名前と感覚で、覚えていきましょう。</p>
+    </div>
+    <div class="nar"><h3>本編① 全体像「コリの震源」（01:20–04:30）</h3>
+      <p>前回のPG10では、頭の地図を覚えました。今日は、その続き。首と肩です。</p>
+      <p>画面には、これから最後まで、私の手が映り続けます。スライドは出しません。指が、どこに当たっているのか。それを、地図と重ねて、確認していきます。</p>
+      <p>はじめに、ひとつ、考え方をお伝えします。「コリの震源」という考え方です。</p>
+      <p>肩がこる。首が張る。多くのお客様は、その「こっている場所」を、もんでほしいと言います。けれど、こっている場所は、地震でいう「揺れているところ」です。私たちが探すのは、その揺れを生んでいる、「震源」のほうです。</p>
+      <p>その震源は、たいてい、決まった場所にあります。今日おぼえる、3つの筋肉です。</p>
+      <p>ひとつ、僧帽筋（そうぼうきん）。首の付け根から、肩、そして背中へ広がる、大きな筋肉です。</p>
+      <p>ふたつ、後頭下筋群（こうとうかきんぐん）。頭と首の境目にある、小さな筋肉のあつまりです。</p>
+      <p>みっつ、胸鎖乳突筋（きょうさにゅうとつきん）。首の前から、横にかけて走る、太い筋肉です。</p>
+      <p>なぜ、この3つなのか。理由は、姿勢にあります。</p>
+      <p>デスクワークを思い出してください。画面を見て、頭が前に出る。肩が上がって、すくむ。あごが、前に突き出る。この姿勢が、何時間も続きます。</p>
+      <p>そのあいだ、いま挙げた3つの筋肉は、頭の重みと、腕の重みを、ずっと支え続けています。休むひまが、ありません。だから、緊張がたまりやすい場所として知られています。</p>
+      <p>今日は、この3つの震源を、ひとつずつ、位置と、働きと、触り方で、地図にしていきます。触る理由が分かると、来週のリリースが、まったく違うものになります。</p>
+    </div>
+    <div class="nar"><h3>本編② 僧帽筋（上部）（04:30–08:30）</h3>
+      <figure class="anatomy">
+        <div class="imgwrap wait" data-file="PG13_01_trapezius_back.png"><img class="pending" src="img/PG13_01_trapezius_back.png" alt="首肩を後ろから見た僧帽筋上部のマップ" onload="this.classList.remove('pending');this.parentElement.classList.remove('wait')"></div>
+        <figcaption><b>僧帽筋の上部（首肩の後ろ姿マップ）</b> — 首の付け根から肩先へ広がる帯。ここに一日ぶんの肩の重みが「のって」しまう、いちばん分かりやすい震源。</figcaption>
+        <ul class="legend">
+          <li><span class="sw" style="background:#C5A55A"></span>ゴールド＝僧帽筋（上部）</li>
+          <li><span class="sw" style="background:#7f8aa0"></span>グレー＝その他の筋肉</li>
+        </ul>
+        <div class="talk"><b>お客様に言うなら：</b>「肩の付け根のこの帯に、一日ぶんの力がのっていますね。指でえぐらず、手のひらで包むようにゆるめていきますね。」</div>
+      </figure>
+      <p>まず、僧帽筋です。首の付け根から、肩の先、そして背中の真ん中まで、背中いっぱいに広がる、大きな筋肉です。ひし形をしています。</p>
+      <p>今日、私たちがおもに触れるのは、その中でも、いちばん上の部分。「上部（じょうぶ）」と呼ばれる、首から肩にかけての帯です。</p>
+      <p>働きを見ましょう。この上部の僧帽筋は、肩をすくめる、肩を持ち上げる、という働きをします。</p>
+      <p style="color:var(--mut)">（太郎さんの手：モデルの首の付け根から肩先へ、稜線をなぞる）</p>
+      <p>ためしに、肩を、ぐっと上げてみてください。首と肩のあいだが、かたく盛り上がります。それが、僧帽筋の上部です。</p>
+      <p>問題は、ここからです。緊張したとき、寒いとき、パソコンに集中したとき。私たちは、無意識に、肩を上げています。そして、上げたまま、下ろすのを忘れてしまう。一日じゅう、重い肩を、この筋肉に「のせて」いる状態です。</p>
+      <p>これが、肩こりの、いちばん分かりやすい震源です。</p>
+      <p>触り方のガイドです。まず、位置。首の付け根と、肩先を結んだ、あの稜線（りょうせん）。その盛り上がりが、上部の僧帽筋です。</p>
+      <p style="color:var(--mut)">（太郎さんの手：親指と、そろえた4本の指で、稜線の帯をやわらかく挟む）</p>
+      <p>とらえ方は、「面」です。指先で一点をえぐるのではなく、手のひら全体で、帯を、やさしく包みます。</p>
+      <p>そして、つかみません。ぎゅっと握ると、お客様は身構えて、かえって力が入ります。皮ふごと、ゆっくり、上下に動かすイメージです。</p>
+      <p>中くらいの、心地よい圧。痛みを我慢させる圧ではありません。中くらいの圧は、心拍や血圧がしずまる方向と関連すると、マッサージの研究群で示唆されています。</p>
+      <p>ここは、来週のPG14で、実際にゆるめていく、いちばんの主役です。今日は、場所と、面でとらえる感覚を、覚えてください。</p>
+      <p>僧帽筋の上部は、「稜線を、面で、つかまずに」。これが基本です。</p>
+    </div>
+    <div class="nar"><h3>本編③ 後頭下筋群（09:00–13:00）</h3>
+      <figure class="anatomy">
+        <div class="imgwrap wait" data-file="PG13_02_suboccipital_back.png"><img class="pending" src="img/PG13_02_suboccipital_back.png" alt="後頭部アップで見た後頭下筋群" onload="this.classList.remove('pending');this.parentElement.classList.remove('wait')"></div>
+        <figcaption><b>後頭下筋群（後頭部アップ）</b> — 後頭骨の縁のすぐ下、くぼみの奥にある小さな筋肉のあつまり。目をよく使う人が張りやすい部位として知られています。</figcaption>
+        <ul class="legend">
+          <li><span class="sw" style="background:#C5A55A"></span>ゴールド＝後頭下筋群</li>
+          <li><span class="sw" style="background:#c8b98f"></span>ベージュ＝後頭骨の下縁</li>
+          <li><span class="sw" style="background:#7f8aa0"></span>グレー＝その他の筋肉</li>
+        </ul>
+        <div class="talk"><b>お客様に言うなら：</b>「頭と首の境目のここ、目をよく使う方ほど張りやすい場所です。押さずに、頭の重みを指で受けている感じですよ。」</div>
+      </figure>
+      <p>次は、後頭下筋群です。頭と首の、ちょうど境目。後頭部の骨の、すぐ下にある、小さな筋肉のあつまりです。</p>
+      <p style="color:var(--mut)">（太郎さんの手：後頭部のいちばん出っぱった骨から、下へ指をすべらせる）</p>
+      <p>位置を確認します。後頭部の、いちばん出っぱった骨。そこから、下へ指をおろすと、横に走る、骨の縁（ふち）に当たります。その縁の、すぐ下の、くぼみ。ここが、後頭下筋群のある場所です。</p>
+      <p>この筋肉は、とても小さいのですが、大切な仕事をしています。目を動かすこと。そして、頭の、ほんのわずかな傾きを、支えること。</p>
+      <p>ここが、なぜ「震源」なのか。理由は、目です。</p>
+      <p>パソコンやスマートフォンの画面を、じっと見つめる。目が、細かく動き続ける。うつむいて、頭が前に落ちる。そのあいだ、この後頭下筋群は、頭の重みを支えながら、目の動きにも付き合っています。休みが、ありません。</p>
+      <p>「目が疲れると、首の後ろが張る」。これは、この筋肉の場所で、起きていることだと言われています。目の疲れと、首のこりが、ここでつながっているのです。</p>
+      <p>触り方のガイドです。</p>
+      <p style="color:var(--mut)">（太郎さんの手：骨の縁の下に、指の腹を4本、すべり込ませる）</p>
+      <p>指の腹を、骨の縁の、すぐ下に、すべり込ませるように当てます。そして、上の骨を、下から持ち上げるように、ゆっくり、圧を入れます。</p>
+      <p>大切なのは、頭の重みを、指で受ける、という感覚です。お客様には、力を抜いて、指に頭をあずけてもらいます。</p>
+      <p>グリグリと、こすってはいけません。小さな筋肉なので、強い刺激は、かえって身構えさせます。温かい手で、頭の重みを、静かに受け止める。それだけです。</p>
+      <p>温かい手で触れると、こわばりがゆるむ方向に向かうと、温熱の基礎研究で示唆されています。触れる前に、手のひらをこすり合わせて、温めておくとよいでしょう。</p>
+      <p>後頭下筋群は、「骨の縁の下で、頭の重みを、静かに受ける」。これが基本です。</p>
+    </div>
+    <div class="nar"><h3>本編④ 胸鎖乳突筋（13:30–17:30）</h3>
+      <figure class="anatomy">
+        <div class="imgwrap wait" data-file="PG13_03_scm_side.png"><img class="pending" src="img/PG13_03_scm_side.png" alt="横顔で見た胸鎖乳突筋と近くを通る頸動脈" onload="this.classList.remove('pending');this.parentElement.classList.remove('wait')"></div>
+        <figcaption><b>胸鎖乳突筋（横顔の首）</b> — 耳の後ろから鎖骨へ斜めに走る、前側の震源。すぐ近くを太い血管（頸動脈）が通るため、強く押さず・つかまず・そっと。</figcaption>
+        <ul class="legend">
+          <li><span class="sw" style="background:#C5A55A"></span>ゴールド＝胸鎖乳突筋</li>
+          <li><span class="sw" style="background:#c0392b"></span>レッド＝近くを通る太い血管（頸動脈）／強く押さない</li>
+          <li><span class="sw" style="background:#7f8aa0"></span>グレー＝その他の筋肉</li>
+        </ul>
+        <div class="talk"><b>お客様に言うなら：</b>「首の前のこの筋、近くに太い血管があるので、強くは押さないですね。顔を軽く横に向けて、そっとなでるだけで大丈夫ですよ。」</div>
+      </figure>
+      <p>3つめは、胸鎖乳突筋です。名前が長いので、分けて読みます。胸（きょう）、鎖（さ）、乳突（にゅうとつ）。胸の骨と、鎖骨と、耳の後ろの出っぱりを、つないでいる筋肉、という意味です。</p>
+      <p>場所は、首の、前から横です。ここまでの2つは、首の後ろでした。この筋肉だけ、前側にあります。だから、いちばん、見落とされます。</p>
+      <p>位置の確認です。</p>
+      <p style="color:var(--mut)">（太郎さんの手：モデルに軽く顔を横へ向けてもらい、浮き上がる筋を指でなぞる）</p>
+      <p>お客様に、顔を、ゆっくり横へ向けてもらいます。すると、首の前に、太い筋が、斜めに浮き上がります。耳の後ろから、鎖骨の内側へ。これが、胸鎖乳突筋です。</p>
+      <p>働きを見ましょう。この筋肉は、頭を横に向けたり、あごを前に出したり、頭を前へ傾けたりするときに働きます。</p>
+      <p>では、なぜ、震源なのか。ここでも、姿勢です。</p>
+      <p>画面をのぞきこむと、頭が、前に出ます。いわゆる、頭が前に落ちた姿勢です。このとき、前側にあるこの筋肉は、前に落ちようとする頭を、後ろから引き止めるように、ずっと引っ張られ続けます。前かがみの時間が長いほど、この筋肉は、こっそり疲れていきます。</p>
+      <p>首の後ろだけでなく、前側にも震源がある。これを知っているかどうかで、施術の幅が変わります。</p>
+      <p>触り方のガイドです。ここは、いちばん、注意が必要な場所です。</p>
+      <p style="color:var(--mut)">（太郎さんの手：親指と人差し指で、浮き上がった筋を&quot;そっと&quot;つまむ／なでる。強く握らない）</p>
+      <p>この筋肉の、すぐ近くには、太い血管が通っています。ですから、強く押し込んだり、ぐっとつかんだりは、しません。</p>
+      <p>顔を軽く横に向けて、筋を浮かせた状態で、親指と人差し指で、そっと挟む。あるいは、上から下へ、やさしくなでる。それだけで、じゅうぶんです。</p>
+      <p>「そっと・浮かせて・なでる」。強い圧は、いりません。ここは、ていねいさが、そのまま技術になる場所です。</p>
+      <p>胸鎖乳突筋は、「顔を向けて浮かせ、そっとなでる」。これが基本です。</p>
+    </div>
+    <div class="nar"><h3>本編⑤ 3筋の連動（18:00–21:00）</h3>
+      <p>ここまで、3つの震源を見てきました。僧帽筋の上部。後頭下筋群。胸鎖乳突筋。</p>
+      <p>最後に、この3つが、ばらばらではない、ということをお伝えします。</p>
+      <p>もう一度、デスクワークの姿勢を思い出してください。</p>
+      <p>画面を見て、頭が前に出る。すると、前側の胸鎖乳突筋が、頭を引き止めようと、引っ張られます。</p>
+      <p>頭が前に落ちれば、後ろでは、後頭下筋群が、その重みを支えようと、ふんばります。</p>
+      <p>そして、その頭と腕の重みを、首の付け根で受け止めているのが、僧帽筋の上部です。</p>
+      <p>つまり、この3つは、ひとつの姿勢によって、同時に、追い込まれています。前で引っぱられ、後ろで支え、付け根で背負う。1枚の地図の上で、3つの震源が、つながっているのです。</p>
+      <p style="color:var(--mut)">（図解：デスクワーク姿勢に3筋を重ね、3本の矢印が「1つの姿勢」に集まる）</p>
+      <p>だから、首肩のこりは、一か所をもんでも、なかなかスッキリしません。震源が、3つあるからです。3つを地図として持っておくと、お客様の首肩を触ったときに、「今日は前が張っているな」「今日は後頭下だな」と、あたりをつけられるようになります。</p>
+      <p>場所が分かれば、手は、迷いません。これが、今日いちばんお伝えしたい、地図の使い方です。</p>
+    </div>
+    <div class="nar"><h3>デスクワーク客への説明トーク例（21:00–24:00・読み上げ／ナレ実演）</h3>
+      <p>ここからは、いま覚えた地図を、お客様に「言葉」で伝える練習です。とくに、デスクワークのお客様に、そのまま使える例を、3つ読み上げます。トーンと、間の取り方も、まねしてみてください。3つとも、断定はしていません。「〜と言われています」「〜を目的に」という止め方に、注目してください。</p>
+      <p><b>説明トーク①｜施術前の声かけ</b></p>
+      <p>「お仕事、パソコンの前が長いですか。実は、画面を見ているときって、頭が少し前に出て、その重みを、首と肩がずっと支えているんです。とくに、肩の付け根、首の後ろ、それから首の前側。この3か所は、デスクワークの方で、力が入りやすい場所だと言われています。今日は、その3か所を、ゆっくりゆるめていきますね。痛いことはしませんので、安心して、力を抜いてください。」</p>
+      <p><b>説明トーク②｜施術中のひとこと（後頭下・僧帽筋に触れながら）</b></p>
+      <p>「いま触っているのは、頭と首の境目です。ここは、目をよく使う方ほど、張りやすい場所だと言われています。パソコンやスマホを見ていると、目と一緒に、この奥の小さな筋肉も、ずっと働いているんですね。強く押さずに、頭の重みを、私の指で受けている感じです。肩のほうも、一日ぶんの力が、のっていますね。ゆっくり、下ろしていきましょう。」</p>
+      <p><b>説明トーク③｜施術後のクロージング</b></p>
+      <p>「お疲れさまでした。今日ゆるめたのは、首の後ろと、前と、肩の付け根。デスクワークで、いちばん力がたまりやすい場所です。ここは、放っておくとまた張ってくる場所なので、ためこむ前に、また休みにいらしてくださいね。ご自宅でも、画面を見る時間が長いなと思ったら、一度、肩をすとんと下ろすだけでも違いますよ。続けて休ませてあげることが、いちばんのリラクゼーションになりますから。」</p>
+      <p>3つとも、丸暗記でなくてかまいません。大切なのは、「3つの場所」と、「デスクワークで力がたまる」という理由を、自分の言葉で、やさしく話せることです。言葉も、技術の一部です。</p>
+    </div>
+    <div class="nar"><h3>セルフ触診3分（ガイド）（24:00–27:00）</h3>
+      <p>ここから3分。太郎さんが、自分の首で、見本を見せます。画面を見ながら、いっしょに、自分の首と肩を触ってみてください。強く押さず、場所を「感じる」ことが目的です。</p>
+      <p style="color:var(--mut)">（0:00〜1:00｜僧帽筋）</p>
+      <p>まず、右手を、左の首の付け根に、そっと置きます。首と肩のあいだの、盛り上がった帯です。手のひら全体で、包むように。指先でえぐらないでください。</p>
+      <p>そのまま、左の肩を、いちど、ぐっと上げて、すとんと下ろします。上げたとき、盛り上がるのが分かりますか。それが、僧帽筋の上部です。反対側も、同じように、確認してください。</p>
+      <p style="color:var(--mut)">（1:00〜2:00｜後頭下筋群）</p>
+      <p>次に、両手を、後頭部へ。いちばん出っぱった骨から、指を下へおろすと、横に走る骨の縁に当たります。その、すぐ下のくぼみに、指の腹を、そっと当てます。</p>
+      <p>当てたら、力を抜いて、頭の重みを、指にあずけます。指で、頭を、下から支えるだけ。押しません。ここが、目の疲れとつながる、後頭下筋群です。じんわりと、重みを感じてください。</p>
+      <p style="color:var(--mut)">（2:00〜3:00｜胸鎖乳突筋）</p>
+      <p>最後に、顔を、ゆっくり左へ向けます。すると、首の右前に、太い筋が、斜めに浮き上がります。耳の後ろから、鎖骨へ。そこを、親指と人差し指で、そっと挟みます。強く、つままないでください。</p>
+      <p>挟んだまま、顔を、ゆっくり正面へ戻します。筋が、やわらぐのが分かります。反対側も、同じように。これが、前側の震源、胸鎖乳突筋です。</p>
+      <p>3つ、触れましたね。この「指の感覚」が、来週のリリースの、土台になります。</p>
+    </div>
+    <div class="nar"><h3>復習（27:00–29:30）</h3>
+      <p>ここまでを、地図で総ざらいします。</p>
+      <p>僧帽筋の上部。首の付け根から肩先の、盛り上がった帯。肩に力を「のせて」しまう場所。触り方は、面でとらえ、つかまない。</p>
+      <p>後頭下筋群。頭と首の境目、骨の縁の下のくぼみ。目の疲れとつながる場所。触り方は、頭の重みを、指で静かに受ける。</p>
+      <p>胸鎖乳突筋。首の前から横へ、斜めに走る筋。頭が前に出る姿勢で引っぱられる、前側の震源。触り方は、顔を向けて浮かせ、そっとなでる。</p>
+      <p>この3つは、デスクワークの姿勢で、同時に追い込まれています。前で引かれ、後ろで支え、付け根で背負う。3つで、ひとつの地図です。</p>
+    </div>
+    <div class="nar"><h3>復習クイズ＋接続（29:30–31:30）</h3>
+      <p>最後に、復習クイズです。画面を一時停止して、考えてみてください。</p>
+      <p>1問目。「肩に力を&quot;のせて&quot;しまう、首の付け根から肩先の、大きな筋肉は？」……答えは、僧帽筋です。</p>
+      <p>2問目。「目の疲れとつながる、頭と首の境目にある、小さな筋肉のあつまりは？」……答えは、後頭下筋群です。</p>
+      <p>3問目。「首の前から横へ斜めに走り、そっとなでるのが基本の筋肉は？」……答えは、胸鎖乳突筋です。</p>
+      <p>3つ、分かりましたか。分からなかった場所は、もう一度、自分の首で触ってみてください。</p>
+      <p>そして、来週です。来週は、PG14「首肩コリのリリース」。今日おぼえた、この3つの震源を、実際に、手でゆるめていきます。撮影済みの、実技の回です。</p>
+      <p>今日の地図があれば、来週、私の手が「どこを、なぜ触っているのか」が、はっきり分かります。場所を知ってから技を見ると、同じ映像でも、まったく違って見えます。楽しみにしていてください。</p>
+    </div>
+  </section>
+
+  <section><h2>テロップ・図解指示</h2><ul class="plain">
+    <li><b>OPテロップ（00:00〜）</b>：中央「PG13｜解剖学② 首肩・後頭下 ＝ コリの震源」。サブ「今日のゴール：3つの震源を地図にする（僧帽筋・後頭下筋群・胸鎖乳突筋）」。右下小「触診ナレ型／手技なし・場所を覚える回」。</li>
+    <li><b>全体像（01:20〜）</b>：「コリの震源＝揺れている場所ではなく、揺れを生む場所」の対比アイコン（症状の点 → 原因の場所）。デスクワーク姿勢図（頭前方偏位・肩すくみ）に、3筋をうっすら重ねる。</li>
+    <li><b>僧帽筋（04:30〜）</b>：首肩CGで僧帽筋の上部のみ点灯（首の付け根〜肩先の帯）。矢印「稜線を面でとらえる／つかまない」。数値テロップ「圧：中くらい（痛みを我慢させない）」。注記「肩を&quot;のせたまま&quot;が震源（緊張がたまりやすい部位として知られています）」。</li>
+    <li><b>後頭下筋群（09:00〜）</b>：CGで後頭下筋群を点灯。後頭骨の下縁の線を強調し、その下のくぼみに〇印。矢印「縁の下へ滑り込ませ、頭の重みを受ける」。注記「目の疲れと関連する部位として知られています」「手を温めてから（温熱の基礎研究で示唆）」。</li>
+    <li><b>胸鎖乳突筋（13:30〜）</b>：CGで胸鎖乳突筋を点灯（耳の後ろ→鎖骨へ斜め）。近くの太い血管をグレーで薄く示し、<b style="color:#c0392b">警告テロップ「⚠ 近くに太い血管。強く押さない・つかまない・そっと」</b>を常時表示。矢印「顔を向けて浮かせ、そっとなでる」。</li>
+    <li><b>3筋の連動（18:00〜）</b>：デスクワーク姿勢図に3筋を重ね、「前＝引かれる（胸鎖乳突筋）／後ろ＝支える（後頭下）／付け根＝背負う（僧帽筋）」の3矢印が「1つの姿勢」に集まる統合フロー図。</li>
+    <li><b>説明トーク例（21:00〜）</b>：トーク①〜③の本文を字幕化。断定を避けた言い回し「〜と言われています」「〜を目的に」に下線＋色変え（ゴールド #C5A55A）。画面隅に「そのまま使える説明台本／配布あり」バッジ。</li>
+    <li><b>セルフ触診（24:00〜）</b>：画面左上に残り時間バー（3:00→0:00）。各筋の名前を大テロップ。「強く押さない／場所を感じる」を常時小テロップ。太郎さんの見本と、視聴者向けミラー図（左右反転ガイド）を並置。</li>
+    <li><b>今日から現場で使える1つ（27:00の復習中に全画面で1枚）</b>：「首肩は&quot;3つの震源&quot;で診る。前(胸鎖乳突筋)・後ろ(後頭下)・付け根(僧帽筋)。もむ前に、どこが震源かを&quot;面&quot;で確かめる。」</li>
+    <li><b>復習クイズ（29:30〜）</b>：全画面「ここで一時停止」アイコン＋カウントダウン3秒。問題文を大きく。正解をゴールド（#C5A55A）でハイライト。</li>
+    <li><b>接続テロップ（31:00〜）</b>：「来週：PG14 首肩コリのリリース（実技・撮影済）／今日の3つの震源を、手でゆるめる」。</li>
+    <li><b>コンプライアンス共通</b>：効能を断定する語は使わない。図中の根拠は「〜と言われています／示唆されています」表記。画面下に常時小さく「本コンテンツはリラクゼーションを目的とした手技と知識の紹介です。治療・効能を保証するものではありません。」</li>
+  </ul></section>
+
+  <section><h2>宿題・配布物</h2><ul class="plain">
+    <li><b>今週の宿題（セリフS07／テロップ同時表示）</b>：自分の首と肩を触り、3つの震源の位置を「指の感覚」で確認する。各部位、名前を声に出しながら、ゆっくり触れて撮影する（強く押さない）。① 僧帽筋の上部（稜線を面で）② 後頭下筋群（骨の縁の下で頭の重みを受ける）③ 胸鎖乳突筋（顔を向けて浮かせ、そっとなでる）。</li>
+    <li><b>配布物（配信ページからダウンロード）</b>：セルフ触診チェックシート（3項目）</li>
+    <li>デスクワーク客への説明トーク台本 3種（施術前／施術中／施術後）</li>
+    <li>※実文は <code>09_台本_v6/配布物パック_v6.md</code> の「PG13」セクションに収録</li>
+  </ul></section>
+
+  <section><h2>制作メモ</h2><div class="memo">
+    <b>触診ナレ型の原則</b>：本編は最初から最後まで、太郎さんの手がモデルの首肩に映り続ける。講義スライド・図表の全画面は使わず、CG点灯は必ず「太郎さんの手が触れている実写」に半透明オーバーレイする形で重ねる（手＝層1が主、CG＝層3が従）。<br><br>
+    <b>太郎さんの発話は最小限</b>：OP（S01・S02）、本編の一言（S03〜S05）、セルフ触診導入（S06）、ED（S07・S08）のみ。本編の解説・触り方ガイド・説明トーク例・セルフ触診ガイドは、すべてナレーターが読む。太郎さんに座学トークやアドリブを求めない。<br><br>
+    <b>一言（S03〜S05）は手を動かしながら</b>：Bロールに声をかぶせる形でよい。姿を映す場合は手元アップのまま。S04は「指を骨の縁に当てたまま」、S05は「手を止めて」など、動作は静止／継続のみで演技を要さない。<br><br>
+    <b>胸鎖乳突筋パートの安全表現は三層で固定</b>：ナレ「強く押さない・そっと」／テロップ「⚠ 近くに太い血管」／太郎さんの手も&quot;つままず、なでる&quot;デモに限定。編集で圧を強く見せるカットは使わない。<br><br>
+    <b>カメラC（斜め後ろ）</b>：後頭下・僧帽筋は正面カメラだと手で隠れるため、斜め後ろから骨の縁・稜線のなぞりを別カットで確保。編集で位置説明のとき差し込む。<br><br>
+    <b>セルフ触診は左右反転ガイドを用意</b>：太郎さんは自分の首で見本を見せるが、視聴者が真似しやすいよう「鏡像（ミラー）」の簡易図を並置。3分は実尺で確保（早送りしない）。<br><br>
+    <b>モデル手配</b>：襟を下げられる服またはケープで、首の付け根・後頭部・鎖骨まわりが見える状態。長髪はまとめる。胸鎖乳突筋の浮き上がりを撮るため「顔を横に向ける」所作を事前に軽く練習。<br><br>
+    <b>CG素材の指定</b>：僧帽筋（上部を明色）・後頭下筋群・胸鎖乳突筋を個別レイヤーで点灯可能に。胸鎖乳突筋レイヤーには近接する太い血管をグレーで薄く同梱（安全テロップと連動）。<br><br>
+    <b>数字・エビデンス</b>：中程度の圧・温熱・目の疲れとの関連は「示唆／言われています」止め。新たな数値実績は入れない。<b style="color:#c0392b">〔要確認: 不明点が生じた場合は台本に〔要確認：〕を残し、勝手に補完しない〕</b><br><br>
+    <b>接続の徹底</b>：ラストは必ず翌週PG14「首肩コリのリリース（撮影済）」へつなぐ。「今日の地図＝来週の実技の下敷き」という関係を、ナレ・テロップの両方で明示する。
+  </div></section>
+
+  <footer>山口流 理容道｜台本v6｜PG13 解剖学②｜首肩・後頭下 ＝ コリの震源｜ⓒ Prorium（社外秘）</footer>
+</div>
+
+<div id="pv">
+  <div class="bar">
+    <button onclick="closePv()">✕ 閉じる(Esc)</button>
+    <button id="mSingle" class="act" onclick="setMode('single')">1枚ずつ</button>
+    <button id="mScroll" onclick="setMode('scroll')">自動スクロール</button>
+    <button onclick="fsz(1)">文字＋</button><button onclick="fsz(-1)">文字−</button>
+    <button id="spD" onclick="spd(-1)" style="display:none">遅く</button><button id="spU" onclick="spd(1)" style="display:none">速く</button>
+    <button id="mir" onclick="mirror()">🪞 ミラー反転</button>
+    <span class="pos" id="pos"></span>
+  </div>
+  <div class="stage" id="stage"><div class="line" id="line"></div></div>
+  <div class="scrollwrap" id="sw" style="display:none"></div>
+  <button class="nav prev" onclick="mv(-1)">‹</button>
+  <button class="nav next" onclick="mv(1)">›</button>
+</div>
+
+<script>
+const LINES = [
+  {"id":"S01","text":"こんにちは。山口太郎です。"},
+  {"id":"S02","text":"今日は、手技はしません。場所を覚える回です。\n首と肩のコリのもとになる筋肉を、3つ覚えます。\n僧帽筋。後頭下筋群。胸鎖乳突筋。\n場所が分かれば、来週の実技で迷いません。\nでは、始めます。"},
+  {"id":"S03","text":"ここが、僧帽筋です。肩こりで、いちばん張りやすい場所です。\n指先で押さず、手のひら全体で、やさしく包んでください。\n強くつかむ必要は、ありません。"},
+  {"id":"S04","text":"ここが、後頭下筋群です。目をよく使う人が、張りやすい場所です。\nグリグリこすらないでください。\n指を当てて、頭の重みを支えるだけで大丈夫です。"},
+  {"id":"S05","text":"ここが、胸鎖乳突筋です。首の前側なので、見落としやすい場所です。\nすぐ近くに太い血管があるので、強く押しません。\n指の腹で、そっとなでるだけで大丈夫です。"},
+  {"id":"S06","text":"ここから3分、自分の首と肩を、いっしょに触ります。\nナレーションのとおりに、手を動かしてください。\n強く押さなくて大丈夫です。"},
+  {"id":"S07","text":"今週の宿題です。\n自分の首と肩で、今日の3か所を探してください。\n筋肉の名前を声に出しながら、ひとつずつ触ってください。"},
+  {"id":"S08","text":"来週は、今日の3か所を、実際に手でゆるめる回です。\n場所を覚えておくと、来週の動画がよく分かります。\nそれでは、また来週。"}
+];
+let idx=0, fs=6.4, mode='single', speed=1, raf=null;
+const pv=document.getElementById('pv'), line=document.getElementById('line'), pos=document.getElementById('pos'), sw=document.getElementById('sw'), stage=document.getElementById('stage');
+function openPv(i){ if(!LINES.length) return; idx=i||0; pv.classList.add('on'); render(); }
+function closePv(){ pv.classList.remove('on'); stopScroll(); }
+function render(){
+  if(mode==='single'){
+    stage.style.display='flex'; sw.style.display='none';
+    const L=LINES[idx]; line.style.fontSize=fs+'vw'; line.textContent=L.text;
+    pos.textContent=(L.id||('#'+(idx+1)))+'　'+(idx+1)+' / '+LINES.length;
+  }else{
+    stage.style.display='none'; sw.style.display='block';
+    sw.innerHTML=LINES.map(L=>'<div class="sl" style="font-size:'+fs+'vw"><span class="tag">'+(L.id||'')+'</span>'+L.text.replace(/</g,'&lt;')+'</div>').join('');
+    pos.textContent='自動スクロール（速度 '+speed+'）— クリックで一時停止/再開';
+    startScroll();
+  }
+}
+function mv(d){ if(mode!=='single')return; idx=Math.min(LINES.length-1,Math.max(0,idx+d)); render(); }
+function fsz(d){ fs=Math.min(14,Math.max(2.4,fs+d*0.8)); render(); }
+function mirror(){ pv.classList.toggle('mirror'); document.getElementById('mir').classList.toggle('act'); }
+function setMode(m){ mode=m; stopScroll();
+  document.getElementById('mSingle').classList.toggle('act',m==='single');
+  document.getElementById('mScroll').classList.toggle('act',m==='scroll');
+  document.getElementById('spD').style.display=m==='scroll'?'':'none';
+  document.getElementById('spU').style.display=m==='scroll'?'':'none';
+  render(); }
+function spd(d){ speed=Math.min(5,Math.max(1,speed+d)); pos.textContent='自動スクロール（速度 '+speed+'）'; }
+let paused=false;
+function startScroll(){ paused=false; sw.scrollTop=0; const step=()=>{ if(!paused){ sw.scrollTop+=0.4*speed; } raf=requestAnimationFrame(step); }; raf=requestAnimationFrame(step); }
+function stopScroll(){ if(raf)cancelAnimationFrame(raf); raf=null; }
+sw.addEventListener('click',()=>{ paused=!paused; });
+document.addEventListener('keydown',e=>{
+  if(!pv.classList.contains('on'))return;
+  if(e.key==='Escape')closePv();
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();mv(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();mv(-1);}
+});
+document.querySelectorAll('.serif-card').forEach((el,i)=>el.addEventListener('click',()=>openPv(i)));
+</script>
+</body>
+</html>

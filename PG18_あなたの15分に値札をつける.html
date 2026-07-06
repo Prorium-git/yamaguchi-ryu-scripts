@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG18｜あなたの15分に値札をつける——メニューと価格＋既存客への伝え方｜山口流 理容道 台本v6</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:38px 26px 32px;margin:0 -18px 24px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:24px;font-weight:600;margin:8px 0 8px;line-height:1.5}
+  header .meta{font-size:12.5px;color:#c9d2e0;display:flex;gap:16px;flex-wrap:wrap}
+  .prompter-btn{position:sticky;top:10px;z-index:50;display:flex;justify-content:flex-end;margin-bottom:6px}
+  .prompter-btn button{background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:30px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,26,46,.3)}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:16px 0;box-shadow:0 2px 10px rgba(27,42,74,.05)}
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .oc{background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .oc .l{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+  .oc .v{font-size:13.5px;color:var(--ink);margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  .chip{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;white-space:nowrap}
+  .c1{background:#fbf3dc;color:#9a7b27}.c2{background:#eaf1fa;color:var(--blue)}.c3{background:#eef7f0;color:var(--green)}
+  .serif-card{background:#fffdf8;border:1px solid var(--gold-l);border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0;cursor:pointer}
+  .serif-card:hover{background:#fdf8ec}
+  .serif-card .sid{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .serif-card .sno{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 10px}
+  .serif-card .scene{font-size:11.5px;color:var(--mut)}
+  .serif-card .stx{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;color:var(--ink);line-height:1.9}
+  .serif-card .hint{font-size:10.5px;color:#b6a26d;margin-top:4px}
+  .nar{margin:14px 0}
+  .nar h3{font-size:14px;color:var(--navy);background:#eaf1fa;border-radius:8px;padding:6px 12px;margin-bottom:8px}
+  .nar p{font-size:13.5px;margin:8px 4px;color:#2c3644}
+  ul.plain{list-style:none}
+  ul.plain li{position:relative;padding-left:20px;margin:6px 0;font-size:13.5px}
+  ul.plain li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+  .memo{background:#fff8e8;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin-top:8px}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:30px}
+  /* ===== プロンプター ===== */
+  #pv{position:fixed;inset:0;background:#000;color:#fff;z-index:999;display:none;flex-direction:column}
+  #pv.on{display:flex}
+  #pv .bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#111;flex-wrap:wrap}
+  #pv .bar button{background:#222;color:#fff;border:1px solid #555;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+  #pv .bar button.act{background:var(--gold);color:#000;border-color:var(--gold)}
+  #pv .bar .pos{margin-left:auto;font-size:14px;color:#d8c79b}
+  #pv .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:4vw;overflow:hidden}
+  #pv .line{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;text-align:center;line-height:1.7;white-space:pre-wrap}
+  #pv .scrollwrap{flex:1;overflow-y:auto;padding:20vh 6vw}
+  #pv .scrollwrap .sl{font-family:"Hiragino Mincho ProN",serif;font-weight:600;line-height:1.9;margin:5vh 0;text-align:center;white-space:pre-wrap}
+  #pv .scrollwrap .sl .tag{display:block;font-size:14px;color:#d8c79b;font-family:sans-serif;margin-bottom:8px}
+  #pv.mirror .stage,#pv.mirror .scrollwrap{transform:scaleX(-1)}
+  #pv .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:#888;font-size:34px;padding:18px 10px;cursor:pointer;border-radius:10px}
+  #pv .prev{left:8px}#pv .next{right:8px}
+  @media(max-width:640px){.cards3{grid-template-columns:1fr}header h1{font-size:20px}}
+  @media print{.prompter-btn,#pv{display:none!important}body{background:#fff}section{box-shadow:none;page-break-inside:avoid}}
+  /* ===== 太郎さん専用ガイド ===== */
+  .taro{background:#fffaf0;border:3px solid var(--gold);border-radius:14px;padding:8px 22px 22px}
+  .taro h2{font-size:20px;border:none;background:var(--gold);color:#3a2c08;padding:6px 16px;border-radius:10px;display:block;margin:14px 0 6px}
+  .taro .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.5;margin:6px 0}
+  .taro .row{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+  .taro .ico{font-size:30px;flex:0 0 40px;text-align:center;line-height:1.2}
+  .taro .ttl{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.04em}
+  .taro .txt{font-size:16px;color:var(--ink);line-height:1.75;margin-top:2px}
+  .taro .txt b{color:var(--navy)}
+  .taro .tell{background:#eef7f0;border-left:5px solid var(--green)}
+  .taro .tell .ttl{color:var(--green)}
+  .taro ul.gist{list-style:none;margin:4px 0 0}
+  .taro ul.gist li{position:relative;padding:6px 0 6px 26px;font-size:16px;line-height:1.6}
+  .taro ul.gist li::before{content:"💬";position:absolute;left:0;top:5px;font-size:15px}
+  .taro .tip{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 14px;margin-top:10px;font-size:14.5px;color:#7a5f1e}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ SCRIPT v6</div>
+  <h1>PG18｜あなたの15分に値札をつける——メニューと価格＋既存客への伝え方</h1>
+  <div class="meta"><span>尺：約34分</span><span>形式：ナレーション主体回（太郎さんは座り収録のみ・計約7分）</span><span>台本v6（2026-07-02）</span><span>層：<span class="chip c1">🎬 層1 太郎</span> <span class="chip c2">🎙 層2 ナレ</span> <span class="chip c3">📺 層3 テロップ</span></span></div>
+</header>
+<div class="wrap">
+  <div class="prompter-btn"><button onclick="openPv(0)">🎬 プロンプターを開く（太郎さんセリフ）</button></div>
+
+  <section class="taro">
+    <h2>👤 太郎さん、まずこれだけ（撮影前に読む）</h2>
+    <div class="big">この回は「ヘッドスパの値段のつけ方」と「そのメニューをお客さまに知らせるやり方」を教える回です。</div>
+
+    <div class="row"><div class="ico">🤔</div><div><div class="ttl">なんで大事？</div>
+      <div class="txt">どんなに手技がうまくても、<b>値段と、伝える言葉がないと、お金にならない</b>からです。たとえば、すごくおいしいパンを焼けても、値札を貼らず、店の前に「パン始めました」と貼り出さなければ、誰も買いに来ません。技術は「焼けたパン」、値段と告知は「値札と貼り紙」。この回は、その値札と貼り紙のつくり方を教える回です。だから太郎さんが自信を持って「こう決めればいい」と言えると、受講生は安心して自分の値段をつけられます。</div></div></div>
+
+    <div class="row"><div class="ico">🙌</div><div><div class="ttl">太郎さんがやること</div>
+      <div class="txt">🤲 <b>手：</b>施術の実演はナシ。ずっと座ったままでOK。S06・S08・S09だけ、手元の紙（読み上げカード）を持って読みます。カメラに紙が映って大丈夫です。最後のS10は言い終わりに軽くおじぎ。<br>🗣 <b>口：</b>座ったまま、10か所（S01〜S10）を読むだけ。全部プロンプターに出るので、そのまま読めばOK。演技はいりません。</div></div></div>
+
+    <div class="row tell"><div class="ico">💬</div><div><div class="ttl">言いたいことは、ざっくりこれ</div>
+      <ul class="gist">
+        <li>今日は「値段の決め方」と「お客さまへの知らせ方」を一緒にやります。見終わる頃には、自分のメニュー表とお知らせ文ができています。（S01・S02）</li>
+        <li>値段は勘や「安けりゃいい」で決めない。「1分でいくらもらうか」を先に決めて、そこから計算する。自信がないから安くする、はやめて、出した値段を堂々とつけて。（S03・S04）</li>
+        <li>お客さまへの声かけは、売り込まなくていい。「ご案内だけ置いておきますね」と言って、案内を1枚そっと置くだけ。これで十分。（S05〜S07）</li>
+        <li>もし断られても大丈夫。「無理にはおすすめしません」「気が向いたらいつでも」と受け流す。しつこくしないから、次にまた案内できる。（S08・S09）</li>
+      </ul></div></div>
+
+    <div class="tip">💡 <b>コツ：</b>下の台本は、丸暗記しなくて大丈夫。<b>「言いたいこと（上の💬）」さえ分かっていれば</b>、プロンプターの文はスッと自然に出てきます。読むんじゃなく、"分かってる人がしゃべる"感じで。</div>
+  </section>
+
+  <section style="border-left:5px solid var(--gold)">
+  <h2>📌 この回の設計図（まずこれだけ読めばOK）</h2>
+
+  <div style="background:#fbf6ea;border:1px solid var(--gold-l);border-radius:10px;padding:14px 18px;margin:10px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em">① この回でやること</div>
+    <div style="font-size:16px;font-weight:700;color:var(--navy);margin:4px 0">15分・30分のヘッドマッサージ（頭＋首肩）に値段をつけて、3段のメニュー表と、いまのお客さまへのお知らせ文（貼り紙・LINE・口で言う一言）まで作る回</div>
+    <ol style="margin:6px 0 0 22px;font-size:13.5px">
+      <li>「1分あたり単価 × 提供時間」の式で定価を計算して見せる（例：200円×30分＝6,000円）</li>
+      <li>30分・15分の時間配分（どの手技を何分やるか）を図で見せ、値段の根拠にする</li>
+      <li>松竹梅の3段メニュー表を作って見せる（梅15分3,500円／竹30分6,000円おすすめ／松45分8,500円）</li>
+      <li>貼り紙とLINEの告知文（新メニュー版・値上げ版の全文）を画面に出して読み上げ、そのまま使わせる</li>
+      <li>太郎さんが「切り出しの一言」と「断られた時の返し」を実際に読んで手本を見せる</li>
+      <li>演習で受講生に、自分の松竹梅3行と告知文1本を書かせる（一時停止式）</li>
+    </ol>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">② 太郎さんのタスク（手でやること／口で読むこと）</div>
+    <table>
+      <tr><th style="width:50%">🤲 手でやること（実演・撮る絵）</th><th>🗣 口で読むこと（プロンプター）</th></tr>
+      <tr><td>・施術の実演はなし（モデル不要。施術映像は過去回のBロールを流用）<br>・S06・S08・S09は手元の読み上げカードを持って読む（カードが映ってよい）<br>・S10の言い終わりに軽く会釈</td><td>・S01–S02 冒頭挨拶とゴール（座り・正面）<br>・S03–S04 価格に込める一言（座り）<br>・S05–S07 切り出しの一言を読む（座り・カード読み）<br>・S08–S09 断られた時の返しを読む（座り・カード読み）<br>・S10 宿題と締め（座り）</td></tr>
+    </table>
+    <div style="font-size:12px;color:var(--mut);margin-top:4px">合計拘束目安：実演0分＋読み約7分（読みはプロンプター使用・演技不要）</div>
+  </div>
+
+  <div style="margin:12px 0">
+    <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">③ 画面に入れるクリエイティブ（編集チームへの発注リスト）</div>
+    <table>
+      <tr><th style="width:110px">種類</th><th>作るもの</th><th style="width:130px">使う場面</th></tr>
+      <tr><td>図解</td><td>値付けの基本式「1分単価 × 提供時間 ＝ 定価」（200円×30分＝6,000円／233円×15分≒3,500円）</td><td>02:30 原則①</td></tr>
+      <tr><td>アニメ図</td><td>30分コースの横棒タイムライン（静止2分→軽擦5分→側頭・咬筋6分→後頭・首肩6分→反復5分→クールダウン4分→静止2分）</td><td>05:00 原則②</td></tr>
+      <tr><td>図解</td><td>15分コースの時間配分図（側頭〜後頭8分を強調色で）</td><td>07:30 原則③</td></tr>
+      <tr><td>テンプレ見本</td><td>松竹梅3段メニュー表の見本図（実際のメニュー表風・竹に「おすすめ」帯・1分単価を小さく併記）</td><td>10:30 松竹梅</td></tr>
+      <tr><td>比較テロップ</td><td>職種別比較表（セラピスト／理容師／美容師 × 相場目安・設定例・強み）</td><td>14:00 職種別</td></tr>
+      <tr><td>テンプレ見本</td><td>貼り紙モック2枚（新メニュー版・値上げ版の全文。読み上げに合わせて行ハイライト）</td><td>16:00 告知①</td></tr>
+      <tr><td>テンプレ見本</td><td>LINEトーク画面モック2枚（新メニュー版・値上げ版。「9月末までは現在の価格」をマーカー強調）</td><td>19:30 告知②</td></tr>
+      <tr><td>字幕テロップ</td><td>読み上げデモの全文字幕（太郎さんの音声と一字一句同じ文を2秒以上表示）</td><td>23:00／25:30</td></tr>
+      <tr><td>実演インサート</td><td>手元で松竹梅3行とテンプレ差し替えを書く記入見本（別撮り）</td><td>28:00 演習</td></tr>
+      <tr><td>画面キャプチャ</td><td>前回PG17の宿題提出例（枠付き表示。実物は要確認）</td><td>00:30 宿題ふり返り</td></tr>
+    </table>
+  </div>
+
+  <div class="cards3" style="margin-top:12px">
+    <div class="oc"><div class="l">今日から現場で使える1つ</div><div class="v">押さずに、案内を置く——施術後に「ご案内だけ、こちらに置いておきますね。」と言って案内を1枚置くだけ</div></div>
+    <div class="oc"><div class="l">宿題</div><div class="v">自分の店の告知文を1本提出（貼り紙かLINEのどちらか。テンプレの日付・店名・メニュー名・価格の4か所差し替えでOK）</div></div>
+    <div class="oc"><div class="l">配布物</div><div class="v">松竹梅メニュー設計シート／告知文テンプレ集4種／読み上げカード4種／宿題チェックシート</div></div>
+  </div>
+  </section>
+  <section><h2>基本情報</h2><table><tr><th>番号</th><td>PG18（旧PG15「メニューと価格の設計」の改修版）</td></tr><tr><th>タイトル</th><td>あなたの15分に値札をつける——メニューと価格＋既存客への伝え方</td></tr><tr><th>尺</th><td>約34分</td></tr><tr><th>収録形態</th><td>ナレーション主体回。太郎さんは座り収録のみ（OP／価格に込める一言／切り出し・返しの読み上げデモ／ED＝計約7分）。本編はナレーション＋フルスクリーン図解＋既存PGのBロール</td></tr><tr><th>必要機材</th><td>座り収録用イス（落ち着いた背景）、ピンマイク、カンペ（S01〜S10を大きく印刷）、図解用フルスクリーン素材、Bロール用施術風景（既存PG映像の流用可）、A4ワークシート・ペン（記入見本インサート用）、スマホ（LINE画面モックのインサート用・実機でなく画面素材でも可）</td></tr><tr><th>モデル</th><td>不要（施術実演なし。Bロールは既存映像流用）</td></tr><tr><th>参照PG</th><td>タッピング回（v4基準PG06）／太郎ハンド回（同PG09）／頭皮の軽擦回（同PG11）／首肩リリース回（同PG13）／コンビネーション回（同PG14）<b style="color:#c0392b">〔要確認: v6での各回の最終番号。確定後にテロップ・ナレの番号呼称を差し替え〕</b></td></tr><tr><th>コンプラ</th><td>効果の断定禁止。「リラクゼーションを目的に」「〜と言われています」「研究で示唆されています」に統一。治る／改善／自律神経が整う／育毛はNG。価格はすべて税込・国内相場前提（円）。「一番人気」等の実績表記は実績が出るまで使わない旨を本編で明示</td></tr></table></section>
+  <section><h2>タイムコード構成表</h2><table><tr><th>時間</th><th>パート</th><th>内容</th><th>層</th></tr><tr><td>00:00–00:30</td><td>OP</td><td>太郎さん挨拶＋今日のゴール（S01・S02）＋OPテロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>00:30–01:00</td><td>先週の宿題</td><td>前回宿題のふり返り・良い提出例の紹介</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>01:00–02:30</td><td>導入</td><td>「技術に値札をつける日」——なぜ価格と告知をセットで学ぶのか</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>02:30–05:00</td><td>原則①</td><td>1分あたり単価 × 提供時間 の基本式</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>05:00–07:30</td><td>原則②</td><td>メニューの中身＝時間配分（30分コースの型）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span> ＋Bロール</td></tr><tr><td>07:30–10:00</td><td>原則③</td><td>15分は「削る」のではなく「絞る」</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>10:00–10:30</td><td>太郎さん一言</td><td>「価格に込める考え」（S03・S04）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>10:30–14:00</td><td>松竹梅</td><td>3段メニュー表の作り方・書き方ルール4つ</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>14:00–16:00</td><td>職種別の目安</td><td>セラピスト／理容師／美容師の設定例（比較表）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>16:00–19:30</td><td>告知①店内掲示</td><td>新メニュー告知・価格改定告知の実文（貼り紙全文）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>19:30–23:00</td><td>告知②LINE</td><td>新メニュー告知・価格改定告知の実文（LINE全文）＋送り方のルール</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>23:00–25:30</td><td>切り出しの一言</td><td>対面で伝える言葉。太郎さんが実文を読む（S05〜S07）＋値上げ版はナレ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>25:30–28:00</td><td>断られた時の返し</td><td>読み上げ台本。太郎さんが実文を読む（S08・S09）＋値上げ版はナレ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>28:00–31:00</td><td>演習</td><td>一時停止式3ステップ（松竹梅→告知文→声出し）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>31:00–32:30</td><td>復習</td><td>今日の要点総ざらい（値付け3原則＋告知3点セット）</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>32:30–33:00</td><td>現場で使える1つ</td><td>まとめテロップ「押さずに、案内を置く」</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr><tr><td>33:00–34:00</td><td>ED</td><td>宿題提示＋締め（S10）＋宿題テロップ</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr></table></section>
+  <section><h2>太郎さんセリフ（クリックでその行からプロンプター起動）</h2><div class="serif-card"><div class="sid"><span class="sno">S01</span><span class="scene">（OP｜00:00–00:30｜座り・バストアップ正面）</span></div><div class="stx">こんにちは。山口太郎です。今日は、ヘッドスパの値段の決め方と、お客さまへの知らせ方をやります。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S02</span><span class="scene">（OP｜00:00–00:30）</span></div><div class="stx">ゴールはひとつです。見終わるまでに、自分のメニュー表と、お客さまへのお知らせ文を作ります。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S03</span><span class="scene">（価格に込める一言｜10:00–10:30｜座り）</span></div><div class="stx">値段は、勘や安さで決めるものではありません。1分あたりいくらか。そこから計算して決めてください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S04</span><span class="scene">（価格に込める一言｜10:00–10:30）</span></div><div class="stx">自信がないから安くする、はやめましょう。計算で出した値段を、そのまま堂々とつけてください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S05</span><span class="scene">（切り出しの一言・読み上げデモ｜23:00–25:30）</span></div><div class="stx">ここからは、わたしが実際に読みます。施術のあと、お客さまにメニューを案内する言葉です。このまま使えます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S06</span><span class="scene">（切り出しの一言・読み上げデモ｜23:00–25:30｜手元のカードを見ながらゆっくり読んでよい）</span></div><div class="stx">「いつもありがとうございます。実は来月から、新しくヘッドスパのメニューを始めます。ご案内だけ、こちらに置いておきますね。」</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S07</span><span class="scene">（切り出しの一言・読み上げデモ｜23:00–25:30）</span></div><div class="stx">売り込まなくて、いいです。この一言を言って、案内を1枚置く。やることは、それだけです。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S08</span><span class="scene">（断られた時の返し・読み上げデモ｜25:30–28:00｜手元のカードを見ながらゆっくり読んでよい）</span></div><div class="stx">断られたときの返しも、読みます。「かしこまりました。無理には、おすすめしません。」</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S09</span><span class="scene">（断られた時の返し・読み上げデモ｜25:30–28:00｜手元のカードを見ながらゆっくり読んでよい）</span></div><div class="stx">「気が向いたときに、いつでもおっしゃってください。」ここでしつこくしないから、次にまた案内できます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div><div class="serif-card"><div class="sid"><span class="sno">S10</span><span class="scene">（ED｜33:00–34:00｜言い終わりに軽く会釈）</span></div><div class="stx">今週の宿題です。お店に貼る文章か、LINEで送る文章を、ひとつ書いて提出してください。それでは、また来週。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div></section>
+  <section><h2>ナレーション全文</h2><div class="nar"><h3>先週の宿題・良い例紹介（00:30–01:00）</h3><p>先週の宿題の提出、ありがとうございました。今週も、良い提出をひとつ紹介します。<b style="color:#c0392b">〔要確認: 前回PG17の宿題内容に合わせて、実際の提出例をここで紹介。画面に提出物を表示〕</b>このように、手を動かして書いたものは、必ず自分の財産になります。今日の回も、最後に「書いて出す」宿題があります。今日はその宿題が、そのままお店で使える告知文になります。</p></div><div class="nar"><h3>導入：技術に値札をつける日（01:00–02:30）</h3><p>ここまでの回で、手の中の引き出しは十分に増えました。タッピング、太郎ハンド、頭皮の軽擦、首肩のリリース、そしてコンビネーション。ですが、どんなに良い技術も、値段と伝え方がなければ、仕事になりません。</p><p>今日やることは、大きく二つです。前半は、値付け。あなたの15分と30分に、根拠のある値札をつけます。後半は、伝え方。作ったメニューと価格を、いまのお客さまに、どう知らせるか。貼り紙の文章、LINEの文章、口で伝える一言、そして断られたときの返し方まで、全部、そのまま使える形でお渡しします。</p><p>値付けだけ学んで、伝え方を学ばないと、メニューは引き出しの中で眠ります。今日で、値札と告知をセットで持ち帰ってください。</p></div><div class="nar"><h3>原則①：1分あたり単価 × 提供時間（02:30–05:00）</h3><p>最初の原則は、時間と単価の関係です。価格は、勘で決めるものではありません。「1分あたり、いくらの価値を渡すか」から逆算します。</p><p>たとえば、30分のメニューを6,000円に設定したとします。1分あたりに割り戻すと、200円です。15分を3,500円にすれば、1分あたり約233円。短いメニューのほうが、1分あたりの単価はやや高くなるのが自然です。来店から退店までの準備や案内に、固定の手間がかかるからです。</p><p>大切なのは、思いつきの端数価格を付けないこと。まず「1分あたりいくら」という基準を1本決める。その基準に、提供時間をかける。これが定価の土台です。土台のない値引きは、ただ自分の手を安くするだけです。</p><p>もう一点。施術時間と「枠の時間」は別物です。30分の施術でも、説明・カウンセリング・片付けを入れると、1枠は40分から45分かかります。価格は、この「枠の時間」を埋める対価として考えてください。</p></div><div class="nar"><h3>原則②：メニューの中身＝時間配分（05:00–07:30）</h3><p>二つ目の原則です。メニューの中身とは、「どの手技を、何分、どの順番で行うか」という時間配分そのものです。価格の根拠は、ここに宿ります。</p><p>リラクゼーションを目的とした30分コースの型を見ておきます。まず、静止タッチを2分。手をそっと置いて、始まりを伝えます。予測できる始まり方は、安心につながると研究で示唆されています。次に、低速の軽擦を5分。ゆっくりとした撫では、心地よさと関連すると示唆されています。続いて、側頭と咬筋まわりを6分。後頭部から首肩を6分。一定リズムの反復刺激を5分。最後に、呼吸に合わせたクールダウンを4分、静かに手を離す時間を2分。合わせて30分です。</p><p>この枠に、これまで学んだ手技を流し込みます。軽擦には頭皮のさすり、側頭には太郎ハンド、後頭と首肩にはリリース、反復にはタッピング。時間の枠に手技が収まると、コースは一本の物語になります。価格は、この物語の密度に対して付くものです。</p></div><div class="nar"><h3>原則③：15分は削らず、絞る（07:30–10:00）</h3><p>三つ目の原則です。15分メニューを作るとき、多くの人が30分をそのまま半分に削ってしまいます。これはおすすめしません。すべてが中途半端になり、印象に残らないからです。</p><p>15分は、削るのではなく、絞ります。「これだけは渡したい」という核を一つか二つに決めて、そこに時間を集中させる。型はこうです。静止タッチ1分、低速の軽擦3分で土台を作り、いちばん緊張が集まりやすいと言われる側頭から後頭にかけてを8分かけてじっくり扱う。最後にクールダウン3分。合わせて15分です。</p><p>15分メニューの役割は三つ。初めてのお客さまへのお試し。30分への入り口。忙しいリピーターの受け皿。30分の縮小版ではなく、独立した一品として、堂々と値札を付けてください。</p></div><div class="nar"><h3>松竹梅：3段メニュー表の作り方（10:30–14:00）</h3><p>ここからが今日の新しい話です。メニュー表には、書き方があります。結論から言うと、メニューは3段で書きます。松・竹・梅です。</p><p>理由は単純です。メニューが1つだけだと、お客さまの選択は「やるか、やらないか」の二択になります。3つ並ぶと、「どれにするか」の選択に変わります。そして3つ並んだとき、人は真ん中を選びやすいと言われています。</p><p>役割を決めます。梅は、15分のお試し。入り口です。竹は、30分の主役。あなたが一番受けてほしいコースを、必ず真ん中に置きます。松は、45分、あるいは30分にオプションを足した贅沢版。松があることで、竹が「ちょうどいい」と感じられるようになります。松は、売れなくても仕事をしています。</p><p>価格の付け方は、原則①のとおりです。竹を基準に決める。1分200円なら、30分で6,000円。梅は15分で3,500円。短いぶん、1分単価は少し高くて構いません。松は45分で8,500円。長いぶん、1分単価は少し下がって構いません。</p><p>書き方のルールは4つです。ルール1、名前は内容が伝わる日本語にする。「Sコース」ではなく、「お試しヘッドスパ 15分」。名前だけで、何をどれくらい受けられるか分かるように。ルール2、竹に「おすすめ」と書く。ただし「一番人気」は、本当に一番売れてから書いてください。まだ売れていないものに人気と書くのは、うそになります。ルール3、価格は税込で、大きく、堂々と書く。小さく書かれた価格は、自信のなさとして伝わります。ルール4、「〜円より」のような曖昧な書き方をしない。あとから足される価格は、不信のもとです。</p><p>画面の記入例を見てください。お試しヘッドスパ15分・3,500円。じっくりヘッドスパ30分・6,000円、ここに「おすすめ」。ヘッドスパと首肩の贅沢コース45分・8,500円。この3行が、あなたのメニュー表の骨格です。</p></div><div class="nar"><h3>職種別の目安（14:00–16:00）</h3><p>自分の1分単価を決めるための、職種別の目安です。</p><p>セラピストの場合。ドライヘッドスパやリラクゼーションサロンでは、30分でおよそ4,000円から7,000円が一つの目安です。設定例は、15分3,000円、30分6,000円。強みは、照明や香りまで含めた「時間の質」で価格を作れることです。</p><p>理容師の場合。強みは、シャンプー台と、すでにある来店動線です。カットの後に10分のヘッドマッサージを1,500円から2,000円で追加する形、または30分の単独メニューを5,000円から6,500円で新設する形が自然です。既存のお客さまに追加で提案できるのが最大の利点です。</p><p>美容師の場合。カラーの待ち時間や仕上げに、15分のヘッドスパを2,500円から3,500円で追加。単独30分なら6,000円から8,000円も狙えます。仕上がりへの信頼が、価格を支えてくれます。</p><p>共通する考え方はひとつ。相場は「下限の参考」であって、「あなたの上限」ではありません。</p></div><div class="nar"><h3>告知①：店内掲示の実文（16:00–19:30）</h3><p>ここからは、伝え方です。作ったメニューを、いまのお客さまに知らせます。順番は、掲示、LINE、口頭。まず、店内掲示です。文章は考えなくていいです。画面の実文を、そのまま使ってください。</p><p>新メニューの貼り紙は、この全文です。読み上げます。</p><p>「新メニューのご案内。10月1日より、ヘッドスパを始めます。シャンプー台で受けられる、リラクゼーションを目的とした15分からのメニューです。お試しヘッドスパ 15分 3,500円。じっくりヘッドスパ 30分 6,000円、おすすめ。ヘッドスパと首肩の贅沢コース 45分 8,500円。ご希望の方は、お気軽にお声がけください。山口理容店」</p><p>構造は4つだけです。何が始まるか。いつからか。3段の価格。どうすれば受けられるか。日付と店名とメニュー名を自分のものに差し替えれば、完成です。貼る場所は、鏡の横か、レジの横。お客さまの手が止まる場所です。</p><p>次に、価格改定、つまり値上げの貼り紙です。全文を読み上げます。</p><p>「価格改定のお知らせ。いつもご来店いただき、ありがとうございます。誠に勝手ながら、10月1日より、下記のとおり価格を改定いたします。カット 4,500円 → 5,000円。今後も、一回一回の時間の質を高めてまいります。なにとぞご理解のほど、お願い申し上げます。山口理容店」</p><p>値上げの掲示には、守ってほしい型が5つあります。1、最初に感謝を書く。2、日付を明記し、1か月から2か月前に貼り出す。3、新旧の価格を並べて書く。ごまかさない。4、理由は短く、前向きに。長い言い訳は、かえって不安にさせます。5、最後にもう一度、感謝で締める。この5つが入っていれば、値上げの告知は失礼になりません。</p></div><div class="nar"><h3>告知②：LINEの実文（19:30–23:00）</h3><p>次は、公式LINEやお客さまへのメッセージです。掲示と同じ内容を、短くして送ります。</p><p>新メニューのLINEは、この全文です。</p><p>「こんにちは、山口理容店です。10月1日から、新しくヘッドスパのメニューを始めます。シャンプー台で受けられる、リラクゼーションを目的とした15分からのメニューです。・お試しヘッドスパ 15分 3,500円 ・じっくりヘッドスパ 30分 6,000円 ・ヘッドスパと首肩の贅沢コース 45分 8,500円。いつものカットにプラスすることもできます。ご予約の際に『ヘッドスパも』とひとこと添えてください。」</p><p>価格改定のLINEは、この全文です。</p><p>「いつもありがとうございます。山口理容店です。大切なお知らせです。10月1日より、カットの価格を4,500円から5,000円に改定いたします。9月末までは、現在の価格でご案内いたします。これからも、一回一回の時間を大切にしてまいります。今後とも、よろしくお願いいたします。」</p><p>LINEで送るときのルールは4つです。ルール1、1通目は案内だけ。売り込みの言葉を足さない。ルール2、スマホの画面ひとつに収まる長さにする。長い文章は読まれません。ルール3、お客さまが返しやすい一言を、こちらから文面に書いておく。「ご予約の際に『ヘッドスパも』とひとこと」の部分がそれです。お客さまは、その言葉をそのまま使えます。ルール4、送るのはお店の営業時間内。夜遅くの通知は、それだけで印象を下げます。</p><p>そして、値上げのLINEにだけある大事な一文があります。「9月末までは、現在の価格でご案内いたします」。移行期間です。いま通ってくださっているお客さまに、駆け込みの余地を残す。これが、長く通ってくれた方への礼儀です。</p></div><div class="nar"><h3>切り出しの一言（太郎さんデモの前後）（23:00–25:30）</h3><p>※このパート冒頭でナレーション→太郎さんS05〜S07→ナレーションで補足、の順。</p><p>（S05の前）掲示とLINEを出しても、最後は顔を合わせたお客さまに、ひとこと伝える場面が来ます。ここで言葉に詰まらないように、言うことを先に決めておきます。タイミングは、施術が終わって、鏡で仕上がりを確認したあと。会計の前。手が止まっている、あの時間です。</p><p>（S07のあと）いまの言葉が、そのまま台本です。「ご案内だけ、置いておきますね」。売り込みではなく、案内。この一言なら、断られても、関係は何も傷つきません。</p><p>値上げを口頭で伝える場合の言葉も、決めておきます。画面の実文を読みます。「ひとつ、お知らせがあります。10月から、カットの価格が5,000円に変わります。9月までは、今のままです。早めに、直接お伝えしたくて。」ポイントは三つ。言い訳をしない。短く言う。そして「直接伝えたかった」という事実を添える。長い説明より、先に本人の口から聞いたという事実が、信頼を守ります。</p></div><div class="nar"><h3>断られた時の返し（太郎さんデモの前後）（25:30–28:00）</h3><p>（S08の前）伝えれば、断られることもあります。断られてから言葉を探すと、気まずさが顔に出ます。だから、返す言葉も先に決めておきます。これが今日の、いちばんの保険です。</p><p>（S09のあと）「無理には、おすすめしません」。この一言が言えると、提案は怖くなくなります。断られるのは、関係の終わりではありません。今日ではなかった、というだけです。掲示とLINEが、あなたの代わりに、この先も何度でも案内してくれます。</p><p>値上げに難色を示されたときの返しも、実文で持っておきます。画面の文を読みます。「そうですよね。急なお話に感じますよね。9月末までは今の価格ですので、ゆっくりお考えください。」まず一度、受け止める。反論しない。移行期間を伝えて、そこで終える。追わない。値下げの約束を、その場でしない。これだけ守れば十分です。</p></div><div class="nar"><h3>演習：一時停止式3ステップ（28:00–31:00）</h3><p>ここからは、あなた自身の番です。紙とペンを用意してください。ステップごとに動画を一時停止して、書き込んでください。</p><p>ステップ1。自分の松竹梅を3行で書きます。メニュー名、時間、価格。竹から決めてください。1分単価に迷ったら、まず180円から220円のあいだで仮に置いて構いません。書けたら、一時停止してください。</p><p>ステップ2。告知文を1本作ります。新メニューの告知か、価格改定の告知か、いま自分に必要なほうを選んでください。画面のテンプレートの、日付、店名、メニュー名、価格の4か所を、自分のものに差し替えます。文章のほかの部分は、変えなくて構いません。書けたら、一時停止してください。</p><p>ステップ3。切り出しの一言を、声に出して3回読んでください。「いつもありがとうございます。実は来月から、新しくヘッドスパのメニューを始めます。ご案内だけ、こちらに置いておきますね。」書く練習ではなく、口の練習です。3回読むと、自分の言葉になります。</p><p>これで、メニュー表と、告知文と、口で言う一言が、そろいました。</p></div><div class="nar"><h3>復習：今日の総ざらい（31:00–32:30）</h3><p>今日の要点をまとめます。</p><p>値付けの3原則。原則①、価格は1分あたりの単価から逆算する。原則②、メニューの中身は時間配分そのもの。原則③、15分は削らず、核を絞る。</p><p>メニュー表は松竹梅の3段で書く。竹が主役。「おすすめ」は書いてよい、「一番人気」は売れてから。</p><p>告知は3点セット。掲示を貼り、LINEを1通送り、施術後にひとこと添える。断られた時の返しまで、先に決めておく。</p></div><div class="nar"><h3>今日から現場で使える1つ（32:30–33:00）</h3><p>今日から現場で使える1つは、これです。押さずに、案内を置く。「ご案内だけ、こちらに置いておきますね。」明日の営業から、この一言だけで、あなたのメニューは動き始めます。</p></div></section>
+  <section><h2>テロップ・図解指示</h2><ul class="plain"><li><b>OPテロップ</b>: 「PG18｜あなたの15分に値札をつける」／サブ「メニューと価格＋既存客への伝え方」。ブランドカラー（ネイビー＋ゴールド）。</li><li><b>先週の宿題（00:30）</b>: 提出物の画面キャプチャを枠付きで表示。<b style="color:#c0392b">〔要確認: PG17宿題の実提出例〕</b></li><li><b>基本式図解（02:30）</b>: 「1分あたり単価 × 提供時間 ＝ 定価」を中央大。例「200円 × 30分 ＝ 6,000円」「233円 × 15分 ≒ 3,500円」。注記「施術時間 ＜ 枠時間（説明・片付け含む40〜45分）」。</li><li><b>30分コース構成図（05:00）</b>: 横棒タイムライン。静止2分／軽擦5分／側頭・咬筋6分／後頭・首肩6分／反復5分／クールダウン4分／静止離れ2分＝30分。各ブロックに対応手技名バッジ（PG番号は<b style="color:#c0392b">〔要確認: v6番号〕</b>確定後に入れる）。</li><li><b>15分設計図（07:30）</b>: 静止1分／軽擦3分／側頭〜後頭8分（強調色）／クールダウン3分。「核を絞る」の矢印。</li><li><b>松竹梅メニュー表（10:30）</b>: 実物のメニュー表風デザインで3段表示。「お試しヘッドスパ 15分 3,500円」「じっくりヘッドスパ 30分 6,000円【おすすめ】」「ヘッドスパと首肩の贅沢コース 45分 8,500円」。横に1分単価（233円／200円／約189円）を小さく併記。書き方ルール4つは1枚ずつテロップ（①伝わる日本語名 ②おすすめはOK・一番人気は売れてから ③税込で大きく ④「〜円より」禁止）。</li><li><b>職種別比較表（14:00）</b>: 3列（セラピスト／理容師／美容師）×行（相場目安・設定例・強み）。下部注記「相場は下限の参考。あなたの上限ではない」。</li><li><b>店内掲示の実文（16:00）</b>: 貼り紙のビジュアルモック全文を画面表示し、ナレーションの読み上げに合わせて行ハイライト。値上げ版は「4,500円 → 5,000円」の新旧併記を強調。型5つ（感謝→日付→新旧併記→短く前向きな理由→感謝）を番号バッジで重ねる。</li><li><b>LINEの実文（19:30）</b>: スマホのトーク画面モックで全文表示。値上げ版は「9月末までは現在の価格で」の一文をマーカー強調。送り方ルール4つを1枚ずつ。</li><li><b>切り出しの一言（23:00）</b>: 太郎さんの読み上げに合わせ、画面下1/3にセリフ全文を字幕表示（受講生が書き写せるよう2秒以上ホールド）。値上げ版の実文もフルスクリーンで表示。</li><li><b>断られた時の返し（25:30）</b>: 「読み上げカード」風の枠で実文表示。「受け止める→移行期間→終える（追わない・値下げしない）」の3ステップ図。</li><li><b>演習画面（28:00）</b>: ステップ番号を左上大。各ステップ末に一時停止アイコン＋「ここで書き込む」テロップ2秒。</li><li><b>復習テロップ（31:00）</b>: 「値付け3原則」「松竹梅」「告知3点セット」を1枚ずつ。</li><li><b>まとめテロップ（32:30）</b>: 「今日から現場で使える1つ：押さずに、案内を置く——『ご案内だけ、こちらに置いておきますね。』」</li><li><b>EDテロップ</b>: 「今週の宿題：自分の告知文を1本書いて提出（店内掲示 or LINE どちらか）」。</li><li><b>共通コンプラ表記</b>: 効能に触れる箇所に常時小さく「※リラクゼーションを目的とした内容です／効果には個人差があります」。</li><li><b>注記</b>: 図解内の日付（10月1日等）・店名（山口理容店）・価格はすべて記入例。テロップに小さく「※日付・店名・価格はご自身のものに差し替えてください」を併記。</li></ul></section>
+  <section><h2>宿題・配布物</h2><ul class="plain"><li><b>今週の宿題</b>: 自分の店の告知文を1本書いて提出する。店内掲示（貼り紙）かLINE文面のどちらか。新メニュー告知・価格改定告知のどちらでも可。配布テンプレートの日付・店名・メニュー名・価格の4か所を差し替えるだけでも提出OK。</li><li><b>チェック1</b>: □ メニューを松竹梅の3段で書き、竹（30分）を主役に置いたか</li><li><b>チェック2</b>: □ 価格は1分単価から逆算し、税込で堂々と書いたか（「〜円より」になっていないか）</li><li><b>チェック3</b>: □ 告知文に「何が・いつから・いくらで・どうすれば受けられるか」が全部入っているか</li><li><b>チェック4</b>: □ 値上げの場合、新旧価格の併記と移行期間（旧価格の猶予）を入れたか</li><li><b>チェック5</b>: □ 切り出しの一言と断られた時の返しを、声に出して3回読んだか</li><li><b>配布物</b>（配布物パック_v6.md 参照）: 松竹梅メニュー設計シート（A4・1枚）</li><li><b>配布物</b>: 告知文テンプレート集（店内掲示×2種／LINE×2種、空欄版＋記入例）</li><li><b>配布物</b>: 読み上げカード（切り出し2種＋断られた時の返し2種）</li><li><b>配布物</b>: 宿題チェックシート（上記5項目）</li></ul></section>
+  <section><h2>制作メモ</h2><div class="memo"><b>太郎さん収録は座りのみ・計約7分</b>（OP／一言／読み上げデモ2本／ED）。バストアップ正面、背景はダークネイビー基調。S06・S08・S09は手元のカードを見ながらゆっくり読んで構わない——「台本を読んで伝える」姿そのものが受講生の手本になるため、カメラ目線を無理に維持しなくてよい。<br><b>読み上げデモの字幕は必須</b>。太郎さんの音声と画面の実文を完全一致させる。受講生がそのまま書き写す前提。<br><b>Bロール割当（05:00–07:30）</b>: 軽擦＝頭皮の軽擦回、側頭＝太郎ハンド回、後頭・首肩＝リリース回、反復＝タッピング回の既存映像を各5〜10秒。音はナレーション優先。<br><b>演習パート</b>: 各ステップ末の「一時停止してください」で一時停止アイコン＋記入欄テロップを2秒表示してから次へ。記入見本用に、手元で松竹梅3行とテンプレ差し替えを書く様子を別撮りしておく。<br><b>LINE画面モック</b>は実在のお客さま名・アイコンが映らないダミーで作成。店名は「山口理容店」で統一。<br><b>数値の扱い</b>: 本編の価格（3,500円／6,000円／8,500円等）はすべて「記入例」。相場帯（セラピスト30分4,000〜7,000円等）は旧PG15から踏襲した目安表記。断定・保証の表現にしない。<br><b style="color:#c0392b">〔要確認: ①前回PG17の宿題内容と実提出例（00:30パートの差し替え） ②参照する手技回のv6最終番号（構成図バッジとナレの呼称） ③自社受講環境の提出方法（LINEか会員サイトか）に合わせてEDテロップの提出先文言を確定〕</b><br><b>旧PG15からの主な変更点</b>: ワークシート5ステップ演習→告知文中心の3ステップ演習に差し替え／分解リプレイ枠→告知テンプレ2パート（掲示・LINE）＋切り出し・返しデモに再配分／宿題を「時間配分の書き出し」→「告知文の提出」に変更。値付け3原則・職種別目安・太郎さん「価格に込める一言」は流用。</div></section>
+  <footer>山口流 理容道｜台本v6｜PG18 あなたの15分に値札をつける——メニューと価格＋既存客への伝え方｜ⓒ Prorium（社外秘）</footer>
+</div>
+
+<div id="pv">
+  <div class="bar">
+    <button onclick="closePv()">✕ 閉じる(Esc)</button>
+    <button id="mSingle" class="act" onclick="setMode('single')">1枚ずつ</button>
+    <button id="mScroll" onclick="setMode('scroll')">自動スクロール</button>
+    <button onclick="fsz(1)">文字＋</button><button onclick="fsz(-1)">文字−</button>
+    <button id="spD" onclick="spd(-1)" style="display:none">遅く</button><button id="spU" onclick="spd(1)" style="display:none">速く</button>
+    <button id="mir" onclick="mirror()">🪞 ミラー反転</button>
+    <span class="pos" id="pos"></span>
+  </div>
+  <div class="stage" id="stage"><div class="line" id="line"></div></div>
+  <div class="scrollwrap" id="sw" style="display:none"></div>
+  <button class="nav prev" onclick="mv(-1)">‹</button>
+  <button class="nav next" onclick="mv(1)">›</button>
+</div>
+
+<script>
+const LINES = [{"id":"S01","text":"こんにちは。山口太郎です。今日は、ヘッドスパの値段の決め方と、お客さまへの知らせ方をやります。"},{"id":"S02","text":"ゴールはひとつです。見終わるまでに、自分のメニュー表と、お客さまへのお知らせ文を作ります。"},{"id":"S03","text":"値段は、勘や安さで決めるものではありません。1分あたりいくらか。そこから計算して決めてください。"},{"id":"S04","text":"自信がないから安くする、はやめましょう。計算で出した値段を、そのまま堂々とつけてください。"},{"id":"S05","text":"ここからは、わたしが実際に読みます。施術のあと、お客さまにメニューを案内する言葉です。このまま使えます。"},{"id":"S06","text":"「いつもありがとうございます。実は来月から、新しくヘッドスパのメニューを始めます。ご案内だけ、こちらに置いておきますね。」"},{"id":"S07","text":"売り込まなくて、いいです。この一言を言って、案内を1枚置く。やることは、それだけです。"},{"id":"S08","text":"断られたときの返しも、読みます。「かしこまりました。無理には、おすすめしません。」"},{"id":"S09","text":"「気が向いたときに、いつでもおっしゃってください。」ここでしつこくしないから、次にまた案内できます。"},{"id":"S10","text":"今週の宿題です。お店に貼る文章か、LINEで送る文章を、ひとつ書いて提出してください。それでは、また来週。"}];
+let idx=0, fs=6.4, mode='single', speed=1, raf=null;
+const pv=document.getElementById('pv'), line=document.getElementById('line'), pos=document.getElementById('pos'), sw=document.getElementById('sw'), stage=document.getElementById('stage');
+function openPv(i){ if(!LINES.length) return; idx=i||0; pv.classList.add('on'); render(); }
+function closePv(){ pv.classList.remove('on'); stopScroll(); }
+function render(){
+  if(mode==='single'){
+    stage.style.display='flex'; sw.style.display='none';
+    const L=LINES[idx]; line.style.fontSize=fs+'vw'; line.textContent=L.text;
+    pos.textContent=(L.id||('#'+(idx+1)))+'　'+(idx+1)+' / '+LINES.length;
+  }else{
+    stage.style.display='none'; sw.style.display='block';
+    sw.innerHTML=LINES.map(L=>'<div class="sl" style="font-size:'+fs+'vw"><span class="tag">'+(L.id||'')+'</span>'+L.text.replace(/</g,'&lt;')+'</div>').join('');
+    pos.textContent='自動スクロール（速度 '+speed+'）— クリックで一時停止/再開';
+    startScroll();
+  }
+}
+function mv(d){ if(mode!=='single')return; idx=Math.min(LINES.length-1,Math.max(0,idx+d)); render(); }
+function fsz(d){ fs=Math.min(14,Math.max(2.4,fs+d*0.8)); render(); }
+function mirror(){ pv.classList.toggle('mirror'); document.getElementById('mir').classList.toggle('act'); }
+function setMode(m){ mode=m; stopScroll();
+  document.getElementById('mSingle').classList.toggle('act',m==='single');
+  document.getElementById('mScroll').classList.toggle('act',m==='scroll');
+  document.getElementById('spD').style.display=m==='scroll'?'':'none';
+  document.getElementById('spU').style.display=m==='scroll'?'':'none';
+  render(); }
+function spd(d){ speed=Math.min(5,Math.max(1,speed+d)); pos.textContent='自動スクロール（速度 '+speed+'）'; }
+let paused=false;
+function startScroll(){ paused=false; sw.scrollTop=0; const step=()=>{ if(!paused){ sw.scrollTop+=0.4*speed; } raf=requestAnimationFrame(step); }; raf=requestAnimationFrame(step); }
+function stopScroll(){ if(raf)cancelAnimationFrame(raf); raf=null; }
+sw.addEventListener('click',()=>{ paused=!paused; });
+document.addEventListener('keydown',e=>{
+  if(!pv.classList.contains('on'))return;
+  if(e.key==='Escape')closePv();
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();mv(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();mv(-1);}
+});
+document.querySelectorAll('.serif-card').forEach((el,i)=>el.addEventListener('click',()=>openPv(i)));
+</script>
+</body>
+</html>

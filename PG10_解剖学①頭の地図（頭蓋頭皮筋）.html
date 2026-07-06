@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PG10｜解剖学①｜頭の地図（頭蓋・頭皮・筋肉）｜山口流 理容道 台本v6</title>
+<style>
+  :root{--navy:#1B2A4A;--navy2:#0F1A2E;--gold:#C5A55A;--gold-l:#e3d3a6;--ivory:#F5F0E6;--ink:#1f2733;--mut:#5b6676;--line:#e7e2d6;--bg:#faf8f3;--red:#c0392b;--green:#2f8a52;--blue:#2c5f9e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+  header{background:radial-gradient(circle at 30% 20%,#27406b,var(--navy2));color:var(--ivory);padding:38px 26px 32px;margin:0 -18px 24px;border-bottom:4px solid var(--gold)}
+  header .mark{font-family:"Hiragino Mincho ProN",serif;color:var(--gold);letter-spacing:.28em;font-size:11px}
+  header h1{font-family:"Hiragino Mincho ProN",serif;font-size:24px;font-weight:600;margin:8px 0 8px;line-height:1.5}
+  header .meta{font-size:12.5px;color:#c9d2e0;display:flex;gap:16px;flex-wrap:wrap}
+  .prompter-btn{position:sticky;top:10px;z-index:50;display:flex;justify-content:flex-end;margin-bottom:6px}
+  .prompter-btn button{background:var(--navy);color:#fff;border:2px solid var(--gold);border-radius:30px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(15,26,46,.3)}
+  section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:16px 0;box-shadow:0 2px 10px rgba(27,42,74,.05)}
+  h2{font-family:"Hiragino Mincho ProN",serif;color:var(--navy);font-size:18px;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .oc{background:#fbf9f3;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  .oc .l{font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em}
+  .oc .v{font-size:13.5px;color:var(--ink);margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:var(--ivory);color:var(--navy);white-space:nowrap}
+  .chip{display:inline-block;font-size:10.5px;font-weight:700;border-radius:10px;padding:1px 9px;white-space:nowrap}
+  .c1{background:#fbf3dc;color:#9a7b27}.c2{background:#eaf1fa;color:var(--blue)}.c3{background:#eef7f0;color:var(--green)}
+  .serif-card{background:#fffdf8;border:1px solid var(--gold-l);border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0;cursor:pointer}
+  .serif-card:hover{background:#fdf8ec}
+  .serif-card .sid{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .serif-card .sno{background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 10px}
+  .serif-card .scene{font-size:11.5px;color:var(--mut)}
+  .serif-card .stx{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16.5px;color:var(--ink);line-height:1.9}
+  .serif-card .hint{font-size:10.5px;color:#b6a26d;margin-top:4px}
+  .nar{margin:14px 0}
+  .nar h3{font-size:14px;color:var(--navy);background:#eaf1fa;border-radius:8px;padding:6px 12px;margin-bottom:8px}
+  .nar p{font-size:13.5px;margin:8px 4px;color:#2c3644}
+  ul.plain{list-style:none}
+  ul.plain li{position:relative;padding-left:20px;margin:6px 0;font-size:13.5px}
+  ul.plain li::before{content:"";position:absolute;left:3px;top:11px;width:6px;height:6px;background:var(--gold);border-radius:50%}
+  .memo{background:#fff8e8;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;font-size:13px;margin-top:8px}
+  footer{text-align:center;color:var(--mut);font-size:11.5px;margin-top:30px}
+  /* ===== プロンプター ===== */
+  #pv{position:fixed;inset:0;background:#000;color:#fff;z-index:999;display:none;flex-direction:column}
+  #pv.on{display:flex}
+  #pv .bar{display:flex;gap:8px;align-items:center;padding:10px 14px;background:#111;flex-wrap:wrap}
+  #pv .bar button{background:#222;color:#fff;border:1px solid #555;border-radius:8px;padding:8px 14px;font-size:13px;cursor:pointer}
+  #pv .bar button.act{background:var(--gold);color:#000;border-color:var(--gold)}
+  #pv .bar .pos{margin-left:auto;font-size:14px;color:#d8c79b}
+  #pv .stage{flex:1;display:flex;align-items:center;justify-content:center;padding:4vw;overflow:hidden}
+  #pv .line{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;text-align:center;line-height:1.7;white-space:pre-wrap}
+  #pv .scrollwrap{flex:1;overflow-y:auto;padding:20vh 6vw}
+  #pv .scrollwrap .sl{font-family:"Hiragino Mincho ProN",serif;font-weight:600;line-height:1.9;margin:5vh 0;text-align:center;white-space:pre-wrap}
+  #pv .scrollwrap .sl .tag{display:block;font-size:14px;color:#d8c79b;font-family:sans-serif;margin-bottom:8px}
+  #pv.mirror .stage,#pv.mirror .scrollwrap{transform:scaleX(-1)}
+  #pv .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:#888;font-size:34px;padding:18px 10px;cursor:pointer;border-radius:10px}
+  #pv .prev{left:8px}#pv .next{right:8px}
+  @media(max-width:640px){.cards3{grid-template-columns:1fr}header h1{font-size:20px}}
+  @media print{.prompter-btn,#pv{display:none!important}body{background:#fff}section{box-shadow:none;page-break-inside:avoid}}
+  /* ===== 解剖図版ブロック ===== */
+  .anatomy{background:#fbf9f3;border:1px solid var(--line);border-radius:12px;padding:14px;margin:12px 0}
+  .anatomy .imgwrap{position:relative;width:100%;max-width:560px;margin:0 auto;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:#efe9dc}
+  .anatomy img{width:100%;height:100%;object-fit:cover;display:block}
+  .anatomy img.pending{display:none}
+  .anatomy .imgwrap.wait::after{content:"🖼 画像生成待ち（"attr(data-file)"）";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#9a8b6a;font-size:12px;text-align:center;padding:12px}
+  .anatomy figcaption{font-size:13.5px;margin-top:8px;color:var(--ink)}
+  .anatomy figcaption b{color:var(--navy)}
+  .anatomy .legend{list-style:none;display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;font-size:12.5px}
+  .anatomy .legend li{display:flex;align-items:center;gap:6px}
+  .anatomy .legend .sw{width:14px;height:14px;border-radius:4px;display:inline-block;border:1px solid #0002}
+  .anatomy .talk{background:#eef3fa;border-left:3px solid var(--blue);border-radius:6px;padding:8px 12px;margin-top:8px;font-size:13px}
+  .anatomy .talk b{color:var(--blue)}
+  /* ===== 太郎さん専用ガイド ===== */
+.taro{background:#fffaf0;border:3px solid var(--gold);border-radius:14px;padding:8px 22px 22px}
+.taro h2{font-size:20px;border:none;background:var(--gold);color:#3a2c08;padding:6px 16px;border-radius:10px;display:block;margin:14px 0 6px}
+.taro .big{font-size:22px;font-weight:800;color:var(--navy);line-height:1.5;margin:6px 0}
+.taro .row{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+.taro .ico{font-size:30px;flex:0 0 40px;text-align:center;line-height:1.2}
+.taro .ttl{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.04em}
+.taro .txt{font-size:16px;color:var(--ink);line-height:1.75;margin-top:2px}
+.taro .txt b{color:var(--navy)}
+.taro .tell{background:#eef7f0;border-left:5px solid var(--green)}
+.taro .tell .ttl{color:var(--green)}
+.taro ul.gist{list-style:none;margin:4px 0 0}
+.taro ul.gist li{position:relative;padding:6px 0 6px 26px;font-size:16px;line-height:1.6}
+.taro ul.gist li::before{content:"💬";position:absolute;left:0;top:5px;font-size:15px}
+.taro .tip{background:#fff8e8;border:1px dashed var(--gold);border-radius:10px;padding:12px 14px;margin-top:10px;font-size:14.5px;color:#7a5f1e}
+</style>
+</head>
+<body>
+<header>
+  <div class="mark">YAMAGUCHI-RYU RIYODO ／ SCRIPT v6</div>
+  <h1>PG10｜解剖学①｜頭の地図（頭蓋・頭皮・筋肉）</h1>
+  <div class="meta"><span>尺：約33分（OP・振り返り 約3分 ＋ 触診本編4部位 約16分30秒 ＋ セルフ触診3分 ＋ 通し 約5分 ＋ まとめ・宿題・来週予告 約4分）</span><span>形式：触診ナレ型（講義スライドは使わない）</span><span>台本v6（2026-07-02）</span><span>層：<span class="chip c1">🎬 層1 太郎</span> <span class="chip c2">🎙 層2 ナレ</span> <span class="chip c3">📺 層3 テロップ</span></span></div>
+</header>
+<div class="wrap">
+  <div class="prompter-btn"><button onclick="openPv(0)">🎬 プロンプターを開く（太郎さんセリフ）</button></div>
+
+  <section class="taro">
+    <h2>👤 太郎さん、まずこれだけ（撮影前に読む）</h2>
+    <div class="big">今日は「頭のどこに、なんという場所があるか」を、手でさわって覚える回です。もみほぐしはしません。名前と場所を、指で確かめるだけ。</div>
+
+    <div class="row"><div class="ico">🤔</div><div><div class="ttl">なんで大事？</div>
+      <div class="txt">お客様（＝ずっと通いたいお店を探している人）は、<b>「この人、分かってるな」と感じた人を選び続けます</b>。たとえば道を聞いたとき、「こっちの方かな…」と迷う人より、「この道をまっすぐ、次の角を右」と<b>地図が頭に入っている人</b>のほうが安心して任せられますよね。頭の地図が入っていれば、太郎さんは施術中に「今ここは側頭筋ですよ」と<b>自然に言える</b>。この一言が、指名につながります。</div></div></div>
+
+    <div class="row"><div class="ico">🙌</div><div><div class="ttl">太郎さんがやること</div>
+      <div class="txt">🤲 <b>手：</b>モデルさんの頭の<b>4か所</b>（おでこ→こめかみ→後ろ→てっぺん）を、上から順に1か所ずつさわる。各所で「触れる→2秒とめる→次へ」。眉を上げてもらう・奥歯をかんでもらう、で筋肉が動くのを見せる。最後に自分の頭でも同じ4か所をなぞる。<br>🗣 <b>口：</b>しゃべるのは最初と最後だけ（S01〜S10）。<b>プロンプターに出る文をそのまま読めばOK</b>。さわっている最中の説明はナレーション（別録り）がやるので、太郎さんは黙って手を動かして大丈夫です。</div></div></div>
+
+    <div class="row tell"><div class="ico">💬</div><div><div class="ttl">言いたいことは、ざっくりこれ</div>
+      <ul class="gist">
+        <li>今日は施術じゃなくて、頭の4つの場所を手で覚える回だよ（筋肉3つ＋膜1つ）</li>
+        <li>今どこを触ってるか言える人は、また選んでもらえるよ</li>
+        <li>ご自分の頭でもいっしょにさわってみてね、私も一緒にやるよ</li>
+        <li>強く押さなくていい、皮ふごとゆっくり動かすだけで十分。来週はこの4か所を使うよ</li>
+      </ul></div></div>
+
+    <div class="tip">💡 <b>コツ：</b>下の台本は、丸暗記しなくて大丈夫。<b>「言いたいこと（上の💬）」さえ分かっていれば</b>、プロンプターの文はスッと自然に出てきます。読むんじゃなく、"分かってる人がしゃべる"感じで。</div>
+  </section>
+
+  <section style="border-left:5px solid var(--gold)">
+    <h2>📌 この回の設計図（まずこれだけ読めばOK）</h2>
+
+    <div style="background:#fbf6ea;border:1px solid var(--gold-l);border-radius:10px;padding:14px 18px;margin:10px 0">
+      <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em">① この回でやること</div>
+      <div style="font-size:16px;font-weight:700;color:var(--navy);margin:4px 0">頭の4か所（筋肉3つ＋膜1つ）の名前・場所・触り方を、太郎さんの手で1つずつ触って覚え、施術中にお客様へ「今どこを触っているか」を言える状態にする回。手技（もみほぐし）はやらない。</div>
+      <ol style="margin:6px 0 0 22px;font-size:13.5px">
+        <li>頭の層構造（皮ふ→帽状腱膜→筋肉→骨）を手でなぞって見せる</li>
+        <li>前頭筋（おでこ）・側頭筋（こめかみ）・後頭筋（後頭部）・帽状腱膜（頭頂）の4か所を、モデルさんの頭で1つずつ触って見せる</li>
+        <li>各部位で確認動作をさせる（眉を上げてもらう／奥歯をかみしめてもらう）→ 指の下で筋肉が動くのを見せる</li>
+        <li>視聴者に自分の頭で同じ4か所を触らせる（セルフ触診・3分）</li>
+        <li>4か所を続けて触る「通し」を実演し、部位ごとの触り方の違い（軽く／じっくり／動かす／ていねいに）を見せる</li>
+        <li>施術中にお客様へ部位名を一言添える言い方の見本を見せる</li>
+      </ol>
+    </div>
+
+    <div style="margin:12px 0">
+      <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">② 太郎さんのタスク（手でやること／口で読むこと）</div>
+      <table>
+        <tr><th style="width:50%">🤲 手でやること（実演・撮る絵）</th><th>🗣 口で読むこと（プロンプター）</th></tr>
+        <tr><td>
+          ・モデルさんのおでこ→こめかみ→後頭部→頭頂を順に触り、各部位で「触れる→2秒静止→次へ」<br>
+          ・確認動作を誘導：眉を上げてもらう（前頭筋）／奥歯をかみしめてもらう（側頭筋）<br>
+          ・後頭部の骨の縁を指でそっとなぞって目印を見せる<br>
+          ・頭頂で頭皮を皮ふごと大きく動かし「膜がすべる」動きを見せる<br>
+          ・自分の頭で4か所をなぞるセルフ触診の見本<br>
+          ・4か所を続けて触る「通し」を1〜2回
+        </td><td>
+          ・S01–S02 冒頭挨拶＋今日やること宣言（座り・バストアップ）<br>
+          ・S03 フレーム「語れる施術者」（手を止めて・手は頭上に待機）<br>
+          ・S04 セルフ触診の呼びかけ（19:30・自分の頭の前）<br>
+          ・S05–S06 触れ方の勘所（22:30・バストアップ）<br>
+          ・S07–S10 宿題・来週予告・締め（ED・バストアップ）
+        </td></tr>
+      </table>
+      <div style="font-size:12px;color:var(--mut);margin-top:4px">合計拘束目安：実演 約25分（触診16分＋セルフ見本3分＋通し5分）＋読み 約4分（S01〜S10・プロンプター使用・演技不要）</div>
+    </div>
+
+    <div style="margin:12px 0">
+      <div style="font-size:11px;font-weight:700;color:#9a7b27;letter-spacing:.08em;margin-bottom:6px">③ 画面に出す解剖図（AI生成・発注リスト）</div>
+      <div style="font-size:12px;color:var(--mut);margin-bottom:6px">全3枚。gpt-image-1で生成し <code>img/</code> 直下へ。文字は画像に入れず、部位名はHTML凡例側で付与。ナレが図を指し、直後に太郎さんの手が同じ場所を触る（図→実演の順）。</div>
+      <table>
+        <tr><th style="width:90px">種類</th><th style="width:230px">ファイル名</th><th>使う場面（タイムコード）</th></tr>
+        <tr><td>AI生成解剖図</td><td>PG10_01_head_muscle_map_side.png</td><td>03:00 前頭筋の頭（触診①の冒頭で全体マップを提示→おでこへ）</td></tr>
+        <tr><td>AI生成解剖図</td><td>PG10_02_scalp_layers_cross.png</td><td>02:00 全体像（層構造をなぞる直後に断面を提示）</td></tr>
+        <tr><td>AI生成解剖図</td><td>PG10_03_galea_top_view.png</td><td>15:30 帽状腱膜の頭（膜が前後をつなぐ俯瞰を提示→頭頂へ）</td></tr>
+      </table>
+      <div style="font-size:12px;color:var(--mut);margin-top:6px">※ 各部位の実写重ねテロップ（色面・矢印・締め語）は従来どおり「テロップ・図解指示」欄に記載。解剖図は各パート冒頭で数秒インサートし、そのまま太郎さんの手の実演へつなぐ。</div>
+    </div>
+
+    <div class="cards3" style="margin-top:12px">
+      <div class="oc"><div class="l">今日から現場で使える1つ</div><div class="v">施術中に「今どこを触っているか」を一言お客様に伝える。例：「ここは側頭筋です。噛みしめで、かたくなりやすい場所ですよ」</div></div>
+      <div class="oc"><div class="l">宿題</div><div class="v">自分の頭で4つの場所（前頭筋・側頭筋・後頭筋・帽状腱膜）を指の感覚で確認する（強く押さない）。次回の頭皮筋膜リリースでそのまま使う。</div></div>
+      <div class="oc"><div class="l">配布物</div><div class="v">チェックシート（4部位）＋現場で使える暗記カード（実体は「配布物パック_v6.md」に収録）</div></div>
+    </div>
+  </section>
+
+  <section><h2>基本情報</h2><table>
+    <tr><th>番号</th><td>PG10</td></tr>
+    <tr><th>タイトル</th><td>解剖学①｜頭の地図（頭蓋・頭皮・筋肉）</td></tr>
+    <tr><th>尺</th><td>約33分（OP・振り返り 約3分 ＋ 触診本編4部位 約16分30秒 ＋ セルフ触診3分 ＋ 通し 約5分 ＋ まとめ・宿題・来週予告 約4分）</td></tr>
+    <tr><th>収録形態</th><td>触診ナレ型。画面は常に太郎さんの手がモデルさんの頭の上。ナレーションが「いま親指が当たっているのが側頭筋です」と実況で重ねる。<b>講義スライドは使わない</b>（部位名・矢印・数値はすべて実写映像への重ねテロップで処理）</td></tr>
+    <tr><th>必要機材</th><td>メインカメラ（太郎さんの手元＋モデルさんの頭が入る俯瞰／横／後方の3ポジション想定・最低2台）、OP/ED用バストアップカメラ1台、ピンマイク（環境音のみ・太郎さんの実演中の生声は使わずナレを主とする）、頭部を安定させる施術椅子またはベッド</td></tr>
+    <tr><th>モデル</th><td>被検者（頭を触られる側）1名。髪はまとめず、生えぎわ・こめかみ・後頭部の骨の縁が触れる状態にしておく。太郎さんはセルフ触診パートで自分の頭も使う</td></tr>
+    <tr><th>参照PG</th><td>翌週「頭皮筋膜リリース」（撮影済み）／基礎の手の当て方・圧のコントロール回 〔要確認: 直前PGの番号・宿題内容〕</td></tr>
+    <tr><th>コンプラ</th><td>効果効能は断定しない。「リラクゼーションを目的に」「〜と言われています」「研究で示唆されています」で統一。治る／改善／自律神経が整う／育毛 は使わない。数字・実績は捏造しない</td></tr>
+    <tr><th>フレーム</th><td>「語れる施術者はリピートされる」──今どこを触っているかを言葉にできることが、信頼と指名につながる</td></tr>
+  </table></section>
+
+  <section><h2>タイムコード構成表</h2><table><tr><th>時間</th><th>パート</th><th>内容</th><th>層</th></tr>
+    <tr><td>00:00–00:30</td><td>OP</td><td>太郎さん挨拶＋今日のゴール宣言（S01・S02）</td><td><span class="chip c1">🎬 層1</span></td></tr>
+    <tr><td>00:30–01:00</td><td>振り返り</td><td>先週の宿題・良い例の紹介（ナレ）</td><td><span class="chip c2">🎙 層2</span></td></tr>
+    <tr><td>01:00–02:00</td><td>導入・フレーム</td><td>「語れる施術者はリピートされる」＋今日さわる4つ（S03＋ナレ。太郎さんの手はモデルさんの頭上に待機）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>02:00–03:00</td><td>全体像</td><td>層構造の解剖図（PG10_02 断面）を出してナレが層を指す→太郎さんの手が同じ順で皮ふをなぞる（図→実演）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>03:00–07:00</td><td>触診① 前頭筋</td><td>冒頭に筋肉マップ（PG10_01 横顔）を出してナレが全体を指す→太郎さんの手がおでこへ。境界・働き・触り方をナレ実況（図→実演）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>07:00–11:30</td><td>触診② 側頭筋</td><td>こめかみ〜耳の上。噛みしめで確認・触り方</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>11:30–15:30</td><td>触診③ 後頭筋</td><td>後頭部・骨の縁。首肩との連動・触り方</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>15:30–19:30</td><td>触診④ 帽状腱膜</td><td>冒頭に俯瞰図（PG10_03 帽状腱膜と筋の連続）を出してナレが前後のつながりを指す→太郎さんの手が頭頂へ。動かし方をナレ実況（図→実演）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>19:30–22:30</td><td>セルフ触診（3分）</td><td>視聴者が自分の頭で4部位を確認。太郎さんも自分の頭で見本（S04＋ナレ誘導）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>22:30–24:00</td><td>太郎さん一言</td><td>触れ方の勘所（S05・S06）</td><td><span class="chip c1">🎬 層1</span></td></tr>
+    <tr><td>24:00–29:00</td><td>通し</td><td>4部位を続けてさわる通し。ナレ実況で「前は軽く/横はじっくり/てっぺんは動かす/後ろはていねいに」</td><td><span class="chip c1">🎬 層1</span> <span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>29:00–31:00</td><td>まとめ</td><td>「今日から現場で使える1つ」テロップ＋ナレ</td><td><span class="chip c2">🎙 層2</span> <span class="chip c3">📺 層3</span></td></tr>
+    <tr><td>31:00–33:00</td><td>宿題＋来週予告</td><td>太郎さん締めセリフ＋翌週「頭皮筋膜リリース」への接続（S07〜S10）</td><td><span class="chip c1">🎬 層1</span> <span class="chip c3">📺 層3</span></td></tr>
+  </table></section>
+
+  <section><h2>太郎さんセリフ（クリックでその行からプロンプター起動）</h2>
+    <div class="serif-card"><div class="sid"><span class="sno">S01</span><span class="scene">OP（00:00–00:30）／挨拶・バストアップ</span></div><div class="stx">こんにちは。山口太郎です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S02</span><span class="scene">OP（00:00–00:30）／今日のゴール宣言・バストアップ</span></div><div class="stx">今日は、施術はしません。頭の筋肉と膜の場所を、手で覚えます。<br>筋肉が3つ、膜が1つ。この4つを、上から順にさわります。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S03</span><span class="scene">導入・フレーム（01:00–02:00 の頭）／手を止めて言う（手はモデルさんの頭上に待機）</span></div><div class="stx">施術中に、今どこを触っているかを、お客様に言う。<br>それができる人は、また指名されます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S04</span><span class="scene">セルフ触診の前（19:30 の頭）</span></div><div class="stx">今度は、ご自分の頭で確かめます。<br>私も、いっしょにさわります。まねしてください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S05</span><span class="scene">太郎さん一言（22:30–24:00）</span></div><div class="stx">強く押さないでください。<br>皮ふごと、ゆっくり動かす。それで、十分です。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S06</span><span class="scene">太郎さん一言（22:30–24:00）</span></div><div class="stx">場所を覚えれば、手は迷いません。<br>どこを触るか分かっているから、迷わず動けます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S07</span><span class="scene">ED・宿題（31:00–33:00）</span></div><div class="stx">今週の宿題です。<br>自分の頭で、4つの場所を、指で探してください。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S08</span><span class="scene">ED・宿題（31:00–33:00）</span></div><div class="stx">おでこの前頭筋。こめかみの側頭筋。後ろの後頭筋。<br>そして、頭を包む、帽状腱膜。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S09</span><span class="scene">ED・来週予告（31:00–33:00）</span></div><div class="stx">来週は、今日覚えた4つの場所で、頭皮筋膜リリースをします。<br>場所が分かっていると、そのまま使えます。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+    <div class="serif-card"><div class="sid"><span class="sno">S10</span><span class="scene">ED・締め（31:00–33:00）／ゆっくり読む</span></div><div class="stx">それでは、また来週。</div><div class="hint">▶ クリックでこの行からプロンプター</div></div>
+  </section>
+
+  <section><h2>ナレーション全文</h2>
+    <div class="nar"><h3>00:30–01:00｜振り返り（先週の宿題・良い例）</h3>
+      <p>〔要確認: 直前PGの宿題内容に合わせて1〜2文を差し替え。以下は「ゆっくり触れる」練習を前提にした汎用版〕</p>
+      <p>先週の宿題は、手を温めてから、ゆっくり触れる、という練習でした。</p>
+      <p>提出してくださった動画を、拝見しました。手のスピードが、先週よりも、ずっとゆっくりになっていました。とても良い変化です。</p>
+      <p>ゆっくり触れることは、心地よさと関連すると言われています。</p>
+      <p>その手の速さは、そのままで大丈夫です。今日はそこに、「どこを触っているか」を、足していきます。</p>
+    </div>
+    <div class="nar"><h3>01:00–02:00｜導入・フレーム＋今日の4つ</h3>
+      <p>今日のテーマは、頭の地図です。</p>
+      <p>施術の上手さは、手の動きだけでは決まりません。今、どこを触っているのか。それを言葉にできるかどうかで、印象が変わります。</p>
+      <p>お客様に、「ここは側頭筋です。噛みしめで、かたくなりやすい場所です」と言える。それだけで、施術の説得力は変わります。</p>
+      <p>今日、太郎さんの手で確かめる場所は、4つです。</p>
+      <p>おでこの、前頭筋（ぜんとうきん）。こめかみの、側頭筋（そくとうきん）。後頭部の、後頭筋（こうとうきん）。そして、頭全体を包む膜、帽状腱膜（ぼうじょうけんまく）。</p>
+      <p>筋肉が3つと、膜が1つ。この4つを、上から順に、さわっていきます。</p>
+    </div>
+    <div class="nar"><h3>02:00–03:00｜全体像（層構造を手でなぞる）</h3>
+      <p>はじめに、頭の構造を、手でなぞって確かめます。</p>
+      <p>太郎さんの指が、今、モデルさんの頭皮に触れています。いちばん外側が、皮ふです。</p>
+      <p>その皮ふを、指で軽く動かしてみます。皮ふといっしょに、その下の薄い層が動いています。これが、帽状腱膜。頭全体を、帽子のように包んでいる膜です。</p>
+      <p>さらにその下に、筋肉があります。そして、いちばん下が、頭の骨です。</p>
+      <p>皮ふ、帽状腱膜、筋肉、骨。この4つの層のうち、施術でさわっているのは、上の3つです。骨は、位置の目印として使います。</p>
+      <p>では、上から順に、4つの場所を確かめていきます。</p>
+      <figure class="anatomy">
+        <div class="imgwrap wait" data-file="PG10_02_scalp_layers_cross.png"><img class="pending" src="img/PG10_02_scalp_layers_cross.png" alt="頭皮の層構造の断面図。皮ふ・帽状腱膜・筋肉・頭蓋骨の4層を上から順に示す" onload="this.classList.remove('pending');this.parentElement.classList.remove('wait')"></div>
+        <figcaption><b>頭皮の層構造（断面）</b> — 外側から、皮ふ → 帽状腱膜 → 筋肉 → 頭蓋骨。さわるのは上の3層で、骨は位置の目印。</figcaption>
+        <ul class="legend">
+          <li><span class="sw" style="background:#F5F0E6"></span>アイボリー＝皮ふ</li>
+          <li><span class="sw" style="background:#C5A55A"></span>ゴールド＝帽状腱膜</li>
+          <li><span class="sw" style="background:#7f8aa0"></span>スレート＝筋肉</li>
+          <li><span class="sw" style="background:#d8d2c4"></span>ベージュ＝頭蓋骨</li>
+        </ul>
+        <div class="talk"><b>お客様に言うなら：</b>「頭皮って、皮ふのすぐ下に膜があって、その下に筋肉と骨、という重なりなんですよ。今は上の層をやさしく動かしていますね。」</div>
+      </figure>
+    </div>
+    <div class="nar"><h3>03:00–07:00｜触診① 前頭筋</h3>
+      <figure class="anatomy">
+        <div class="imgwrap wait" data-file="PG10_01_head_muscle_map_side.png"><img class="pending" src="img/PG10_01_head_muscle_map_side.png" alt="横顔の頭の筋肉マップ。前頭筋・側頭筋・後頭筋を色分けで示す" onload="this.classList.remove('pending');this.parentElement.classList.remove('wait')"></div>
+        <figcaption><b>頭の筋肉マップ（横顔）</b> — 今日さわる3つの筋肉の位置。まず全体を見てから、1つずつ触っていく。</figcaption>
+        <ul class="legend">
+          <li><span class="sw" style="background:#C5A55A"></span>ゴールド＝前頭筋（おでこ）</li>
+          <li><span class="sw" style="background:#7f8aa0"></span>スレート＝側頭筋（こめかみ）</li>
+          <li><span class="sw" style="background:#a7b0be"></span>ライトスレート＝後頭筋（後頭部）</li>
+        </ul>
+        <div class="talk"><b>お客様に言うなら：</b>「頭にはこうやっておでこ・こめかみ・後ろに筋肉があるんです。今はおでこの前頭筋にふれていますね。」</div>
+      </figure>
+      <p>最初は、前頭筋です。おでこにある、うすい筋肉です。</p>
+      <p>太郎さんの両手が、今、モデルさんのおでこに置かれました。指の腹が当たっている、この平らな面。ここが、前頭筋です。</p>
+      <p>場所は、眉の少し上から、髪の生えぎわまで。横に、平らに広がっています。</p>
+      <p>前頭筋は、眉を持ち上げたり、額にしわを寄せたりするときに使います。集中して画面を見続けたとき、ここは、知らないうちに力が入っています。</p>
+      <p>働きを、手で確かめます。モデルさんに、眉を、二、三回、上げてもらいます。今、太郎さんの指の下で、おでこの筋肉が、動きました。これが、前頭筋の動きです。</p>
+      <p>触り方です。前頭筋は、うすくて、すぐ下に骨があります。ですから、強く押し込む場所ではありません。</p>
+      <p>今、太郎さんの指の腹が、皮ふごと、ゆっくり上下に動いています。眉の上から、生えぎわへ。下から上へ、なで上げています。</p>
+      <p>このゆっくりとした、なで上げる刺激は、心地よさと関連すると示唆されています。</p>
+      <p>前頭筋は、軽く、ゆっくり、なで上げる。これが基本です。</p>
+    </div>
+    <div class="nar"><h3>07:00–11:30｜触診② 側頭筋</h3>
+      <p>次は、側頭筋です。こめかみから、耳の上に広がる、おうぎ形の筋肉です。</p>
+      <p>太郎さんの指が、今、モデルさんのこめかみに移りました。この、耳のすぐ上の、広い面。ここが、側頭筋です。</p>
+      <p>側頭筋は、かむ、食いしばる、ときに働きます。ここは、多くの方が、いちばんこりを感じる場所です。ストレスや、無意識の食いしばりで、かたくなりやすいところだと、緊張型の頭痛の研究でも指摘されています。</p>
+      <p>働きを、手で確かめます。モデルさんに、奥歯を、軽く、かみしめてもらいます。今、太郎さんの指の下で、こめかみが、ふくらみました。これが、側頭筋です。</p>
+      <p>かむのをやめると、また、ゆるみます。この動きを、指で感じ取ります。</p>
+      <p>触り方です。側頭筋は、面で、広くとらえます。</p>
+      <p>今、太郎さんの指の腹が、こめかみに当たり、小さな円を、ゆっくり描いています。皮ふと筋肉を、いっしょに動かしています。押し込むのではなく、動かす。</p>
+      <p>中くらいの、心地よい圧は、心拍や血圧が下がる方向と関連すると、マッサージの研究群で示唆されています。痛みを、我慢させる圧ではありません。</p>
+      <p>側頭筋は、面でとらえ、円を描き、ゆっくりゆるめる。これが基本です。</p>
+    </div>
+    <div class="nar"><h3>11:30–15:30｜触診③ 後頭筋</h3>
+      <p>続いて、後頭筋です。後頭部にある筋肉です。</p>
+      <p>太郎さんの手が、今、モデルさんの後頭部に回りました。指が当たっているのは、後頭部の、丸みのある面です。ここに、後頭筋があります。</p>
+      <p>後頭筋は、さきほどの帽状腱膜を、後ろから引く働きがあります。前の前頭筋と、後ろの後頭筋が、膜をはさんで、引き合っています。</p>
+      <p>位置の目印を、骨で取ります。後頭部の、いちばん出っぱった骨。その下に、横に走る、骨の縁があります。</p>
+      <p>今、太郎さんの指が、その骨の縁を、そっとなぞっています。この縁のすぐ上の面が、後頭筋のあるところです。</p>
+      <p>デスクワークや、スマートフォンを見る前かがみの姿勢で、後頭部から首の境目は、とても疲れます。</p>
+      <p>触り方です。今、太郎さんの指の腹が、骨の縁に、下からそっと当たっています。頭の重みを、指で受けとめるように、ゆっくり支えています。</p>
+      <p>グリグリと、強くこするのではありません。頭の重さを、指にあずけてもらうイメージです。</p>
+      <p>温かい手で触れると、こわばりがゆるむ方向に向かうと、温熱の基礎研究で示唆されています。触れる前に、手を温めておくと良いでしょう。</p>
+      <p>後頭筋は、骨の縁を目印に、頭の重みで支え、ゆっくりゆるめる。これが基本です。</p>
+    </div>
+    <div class="nar"><h3>15:30–19:30｜触診④ 帽状腱膜</h3>
+      <figure class="anatomy">
+        <div class="imgwrap wait" data-file="PG10_03_galea_top_view.png"><img class="pending" src="img/PG10_03_galea_top_view.png" alt="頭頂からの俯瞰図。帽状腱膜が前頭筋と後頭筋を前後につなぐ連続を示す" onload="this.classList.remove('pending');this.parentElement.classList.remove('wait')"></div>
+        <figcaption><b>頭頂からの俯瞰（帽状腱膜と筋の連続）</b> — てっぺんを包む帽状腱膜が、前の前頭筋と後ろの後頭筋を、前後につないでいる。</figcaption>
+        <ul class="legend">
+          <li><span class="sw" style="background:#C5A55A"></span>ゴールド＝帽状腱膜（膜）</li>
+          <li><span class="sw" style="background:#7f8aa0"></span>スレート前＝前頭筋</li>
+          <li><span class="sw" style="background:#a7b0be"></span>スレート後＝後頭筋</li>
+        </ul>
+        <div class="talk"><b>お客様に言うなら：</b>「てっぺんの膜が、おでこと後ろの筋肉を前後でつないでいるんです。だから頭全体が一枚でつながっている感じなんですよ。」</div>
+      </figure>
+      <p>4つめは、帽状腱膜です。これは筋肉ではなく、頭のてっぺんを広く包む、丈夫な膜です。</p>
+      <p>太郎さんの両手が、今、頭のてっぺんに置かれました。指の腹が当たっている、この広い面。皮ふのすぐ下に、帽状腱膜があります。</p>
+      <p>さきほどの前頭筋と、後頭筋を、前と後ろからつないでいるのが、この膜です。</p>
+      <p>確かめます。今、太郎さんの手が、頭皮を、皮ふごと、ゆっくり大きく動かしています。頭のてっぺんの皮ふが、前後に、左右に、少し動きました。この、動く感じ。これが、帽状腱膜が、すべっている感覚です。</p>
+      <p>ここがかたくなると、頭皮が動きにくくなり、頭全体が、つっぱった感じになると言われています。</p>
+      <p>触り方です。帽状腱膜は、一点を押すのではありません。手のひら全体で、皮ふごと、大きく動かします。</p>
+      <p>今、太郎さんの手が、円を描くように、頭皮をゆっくり動かしています。膜を、すべらせるイメージです。</p>
+      <p>帽状腱膜は、手のひらで、皮ふごと、大きく動かす。これが基本です。</p>
+    </div>
+    <div class="nar"><h3>19:30–22:30｜セルフ触診（3分・視聴者が自分の頭を触る）</h3>
+      <p>太郎さんは自分の頭で見本を見せる。ナレは視聴者に語りかける実況。編集で「セルフ触診 3:00」のカウントダウンを重ねる。</p>
+      <p>ここからは、ご自分の頭で、確かめます。太郎さんも、いっしょにさわります。画面を見ながら、まねしてください。時間は、3分です。</p>
+      <p>まず、前頭筋。両手の指の腹を、おでこに当ててください。眉の、少し上です。</p>
+      <p>そのまま、眉を、二、三回、上げ下げしてみましょう。指の下で、おでこの筋肉が動きます。これが、あなたの前頭筋です。</p>
+      <p>場所が分かったら、下から上へ、生えぎわに向けて、ゆっくり、なで上げます。強く押さないでください。</p>
+      <p>次は、側頭筋。指を、こめかみに移します。耳の、すぐ上です。</p>
+      <p>奥歯を、軽く、かみしめてみてください。こめかみが、ふくらみます。指の下で、動いたのが分かりますか。これが、あなたの側頭筋です。</p>
+      <p>かみしめをやめて、こめかみに指を当てたまま、小さな円を、ゆっくり描きます。</p>
+      <p>次は、後頭筋。手を、後頭部に回します。</p>
+      <p>いちばん出っぱった骨を探し、その下の、横の縁を、指でなぞってください。骨の縁が分かったら、その少し上の、丸みの面。ここが、後頭筋です。</p>
+      <p>頭を、少しうしろに預けるようにして、指で軽く支えてみましょう。</p>
+      <p>最後は、帽状腱膜。両手を、頭のてっぺんに置きます。</p>
+      <p>指の腹で、頭皮を、皮ふごと、前後に、ゆっくり動かしてみてください。頭皮が、少し動きます。この、動く感じが、帽状腱膜です。</p>
+      <p>かたくて動きにくい方も、心配いりません。今日は、場所と、動く感覚を、覚えるだけで十分です。</p>
+      <p>おでこの前頭筋。こめかみの側頭筋。後ろの後頭筋。てっぺんの帽状腱膜。</p>
+      <p>4つの場所を、言葉ではなく、指の感覚で、覚えてください。これで、セルフ触診は、おしまいです。</p>
+    </div>
+    <div class="nar"><h3>24:00–29:00｜通し（4部位連続・ナレ実況）</h3>
+      <p>最後に、4つの場所を、続けてさわる通しです。太郎さんの手が、地図の上を、順番に動きます。</p>
+      <p>今、手はおでこ。前頭筋です。下から上へ、軽く、なで上げます。前は、軽く。</p>
+      <p>手が、こめかみへ移ります。側頭筋です。面でとらえ、ゆっくり円を描きます。横は、じっくり。</p>
+      <p>手が、頭のてっぺんへ。帽状腱膜です。手のひらで、皮ふごと、大きく動かします。てっぺんは、動かす。</p>
+      <p>手が、後頭部へ回ります。後頭筋です。骨の縁を目印に、頭の重みを支えます。後ろは、ていねいに。</p>
+      <p>前は軽く。横はじっくり。てっぺんは動かす。後ろはていねいに。</p>
+      <p>場所が変わると、手の動きも、圧も、変わります。地図があるから、手が、迷いません。</p>
+      <p>もう一度、通します。前頭筋。側頭筋。帽状腱膜。後頭筋。</p>
+      <p>今、どこを触っているか。それが言えれば、あなたの施術は、変わります。</p>
+    </div>
+    <div class="nar"><h3>29:00–31:00｜まとめ（今日から現場で使える1つ）</h3>
+      <p>今日から現場で使える、ひとつのこと。</p>
+      <p>それは、施術中に、お客様へ、今どこを触っているかを、ひとことで伝えることです。</p>
+      <p>「ここは側頭筋です。噛みしめで、かたくなりやすい場所ですよ」。</p>
+      <p>たったこれだけで、お客様は、自分の頭のことを知り、あなたを、信頼します。</p>
+      <p>語れる施術者は、リピートされます。今日覚えた4つの名前が、その第一歩です。</p>
+    </div>
+    <div class="nar"><h3>31:00–33:00｜宿題・来週予告（太郎さんセリフに接続）</h3>
+      <p>ここは太郎さん S07〜S10。ナレは入れず、締めテロップのみ重ねる。</p>
+    </div>
+  </section>
+
+  <section><h2>テロップ・図解指示</h2><ul class="plain">
+    <li><b>原則</b>：部位名・境界線・矢印・数値は、太郎さんの手が触れている<b>実写の頭に直接重ねる</b>（モーショントラッキングで追従）。独立した解剖スライドや静止図パネルは使わない。</li>
+    <li><b>OPテロップ（00:00〜）</b>：メイン「PG10｜解剖学① 頭の地図」／サブ「今日のゴール：前頭筋・側頭筋・後頭筋・帽状腱膜の4つを、手で覚える」。</li>
+    <li><b>フレームテロップ（01:00〜／S03に同期）</b>：画面下に「語れる施術者は、リピートされる」を1回大きく。以降、各部位の締めで小さく再掲。</li>
+    <li><b>全体像（02:00〜）</b>：手が触れている頭に、うっすら層ラベルを順に重ねる「皮ふ → 帽状腱膜 → 筋肉 → 骨」。「さわるのは上の3層」を強調枠。</li>
+    <li><b>前頭筋（03:00〜）</b>：指が当たった額の面に半透明の色面＋ラベル「前頭筋（ぜんとうきん）」。矢印「下 → 上 なで上げる」。数値テロップ「圧：弱／速さ：ゆっくり（目安 約3〜5cm/秒）」。締め「前は、軽く」。</li>
+    <li><b>側頭筋（07:00〜）</b>：こめかみ〜耳上の面に色面＋ラベル「側頭筋（そくとうきん）」。噛みしめでふくらむ瞬間に「ここが動く＝側頭筋」ポップ。円形回転アイコンで「円を描く」。注記（小）「かたくなりやすい場所（緊張型頭痛の研究で指摘）」。締め「横は、じっくり」。</li>
+    <li><b>後頭筋（11:30〜）</b>：後頭部の面に色面＋ラベル「後頭筋（こうとうきん）」。骨の縁を線でハイライトし「後頭骨の縁＝目印」。矢印「縁の下から支え、持ち上げる」。注記（小）「手を温めてから（温熱の基礎研究で示唆）」。締め「後ろは、ていねいに」。</li>
+    <li><b>帽状腱膜（15:30〜）</b>：頭頂の広い面に半透明の色面＋ラベル「帽状腱膜（ぼうじょうけんまく）＝筋肉ではなく膜」。頭皮が動く瞬間に「この動き＝膜がすべる」ポップ。締め「てっぺんは、動かす」。</li>
+    <li><b>セルフ触診（19:30〜）</b>：画面隅に「セルフ触診 3:00」のカウントダウンタイマー。順に手順ラベル「① 前頭筋」「② 側頭筋」「③ 後頭筋」「④ 帽状腱膜」。「強く押さない」を常時小さく表示。</li>
+    <li><b>通し（24:00〜）</b>：手の移動に合わせ、ラベルと「前=軽く／横=じっくり／てっぺん=動かす／後ろ=ていねいに」を1語ずつ点灯。</li>
+    <li><b>まとめ（29:00〜）</b>：全画面「今日から現場で使える1つ」→「触っている場所を、ひとことで伝える」。例文カード「ここは側頭筋です。噛みしめでかたくなりやすい場所ですよ」を金色（#C5A55A）でハイライト。</li>
+    <li><b>宿題・来週予告（31:00〜）</b>：宿題テロップ「自分の頭で、4つの場所を指で探す」＋チェック4項目のミニ表示。締めに「来週：頭皮筋膜リリース（この地図の上で行います）」。</li>
+    <li><b>コンプラ共通</b>：効能を断定する語（治る・改善・整う・育毛）は使わない。根拠つき表現は「〜と示唆されています／研究で指摘」を小さく出典トーンで。</li>
+  </ul></section>
+
+  <section><h2>宿題・配布物</h2><ul class="plain">
+    <li><b>宿題</b>：自分の頭を指でさわり、4つの場所を「指の感覚」で確認する。各部位、ゆっくりさわって場所を覚える（強く押さない）。次回の頭皮筋膜リリースで、この地図をそのまま使う。</li>
+    <li><b>チェック①</b> 前頭筋：おでこに指の腹を当て、眉を上げ下げして動く範囲を確認できた。下から上へ、なで上げる位置が分かった。</li>
+    <li><b>チェック②</b> 側頭筋：奥歯を軽くかみしめ、こめかみ〜耳の上でふくらむ面を、指でとらえられた。</li>
+    <li><b>チェック③</b> 後頭筋：後頭部の骨の縁と、その少し上の丸みの面を、指で見つけられた。</li>
+    <li><b>チェック④</b> 帽状腱膜：頭頂に両手を置き、皮ふごと動かして、頭皮が動く（膜がすべる）感覚を確認できた。</li>
+    <li><b>現場で使えるひとこと（暗記カード）</b>：「ここは○○です。○○なときにかたくなりやすい場所ですよ」──触っている部位名を、ひとことお客様に伝える。</li>
+    <li>配布物の実体（チェックシート／暗記カード）は「配布物パック_v6.md」に収録。</li>
+  </ul></section>
+
+  <section><h2>制作メモ</h2><div class="memo">
+    <b>画面は常に手＋頭</b>：太郎さんの顔出しはOP／ED／一言のバストアップのみ。触診本編・セルフ触診・通しは、手とモデルさんの頭だけを画面に保つ。講義スライドへ切り替えない。<br><br>
+    <b>カメラ3ポジション</b>：①俯瞰（真上・なで上げ／円の軌道が分かる）②横（こめかみ・咬みしめ時のふくらみ、圧の方向）③後方斜め（後頭骨の縁・頭を支える角度）。部位ごとに主アングルを切り替える。前頭筋=俯瞰、側頭筋=横、後頭筋=後方斜め、帽状腱膜=俯瞰。<br><br>
+    <b>ナレは実況同期が命</b>：「いま親指が当たっているのが側頭筋」は、実際に指がその位置にある画に必ず合わせる。ズレると信頼が崩れるので、編集で手の到達フレームにナレ頭を合わせる。撮影時、太郎さんは各部位で「触れる→2秒静止→次へ」のテンポで動くと同期しやすい。<br><br>
+    <b>太郎さんは読むだけ</b>：実演中の生セリフは使わない（ナレで処理）。S01〜S10のみカンペ読み。カンペはレンズ脇、目線が大きく外れない位置。1文ごとに軽い間。演技指示は出さない。<br><br>
+    <b>セルフ触診の見本</b>：太郎さんは自分の頭で4部位をなぞる。視聴者がまねしやすいよう、鏡像にならない向き（またはミラー反転処理）で。3分尺はカウントダウンテロップで管理し、実尺が前後しても編集で調整。<br><br>
+    <b>薬機法チェック</b>：断定語（治る・改善・自律神経が整う・育毛）が生ナレ・テロップに混入していないか、書き出し前に全部確認。根拠表現は「示唆／言われています」に統一。<br><br>
+    <b>モデル準備</b>：生えぎわ・こめかみ・後頭部の骨の縁が指で触れるよう、髪を分ける／留める。噛みしめ動作を事前にリハし、こめかみのふくらみがカメラに映る角度を決めておく。<br><br>
+    <b>来週接続</b>：ED（S09）で頭皮筋膜リリース（撮影済み）への橋渡しを明言。編集で来週回のワンカット（頭頂を大きく動かすクリップ）を予告として3秒差し込むと接続が強い。<br><br>
+    <b style="color:#c0392b">〔要確認: 直前PGの番号・宿題内容を確定し、振り返りナレ（00:30–01:00）の1〜2文を差し替える。参照PG欄も同様〕</b>
+  </div></section>
+  <footer>山口流 理容道｜台本v6｜PG10 解剖学①｜頭の地図（頭蓋・頭皮・筋肉）｜ⓒ Prorium（社外秘）</footer>
+</div>
+
+<div id="pv">
+  <div class="bar">
+    <button onclick="closePv()">✕ 閉じる(Esc)</button>
+    <button id="mSingle" class="act" onclick="setMode('single')">1枚ずつ</button>
+    <button id="mScroll" onclick="setMode('scroll')">自動スクロール</button>
+    <button onclick="fsz(1)">文字＋</button><button onclick="fsz(-1)">文字−</button>
+    <button id="spD" onclick="spd(-1)" style="display:none">遅く</button><button id="spU" onclick="spd(1)" style="display:none">速く</button>
+    <button id="mir" onclick="mirror()">🪞 ミラー反転</button>
+    <span class="pos" id="pos"></span>
+  </div>
+  <div class="stage" id="stage"><div class="line" id="line"></div></div>
+  <div class="scrollwrap" id="sw" style="display:none"></div>
+  <button class="nav prev" onclick="mv(-1)">‹</button>
+  <button class="nav next" onclick="mv(1)">›</button>
+</div>
+
+<script>
+const LINES = [
+  {"id":"S01","text":"こんにちは。山口太郎です。"},
+  {"id":"S02","text":"今日は、施術はしません。頭の筋肉と膜の場所を、手で覚えます。\n筋肉が3つ、膜が1つ。この4つを、上から順にさわります。"},
+  {"id":"S03","text":"施術中に、今どこを触っているかを、お客様に言う。\nそれができる人は、また指名されます。"},
+  {"id":"S04","text":"今度は、ご自分の頭で確かめます。\n私も、いっしょにさわります。まねしてください。"},
+  {"id":"S05","text":"強く押さないでください。\n皮ふごと、ゆっくり動かす。それで、十分です。"},
+  {"id":"S06","text":"場所を覚えれば、手は迷いません。\nどこを触るか分かっているから、迷わず動けます。"},
+  {"id":"S07","text":"今週の宿題です。\n自分の頭で、4つの場所を、指で探してください。"},
+  {"id":"S08","text":"おでこの前頭筋。こめかみの側頭筋。後ろの後頭筋。\nそして、頭を包む、帽状腱膜。"},
+  {"id":"S09","text":"来週は、今日覚えた4つの場所で、頭皮筋膜リリースをします。\n場所が分かっていると、そのまま使えます。"},
+  {"id":"S10","text":"それでは、また来週。"}
+];
+let idx=0, fs=6.4, mode='single', speed=1, raf=null;
+const pv=document.getElementById('pv'), line=document.getElementById('line'), pos=document.getElementById('pos'), sw=document.getElementById('sw'), stage=document.getElementById('stage');
+function openPv(i){ if(!LINES.length) return; idx=i||0; pv.classList.add('on'); render(); }
+function closePv(){ pv.classList.remove('on'); stopScroll(); }
+function render(){
+  if(mode==='single'){
+    stage.style.display='flex'; sw.style.display='none';
+    const L=LINES[idx]; line.style.fontSize=fs+'vw'; line.textContent=L.text;
+    pos.textContent=(L.id||('#'+(idx+1)))+'　'+(idx+1)+' / '+LINES.length;
+  }else{
+    stage.style.display='none'; sw.style.display='block';
+    sw.innerHTML=LINES.map(L=>'<div class="sl" style="font-size:'+fs+'vw"><span class="tag">'+(L.id||'')+'</span>'+L.text.replace(/</g,'&lt;')+'</div>').join('');
+    pos.textContent='自動スクロール（速度 '+speed+'）— クリックで一時停止/再開';
+    startScroll();
+  }
+}
+function mv(d){ if(mode!=='single')return; idx=Math.min(LINES.length-1,Math.max(0,idx+d)); render(); }
+function fsz(d){ fs=Math.min(14,Math.max(2.4,fs+d*0.8)); render(); }
+function mirror(){ pv.classList.toggle('mirror'); document.getElementById('mir').classList.toggle('act'); }
+function setMode(m){ mode=m; stopScroll();
+  document.getElementById('mSingle').classList.toggle('act',m==='single');
+  document.getElementById('mScroll').classList.toggle('act',m==='scroll');
+  document.getElementById('spD').style.display=m==='scroll'?'':'none';
+  document.getElementById('spU').style.display=m==='scroll'?'':'none';
+  render(); }
+function spd(d){ speed=Math.min(5,Math.max(1,speed+d)); pos.textContent='自動スクロール（速度 '+speed+'）'; }
+let paused=false;
+function startScroll(){ paused=false; sw.scrollTop=0; const step=()=>{ if(!paused){ sw.scrollTop+=0.4*speed; } raf=requestAnimationFrame(step); }; raf=requestAnimationFrame(step); }
+function stopScroll(){ if(raf)cancelAnimationFrame(raf); raf=null; }
+sw.addEventListener('click',()=>{ paused=!paused; });
+document.addEventListener('keydown',e=>{
+  if(!pv.classList.contains('on'))return;
+  if(e.key==='Escape')closePv();
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();mv(1);}
+  if(e.key==='ArrowLeft'){e.preventDefault();mv(-1);}
+});
+document.querySelectorAll('.serif-card').forEach((el,i)=>el.addEventListener('click',()=>openPv(i)));
+</script>
+</body>
+</html>
